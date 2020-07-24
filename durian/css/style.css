@@ -657,20 +657,106 @@ margin-left: 50px;
   }
 }
 
+.icon-NextBack-pageRight{
+  float: right;
+  display: contents;
+}
+
+.icon-NextBack-pageLeft{
+  float: left;
+  display: contents;
+}
+
 .card-next-page{
   writing-mode: vertical-rl;
   display: flex;
   position: fixed;
   right: 0px;
   height: 100%;
-  text-align: center;
+  text-align: -moz-right;
   background-color: #d1a52a;
   color: #4f794d;
+  cursor: pointer;
+  top: 0;
 }
 
-.text-next-page{
+.card-next-page:hover{
+  writing-mode: vertical-rl;
+  display: flex;
+  position: fixed;
+  right: 0px;
+  height: 100%;
+  text-align: -moz-right;
+  background-color: #4f794d;
+  color: #d1a52a;
+  cursor: pointer;
+  top: 0;
+}
+
+.li-next-page{
+  display:block;
+  list-style: none;
+}
+
+.li-back-page{
+  display:none;
+  list-style: none;
+}
+
+.text-NextBackPage{
   right: 0px;
   height: 100%;
   text-align: center;
   background-color: transparent;
+  width: 32px;
+}
+
+.ul-TextNextBackPage{
+display: inline-flex;
+}
+
+.li-TextNextBackPage{
+  list-style: none;
+  display: block;
+}
+
+.link-NextBackPage{
+  cursor: pointer;
+  float: left;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.ImageLeft-NextBackPage{
+  display: block;
+  float: left;
+  width: 15px;
+  padding-bottom: 5px;
+  margin-right: 4px;
+}
+
+.ImageLeft-NextBackPage-OnHover{
+  display: none;
+  float: left;
+  width: 15px;
+  padding-bottom: 5px;
+  margin-right: 4px;
+}
+
+.ImageRight-NextBackPage{
+  display: block;
+  float: right;
+  width: 15px;
+  padding-bottom: 5px;
+  margin-right: 4px;
+  margin-top: 3px;
+}
+
+.ImageRight-NextBackPage-OnHover{
+  display: none;
+  float: right;
+  width: 15px;
+  padding-bottom: 5px;
+  margin-right: 4px;
+  margin-top: 3px;
 }
