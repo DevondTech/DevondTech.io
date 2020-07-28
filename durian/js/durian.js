@@ -1,3 +1,5 @@
+
+
 var renderPage = true;
 $(window).on("load", function(){
   if(renderPage) {
@@ -15,6 +17,22 @@ $(document).ready(function(){
   });
 });
 
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+/*        $('#navbar-page').attr('style','-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3)');
+        $('#navbar-page').attr('style','box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3)');
+        $('#navbar-page').attr('style','width: 100%');*/
+        $('#navbar-page').attr('class','nav-scroll nav-fixed navbar navbar-expand-lg navbar-light ');
+    } else {
+/*        $('#navbar-page').attr('style','-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) ');
+        $('#navbar-page').attr('style','box-shadow: 0 0 0 rgba(0, 0, 0, 0) ');
+        $('#navbar-page').attr('style','width: 100%');*/
+        $('#navbar-page').attr('class','nav-outscroll nav-fixed navbar navbar-expand-lg navbar-light ');
+    }
+}
 $('#openForm').on('click',function(e){
   $('#myForm').attr('style','display:block'); 
   $('#open-chat-modal').attr('style','display:none'); 
