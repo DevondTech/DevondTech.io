@@ -25,6 +25,10 @@
   }
 }*/
 
+.row{
+  margin-right: 0px;
+}
+
 a:hover{
   text-decoration:none;
 }
@@ -67,6 +71,7 @@ a:hover{
   width: 100%;
   background: transparent;
   padding-bottom: 20px;
+  padding-right: 40px;
 }
 
 .nav-fixed{
@@ -124,14 +129,27 @@ a:hover{
   margin-top: -100px;
 }
 
+.img-close-icon-search{
+  margin-left: 4px;
+  width: 20px;
+  cursor: pointer;
+}
+
+@media(max-width: 575px){
+  .div-img-imageTop{
+    display: none;
+  }
+}
+
 .div-img-textTop{
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .ul-medsos-icon-top{
   list-style: none;
   cursor: pointer;
+  margin-left: 15px;
 }
 
 .li-medsos-icon-top{
@@ -167,7 +185,7 @@ a:hover{
 .nav-icon-link-large{
   float: left;
   display: block;
-  margin-right: 30px;
+ /* margin-right: 30px;*/
 }
 
 .ul-icon-link{
@@ -175,7 +193,37 @@ a:hover{
 }
 
 .li-icon-link{
-  float: left
+  float: left;
+  display: block;
+}
+
+.li-icon-link-hidden{
+  display: none;
+}
+
+.li-icon-link-search{
+  float: left;
+  margin-top: 7px;
+  display: block;
+}
+
+.li-icon-link-search-hidden{
+  display: none;
+}
+
+.input-search{
+  border-radius: 5px;
+  color: ;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.input-search-small{
+  border-radius: 5px;
+  color: ;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 150px;
 }
 
 .div-Logo-NavIconlink{
@@ -204,7 +252,7 @@ a:hover{
   .nav-icon-link{
     display: block;
     margin-top: 20px;
-    margin-right: 25px;
+    /*margin-right: 25px;*/
   }
 
   .nav-icon-link-large{
@@ -907,7 +955,19 @@ margin-left: 50px;
   top: 0;
 }
 
-.li-next-page{
+@media(max-width: 575){
+  .card-next-page{
+    padding-right: 15px;
+  }
+}
+
+.li-next-page-scroll{
+  display:block;
+  list-style: none;
+  padding-top: 100px;
+}
+
+.li-next-page-outscroll{
   display:block;
   list-style: none;
 }
