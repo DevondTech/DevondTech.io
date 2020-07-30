@@ -45,7 +45,11 @@
     border-top: 1px solid #53C2BB;
 }
 
-/*card div page*/
+/*card div page, width, height*/
+
+.width-auto{
+    width: auto;
+}
 
 .card-height-500px{
     height: 500px;
@@ -197,6 +201,38 @@ margin-top: 0px;
     width: 40px;
 }
 
+.div-LinkNavPage-position{
+    margin-top:8px;
+}
+
+.a-LinkNavPage-position{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 30px;
+}
+
+.image-LinkNavPage-position{
+    width: 8px;
+    float: left;
+    margin-top: -23px;
+    position: absolute;
+}
+
+.imageRed-LinkNavPage-show{
+    width: 8px;
+    margin-left: 20px;
+    margin-top: -25px;
+}
+
+.imageRed-LinkNavPage-hidden{
+    display: none;
+    width: 8px;
+    margin-left: 20px;
+    margin-top: -25px;
+}
+
 .span-unread{
     background-color: red;
     border-radius: 20px;
@@ -306,6 +342,18 @@ margin-top: 0px;
     float: left;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+
+@media(max-width: 1000px){
+    .card-col-background{
+        width: 100%;
+        display: block;
+        box-sizing: inherit;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 #card-Bacground1{
