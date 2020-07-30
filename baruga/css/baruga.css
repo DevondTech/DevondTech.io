@@ -180,6 +180,18 @@ margin-top: 0px;
     padding-top: 0px;
 }
 
+.imageLogo-nav-page{
+    width: 111px;
+    margin-top: 0px;
+}
+
+@media(max-width: 341px){
+    .imageLogo-nav-page{
+        width: 75px;
+        margin-top: 5px;
+    }
+}
+
 .logoPosition-nav-page{
     float: left
 }
@@ -445,6 +457,12 @@ margin-top: 0px;
 
 .icon-footer-barugasikola{
     width: 40px;
+}
+
+@media(max-width: 341px){
+    .icon-footer-barugasikola{
+        width: 30px;
+    }
 }
 
 .title-footer-text{
