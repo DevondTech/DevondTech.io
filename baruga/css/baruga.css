@@ -1,3 +1,11 @@
+body{
+    font-size: 16px;
+}
+
+a:hover{
+  text-decoration:none;
+}
+
 /*button type*/
 
 .button-blue{
@@ -33,6 +41,38 @@
     cursor: pointer;
 }
 
+.button-blue-model2{
+    background-color: #1F9991;
+    border: 2px solid #fff;
+    color: #fff;
+    height: 45px;
+    width: auto;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.button-blue-model2:hover{
+    background-color: #083532;
+    border: 2px solid #fff;
+    color: #fff;
+    height: 45px;
+    width: auto;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.button-blue-model2:active{
+    background-color: #083532;
+    border: 2px solid #fff;
+    color: #fff;
+    height: 45px;
+    width: auto;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
 /*hr or border*/
 
 .hr-blue{
@@ -57,11 +97,27 @@
 
 /*image*/
 
+.image-full-screen{
+    height: 100vh;
+}
+
 .image-center{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
+
+.image-center90{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.div-image-center{
+    margin: auto;
+    display: table;
 }
 
 .image-header{
@@ -71,6 +127,10 @@
     width: 100%;
     margin-top: -10px;
     padding-bottom: 25px;
+}
+
+.image-backgroundWhite{
+    border-radius: 20px;
 }
 
 @media(max-width: 700px){
@@ -83,6 +143,12 @@
 }
 
 /*title text or text*/
+
+.text-max-width700px{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
 
 .text-black{
     color: black;
@@ -97,8 +163,18 @@
     font-weight: bolder;
 }
 
+.title-size25{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
 .title-size35{
     font-size: 35px;
+    font-weight: bolder;
+}
+
+.text-size18{
+    font-size: 18px;
     font-weight: bolder;
 }
 
@@ -106,9 +182,41 @@
     width: 70%;
 }
 
+@media(max-width: 960px){
+    .title-size35{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    .title-size25{
+        font-size: 23px;
+        font-weight: bolder;
+    }
+}
+
+
+@media(max-width: 960px){
+    .text-size18{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+}
+
+@media(max-width: 840px){
+    .title-size35{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+}
+
 @media(max-width: 548px){
     .title-size35{
         font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .text-size18{
+        font-size: 16px;
         font-weight: bolder;
     }
 }
@@ -133,8 +241,25 @@
     padding-right: 10px;
 }
 
+.padding-Right5{
+    padding-right: 5px;
+}
+
+.padding-Right2{
+    padding-right: 2px;
+}
+
+.padding-LeftRight40{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 .padding-bottom23{
     padding-bottom: 23px;
+}
+
+.padding-bottom50{
+    padding-bottom: 50px;
 }
 
 .padding-bottom100{
@@ -154,6 +279,25 @@
 .padding-TopBottom20{
     padding-bottom: 20px;
     padding-top: 20px;
+}
+
+.padding-top40{
+    padding-top: 40px;
+}
+
+.padding-top60{
+    padding-top: 60px;
+}
+
+
+.margin-top5{
+    margin-top: 5px;
+}
+
+@media(max-width: 767px){
+    .padding-top60{
+        padding-top: 1px;
+    }
 }
 
 /*Nav Page*/
@@ -201,6 +345,28 @@ margin-top: 0px;
     float: right;
 }
 
+.div-link-DropDown{
+    float: right;
+    position: inherit;
+    height: 177px;
+    padding-top: 0px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    padding-bottom: 0px;
+    margin-top: 12px;
+    padding-top: 9px;
+}
+
+.ul-link-DropDown{
+    background-color: white;
+    width: 160px;
+    list-style: none;
+    font-size: 14px;
+    padding-left: 15px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    margin-top: -11px;
+    margin-bottom: -13px;
+}
+
 .ul-link-nav-page{
     list-style: none; 
     cursor: pointer;
@@ -213,12 +379,17 @@ margin-top: 0px;
     width: 40px;
 }
 
+.a-linkMenu-DropDown{
+    background-color: transparent;
+    box-shadow: none;
+}
+
 .div-LinkNavPage-position{
     margin-top:8px;
 }
 
 .a-LinkNavPage-position{
-    width: 60%;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -243,6 +414,50 @@ margin-top: 0px;
     width: 8px;
     margin-left: 20px;
     margin-top: -25px;
+}
+
+.modalNavLink-show{
+    margin-right: 0px;
+    float: right;
+    display: block;
+    padding-right: 190px;
+    margin-top: -30px;
+}
+
+.modalNavLink-hidden{
+    margin-right: 0px;
+    float: right;
+    display: none;
+    padding-right: 190px;
+    margin-top: -30px;
+}
+
+.card-modalNavLink{
+    background-color: white;
+    color: black;
+    width: 200px;
+    box-shadow: 0 1px 18px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-top: 7px;
+    position: fixed;
+    z-index: 1;
+}
+
+.ul-menu-modalNavLink{
+    list-style: none;
+    cursor: pointer;
+    margin-left: -18px;
+    padding-top: 5px;
+}
+
+.li-menu-modalNavLink{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.span-menu-modalNavLink{
+   padding-left: 12px;
 }
 
 .span-unread{
@@ -286,7 +501,8 @@ margin-top: 0px;
 
 .width-UserDataLink-nav-page{
     width: auto;
-    padding-left: 15px;
+    padding-left: 8px;
+    cursor: context-menu;
 }
 
 .name-UserDataLink-nav-page{
@@ -304,6 +520,28 @@ margin-top: 0px;
     .width-UserDataLink-nav-page{
         display: none;
     }
+}
+
+.div-dropdown-menu{
+    padding-top: 13px;
+    padding-bottom: 10px;
+    margin-left: 35px;
+    color: black;
+}
+
+.li-dropdown-menu{
+    margin-left: -25px;
+/*
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: black;*/
+}
+
+.a-dropdown-menu{
+    color: black;
+    width: 160px;
+    margin-left: -27px;
 }
 
 /*content*/
@@ -430,13 +668,19 @@ margin-top: 0px;
 /*footer page*/
 
 .footer-barugasikola{
-    background-color: black;
+    background-color: #333333;
     color: white;
     height: auto;
     margin-top: 110px;
 }
 
 .ul-icon-footer-barugasikola{
+    list-style: none;
+    margin-left: -40px;
+    padding-top: 12px;
+}
+
+.ul-iconMedsos-barugasikola{
     list-style: none;
     margin-left: -40px;
     padding-top: 12px;
@@ -455,6 +699,15 @@ margin-top: 0px;
     cursor: pointer;
 }
 
+.li-iconMedsos-barugasikola{
+    float: left;
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    background-color: #53C2BB;
+    border-radius: 20px;
+}
+
 .icon-footer-barugasikola{
     width: 40px;
 }
@@ -469,3 +722,270 @@ margin-top: 0px;
     font-size: 25px;
 }
 
+/*page e-sikola */
+
+.background-Esikola{
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(7, 76, 85,.8)),to(rgba(7, 76, 85,.8))),url(../images/background-e-sikola.jpg);
+
+    padding-bottom: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100vh;
+}
+
+.div-cardText-topESikola{
+    padding-top: 140px;
+    color: white;
+}
+
+
+#top2-ESikola{
+    display:block;
+}
+
+@media(max-width: 900px){
+    #top2-ESikola{
+        display:none;
+    }
+    .background-Esikola{
+        background: -webkit-gradient(linear,left top,left bottom,from(rgba(7, 76, 85,.8)),to(rgba(7, 76, 85,.8))),url(../images/background-e-sikola.jpg);
+        padding-bottom: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        height: auto;
+        text-align: center;
+    }
+}
+
+@media(max-width: 960px){
+    .div-cardText-topESikola{
+        padding-top: 120px;
+        color: white;
+    }
+}
+
+@media(max-width: 913px){
+    .div-cardText-topESikola{
+        padding-top: 100px;
+        color: white;
+    }
+}
+
+@media(max-width: 860px){
+    .div-cardText-topESikola{
+        padding-top: 80px;
+        color: white;
+    }
+}
+
+/*Create Account*/
+
+/*.background-EsikolaCreateAccount{
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(7, 76, 85,.8)),to(rgba(7, 76, 85,.8))),url(../images/backgroundesikolacreateaccount.jpg);
+    padding-bottom: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 500px;
+    margin-top: 80px;
+}*/
+
+
+/*Welcome*/
+
+.welcome-content-barugasikola{
+    background-color: #dffffc;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title-product{
+  margin: auto;
+  width: 50%;
+/*  padding: 10px;*/
+  text-align: center;
+/*  border-bottom: 2px solid #444343;*/
+  max-width: 260px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+@media(max-width: 754px){
+  .section-slideSmall{
+    border: 2px solid #969494;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-bottom: 50px;
+  }
+
+  .section-text1{
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-bottom: 50px;
+  }
+
+}
+
+.icon-titleWelcome-ESikola{
+    float: left;
+    padding-right: 10px;
+    width: 40px;
+    font-size: 25px;
+}
+
+.textWelcome-ESikola{
+    float: left;
+    width: 200px;
+}
+
+@media(max-width: 960px){
+   .icon-titleWelcome-ESikola{
+        float: left;
+        padding-right: 10px;
+        width: 40px;
+        font-size: 23px;
+    } 
+}
+
+@media(max-width: 767px){
+    .textWelcome-ESikola{
+        float: left;
+        width: 200px;
+    }
+}
+
+@media(max-width: 575px){
+    .textWelcome-ESikola{
+        float: left;
+        width: 280px;
+    }
+}
+
+#welcome-image-barugasikola{
+    display: block;
+}
+
+@media(max-width: 767px){
+    #welcome-image-barugasikola{
+        display: none;
+    }
+}
+
+.section-slideSmall{
+  border: 2px solid #969494;
+  margin-top: 20px;
+  margin-right: 70px;
+  margin-left: 70px;
+  padding-bottom: 50px;
+}
+
+
+.carousel-control-prev{
+  color: #969a9a;
+}
+
+.carousel-control-prev:hover{
+  color: #000;
+}
+
+.carousel-control-prev:active{
+  color: #969a9a;
+}
+
+.carousel-control-next{
+  color: #969a9a;
+}
+
+.carousel-control-next:hover{
+  color: #000;
+}
+
+.carousel-control-next:active{
+  color: #969a9a;
+}
+
+@media(max-width: 754px){
+  .section-slideSmall{
+    border: 2px solid #969494;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-bottom: 50px;
+  }
+
+  .section-text1{
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+    /* show 3 items */
+    .carouselPrograms .carousel-inner .active,
+    .carouselPrograms .carousel-inner .active + .carousel-item,
+    .carouselPrograms .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+
+    .carouselPrograms .carousel-inner .carousel-item-next,
+    .carouselPrograms .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .carouselPrograms .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* left or forward direction */
+    .carouselPrograms .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    .carouselPrograms .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .carouselPrograms .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
