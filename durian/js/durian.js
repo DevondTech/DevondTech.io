@@ -22,10 +22,28 @@ function scrollFunction() {
 /*      $('#navbar-page').attr('style','-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) ');
         $('#navbar-page').attr('style','box-shadow: 0 0 0 rgba(0, 0, 0, 0) ');
         $('#navbar-page').attr('style','width: 100%');*/
-        $('#navbar-page').attr('class','nav-outscroll nav-fixed navbar navbar-expand-lg navbar-light ');
-        $('#next').attr('class','li-next-page-outscroll');
+        $('#navbar-page').attr('class','nav-outscroll2 nav-fixed navbar navbar-expand-lg navbar-light ');
+        $('#next').attr('class','li-next-page-scroll');
     }
 }
+
+/*loading system*/
+// window.onscroll = function() {scrollFunction()};
+// function scrollFunction() {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+/*      $('#navbar-page').attr('style','-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3)');
+        $('#navbar-page').attr('style','box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3)');
+        $('#navbar-page').attr('style','width: 100%');*/
+//         $('#navbar-page').attr('class','nav-scroll nav-fixed navbar navbar-expand-lg navbar-light ');
+//         $('#next').attr('class','li-next-page-scroll');
+//     } else {
+/*      $('#navbar-page').attr('style','-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) ');
+        $('#navbar-page').attr('style','box-shadow: 0 0 0 rgba(0, 0, 0, 0) ');
+        $('#navbar-page').attr('style','width: 100%');*/
+//         $('#navbar-page').attr('class','nav-outscroll nav-fixed navbar navbar-expand-lg navbar-light ');
+//         $('#next').attr('class','li-next-page-outscroll');
+//     }
+// }
 
 /*action click*/
 
@@ -110,6 +128,12 @@ $(document).ready(function(){
   $('#chatSend').on('click',function(e){
     var chatText = $('#chat-text').val(); 
     /*console.log(chatText);*/
-    $('#output-chat').html(chatText);
+    $('#output-chat').text(chatText);
+  });
+
+  $('#chatSend').on('keypress',function(e){
+    var chatText = $('#chat-text').val(); 
+    /*console.log(chatText);*/
+    $('#output-chat').text(chatText);
   });
 });

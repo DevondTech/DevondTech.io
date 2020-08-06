@@ -384,6 +384,7 @@ margin-top: 0px;
     box-shadow: none;
 }
 
+
 .div-LinkNavPage-position{
     margin-top:8px;
 }
@@ -521,6 +522,7 @@ margin-top: 0px;
         display: none;
     }
 }
+
 
 .div-dropdown-menu{
     padding-top: 13px;
@@ -911,6 +913,7 @@ margin-top: 0px;
   color: #969a9a;
 }
 
+
 @media(max-width: 754px){
   .section-slideSmall{
     border: 2px solid #969494;
@@ -926,6 +929,7 @@ margin-top: 0px;
     margin-left: 15px;
     padding-bottom: 50px;
   }
+
 }
 
 @media (min-width: 768px) {

@@ -40,6 +40,19 @@
   border: transparent;
 }
 
+.card-button-sendChat{
+  width: 33px;
+  margin-left: 6px;
+  background-color: transparent;
+}
+
+.card-button-sendChat:hover{
+  width: 33px;
+  margin-left: 6px;
+  border: 1px solid #046730;
+  border-radius: 5px;
+}
+
 .icon-chat{
   width: 100%
 }
@@ -114,6 +127,10 @@
 .input-sendChat{
   padding-left: 7px;
   width: 200px;
+  border-radius: 5px;
+  color: #1e1e1e;
+  font-size: 16px;
+  height: 35px;
 }
 
 .div-button-sendChat{

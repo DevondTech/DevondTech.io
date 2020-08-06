@@ -27,49 +27,39 @@
     <div class="loader-section section-right"></div>
   </div>
   <div class="top-page" id="top-page">
-    <nav id="navbar-page" class="nav-outscroll nav-fixed navbar navbar-expand-lg navbar-light " > 
+    <nav id="navbar-page" class="nav-outscroll nav-fixed navbar navbar-expand-lg navbar-light " style="z-index: 1;"> 
       <div class="div-Logo-NavIconlink">
         <img src="images/logo-king-fruit.png" class="logo-NavIconLink">
       </div>
-      <div class="nav-icon-link" >
+      <div  id="nav-icon-link"  class="nav-icon-link" >
         <ul class="ul-icon-link">
-          <li class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="">
+          <li id="search-input-small" class="li-icon-link-search-hidden" >
+            <input id="input-search-small" type="" name="" class="input-search-small" placeholder="Search...">
+            <img src="images/icon/close.png" id="close-search-small" class="img-close-icon-search" >
+          </li>
+          <li id="search-icon-small" class="li-icon-link">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
               <img src="images/icon/search.png" class="img-icon-top">
             </a>
           </li>
-          <li class="li-icon-link">
+          <li id="buy-icon-small" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" href="">
               <img src="images/icon/buy.png" class="img-icon-top">
             </a>
           </li>
-          <li class="li-icon-link">
+          <li id="nav-icon-small" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" data-toggle="collapse" data-target="#navbarSupportedContent">
               <img src="images/icon/nav.png" class="img-icon-top" >
             </a>
-           <!--  <button class="button-link-nav collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="">
-              <img src="images/icon/nav.png" class="img-NavIconLink"> 
-            </button> -->
           </li>
         </ul>
-      </div>
-      
-   <!--  <a class="navbar-brand text-logo" href="#"><font class="text-logoGreen">Logo</font>|Durian</a> -->
+      </div>      
       <div class="nav-div-link navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-<!--          <li class="nav-item dropdown">
-          <a class="text-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Home
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="">ex</a>
-            <a class="dropdown-item" href="">ex</a>
-          </div>
-        </li> -->
-          <li class="nav-li-link nav-item active">
-            <a class="text-nav" href="#">Home <!-- span class="sr-only">(current)</span> --></a>
+          <li class="nav-li-link nav-item">
+            <a class="text-nav" href="#">Home </a>
           </li>
-          <li class="nav-li-link nav-item active">
+          <li class="nav-li-link nav-item">
             <a class="text-nav" href="#">Healt Facts </a>
           </li>
           <li class="nav-li-link nav-item">
@@ -82,8 +72,12 @@
       </div>
       <div class="nav-icon-link-large">
         <ul class="ul-icon-link">
-          <li class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="https://api.whatsapp.com/send?phone=628994190773">
+          <li id="search-input-large" class="li-icon-link-search-hidden" >
+            <input type="" name="" class="input-search" placeholder="Search...">
+            <img src="images/icon/close.png" id="close-search-large" class="img-close-icon-search" >
+          </li>
+          <li id="search-icon-large" class="li-icon-link">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
               <img src="images/icon/search.png" class="img-icon-top">
             </a>
           </li>
@@ -95,7 +89,6 @@
         </ul>
       </div>
     </nav>
-    <!-- <img class="img-top-page" src="images/ex-bg.jpg"> -->
     <div class="row" style="padding-top: 210px;">
       <div class="col-sm-6">
         <div style="background-color: #cda32b">
@@ -136,7 +129,7 @@
  
   <div class="div-content-page" id="div-content-page">
     <ul>
-      <li id="next" class="li-next-page">
+      <li id="next" class="li-next-page-outscroll">
         <div class="card-next-page" id="next-page">
           <div class="text-NextBackPage">    
             <ul class="ul-TextNextBackPage">
@@ -512,7 +505,7 @@
         </div>
       </div>
       <div>
-        <form id="chatSend" class="form-container">
+        <div id="chatSend" class="form-container">
           <div>
             <div>
             Haloo...
@@ -530,11 +523,15 @@
                 <input placeholder="Ketik........" name="chat" class="input-sendChat" id="chat-text">
               </div>
               <div class="div-button-sendChat">
-                <button id="chatSend2" type="button" class="button-sendChat" ><img src="images/icon/send.png" width="30px;"></button>
+                <a id="chatSend2" type="button" class="button-sendChat" >
+                  <div class="card-button-sendChat">
+                    <img src="images/icon/send.png" width="30px;">
+                  </div>
+                </a>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
