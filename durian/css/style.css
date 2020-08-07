@@ -1,3 +1,29 @@
+.halamanUtama{
+  font-family: "Arial",  sans-serif;
+}
+
+.a-colorWhite{
+  color: #fff;
+}
+
+.a-colorWhite:hover{
+  color: #CEA32B;
+}
+
+.paddingTopBottom10{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.paddingTopBootom35{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.cursorPointer{
+  cursor: pointer;
+}
+
 /*-----------------Image Style-----------------*/
 
 .image-center{
@@ -854,6 +880,7 @@ margin-left: 50px;
   padding-bottom: 5px;
   text-align: center;
 /*  font-weight: bold;*/
+  border-top: 2px solid #969494;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -938,6 +965,14 @@ margin-left: 50px;
   }
 }
 
+.titleFooter{
+  font-size: 25px;
+}
+
+.padding-linkFooter{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 /*-----------------Next Page-----------------*/
 
 .border-title{

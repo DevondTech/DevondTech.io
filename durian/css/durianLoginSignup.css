@@ -1,0 +1,178 @@
+
+
+/*Login System*/
+
+.row-login{
+	margin: auto;
+    padding-top: 15px;
+    height: 100vh;
+    color: #fff;
+}
+
+.row-signup{
+	margin: auto;
+    height: 100vh;
+    color: #fff;
+    padding-top: 0px;
+}
+
+
+.image-leftDuren-login{
+	padding-top: 70px;
+}
+
+.image-leftText-login{
+	padding-top: 30px;
+}
+
+#leftLoginDiv{
+	display: block;
+}
+
+@media(max-width: 992px){
+	#leftLoginImage{
+		display: none;
+	}
+}
+
+.rightLoginDiv{
+	margin: auto;
+}
+
+.titleLogin{
+	font-size: 40px;
+	font-weight: bold;
+	padding-bottom: 40px;
+}
+
+.text-forgot{
+	padding-top: 0px;
+    padding-bottom: 25px;
+    float: right;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+a{
+	color: #fff;
+}
+
+a:hover{
+	color: #CEA32B;
+}
+
+.a-createAccount{
+	padding-top: 30px;
+	margin: auto;
+	display: table;color: #fff
+}
+
+.buttonYellow{
+	background-color: #CEA32B;
+	width: 100%;
+	border: 1px solid #CEA32B;
+	color: #fff;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.buttonYellow:hover{
+	background-color: #82630D;
+	width: 100%;
+	border: 1px solid #82630D;
+	color: #fff;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/*signup form*/
+
+.leftSignupDiv{	
+	display: block;
+	padding-left: 0px;
+	padding-right: 0px;
+	height: auto;
+	font-size: 20px;
+	width: 100%;
+	background: url(../images/ex-bg.jpg);
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-size: auto;
+	padding-bottom: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
+
+.card-LeftSignupDiv{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+
+.rightSignupDiv{
+	display: block;
+	padding-left: 0px;
+	padding-right: 0px;
+	height: auto;
+	font-size: 20px;
+	width: 100%;
+	background: -webkit-gradient(linear,left top,left bottom,from(rgba(19, 55, 20, 0.7)),to(rgba(19, 55, 20, 0.7))),url(../images/duren.jpg);
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-size: auto;
+	padding-bottom: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
+
+#rightSignupDiv{
+	display: block;
+}
+
+.inputDoubleSignup{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 50%;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.inputSingleSignup{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+@media(max-width: 920px){
+	#rightSignupDiv{
+		display: none;
+	}
+}
+
+@media(max-width: 500px){
+	.inputDoubleSignup{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 100%;
+		float: left;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}

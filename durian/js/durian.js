@@ -7,6 +7,7 @@ $(window).on("load", function(){
       $('#product').load("product.html");  
       /*$('#next').load("next-button.html");*/   
   }         
+  window.scrollTo(0, 0); 
 }); 
 
 /*loading system*/

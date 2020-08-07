@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/chat.css?v=1.0.1">
   <link href="scroll/css/style.css?v=1.0.1" rel="stylesheet" />
 </head>
-<body>
+<body class="halamanUtama">
   <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
@@ -628,21 +628,96 @@
   <section id="footer-content">
     <div id="footer">
       <div class="div-footer-content">
-        <div class="footer-content1">
-          <div class="card-footer-content1">
-            Trusted Fruit King Market
+        <div class="paddingTopBootom35 container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="titleFooter paddingTopBottom10">
+                ABOUT US
+              </div>
+              <div class="paddingTopBottom10">
+                <b>Address:</b>
+                <br />
+                Lorem ipsum dolor sit amet consectectur elit ipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum 
+              </div>
+              <div class="paddingTopBottom10">
+                <b>Phone</b>
+                <br />
+                0899-7364-2358
+                <br />
+                0281-836473
+              </div>
+              <div class="paddingTopBottom10">
+                <b>Any Question?</b>
+                <br />
+                Support@gmail.com
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="titleFooter paddingTopBottom10">
+                INFORMATION
+              </div>
+              <div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">About Us</a>
+                </div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">More Search</a>
+                </div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">Blog</a>
+                </div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">Testimonial</a>
+                </div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">Event</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="titleFooter paddingTopBottom10">
+                HELPFUL LINKS
+              </div>
+              <div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">Services</a>
+                </div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">Support</a>
+                </div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">Terms and Condition</a>
+                </div>
+                <div class="padding-linkFooter">
+                <a href="" class="a-colorWhite">Privacy Policy</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="titleFooter paddingTopBottom10">     
+                FOLLOW US
+              </div>
+              <div class="">
+                  <div class="image-small-detailProduct">
+                    <img data-src="images/icon/facebook-2.png" src="images/blank.png" class="lazy imageMedsos-smallCenter-detailProduct">
+                  </div>
+                  <div class="image-small-detailProduct">
+                    <img data-src="images/icon/whatsapp-2.png" src="images/blank.png" class="lazy imageMedsos-smallCenter-detailProduct">
+                  </div>
+                  <div class="image-small-detailProduct">
+                    <img data-src="images/icon/twitter-2.png" src="images/blank.png" class="lazy imageMedsos-smallCenter-detailProduct">
+                  </div>
+                  <div class="image-small-detailProduct">
+                    <img data-src="images/icon/instagram-2.png" src="images/blank.png" class="lazy imageMedsos-smallCenter-detailProduct">
+                  </div>
+                </div>
+              <div>
+                
+              </div>
+            </div>
           </div>
         </div>
-        <div class="card-footer-content2">
-          <div class="footer-content2">
-            <ul class="ul-footer-content2">
-              <li class="li-footer-content2">FAQ</li>
-              <li class="li-footer-content2">Privacy Policy<div class="li-footer-content2-active"></div></li>
-              <li class="li-footer-content2">Buying Guide</li>
-              <li class="li-footer-content2">Payment Comfirmation</li>
-            </ul>
-          </div>
-        </div>
+      
         <div class="footer-content3">
           <div>
             Deployment by: PT DEVOND TEKNOLOGI INDONESIA, Copyright 2020
