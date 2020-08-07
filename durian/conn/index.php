@@ -1,6 +1,6 @@
 <?php
 
-$hostname = "localhost";
+$hostname = "192.168.1.46";
 $username = "root";
 $password = "";
 $database = "db_durian"; 
