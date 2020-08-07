@@ -89,7 +89,6 @@ a:hover{
   background: transparent;
   padding-bottom: 20px;
   padding-right: 40px;
-  font-family: "Aller",  sans-serif;
 }
 
 .nav-outscroll2{
@@ -193,8 +192,6 @@ a:hover{
 
 .text-nav{
   color: white;
-  font-family: "Aller",  sans-serif;
-  font-size: 18px;
 }
 
 .text-nav:hover{
