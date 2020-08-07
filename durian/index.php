@@ -37,13 +37,18 @@
             <input id="input-search-small" type="" name="" class="input-search-small" placeholder="Search...">
             <img src="images/icon/close.png" id="close-search-small" class="img-close-icon-search" >
           </li>
-          <li id="search-icon-small" class="li-icon-link">
+         <!--  <li id="search-icon-small" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" >
               <img src="images/icon/search.png" class="img-icon-top">
             </a>
+          </li> -->
+          <li id="login-icon-small" class="li-icon-link">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="login">
+              <img src="images/icon/user.png" class="img-icon-top">
+            </a>
           </li>
           <li id="buy-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="login">
               <img src="images/icon/buy.png" class="img-icon-top">
             </a>
           </li>
@@ -76,13 +81,18 @@
             <input type="" name="" class="input-search" placeholder="Search...">
             <img src="images/icon/close.png" id="close-search-large" class="img-close-icon-search" >
           </li>
-          <li id="search-icon-large" class="li-icon-link">
+          <!-- <li id="search-icon-large" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" >
               <img src="images/icon/search.png" class="img-icon-top">
             </a>
+          </li> -->
+          <li id="login-icon-large" class="li-icon-link">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="login">
+              <img src="images/icon/user.png" class="img-icon-top">
+            </a>
           </li>
           <li class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="https://api.whatsapp.com/send?phone=628994190773">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="login">
               <img src="images/icon/buy.png" class="img-icon-top">
             </a>
           </li>
