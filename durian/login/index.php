@@ -28,9 +28,9 @@
     <div class="loader-section section-right"></div>
   </div>
   <div class="top-page">
-    <div>
+    <div class="">
       <div class="container">
-        <div class="row-login row">
+        <div class=" row-login row">
           <div id="leftLoginImage" class="col-lg-7 col-md-12 col-sm-12">
             <div>
               <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
@@ -45,24 +45,27 @@
             </div>
           </div>
           <div class="rightLoginDiv col-lg-5 col-md-12 col-sm-12" >
+            <div class="tabletPhone-logoLogin">
+              <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
+            </div>
             <form method="POST" id="login-form">
               <div>
                 <div class="titleLogin">
-                  Silahkan Login 
+                  Halaman Login 
                 </div>
                 <div class="paddingTopBottom10">
                   Username
-                  <input type="text" class="form-control" name="username" id="username" placeholder="Username" >
+                  <input type="text" class="form-control" name="username" id="username" placeholder="Ex : Devond2020" >
                 </div>
                 <div class="paddingTopBottom10">
                   Password
-                  <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="Your Password">
                 </div>
                 <div class="text-forgot" >
                   <a href="" style=""> Forgot Password?</a>
                 </div>
                 <div class="paddingTopBottom10">
-                  <button type="submit" id="btn-login" class="buttonYellow">Login</button>
+                  <button type="button" id="btn-login" class="buttonYellow">Login</button>
                 </div>
               </div>
             </form>
@@ -82,63 +85,11 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js"></script>
+<script type="text/javascript" src="../js/login-signup.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
   });
-</script>
-<script>
-    $('document').ready(function()
-    { 
-
-      $('#btn-login').on('click',function(e){
-        var username = $('#username').val();
-        var password = $('#password').val();
-        if(username == ''){
-          alert('isi dulu usernamenya')
-        }
-        if(password == ''){
-          alert('isi dulu passwordnya')
-        }  
-        if(username != '' && password != ''){
-           var data = $("#login-form").serialize();
-           console.log(data);
-     $.ajax({
-
-       type : 'POST',
-       url  : '../conn/cek-login.php',
-       data : data,
-       beforeSend: function()
-       { 
-        $("#error").fadeOut();
-        $("#btn-login").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
-       }, 
-     
-
-        success :  function(response)
-          {      
-         if(response == "ok"){
-
-          $("#btn-login").html('<img src="https://github.com/maulayyacyber/phantom0308/raw/master/btn-ajax-loader.gif" />   Signing In ...');
-          setTimeout(' window.location.href = "../"; ',400);
-         }
-         else{
-
-          $("#error").fadeIn(1000, function(){   
-
-          $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>   alamat email atau password salah!.</div>');
-               $("#btn-login").html('<span class="glyphicon glyphicon-log-in"></span>   Sign In');
-
-           });
-          }
-         }
-       });
-        return false;
-
-        }      
-      });
-     
-    });
 </script>
 </body>
 </html>

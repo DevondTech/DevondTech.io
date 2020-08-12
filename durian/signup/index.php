@@ -36,15 +36,15 @@
               <div>
                 <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
               </div>
-              <form method="POST" id="login-form">
+              <form method="POST" id="signup-form">
                 <div>
                   <div class="inputDoubleSignup">
-                    First Name
-                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Your First Name" >
+                    Full Name
+                    <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap" placeholder="Ex : Try Wuri Kinanti" >
                   </div>
                   <div class="inputDoubleSignup">
-                    Last Name
-                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Your Last Name" >
+                    Phone Number
+                    <input type="number" class="form-control" name="nomor_hp" id="nomor_hp" placeholder="Ex : 08994190773" >
                   </div>
                   <div class="inputSingleSignup">
                     Username
@@ -56,21 +56,20 @@
                   </div>
                   <div class="inputDoubleSignup">
                     Password
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" >
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Your Password" >
                   </div>
                   <div class="inputDoubleSignup">
                     Repeat Password
-                    <input type="password" name="password_re" id="password_re" class="form-control" placeholder="Password">
+                    <input type="password" name="password_re" id="password_re" class="form-control" placeholder="Repeat Your Password">
                   </div>
-                  <div class="text-forgot" >
-                    <a href="" style=""> Forgot Password?</a>
-                  </div>
-                  <label class="cursorPointer container" >
+                  <div style="float: left">
+                  <label class="text-forgot cursorPointer container" >
                     <input type="checkbox" checked="checked">
                     I agree to the terms and conditions
                   </label>
-                  <div class="paddingTopBottom10">
-                    <button type="submit" id="btn-login" class="buttonYellow">Signup</button>
+                  </div>
+                  <div class="paddingTopBottom10 paddingLeftRight10">
+                    <button type="button" id="btn-signup" class="buttonYellow">Signup</button>
                   </div>
                 </div>
               </form>
@@ -93,83 +92,11 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js"></script>
+<script type="text/javascript" src="../js/login-signup.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
   });
-</script>
-<script>
-    $('document').ready(function()
-    { 
-
-      $('#btn-login').on('click',function(e){
-        var firstName = $('#firstName').val();
-        var lastName = $('#lastName').val();
-        var username = $('#username').val();
-        var email = $('#email').val();
-        var password = $('#password').val();
-        var password_re = $('#password_re').val();
-        
-        if(firstName == ''){
-          alert('Please insert your first name')
-        }  
-        if(lastName == ''){
-          alert('Please insert your last name')
-        }  
-        if(username == ''){
-          alert('Please insert your username')
-        }  
-        if(firstName == ''){
-          alert('Please insert your email')
-        }  
-        if(password == ''){
-          alert('Please insert your password')
-        }  
-        if(password_re == ''){
-          alert('Please insert your password')
-        }  
-        if(password_re != password){
-          alert('Your password not same')
-        }  
-        if(username != '' && password != ''){
-           var data = $("#login-form").serialize();
-           console.log(data);
-        $.ajax({
-
-           type : 'POST',
-           url  : '../conn/cek-login.php',
-           data : data,
-           beforeSend: function()
-           { 
-            $("#error").fadeOut();
-            $("#btn-login").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
-           }, 
-         
-
-            success :  function(response)
-              {      
-             if(response == "ok"){
-
-              $("#btn-login").html('<img src="https://github.com/maulayyacyber/phantom0308/raw/master/btn-ajax-loader.gif" />   Signing In ...');
-              setTimeout(' window.location.href = "../"; ',400);
-             }
-             else{
-
-              $("#error").fadeIn(1000, function(){   
-
-              $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>   alamat email atau password salah!.</div>');
-                   $("#btn-login").html('<span class="glyphicon glyphicon-log-in"></span>   Sign In');
-
-               });
-              }
-            }
-          });
-          return false;
-
-        }      
-      });
-     
-    });
 </script>
 </body>
 </html>

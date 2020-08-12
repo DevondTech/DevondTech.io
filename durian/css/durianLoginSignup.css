@@ -144,11 +144,30 @@
 
 /*Login System*/
 
+.tabletPhone-logoLogin{
+    display: none;
+}
+
+@media(max-width: 992px){
+    .tabletPhone-logoLogin{
+        display: block;
+    }
+}
+
 .row-login{
 	margin: auto;
     padding-top: 15px;
     height: 100vh;
     color: #fff;
+}
+
+@media(max-width: 992px){
+    .row-login{
+        margin: auto;
+        padding-top: 15px;
+        height: 100vh;
+        color: #fff;
+    }
 }
 
 .row-signup{
@@ -187,6 +206,14 @@
 	padding-bottom: 40px;
 }
 
+@media(max-width: 992px){
+    .titleLogin{
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 15px;
+    }
+}
+
 .text-forgot{
 	padding-top: 0px;
     padding-bottom: 25px;
@@ -207,6 +234,14 @@ a:hover{
 	padding-top: 30px;
 	margin: auto;
 	display: table;color: #fff
+}
+
+@media(max-width: 992px){
+    .a-createAccount{
+        padding-top: 15px;
+        margin: auto;
+        display: table;color: #fff
+    }
 }
 
 .buttonYellow{

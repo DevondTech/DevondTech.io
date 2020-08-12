@@ -27,7 +27,7 @@
     <div class="loader-section section-right"></div>
   </div>
   <div class="top-page" id="top-page">
-    <nav id="navbar-page" class="nav-outscroll nav-fixed navbar navbar-expand-lg navbar-light " style="z-index: 1;"> 
+    <nav id="navbar-page" class="nav-outscroll2 nav-fixed navbar navbar-expand-lg navbar-light " style="z-index: 1;"> 
       <div class="div-Logo-NavIconlink">
         <img src="images/logo-king-fruit.png" class="logo-NavIconLink">
       </div>
@@ -99,7 +99,7 @@
         </ul>
       </div>
     </nav>
-    <div class="row" style="padding-top: 210px;">
+    <div class="row-top-displayBlock row" style="">
       <div class="col-sm-6">
         <div style="background-color: #cda32b">
           <div class="card-textTop">
@@ -113,25 +113,26 @@
         </div>
       </div>
       <div class="div-img-imageTop col-sm-6" >
-        <img data-src="images/gambar-duren.png" src="images/blank.png" class="lazy" width="80%" >
+        <img src="images/gambar-duren.png"  class="lazy" width="80%" >
+      </div>
+      <div class="div-img-textTop">
+        <img src="images/icon/text-top.png"   class=" text-durian-top">
       </div>
     </div>
-    <div class="div-img-textTop">
-      <img data-src="images/icon/text-top.png"  src="images/blank.png" class="lazy text-durian-top">
-    </div>
+    
     <div>
       <ul class="ul-medsos-icon-top">
         <li class="li-medsos-hr-top">
           <div class="vl"></div>
         </li>
         <li class="li-medsos-icon-top">
-          <img data-src="images/icon/facebook.png"  src="images/blank.png" class="lazy img-icon-top">
+          <img src="images/icon/facebook.png"   class=" img-icon-top">
         </li>
         <li class="li-medsos-icon-top">
-          <img data-src="images/icon/instagram.png" src="images/blank.png" class="lazy img-icon-top">
+          <img src="images/icon/instagram.png" class=" img-icon-top">
         </li>
         <li class="li-medsos-icon-top">
-          <img data-src="images/icon/whatsapp.png" src="images/blank.png" class="lazy img-icon-top">
+          <img src="images/icon/whatsapp.png" class=" img-icon-top">
         </li>
       </ul>
     </div>
