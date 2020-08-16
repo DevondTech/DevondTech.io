@@ -5,8 +5,9 @@
 </head>
 <body>
 <?php
+/*
+include("../conn/data2/config.php");*/
 
-include("../conn/data2/config.php");
 session_start();
     if(!isset($_SESSION['id_user'])){
   /*  die("

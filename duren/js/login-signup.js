@@ -35,66 +35,68 @@ $('document').ready(function()
       alert('Silahkan centang checkbox')
     }
     else if(username != '' && password != ''){
-       var data = $("#signup-form").serialize();
-       console.log(data);
-    $.ajax({
 
-       type : 'POST',
-       url  : '../conn/data2/user_login.php/?signup',
-       data : data,
-       beforeSend: function()
-       { 
-        $("#error").fadeOut();
-        $("#btn-signup").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
-       }, 
-        success :  function(response)
-        {      
-          if(response == "userCheck"){
-          alert('Email / Username sudah dipakai');
-          $("#btn-signup").html('Signup');
-          $("#btn-signup").attr('class','buttonYellow');
-          $('#username').val('');
-          $('#email').val('');
-          }
-          else{
-            if(response == "Kode3"){
-              alert('Email / Username sudah dipakai');
-              $("#btn-signup").html('Signup');
-              $("#btn-signup").attr('class','buttonYellow');
-              $('#username').val('');
-              $('#email').val('');
+     /* session_start();*/
+      var data = $("#signup-form").serialize();
+      console.log(data);
+      $.ajax({
+
+         type : 'POST',
+         url  : '../conn/data2/user_login.php/?signup',
+         data : data,
+         beforeSend: function()
+         { 
+          $("#error").fadeOut();
+          $("#btn-signup").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
+         }, 
+          success :  function(response)
+          {      
+            if(response == "userCheck"){
+            alert('Email / Username sudah dipakai');
+            $("#btn-signup").html('Signup');
+            $("#btn-signup").attr('class','buttonYellow');
+            $('#username').val('');
+            $('#email').val('');
             }
             else{
-              if(response == "emailCheck"){
-                alert('Ulangi kembali email bukan tipe email');
+              if(response == "Kode3"){
+                alert('Email / Username sudah dipakai');
                 $("#btn-signup").html('Signup');
                 $("#btn-signup").attr('class','buttonYellow');
                 $('#username').val('');
                 $('#email').val('');
               }
               else{
-                if(response == "Success"){
-
+                if(response == "emailCheck"){
+                  alert('Ulangi kembali email bukan tipe email');
                   $("#btn-signup").html('Signup');
-                  alert('Pendaftaran Anda Berhasil');
-                  $('#nama_lengkap').val('');
-                  $('#nomor_hp').val('');
+                  $("#btn-signup").attr('class','buttonYellow');
                   $('#username').val('');
                   $('#email').val('');
-                  $('#password').val('');
-                  $('#password_re').val('');
                 }
                 else{
-                  $("#error").fadeIn(1000, function(){   
-                  $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>   alamat email atau password salah!.</div>');
-                       $("#btn-signup").html('<span class="glyphicon glyphicon-log-in"></span>   Sign Up');
-                  });
+                  if(response == "Success"){
+
+                    $("#btn-signup").html('Signup');
+                    alert('Pendaftaran Anda Berhasil');
+                    $('#nama_lengkap').val('');
+                    $('#nomor_hp').val('');
+                    $('#username').val('');
+                    $('#email').val('');
+                    $('#password').val('');
+                    $('#password_re').val('');
+                  }
+                  else{
+                    $("#error").fadeIn(1000, function(){   
+                    $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>   alamat email atau password salah!.</div>');
+                         $("#btn-signup").html('<span class="glyphicon glyphicon-log-in"></span>   Sign Up');
+                    });
+                  }
                 }
               }
-            }
-          }       
-        }
-      });
+            }       
+          }
+        });
       return false;
     }      
   });

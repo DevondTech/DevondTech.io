@@ -1,6 +1,6 @@
 <?php 
 
-/*    if(isset($_GET['callUserDatas'])){
+    if(isset($_GET['callUserDatas'])){
         session_start();
         require 'config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -14,7 +14,7 @@
 
         $dataUserCallBack = $callUserData;
     }
-*/
+
 
 /*    if(isset($_GET['callUserDatas'])){
         session_start();

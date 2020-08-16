@@ -1,9 +1,10 @@
 $(window).on('load',function(e){
     $("#content-profile").load("profile.php");
-  	/*$.get( "../../../conn/data2/user_data.php/?callUserDatas", function( dataUserCallBack ) {
+  	$.get( "../../../conn/data2/user_data.php/?callUserDatas", function( dataUserCallBack ) {
         var dataUserName = dataUserCallBack;
   		console.log( dataUserName ); 
-    });*/
+    });
+
 });
 
 
@@ -18,6 +19,12 @@ $('#account-edit').on('click',function(e){
 	$("#order-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
+
+	$("#orderCart-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-none menu-waves-block");
 
 	$("#account-edit-link").attr("class","active-menu-right");
 });
@@ -35,6 +42,12 @@ $('#account-edit-link').on('click',function(e){
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 
+	$("#orderCart-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-none menu-waves-block");
+
 	$("#account-edit-link").attr("class","active-menu-right");
 });
 
@@ -50,6 +63,12 @@ $('#account-link').on('click',function(e){
 	$("#order-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
+
+	$("#orderCart-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-none menu-waves-block");
 
 	$("#account-link").attr("class","active-menu-right");
 });
@@ -67,26 +86,14 @@ $('#password-link').on('click',function(e){
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 
+	$("#orderCart-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-none menu-waves-block");
+
 	$("#password-link").attr("class","active-menu-right");
 });
-
-
-
-
-/*if click link*/
-
-$('#order-link').on('click',function(e){
-	$("#content-profile").load("cartData.php");
-
-	$("#account-edit-link").attr("class","menu-waves-block");
-	$("#account-link").attr("class","menu-waves-block");
-	$("#password-link").attr("class","menu-waves-block");
-	$("#notification-link").attr("class","menu-waves-block");
-	$("#logout-link").attr("class","menu-waves-block");
-
-	$("#order-link").attr("class","active-menu-right");
-});
-
 
 
 
@@ -101,8 +108,133 @@ $('#notification-link').on('click',function(e){
 	$("#password-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 
+	$("#orderCart-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-none menu-waves-block");
+
 	$("#notification-link").attr("class","active-menu-right");
 });
 
 
 
+
+
+/*-----------------------------link order all---------------------*/
+
+
+
+/*if click link*/
+
+$('#order-link').on('click',function(e){
+	$("#content-profile").load("cartDataAll.php");
+
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#order-link").attr("class","menu-waves-block");
+	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-block menu-waves-block");
+
+	$("#orderAll-link").attr("class","displayLink-block active-menu-right");
+});
+
+
+
+$('#orderAll-link').on('click',function(e){
+	$("#content-profile").load("cartDataAll.php");
+
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#order-link").attr("class","menu-waves-block");
+	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-block menu-waves-block");
+
+	$("#orderAll-link").attr("class","displayLink-block active-menu-right");
+});
+
+
+
+$('#orderCart-link').on('click',function(e){
+	$("#content-profile").load("cartData.php");
+
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#order-link").attr("class","menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-block menu-waves-block");
+
+	$("#orderCart-link").attr("class","displayLink-block active-menu-right");
+});
+
+
+
+$('#orderProcess-link').on('click',function(e){
+	$("#content-profile").load("cartDataProces.php");
+
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#order-link").attr("class","menu-waves-block");
+	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-block menu-waves-block");
+
+	$("#orderProcess-link").attr("class","displayLink-block active-menu-right");
+});
+
+
+
+$('#orderFinish-link').on('click',function(e){
+	$("#content-profile").load("cartDataFinish.php");
+
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#order-link").attr("class","menu-waves-block");
+	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-block menu-waves-block");
+
+	$("#orderFinish-link").attr("class","displayLink-block active-menu-right");
+});
+
+
+
+$('#orderCancel-link').on('click',function(e){
+	$("#content-profile").load("cartDataCancel.php");
+
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#order-link").attr("class","menu-waves-block");
+	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-block menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-block menu-waves-block");
+
+	$("#orderCancel-link").attr("class","displayLink-block active-menu-right");
+});

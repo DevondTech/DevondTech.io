@@ -1,10 +1,10 @@
 <?php 
-    session_start();
 
+    session_start();
 
     /*Login option action */
 
-    if(isset($_GET['login'])){
+   /* if(isset($_GET['login'])){
         
         require 'config.php'; 
         $json = json_decode(file_get_contents('php://input'), true); 
@@ -39,6 +39,87 @@
         else 
         {
         	echo '{"error":"Wrong username and password"} <br />';
+            echo 'Username : ('. json_encode( $username ) .') <br />';
+            echo 'Password : ('. json_encode( $password ) .') <br />';
+        }
+    }*/
+
+
+    if(isset($_GET['login'])){
+        
+        require 'config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true); 
+        $username = $_POST['username']; 
+        $password = $_POST['password']; 
+        $password = hash('ripemd160', $password);
+        $userData =''; $query = "select * from tb_login_user where username='$username' and password='$password'"; 
+        $result = mysqli_query($db,$query);
+        if(mysqli_num_rows($result)==1)
+        {
+
+
+            $baris= mysqli_fetch_array($result);
+
+            
+            $_SESSION['id_user']= $baris['id_user'];
+            $_SESSION['id_status_user']= $baris['id_status_user'];
+            $_SESSION['username']=$baris['username'];
+            $_SESSION['nama_lengkap']=$baris['nama_lengkap'];
+            $_SESSION['foto']=$baris['foto'];
+            $_SESSION['email']=$baris['email'];
+            
+            $id_status_user =  $baris['id_status_user'];
+            
+            if($id_status_user=='1'){
+                echo "KodeSign1";
+            }
+            if($id_status_user=='5'){
+                echo "KodeSign2";
+            }
+        }
+        else 
+        {
+            echo '{"error":"Wrong username and password"} <br />';
+            echo 'Username : ('. json_encode( $username ) .') <br />';
+            echo 'Password : ('. json_encode( $password ) .') <br />';
+        }
+    }
+
+
+     if(isset($_GET['Datalogin'])){
+        
+        require 'config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true); 
+        $username = $_POST['id_user']; 
+        $password = hash('ripemd160', $password);
+        $userData =''; $query = "select * from tb_login_user where id_user='$id_user'"; 
+        $result = mysqli_query($db,$query);
+        if(mysqli_num_rows($result)==1)
+        {
+
+
+            $baris= mysqli_fetch_array($result);
+
+            
+            $_SESSION['id_user']= $baris['id_user'];
+            $_SESSION['id_status_user']= $baris['id_status_user'];
+            $_SESSION['username']=$baris['username'];
+            $_SESSION['nama_lengkap']=$baris['nama_lengkap'];
+            $_SESSION['foto']=$baris['foto'];
+            $_SESSION['email']=$baris['email'];
+            
+            $id_status_user =  $baris['id_status_user'];
+            
+            if($id_status_user=='1'){
+                echo "KodeSign1";
+            }
+            if($id_status_user=='5'){
+                echo "KodeSign2";
+            }
+        }
+        else 
+        {
+            echo '{"error":"Wrong username and password"} <br />';
             echo 'Username : ('. json_encode( $username ) .') <br />';
             echo 'Password : ('. json_encode( $password ) .') <br />';
         }

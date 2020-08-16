@@ -7,7 +7,7 @@
  <?php
     session_start();
 
-    $id_user = $_SESSION['id_user'];
+    $id_user = $_SESSION['username'];
     var_dump($_SESSION['id_user']);
 
     ?>

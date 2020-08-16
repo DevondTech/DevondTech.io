@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
+    <link rel="icon" href="../../../images/1.jpg" type="image/x-icon" />
     <?php
     session_start();
     if(!isset($_SESSION['id_user'])){
@@ -15,15 +17,15 @@
       }
     $id_user = $_SESSION['id_user'];
 
-    /*echo 'ID User : ';
-    echo $id_user;*/
+    echo 'ID User : ';
+    echo $id_user;
     ?>
 
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <title>King Fruit | User Account</title>
     <!-- Favicon-->
-    <link rel="icon" href="../../../images/1.jpg" type="image/x-icon" />
+    
 
     <!-- description -->
     <meta name="description" content="" />
@@ -120,7 +122,7 @@
     <section>
         <aside id="leftsidebar" class="sidebar">
             <div class="menu padding-menu-right" >
-                <ul class="list" style="margin-top: 20px;">
+                <ul class="list" style="margin-top: 20px;padding-bottom: 40px;">
                     <li class="liListNone" id="userInfoLogin">
                         <ul class="ulLeft-liMenu-UserLogin">
                             <li class="liImageHeader-liMenu-UserLogin"> 
@@ -150,7 +152,7 @@
                         </a>
                     </li>
                     <li class="menu-waves-block" id="password-link" >
-                        <a id="waves-effect-this">
+                        <a id="waves-effect-this" >
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/Password.svg" width="20" height="20">
                             </div>
@@ -163,6 +165,46 @@
                                 <img src="../images/durian/cart.svg" width="20" height="20">
                             </div>
                             <span>Pesanan Saya</span>
+                        </a>
+                    </li>
+                    <li class="displayLink-none menu-waves-block" id="orderAll-link" >
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/link/all.svg" width="20" height="20">
+                            </div>
+                            <span>Semua Pesanan</span>
+                        </a>
+                    </li>
+                    <li class="displayLink-none menu-waves-block" id="orderCart-link">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/link/buy.svg" width="20" height="20">
+                            </div>
+                            <span>Keranjang Saya</span>
+                        </a>
+                    </li>
+                    <li class="displayLink-none menu-waves-block" id="orderProcess-link">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/link/process.svg" width="20" height="20">
+                            </div>
+                            <span>Dalam Proses</span>
+                        </a>
+                    </li>
+                    <li class="displayLink-none menu-waves-block" id="orderFinish-link">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/link/finish.svg" width="20" height="20">
+                            </div>
+                            <span>Pesanan Selesai</span>
+                        </a>
+                    </li>
+                    <li class="displayLink-none menu-waves-block" id="orderCancel-link" >
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/link/cancel.svg" width="20" height="20">
+                            </div>
+                            <span>Pesanan Dibatalkan</span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="notification-link">
