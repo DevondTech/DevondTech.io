@@ -97,10 +97,8 @@
         if(mysqli_num_rows($result)==1)
         {
 
-
             $baris= mysqli_fetch_array($result);
 
-            
             $_SESSION['id_user']= $baris['id_user'];
             $_SESSION['id_status_user']= $baris['id_status_user'];
             $_SESSION['username']=$baris['username'];
@@ -198,6 +196,39 @@
 
     /*Update profile option action*/
 
+
+
+     if(isset($_GET['updataUserProfile'])){
+        require 'config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $nama_lengkapUpdate = $_POST['nama_lengkapUpdate']; 
+        $nomor_hpUpdate = $_POST['nomor_hpUpdate']; 
+        $tanggal_lahirUpdate = $_POST['tanggal_lahirUpdate']; 
+        $id_jenis_kelaminUpdate = $_POST['id_jenis_kelaminUpdate']; 
+        $alamatUpdate = $_POST['alamatUpdate']; 
+        $negaraUpdate = $_POST['negaraUpdate']; 
+        $provinsiUpdate = $_POST['provinsiUpdate']; 
+        $kabupatenUpdate = $_POST['kabupatenUpdate']; 
+        $kotaUpdate = $_POST['kotaUpdate']; 
+        $kode_posUpdate = $_POST['kode_posUpdate']; 
+
+            if($nama_lengkapUpdate!=''){
+                $queryUpdateTBLoginUser = "UPDATE tb_login_user SET nama_lengkap='$nama_lengkapUpdate', nomor_hp='$nomor_hpUpdate' WHERE id_user = $id_user";
+                $db->query($queryUpdateTBLoginUser);
+
+                $queryUpdateTBDataUser = "UPDATE tb_data_user SET id_jenis_kelamin='$id_jenis_kelaminUpdate', tanggal_lahir='$tanggal_lahirUpdate', alamat='$alamatUpdate', negara='$negaraUpdate', provinsi='$provinsiUpdate', kabupaten='$kabupatenUpdate', kota='$kotaUpdate', kode_pos='$kode_posUpdate' WHERE id_user = $id_user";
+                $db->query($queryUpdateTBDataUser);
+
+                echo "updataUserProfile";   
+            }
+            else{
+                echo "erorDATA";
+            }
+        
+    }
+
+    /*
     if(isset($_GET['updataUserProfile'])){
         require 'config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -238,6 +269,6 @@
                 echo "eror404";
             }
         }
-    }
+    }*/
 
 ?>

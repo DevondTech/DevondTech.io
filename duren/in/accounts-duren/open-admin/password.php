@@ -86,7 +86,7 @@
     
 </div>
 
-<script src="../js/action.js"></script>
+<script src="../js/pages/password.js"></script>
 <!-- Scrol -->
 <script src="../css/scroll/js/scroll.js"></script>
 </body>

@@ -7,7 +7,7 @@
         die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     if($_SESSION['id_status_user']!="5"){
-        die("<script language='javascript'>alert('Anda Bukan Andmin / Manager'); document.location='../../../login'</script>");
+        die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     $id_user = $_SESSION['id_user'];
 ?>
@@ -48,7 +48,7 @@
             <div class="col-UserDataEdit-left col-lg-8 col-md-6 col-sm-6">
                 <div>
                     <form method="POST" id="updateDataUser">
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <!-- <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
                                     Username
@@ -57,7 +57,7 @@
                             <div class="card-inputDataUser">
                                 <input type="text" name="usernameUpdate" id="usernameUpdate" class="input-textDataUser" placeholder="Ex : wuri123" >
                             </div>
-                        </div>
+                        </div> -->
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
@@ -68,7 +68,7 @@
                                 <input type="text" name="nama_lengkapUpdate" id="nama_lengkapUpdate" class="input-textDataUser" placeholder="Ex : Tri Wuri Kinanti">
                             </div>
                         </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                       <!--  <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
                                     E-mail
@@ -77,7 +77,7 @@
                             <div class="card-inputDataUser">
                                 <input type="mail" name="emailUpdate" id="emailUpdate" class="input-textDataUser" placeholder="Ex : devondtech@gmail.com">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
@@ -188,9 +188,15 @@
     </div>
     
 </div>
-<script src="../js/action.js"></script>
+<!-- Jquery Js -->
+<script type="text/javascript"  src="../js/jquery.js" ></script>
+<!-- Jquery Ajax Js -->
+<script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
+
 <!-- Scrol -->
 <script src="../css/scroll/js/scroll.js"></script>
+
+<script src="../js/pages/editData.js"></script>
 </body>
 </html>
 

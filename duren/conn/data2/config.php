@@ -14,7 +14,7 @@ if(!$db) {
 	echo "success";
 }*/
 
-/*$_HOST = "localhost";
+/*$_HOST = "194.59.165.58";
 $_USER ="devond_durian";
 $_PASS ="devond@durian";
 $_DBNM="db_durian";

@@ -7,7 +7,7 @@
         die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     if($_SESSION['id_status_user']!="5"){
-        die("<script language='javascript'>alert('Anda Bukan Andmin / Manager'); document.location='../../../login'</script>");
+        die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     $id_user = $_SESSION['id_user'];
 ?>
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="text" name="" class="input-textDataUser-false" placeholder="wuri123" disabled>
+                                <input type="text" name="" style="color: #737373" id="dataUsername" class="input-textDataUser-false"  disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="text" name=""  class="input-textDataUser-false" placeholder="Tri Wuri Kinanti" disabled>
+                                <input type="text" name=""  style="color: #737373" id="dataNamaLengkap" class="input-textDataUser-false" disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="mail" name="" class="input-textDataUser-false" placeholder="devondtech@gmail.com" disabled>
+                                <input type="mail" name="" style="color: #737373" id="dataEmail" class="input-textDataUser-false"  disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -85,7 +85,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="number" name="" class="input-textDataUser-false" placeholder=" 08994190773" disabled>
+                                <input type="number" name="" style="color: #737373" id="dataNomorHP" class="input-textDataUser-false" disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                 <input type="text" name=""  class="input-textDataUser-false" placeholder="Wanita" disabled>
+                                 <input type="text" name=""  style="color: #737373" id="dataJenisKelamin" class="input-textDataUser-false"  disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="text" name=""  class="input-textDataUser-false" placeholder="18 November 1996" disabled>
+                                <input type="date" name="" style="color: #737373" id="dataTanggalLahir" class="input-textDataUser-false"  disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <textarea style="color: #737373" class="input-textDataUser-false" disabled>JL. Jend Sudirman Gang Mawar No 505</textarea>
+                                <textarea style="color: #737373" id="dataAlamat" class="input-textDataUser-false" disabled></textarea>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="text" name=""  class="input-textDataUser-false" placeholder="Indonesia" disabled>
+                                <input type="text" name="" style="color: #737373" id="dataNegara" class="input-textDataUser-false"  disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="text" name=""  class="input-textDataUser-false" placeholder="Jawa Barat" disabled>
+                                <input type="text" name="" style="color: #737373" id="dataProvinsi" class="input-textDataUser-false"  disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="text" name=""  class="input-textDataUser-false" placeholder="Depok" disabled>
+                                <input type="text" name="" style="color: #737373" id="dataKabupaten" class="input-textDataUser-false"  disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -155,7 +155,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false"> 
-                                <input type="text" name=""  class="input-textDataUser-false" placeholder="Depok" disabled>
+                                <input type="text" name="" style="color: #737373" id="dataKota" class="input-textDataUser-false"  disabled>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -165,7 +165,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <input type="number" name=""  class="input-textDataUser-false" placeholder="61523" disabled>
+                                <input type="number" name="" style="color: #737373" id="dataKodePos" class="input-textDataUser-false" disabled>
                             </div>
                         </div>
                         <!-- <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -185,8 +185,14 @@
     </div>
     
 </div>
+<!-- Jquery Js -->
+<script type="text/javascript"  src="../js/jquery.js" ></script>
+<!-- Jquery Ajax Js -->
+<script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 <!-- Scrol -->
 <script src="../css/scroll/js/scroll.js"></script>
+
+<script src="../js/pages/Profile.js"></script>
 </body>
 </html>
 

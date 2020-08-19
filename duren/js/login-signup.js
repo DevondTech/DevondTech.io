@@ -130,7 +130,7 @@ $('document').ready(function()
       success :  function(response)
       {      
        if(response == "KodeSign1"){
-
+     
        $("#btn-login").html('Loading System...');
         window.location.href = "../in/accounts-duren/open-admin/data.php";
        /* window.location.href = "../in/accounts-duren/test-user";*/

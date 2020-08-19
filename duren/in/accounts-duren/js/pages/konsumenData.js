@@ -23,8 +23,20 @@ $(window).on('load',function(e){
 	            $('#nama_lengkap_OnLoginPageHome_Large').text(DataNamaLengkap);
 	            $('#email_OnLoginPageHome_Small').text(DataEmail);
 	            $('#email_OnLoginPageHome_Large').text(DataEmail);
-	            $('#foto_OnLoginPageHome_Small').attr('src', DataFoto);
-	            $('#foto_OnLoginPageHome_Large').attr('src', DataFoto);
+	            var DataFotoNull = '../images/user.png';
+	            var DataFotoNull2 = '../images/user2.png';
+	            if(DataFoto == '' || DataFoto == null){
+	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFotoNull);
+	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFotoNull2);
+	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFotoNull2);
+	            }
+	            else{
+	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFoto);
+	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFoto);	
+	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFoto);
+
+	            }
+	           
 	          /*  $('#foto_OnLoginPageHome_Large').data-src(DataFoto);*/
 	          
 	        }

@@ -1,10 +1,6 @@
 $(window).on('load',function(e){
     $("#content-profile").load("profile.php");
-/*  	$.get( "../../../conn/data2/user_data.php/?callUserDatas", function( dataUserCallBack ) {
-        var dataUserName = dataUserCallBack;
-  		console.log( dataUserName ); 
-    });
-*/
+
 	$.ajax({
      	type: "GET",
      	url: "../../../conn/data2/user_data.php/?callUserDatas",
@@ -23,10 +19,19 @@ $(window).on('load',function(e){
 	            $('#nama_lengkap_OnLoginPageHome_Large').text(DataNamaLengkap);
 	            $('#email_OnLoginPageHome_Small').text(DataEmail);
 	            $('#email_OnLoginPageHome_Large').text(DataEmail);
-	            $('#foto_OnLoginPageHome_Small').attr('src', DataFoto);
-	            $('#foto_OnLoginPageHome_Large').attr('src', DataFoto);
-	          /*  $('#foto_OnLoginPageHome_Large').data-src(DataFoto);*/
-	          
+	            var DataFotoNull = '../images/user.png';
+	            var DataFotoNull2 = '../images/user2.png';
+	            if(DataFoto == '' || DataFoto == null){
+	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFotoNull);
+	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFotoNull2);
+	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFotoNull2);
+	            }
+	            else{
+	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFoto);
+	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFoto);	
+	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFoto);
+
+	            }          
 	        }
 	    });
 });
@@ -40,6 +45,7 @@ $('#account-edit').on('click',function(e){
 	$("#password-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 
 	$("#orderCart-link").attr("class","displayLink-none menu-waves-block");
@@ -52,6 +58,27 @@ $('#account-edit').on('click',function(e){
 });
 
 
+/*if click link*/
+
+$('#create-user-link').on('click',function(e){
+	$("#content-profile").load("createDataUser.php");
+
+	$("#account-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#order-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+
+	$("#orderCart-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderProcess-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderFinish-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderCancel-link").attr("class","displayLink-none menu-waves-block");
+	$("#orderAll-link").attr("class","displayLink-none menu-waves-block");
+
+	$("#create-user-link").attr("class","active-menu-right");
+});
+
 
 /*if click link*/
 
@@ -61,6 +88,7 @@ $('#account-edit-link').on('click',function(e){
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 
@@ -83,6 +111,7 @@ $('#account-link').on('click',function(e){
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 
@@ -105,6 +134,7 @@ $('#password-link').on('click',function(e){
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 
@@ -127,6 +157,7 @@ $('#notification-link').on('click',function(e){
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 
@@ -156,6 +187,7 @@ $('#order-link').on('click',function(e){
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
 	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");
@@ -175,6 +207,7 @@ $('#orderAll-link').on('click',function(e){
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
 	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");
@@ -194,6 +227,7 @@ $('#orderCart-link').on('click',function(e){
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
 	$("#orderAll-link").attr("class","displayLink-block menu-waves-block");
@@ -212,6 +246,7 @@ $('#orderProcess-link').on('click',function(e){
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
@@ -232,6 +267,7 @@ $('#orderFinish-link').on('click',function(e){
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
 	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");
@@ -251,6 +287,7 @@ $('#orderCancel-link').on('click',function(e){
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#order-link").attr("class","menu-waves-block");
 	$("#orderCart-link").attr("class","displayLink-block menu-waves-block");

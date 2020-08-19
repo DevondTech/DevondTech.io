@@ -38,13 +38,15 @@
 					//echo $_SESSION['id_status_user'];
 					
 		            $id_status_user =  $baris['id_status_user'];
-
-					if($id_status_user =='1'){
+		            echo $_SESSION['id_status_user'];
+					if($_SESSION['id_status_user'] =='1'){
 						//echo 'halaman sukses';
+						echo $_SESSION['id_status_user']; 
+						echo "this";
 						header("Location: ../in/accounts-duren/open-admin/data.php");
 						die();
 					}
-					elseif($id_status_user=='5'){
+					elseif($_SESSION['id_status_user']=='5'){
 						header("Location: ../in/accounts-duren/open-konsumen/data.php");
 						die();
 					}

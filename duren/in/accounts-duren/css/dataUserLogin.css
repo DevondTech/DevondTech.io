@@ -6,6 +6,10 @@
 
 /*This Text*/
 
+.text-grey{
+    color: #737373
+}
+
 .textTitleLarge-Black{
 	font-size: 30px;
     font-weight: bold;

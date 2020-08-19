@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- <script type="text/javascript">
-     session_start();
-    if(!isset($_SESSION['id_user'])){
-      alert('Silahkan Login Dahulu');
-      window.location.href = '../../../login';
-      }
-      if($_SESSION['id_status_user']!="5"){
-      
-      alert('Anda Bukan Andmin / Manager');
-         window.location.href ='../../../login';
-      }
-    </script> -->
      <link rel="icon" href="../../../images/1.jpg" type="image/x-icon" />
      <?php
+   
     session_start();
     if(!isset($_SESSION['id_user'])){
     die("
@@ -96,18 +85,18 @@
                 </li>
                 <li class="image-userLogin li-right-menu">
                     <a data-toggle="dropdown" role="button" id="menu-icon-a">
-                        <img src="../images/user.jpg" class="user-img-top-right" />
+                        <img src=""  id="foto_OnLoginPageHome_Large_Down" class="user-img-top-right" />
                     </a>
                     <ul class="liCardMenu-UserLogin dropdown-menu" id="shadow2" style="top: 135px;">
                         <li class="liListNone">
                             <ul class="ulHeader-liMenu-UserLogin">
                                 <li class="liImageHeader-liMenu-UserLogin"> 
-                                    <img width="60px" data-src="../images/user.jpg"  src="../images/blank.jpg" class="lazy center-img-drp-dw"  />
+                                    <img width="60px" data-src="" id="foto_OnLoginPageHome_Large" src="../images/blank.jpg" class="lazy center-img-drp-dw"  />
                                 </li>
                                 <li class="TextHeader-liMenu-UserLogin" >
-                                    <font class="TextHeaderName">Mohamad Eko Prasetyo</font>
+                                    <font class="TextHeaderName"  id="nama_lengkap_OnLoginPageHome_Large"></font>
                                     <br />
-                                    @mail.com
+                                    <div id="email_OnLoginPageHome_Large"></div>
                                 </li>
                             </ul>
                         </li>
@@ -137,12 +126,12 @@
                     <li class="liListNone" id="userInfoLogin">
                         <ul class="ulLeft-liMenu-UserLogin">
                             <li class="liImageHeader-liMenu-UserLogin"> 
-                                <img width="60px" data-src="../images/user.jpg"  src="../images/blank.jpg" class="lazy center-img-drp-dw"  />
+                                <img width="60px" data-src=""  src="../images/blank.jpg" id="foto_OnLoginPageHome_Small" class="lazy center-img-drp-dw"  />
                             </li>
                             <li class="TextLeft-liMenu-UserLogin" >
-                                <font class="TextHeaderName" id="nama_lengkap_OnLoginPageHome">Mohamad Eko Prasetyo</font>
+                                <font class="TextHeaderName" id="nama_lengkap_OnLoginPageHome_Small"></font>
                                 <br />
-                                me.serj.adam@gmail.com
+                                <div id="email_OnLoginPageHome_Small"></div>
                             </li>
                         </ul>
                     </li>
@@ -160,6 +149,14 @@
                                 <img src="../images/durian/user-edit.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Edit Akun</font></span>
+                        </a>
+                    </li>
+                    <li class="menu-waves-block" id="create-user-link">
+                        <a  id="waves-effect-this" >
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/user-edit.svg" width="20" height="20">
+                            </div>
+                            <span id=""><font class="icon-menu-active">Tambah User</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="password-link" >
@@ -261,6 +258,10 @@
     </div>
 </section>
 
+<!-- Jquery Js -->
+<script type="text/javascript"  src="../js/jquery.js" ></script>
+<!-- Jquery Ajax Js -->
+<script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 <!-- Jquery Core Js -->
 <script src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap Core Js -->
@@ -276,7 +277,7 @@
 <!-- Demo Js -->
 <script src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script src="../js/flash.js"></script>
+<script src="../js/pages/adminData.js"></script>
 <!-- Scrol -->
 <script src="../css/scroll/js/scroll.js"></script>
 
