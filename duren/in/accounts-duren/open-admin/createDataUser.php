@@ -113,7 +113,7 @@
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 
 <!-- Scrol -->
-<script src="../css/scroll/js/scroll.js"></script>
+<!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
 <script src="../js/pages/createDataUser.js"></script>
 </body>

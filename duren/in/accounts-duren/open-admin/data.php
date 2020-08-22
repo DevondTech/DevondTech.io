@@ -17,8 +17,8 @@
       }
     $id_user = $_SESSION['id_user'];
 
-    echo 'ID User : ';
-    echo $id_user;
+    /*echo 'ID User : ';
+    echo $id_user;*/
     ?>
    
     <meta charset="UTF-8">
@@ -51,7 +51,7 @@
     <link href="../css/themes/all-themes.css?v=1.1.1" rel="stylesheet" />
     <link href="../css/modif-style.css?v=1.1.1" rel="stylesheet" />
     <link href="../css/flexible.css?v=1.1.1" rel="stylesheet" />
-    <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" />
+    <!-- <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
 </head>
 
 <body class="bd-w">
@@ -85,13 +85,13 @@
                 </li>
                 <li class="image-userLogin li-right-menu">
                     <a data-toggle="dropdown" role="button" id="menu-icon-a">
-                        <img src=""  id="foto_OnLoginPageHome_Large_Down" class="user-img-top-right" />
+                        <img src="../images/blank.jpg"  id="foto_OnLoginPageHome_Large_Down" class="lazy user-img-top-right" />
                     </a>
                     <ul class="liCardMenu-UserLogin dropdown-menu" id="shadow2" style="top: 135px;">
                         <li class="liListNone">
                             <ul class="ulHeader-liMenu-UserLogin">
                                 <li class="liImageHeader-liMenu-UserLogin"> 
-                                    <img width="60px" data-src="" id="foto_OnLoginPageHome_Large" src="../images/blank.jpg" class="lazy center-img-drp-dw"  />
+                                    <img width="60px"  id="foto_OnLoginPageHome_Large" src="../images/blank.jpg" class="lazy center-img-drp-dw"  />
                                 </li>
                                 <li class="TextHeader-liMenu-UserLogin" >
                                     <font class="TextHeaderName"  id="nama_lengkap_OnLoginPageHome_Large"></font>
@@ -126,7 +126,7 @@
                     <li class="liListNone" id="userInfoLogin">
                         <ul class="ulLeft-liMenu-UserLogin">
                             <li class="liImageHeader-liMenu-UserLogin"> 
-                                <img width="60px" data-src=""  src="../images/blank.jpg" id="foto_OnLoginPageHome_Small" class="lazy center-img-drp-dw"  />
+                                <img width="60px" src="../images/blank.jpg" id="foto_OnLoginPageHome_Small" class="center-img-drp-dw"  />
                             </li>
                             <li class="TextLeft-liMenu-UserLogin" >
                                 <font class="TextHeaderName" id="nama_lengkap_OnLoginPageHome_Small"></font>
@@ -164,55 +164,15 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/Password.svg" width="20" height="20">
                             </div>
-                            <span>Ubah Password</span>
+                            <span ><font class="icon-menu-active">Ubah Password</font></span>
                         </a>
                     </li>
-                    <li class="menu-waves-block" id="order-link">
-                        <a  id="waves-effect-this">
+                    <li class="menu-waves-block" id="product-link">
+                        <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
-                                <img src="../images/durian/cart.svg" width="20" height="20">
+                                <img src="../images/durian/user-edit.svg" width="20" height="20">
                             </div>
-                            <span>Pesanan Saya</span>
-                        </a>
-                    </li>
-                    <li class="displayLink-none menu-waves-block" id="orderAll-link" >
-                        <a  id="waves-effect-this">
-                            <div class="icon-menu-img-left">
-                                <img src="../images/durian/link/all.svg" width="20" height="20">
-                            </div>
-                            <span>Semua Pesanan</span>
-                        </a>
-                    </li>
-                    <li class="displayLink-none menu-waves-block" id="orderCart-link">
-                        <a  id="waves-effect-this">
-                            <div class="icon-menu-img-left">
-                                <img src="../images/durian/link/buy.svg" width="20" height="20">
-                            </div>
-                            <span>Keranjang Saya</span>
-                        </a>
-                    </li>
-                    <li class="displayLink-none menu-waves-block" id="orderProcess-link">
-                        <a  id="waves-effect-this">
-                            <div class="icon-menu-img-left">
-                                <img src="../images/durian/link/process.svg" width="20" height="20">
-                            </div>
-                            <span>Dalam Proses</span>
-                        </a>
-                    </li>
-                    <li class="displayLink-none menu-waves-block" id="orderFinish-link">
-                        <a  id="waves-effect-this">
-                            <div class="icon-menu-img-left">
-                                <img src="../images/durian/link/finish.svg" width="20" height="20">
-                            </div>
-                            <span>Pesanan Selesai</span>
-                        </a>
-                    </li>
-                    <li class="displayLink-none menu-waves-block" id="orderCancel-link" >
-                        <a  id="waves-effect-this">
-                            <div class="icon-menu-img-left">
-                                <img src="../images/durian/link/cancel.svg" width="20" height="20">
-                            </div>
-                            <span>Pesanan Dibatalkan</span>
+                            <span id=""><font class="icon-menu-active">Data Produk</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="notification-link">
@@ -220,7 +180,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/notification.svg" width="20" height="20">
                             </div>
-                            <span>notifikasi</span>
+                            <span><font class="icon-menu-active">notifikasi</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="logout-link">
@@ -228,7 +188,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/logout.svg" width="20" height="20">
                             </div>
-                            <span>Logout</span>
+                            <span><font class="icon-menu-active">Logout</font></span>
                         </a>
                     </li>
                     
@@ -263,23 +223,23 @@
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 <!-- Jquery Core Js -->
-<script src="../plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap Core Js -->
-<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.js"></script>
 <!-- Select Plugin Js -->
-<script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+<script type="text/javascript" src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
 <!-- Slimscroll Plugin Js -->
-<script src="../plugins/jquery-slimscroll/jquery.slimscroll.js?v=1.1.1"></script>
+<script type="text/javascript" src="../plugins/jquery-slimscroll/jquery.slimscroll.js?v=1.1.1"></script>
 <!-- Waves Effect Plugin Js -->
-<script src="../plugins/node-waves/waves.js"></script>
+<script type="text/javascript" src="../plugins/node-waves/waves.js"></script>
 <!-- Custom Js -->
-<script src="../js/admin.js"></script>
+<script type="text/javascript" src="../js/admin.js"></script>
 <!-- Demo Js -->
-<script src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script src="../js/pages/adminData.js"></script>
+<script type="text/javascript" src="../js/pages/adminData.js"></script>
 <!-- Scrol -->
-<script src="../css/scroll/js/scroll.js"></script>
+<!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
 </body>
 </html>

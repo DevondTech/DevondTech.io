@@ -51,7 +51,7 @@
     <link href="../css/themes/all-themes.css?v=1.1.1" rel="stylesheet" />
     <link href="../css/modif-style.css?v=1.1.1" rel="stylesheet" />
     <link href="../css/flexible.css?v=1.1.1" rel="stylesheet" />
-    <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" />
+<!--     <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
 </head>
 
 <body class="bd-w">
@@ -91,7 +91,7 @@
                         <li class="liListNone">
                             <ul class="ulHeader-liMenu-UserLogin">
                                 <li class="liImageHeader-liMenu-UserLogin"> 
-                                    <img width="60px" data-src="" id="foto_OnLoginPageHome_Large" src="../images/blank.jpg" class="lazy center-img-drp-dw"  />
+                                    <img width="60px" id="foto_OnLoginPageHome_Large" src="../images/blank.jpg" class="lazy center-img-drp-dw"  />
                                 </li>
                                 <li class="TextHeader-liMenu-UserLogin" >
                                     <font class="TextHeaderName"  id="nama_lengkap_OnLoginPageHome_Large"></font>
@@ -126,7 +126,7 @@
                     <li class="liListNone" id="userInfoLogin">
                         <ul class="ulLeft-liMenu-UserLogin">
                             <li class="liImageHeader-liMenu-UserLogin"> 
-                                <img width="60px" data-src=""  src="../images/blank.jpg" id="foto_OnLoginPageHome_Small" class="lazy center-img-drp-dw"  />
+                                <img width="60px"  src="../images/blank.jpg" id="foto_OnLoginPageHome_Small" class="lazy center-img-drp-dw"  />
                             </li>
                             <li class="TextLeft-liMenu-UserLogin" >
                                 <font class="TextHeaderName" id="nama_lengkap_OnLoginPageHome_Small"></font>
@@ -271,7 +271,7 @@
 <!-- Flash Js -->
 <script src="../js/pages/konsumenData.js"></script>
 <!-- Scrol -->
-<script src="../css/scroll/js/scroll.js"></script>
+<!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
 </body>
 </html>

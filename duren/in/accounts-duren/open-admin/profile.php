@@ -15,6 +15,7 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
 <title>Account</title>
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
+<!-- <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
 </head>
 <body class="bd-w">
 <div>
@@ -29,7 +30,7 @@
             <div class="col-UserDataEdit-right col-lg-4 col-md-6 col-sm-6">
                 <div>
                     <div>
-                        <img width="90%" data-src="../images/user.jpg"  src="../images/blank.jpg" class="lazy center-img-drp-dw2"  />
+                        <img width="90%"  id="fotoOnProfile" class="lazy center-img-drp-dw2"  />
                     </div>
                     <div class="card-buttonSelectPic">
                         <div class="margin-auto">
@@ -190,9 +191,9 @@
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 <!-- Scrol -->
-<script src="../css/scroll/js/scroll.js"></script>
+<!-- <script type="text/javascript" src="../css/scroll/js/scroll.js"></script> -->
 
-<script src="../js/pages/Profile.js"></script>
+<script type="text/javascript" src="../js/pages/Profile.js"></script>
 </body>
 </html>
 

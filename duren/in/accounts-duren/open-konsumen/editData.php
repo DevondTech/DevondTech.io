@@ -29,7 +29,7 @@
             <div class="col-UserDataEdit-right col-lg-4 col-md-6 col-sm-6">
                 <div>
                     <div>
-                        <img width="90%" data-src="../images/user.jpg"  src="../images/blank.jpg" class="lazy center-img-drp-dw2"  />
+                        <img width="90%" src="../images/user.jpg"  class="lazy center-img-drp-dw2"  />
                     </div>
                     <div class="card-buttonSelectPic">
                         <div class="margin-auto">
@@ -194,7 +194,7 @@
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 
 <!-- Scrol -->
-<script src="../css/scroll/js/scroll.js"></script>
+<!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
 <script src="../js/pages/editData.js"></script>
 </body>

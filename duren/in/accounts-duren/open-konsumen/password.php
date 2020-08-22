@@ -88,7 +88,7 @@
 
 <script src="../js/pages/password.js"></script>
 <!-- Scrol -->
-<script src="../css/scroll/js/scroll.js"></script>
+<!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>
 </html>
 
