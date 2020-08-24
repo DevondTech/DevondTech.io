@@ -1,0 +1,449 @@
+.p-bt10px{
+	padding-bottom: 10px; 
+}
+
+.p15px{
+	padding: 15px;
+}
+
+.f-nav-link{
+	color: white;
+}
+
+.t-nav-item{
+	margin-top: -20px;
+}
+
+.a-nav-link{
+	padding-right: 0px;
+}
+
+.img-nav-link{
+	padding-right: 0px;
+    width: 44px;
+}
+
+.navbar-blue {
+  background-color: #53C2BB;
+}
+
+.f-r-dropdownMenu{
+	margin-right: 22px;
+    top: 51px;
+}
+
+.tx-dashboard{
+	font-size: 25px;
+}
+
+.dv-dashboard{
+	margin: auto;
+}
+
+.bg-warapperBlue{
+	background-color: #e9f5f5;
+}
+
+.txt-nav-small{
+	font-size: 10px;
+}
+
+.m-bt2{
+	margin-bottom: 2px;
+}
+
+.dropdown-footer,.dropdown-header{
+	display: block; 
+	font-size: 17px; 
+	padding: .5rem 1rem; 
+	text-align: center; 
+	margin-top: -4px; 
+	background-color: #53c2bb; 
+	color: white;
+}
+
+.dropdown-footer:hover{
+	display: block; 
+	font-size: 17px; 
+	padding: .5rem 1rem; 
+	text-align: center; 
+	margin-top: -4px; 
+	background-color: #dc3545; 
+	color: white;
+}
+
+.logo-top-link{
+	margin: auto;
+    width: fit-content;
+}
+
+.dashboard-img-logo{
+    float: left;
+    margin-right: 10px;
+}
+
+.borderBTM-none{
+	border-bottom: 0px solid #fff;
+}
+
+.bg-infoBlue{
+	background-color: #53C2BB;
+	color: white;
+}
+
+.iconWhite{
+	color: #fff;
+}
+
+.text-blueAdmin{
+	color: #53C2BB;
+}
+
+.nav-link{
+	cursor: pointer;
+}
+
+
+/*------------------- Login Form ------------------------*/ 
+
+.body-backgroundColor{
+	background-color: #e9f5f5;
+	font-family: "Bahnschrift", sans-serif;;
+}
+
+.position-card-formLogin{
+	min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}
+
+.card-formLogin{
+	background-color: #53C2BB;
+    margin: auto;
+    width: 800px;
+    height: 500px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.padding-contentLogin{
+	padding: 20px;
+}
+
+.content-leftLogin{
+	float: left;
+    width: 60%;
+    border-right: 1px solid white;
+    height: 460px;
+}
+
+.content-rightLogin{
+	display: flex;
+    padding-left: 20px;
+    margin-top: 60px;
+}
+
+.text-titleLogin{
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+}
+
+.div-formInputLogin{
+	display: flex;
+    padding-left: 20px;
+    margin-top: 16px;
+    padding-right: 10px;
+}
+
+.div-positionLoginSignUp{
+	float: left;
+	padding-top: 20px; 
+}
+
+.input-textLogin{
+	width: 97%;
+	height: 27px;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-top: 10px;
+	font-size: 14px;
+	border-radius: 5px;
+	border: transparent;
+	color: #423c3c;
+}
+
+.button-LoginSignUP{
+	width: 120px;
+	height: 30px;
+	color: #53C2BB;
+	background-color: white;
+	border: 1px solid #72a09d;
+	margin: 8px;
+	font-size: 15px;
+	font-weight: 600;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.button-LoginSignUP:hover{
+	width: 120px;
+	height: 30px;
+	color: white;
+	background-color: #53C2BB;
+	border: 1px solid white;
+	margin: 8px;
+	font-size: 15px;
+	font-weight: 600;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+/*.button-LoginSignUP:hover{
+	width: 125px;
+    height: 30px;
+    color: white;
+    background-color: #53C2BB;
+    border: 1px solid white;
+    margin: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;	
+    cursor: pointer;
+}*/
+
+.a-hrefForgot{
+	float: right;
+	padding-top: 10px;
+	color: white;
+	padding-right: 5px;
+	font-weight: 500;
+	font-style: italic;
+}
+
+.a-hrefForgot:hover{
+	float: right;
+    padding-top: 10px;
+    color: #2b2727;
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+.button-LoginMedsos{
+    height: 35px;
+    color: white;
+    background-color: #53C2BB;
+    border: 1px solid white;
+    margin: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 265px;
+    margin-top: 25px;
+}
+
+.button2-LoginMedsos{
+	background-color: #415dae;
+	margin-bottom: 5px;
+	margin-top: -15px;
+	height: 40px;
+	padding: 4px;
+	height: 30px;
+	color: white;
+	border-radius: 6px;
+	width: 270px;
+	margin-top: 25px;
+	float: right;
+	cursor: pointer;
+}
+
+.button2-LoginMedsos:hover{
+	background-color: #53C2BB;
+	margin-bottom: 5px;
+	margin-top: -15px;
+	height: 40px;
+	padding: 4px;
+	color: #415dae;
+	height: 30px;
+    border : 1px solid #415dae;
+	border-radius: 6px;
+	width: 270px;
+	margin-top: 25px;
+	float: right;
+	cursor: pointer;
+}
+
+.span-LoginMedsos{
+	font-size: 18px;
+	color: white;
+	padding-left: 10px;
+	top: -9px;
+	position: relative;
+}
+
+.div-button-LoginMedsos{
+	padding-top: 50px;
+    margin-left: 20px;
+    display: inline;
+}
+
+.div-Or{
+	padding-top: 45px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    font-style: italic;
+}
+
+.img-link-login-other{
+	border-right: 1px solid white;
+    top: 1px;
+    position: relative;
+}
+
+.img-centerLogoLogin{
+	margin-left: auto;
+    margin-right: auto;
+    width: 54%;
+    margin-top: 25px;
+}
+
+.img1LogoLogin{
+	width: 250px;
+}
+
+.mtop20Login{
+	margin-top: 40px;
+}
+
+.textCenter{
+	text-align: center;
+}
+
+@media(max-width: 810px){
+
+	.content-leftLogin{
+		float: left;
+	    width: 60%;
+	    border-right: 1px solid white;
+	    height: 460px;
+	    display: none;
+	}
+
+	.button2-LoginMedsos{
+		background-color: #415dae;
+		margin-bottom: 5px;
+		margin-top: -15px;
+		height: 40px;
+		padding: 4px;
+		height: 30px;
+		color: white;
+		border-radius: 6px;
+		width: 270px;
+		margin-top: 25px;
+		float: right;
+		cursor: pointer;
+		margin-left: auto;
+	    margin-right: auto;
+	}
+
+	.button2-LoginMedsos:hover{
+		background-color: #53C2BB;
+		margin-bottom: 5px;
+		margin-top: -15px;
+		height: 40px;
+		padding: 4px;
+		color: #415dae;
+		height: 30px;
+	    border : 1px solid #415dae;
+		border-radius: 6px;
+		width: 270px;
+		margin-top: 25px;
+		float: right;
+		cursor: pointer;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+
+	.button-LoginSignUP{
+		width: 120px;
+		height: 30px;
+		color: #53C2BB;
+		background-color: white;
+		border: 1px solid #72a09d;
+		margin: 1px;
+		font-size: 15px;
+		font-weight: 600;
+		border-radius: 6px;
+		cursor: pointer;
+	}
+
+	.button-LoginSignUP:hover{
+		width: 120px;
+		height: 30px;
+		color: white;
+		background-color: #53C2BB;
+		border: 1px solid white;
+		margin: 1px;
+		font-size: 15px;
+		font-weight: 600;
+		border-radius: 6px;
+		cursor: pointer;
+	}
+	.div-button-LoginMedsos{
+		padding-top: 30px;
+	    display: flex;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-top: -30px;
+	}
+
+	.card-formLogin {
+	    background-color: transparent;
+	    margin: auto;
+	    width: 100%;
+	    height: 50%;
+	    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+	    border: transparent;
+	    border-radius: 15px;
+	}
+
+	.position-card-formLogin {
+	    width: 100%;
+	    min-height: 100vh;
+	    display: flex;
+	    align-items: center;
+	    background-size: cover;
+	}
+
+	.body-backgroundColor{
+		background-color: #53C2BB;
+	}
+
+	.content-rightLogin {
+	    display: flex;
+	    padding-left: 3px;
+	    margin-top: 0px;
+	}
+
+	.div-formInputLogin {
+	    display: flex;
+	    padding-left: 3px;
+	    margin-top: 16px;
+	    padding-right: 10px;
+	}
+
+	.f-right{
+		float: right;
+	}
+
+	.img-link-login-other {
+	    border-right: 1px solid white;
+	    top: 0px;
+	    position: relative;
+	}
+}
