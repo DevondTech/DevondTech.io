@@ -110,8 +110,42 @@ $(document).ready(function(){
             });
 
 
-
-
+            $('#nama_product_ubahSave').on('click',function(e){
+            var PrintDetail_nama_produk = $('#PrintDetail_nama_produk').val();
+            var id_barang_nama_produk = $('#id_barang_nama_produk').val();
+              if(PrintDetail_nama_produk == ''){
+                alert('Silahkan Isi Data Nama Produk')
+              }  
+              else{
+                var data = $("#updateNamaProdukForm").serialize();
+                console.log(data);
+                $.ajax({
+                    type : 'POST',
+                    url  : '../../../conn/data2/product/update_product_data.php/?updateNamaProduct',
+                    data : data,
+                    beforeSend: function()
+                    { 
+                      $("#error").fadeOut();
+                    }, 
+                    success :  function(response)
+                    {
+                      if(response == "Success"){
+                        alert('Ubah data berhasil');
+                        $("#PrintDetail_nama_produk").prop('enable', false);
+                        $("#PrintDetail_nama_produk").prop('disabled', true);
+                        $("#PrintDetail_nama_produk").attr('style','background-color:#f1e8e8;color: #505050;');
+                        $("#nama_product_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+                        $("#nama_product_EditDataDetailProductAdmin").attr('style','display:block;');
+                      }
+                      else{
+                        alert('Ubah data gagal');
+                      }
+                    }    
+                  });
+                  return false;
+                } 
+              });
+  
 
             /*detail1_produk*/
 
@@ -131,7 +165,41 @@ $(document).ready(function(){
                 $("#detail1_produk_EditDataDetailProductAdmin").attr('style','display:block;');
             });
 
-
+            $('#detail1_produk_ubahSave').on('click',function(e){
+            var PrintDetail_detail1_produk = $('#PrintDetail_detail1_produk').val();
+            var id_barang_nama_produk = $('#id_barang_nama_produk').val();
+              if(PrintDetail_detail1_produk == ''){
+                alert('Silahkan Isi Data Nama Produk')
+              }  
+              else{
+                var data = $("#updateDetail1Form").serialize();
+                console.log(data);
+                $.ajax({
+                    type : 'POST',
+                    url  : '../../../conn/data2/product/update_product_data.php/?updateDetail1Form',
+                    data : data,
+                    beforeSend: function()
+                    { 
+                      $("#error").fadeOut();
+                    }, 
+                    success :  function(response)
+                    {
+                      if(response == "Success"){
+                        alert('Ubah data berhasil');
+                        $("#PrintDetail_detail1_produk").prop('enable', false);
+                        $("#PrintDetail_detail1_produk").prop('disabled', true);
+                        $("#PrintDetail_detail1_produk").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
+                        $("#detail1_produk_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+                        $("#detail1_produk_EditDataDetailProductAdmin").attr('style','display:block;');
+                      }
+                      else{
+                        alert('Ubah data gagal');
+                      }
+                    }    
+                  });
+                  return false;
+                } 
+            });
 
 
 
@@ -153,7 +221,41 @@ $(document).ready(function(){
                 $("#detail2_produk_EditDataDetailProductAdmin").attr('style','display:block;');
             });
 
-
+            $('#detail2_produk_ubahSave').on('click',function(e){
+            var PrintDetail_detail2_produk = $('#PrintDetail_detail2_produk').val();
+            var id_barang_nama_produk = $('#id_barang_nama_produk').val();
+              if(PrintDetail_detail2_produk == ''){
+                alert('Silahkan Isi Data Nama Produk')
+              }  
+              else{
+                var data = $("#updateDetail2Form").serialize();
+                console.log(data);
+                $.ajax({
+                    type : 'POST',
+                    url  : '../../../conn/data2/product/update_product_data.php/?updateDetail2Form',
+                    data : data,
+                    beforeSend: function()
+                    { 
+                      $("#error").fadeOut();
+                    }, 
+                    success :  function(response)
+                    {
+                      if(response == "Success"){
+                        alert('Ubah data berhasil');
+                        $("#PrintDetail_detail2_produk").prop('enable', false);
+                        $("#PrintDetail_detail2_produk").prop('disabled', true);
+                        $("#PrintDetail_detail2_produk").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
+                        $("#detail2_produk_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+                        $("#detail2_produk_EditDataDetailProductAdmin").attr('style','display:block;');
+                      }
+                      else{
+                        alert('Ubah data gagal');
+                      }
+                    }    
+                  });
+                  return false;
+                } 
+            });
 
 
 
@@ -197,7 +299,41 @@ $(document).ready(function(){
                 $("#jumlah_stok_EditDataDetailProductAdmin").attr('style','display:block;');
             });
 
-
+            $('#jumlah_stok_ubahSave').on('click',function(e){
+            var PrintDetail_jumlah_stok = $('#PrintDetail_jumlah_stok').val();
+            var id_barang_nama_produk = $('#id_barang_nama_produk').val();
+              if(PrintDetail_jumlah_stok == ''){
+                alert('Silahkan Isi Data Nama Produk')
+              }  
+              else{
+                var data = $("#updateStokForm").serialize();
+                console.log(data);
+                $.ajax({
+                    type : 'POST',
+                    url  : '../../../conn/data2/product/update_product_data.php/?updateStokForm',
+                    data : data,
+                    beforeSend: function()
+                    { 
+                      $("#error").fadeOut();
+                    }, 
+                    success :  function(response)
+                    {
+                      if(response == "Success"){
+                        alert('Ubah data berhasil');
+                        $("#PrintDetail_jumlah_stok").prop('enable', false);
+                        $("#PrintDetail_jumlah_stok").prop('disabled', true);
+                        $("#PrintDetail_jumlah_stok").attr('style','background-color:#f1e8e8;color: #505050;');
+                        $("#jumlah_stok_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+                        $("#jumlah_stok_EditDataDetailProductAdmin").attr('style','display:block;');
+                      }
+                      else{
+                        alert('Ubah data gagal');
+                      }
+                    }    
+                  });
+                  return false;
+                } 
+            });
 
 
 
@@ -239,6 +375,42 @@ $(document).ready(function(){
                 $("#PrintDetail_harga").attr('style','background-color:#f1e8e8;color: #505050;');
                 $("#harga_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
                 $("#harga_EditDataDetailProductAdmin").attr('style','display:block;');
+            });
+
+            $('#harga_ubahSave').on('click',function(e){
+            var PrintDetail_harga = $('#PrintDetail_harga').val();
+            var id_barang_nama_produk = $('#id_barang_nama_produk').val();
+              if(PrintDetail_harga == ''){
+                alert('Silahkan Isi Data Nama Produk')
+              }  
+              else{
+                var data = $("#updateHargaForm").serialize();
+                console.log(data);
+                $.ajax({
+                    type : 'POST',
+                    url  : '../../../conn/data2/product/update_product_data.php/?updateHargaForm',
+                    data : data,
+                    beforeSend: function()
+                    { 
+                      $("#error").fadeOut();
+                    }, 
+                    success :  function(response)
+                    {
+                      if(response == "Success"){
+                        alert('Ubah data berhasil');
+                        $("#PrintDetail_harga").prop('enable', false);
+                        $("#PrintDetail_harga").prop('disabled', true);
+                        $("#PrintDetail_harga").attr('style','background-color:#f1e8e8;color: #505050;');
+                        $("#harga_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+                        $("#harga_EditDataDetailProductAdmin").attr('style','display:block;');
+                      }
+                      else{
+                        alert('Ubah data gagal');
+                      }
+                    }    
+                  });
+                  return false;
+                } 
             });
             
 	    }

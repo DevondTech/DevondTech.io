@@ -449,14 +449,19 @@
         width: 150px;
     }
 
+    .card-textDataProduct{
+        width: 100%;
+        float: left;
+    }
+
     .card-inputDataProduct{
-        width: 80%;
-        float: initial;
+        width: 70%;
+        float: left;
     }
 
     .card-buttonDataProduct{
-        width: 20%;
-        float: initial;
+        width: 30%;
+        float: left;
     }
 
     .card-inputDataProduct-false{

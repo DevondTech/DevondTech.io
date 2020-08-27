@@ -210,7 +210,7 @@
                     <div class="padding-card-textData">
                         <div class="card-textData">
                             <div class="textData">
-                                Gambar Produk
+                                Gambar Profil
                             </div>
                         </div>
                         <div class="card-inputData">

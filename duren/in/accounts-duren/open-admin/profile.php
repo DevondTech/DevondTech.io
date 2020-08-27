@@ -34,7 +34,7 @@
                     </div>
                     <div class="card-buttonSelectPic">
                         <div class="margin-auto">
-                            <button data-toggle="modal"   class="buttonLarge-grey" data-target="#open-updateFoto" id="updateFoto" >Pilih Gambar</button>
+                            <button class="buttonLarge-grey" data-toggle="modal" data-target="#open-updateFoto" id="updateFoto" >Pilih Gambar</button>
                         </div>
                     </div>
                      <div class="">  
@@ -207,7 +207,7 @@
                     <div class="padding-card-textData">
                         <div class="card-textData">
                             <div class="textData">
-                                Gambar Produk
+                                Gambar Profil
                             </div>
                         </div>
                         <div class="card-inputData">

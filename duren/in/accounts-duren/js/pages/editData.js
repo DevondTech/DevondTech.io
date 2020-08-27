@@ -50,8 +50,7 @@ $(document).ready(function () {
 
 
 
-$('document').ready(function()
-{ 
+$('document').ready(function(){ 
   $('#btnUpdateDataUser').on('click',function(e){
 
   var nama_lengkapUpdate = $('#nama_lengkapUpdate').val();
