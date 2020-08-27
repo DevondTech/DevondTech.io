@@ -3473,6 +3473,11 @@ fieldset[disabled] .btn-link:focus {
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-width: 100px;
 }
 .btn-block {
   display: block;

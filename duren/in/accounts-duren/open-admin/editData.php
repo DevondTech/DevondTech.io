@@ -29,11 +29,11 @@
             <div class="col-UserDataEdit-right col-lg-4 col-md-6 col-sm-6">
                 <div>
                     <div>
-                        <img width="90%" src="../images/user.jpg"  class="lazy center-img-drp-dw2"  />
+                        <img id="fotoOnProfile"  class="lazy center-img-drp-dwProfile"  />
                     </div>
                     <div class="card-buttonSelectPic">
                         <div class="margin-auto">
-                            <button class="buttonLarge-grey" >Pilih Gambar</button>
+                            <button data-toggle="modal"   class="buttonLarge-grey" data-target="#open-updateFoto" id="updateFoto"  >Pilih Gambar</button>
                         </div>
                     </div>
                      <div class="">  
@@ -195,8 +195,40 @@
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
-
+<script type="text/javascript" src="../js/pages/updateDataFoto.js"></script>
 <script src="../js/pages/editData.js"></script>
+
+<div id="open-updateFoto" class="modal fade" >
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content w100">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-t20">Update Foto Profile</h4>
+            </div>
+            <div class="modal-body" id="modal-body-pad"  >
+                <form  method="post" action="" enctype="multipart/form-data" id="myform">
+                    <div class="padding-card-textData">
+                        <div class="card-textData">
+                            <div class="textData">
+                                Gambar Produk
+                            </div>
+                        </div>
+                        <div class="card-inputData">
+                            <input  type="file" id="foto" name="foto" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept=".jpg,.png" >
+                        </div>  
+                    </div>
+             
+                    <div class="modal-edit" >
+                        <div class="button-edit">
+                            <button class="button-text-grey" type="button" id="btn-batal-create"  data-dismiss="modal"> KELUAR </button> 
+                            <button class="button-text-green" type="button" id="btnUpdateFoto"  > SIMPAN </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
 

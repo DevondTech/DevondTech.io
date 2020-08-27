@@ -1,22 +1,14 @@
 <?php
-
-     if(isset($_GET['callProductData'])){
+    
+    if(isset($_GET['callProductDataTable'])){
         session_start();
         require 'config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $query = "SELECT * FROM view_data_produk";
-        $result = $db->query($query); 
-        $columns = array(
-            array( 'query' => 'id_produk', 'dt' => 0 ),
-            array( 'query' => 'nama_produk', 'dt' => 1 ),
-            array( 'query' => 'jenis_produk',  'dt' => 2 ),
-            array( 'query' => 'jumlah_stok',      'dt' => 3 ),
-            array( 'query' => 'id_produk',      'dt' => 4 ),
-        );
-
-        $columns = mysqli_fetch_all($result,MYSQLI_ASSOC);
-        $columns=json_encode($columns);
-        echo json_encode($columns);
+        $result = $db->query($query);
+        $callProductDataPrintTable = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $callProductDataPrintTable=json_encode($callProductDataPrintTable);
+        echo json_encode($callProductDataPrintTable);
     }
 
     if(isset($_GET['callIDJenisProduk'])){

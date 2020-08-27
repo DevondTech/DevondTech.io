@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <?php
+   error_reporting(0);
+  ?>
+  <?php
+    session_start();
+    if($_SESSION['id_status_user']=="5"){
+        die("<script language='javascript'> document.location='../in/accounts-duren/open-konsumen/data.php'</script>");
+    }
+    else if($_SESSION['id_status_user']=="1"){
+        die("<script language='javascript'> document.location='../in/accounts-duren/open-admin/data.php'</script>");
+    }
+    else{
+
+    }
+  ?>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -1590,11 +1590,11 @@ margin: 40px auto;
 }
 .user-img-top-right{
 	border-radius: 50%;
-    max-width: 35px;
-    max-height: 35px;
+    width: 35px;
+    height: 35px;
     padding-top: 0px;
     margin-top: 10px;
-
+    object-fit: cover;
 }
 .card20{
 	padding-bottom: 20px;
@@ -1890,7 +1890,24 @@ margin: 40px auto;
 	display: block;
 	margin-right: auto;
 	border-radius: 50%;
-
+	width: 60px;
+	height: 60px;
+}
+.center-img-drp-dwProfileSmall{
+	display: block;
+	margin-right: auto;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+}
+.center-img-drp-dwProfile{
+	display: block;
+	margin: auto;
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
 }
 .center-img-home{
 	display: block;

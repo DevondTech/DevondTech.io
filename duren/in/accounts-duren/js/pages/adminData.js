@@ -67,11 +67,11 @@ $(window).on('load',function(e){
 });
 
 //refresh page on browser resize
-$(window).bind('resize', function(e)
+/*$(window).bind('resize', function(e)
 {
   console.log('window resized..');
   this.location.reload(false); 
-});
+});*/
 
 $('#account-edit').on('click',function(e){
 	$("#content-profile").load("editData.php");

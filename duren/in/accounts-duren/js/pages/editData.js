@@ -12,30 +12,39 @@ $(document).ready(function () {
  			var EditDataNamaLengkap = DataUser[0].nama_lengkap;
  			/*var EditDataEmail = DataUser[0].email;*/
  			var EditDataFoto = DataUser[0].foto;
-            var EditDataNomorHP = DataUser[0].nomor_hp;
-            var EditDataJenisKelamin = DataUser[0].id_jenis_kelamin;
-            var EditDataTanggalLahir = DataUser[0].tanggal_lahir;
-            var EditDataAlamat = DataUser[0].alamat;
-            var EditDataNegara = DataUser[0].negara;
-            var EditDataProvinsi = DataUser[0].provinsi;
-            var EditDataKabupaten = DataUser[0].kabupaten;
-            var EditDataKota = DataUser[0].kota;
-            var EditDataKodePos = DataUser[0].kode_pos;
-            
-            /*$('#usernameUpdate').val(EditDataUserName);*/
-            $('#nama_lengkapUpdate').val(EditDataNamaLengkap);
-            /*$('#emailUpdate').val(EditDataEmail);*/
-            $('#nomor_hpUpdate').val(EditDataNomorHP);
-            $('#id_jenis_kelaminUpdate').val(EditDataJenisKelamin);
-            $('#tanggal_lahirUpdate').val(EditDataTanggalLahir);
-            $('#alamatUpdate').val(EditDataAlamat);
-            $('#negaraUpdate').val(EditDataNegara);
-            $('#provinsiUpdate').val(EditDataProvinsi);
-            $('#kabupatenUpdate').val(EditDataKabupaten);
-            $('#kotaUpdate').val(EditDataKota);
-            $('#kode_posUpdate').val(EditDataKodePos);
+      var EditDataNomorHP = DataUser[0].nomor_hp;
+      var EditDataJenisKelamin = DataUser[0].id_jenis_kelamin;
+      var EditDataTanggalLahir = DataUser[0].tanggal_lahir;
+      var EditDataAlamat = DataUser[0].alamat;
+      var EditDataNegara = DataUser[0].negara;
+      var EditDataProvinsi = DataUser[0].provinsi;
+      var EditDataKabupaten = DataUser[0].kabupaten;
+      var EditDataKota = DataUser[0].kota;
+      var EditDataKodePos = DataUser[0].kode_pos;
+      
+      /*$('#usernameUpdate').val(EditDataUserName);*/
+      $('#nama_lengkapUpdate').val(EditDataNamaLengkap);
+      /*$('#emailUpdate').val(EditDataEmail);*/
+      $('#nomor_hpUpdate').val(EditDataNomorHP);
+      $('#id_jenis_kelaminUpdate').val(EditDataJenisKelamin);
+      $('#tanggal_lahirUpdate').val(EditDataTanggalLahir);
+      $('#alamatUpdate').val(EditDataAlamat);
+      $('#negaraUpdate').val(EditDataNegara);
+      $('#provinsiUpdate').val(EditDataProvinsi);
+      $('#kabupatenUpdate').val(EditDataKabupaten);
+      $('#kotaUpdate').val(EditDataKota);
+      $('#kode_posUpdate').val(EditDataKodePos);
+
+      var DataFotoNull = '../images/userProfile.png';
+      if(EditDataFoto == '' || EditDataFoto == null){
+          $('#fotoOnProfile').attr('src', DataFotoNull);
+
+      }
+      else{
+          $('#fotoOnProfile').attr('src', EditDataFoto);
+      } 
     
-	    }
+	   }
 	});
 });
 

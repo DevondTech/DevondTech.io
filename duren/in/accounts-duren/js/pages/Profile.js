@@ -35,8 +35,7 @@ $(document).ready(function () {
             $('#dataKota').val(DataKota);
             $('#dataKodePos').val(DataKodePos);
     
-            /*if data-src*/
-             console.log(DataFotoNull);
+
             var DataFotoNull = '../images/userProfile.png';
             if(DataFoto == '' || DataFoto == null){
                 $('#fotoOnProfile').attr('src', DataFotoNull);

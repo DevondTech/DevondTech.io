@@ -91,7 +91,7 @@
                         <li class="liListNone">
                             <ul class="ulHeader-liMenu-UserLogin">
                                 <li class="liImageHeader-liMenu-UserLogin"> 
-                                    <img width="60px" id="foto_OnLoginPageHome_Large" src="../images/blank.jpg" class="lazy center-img-drp-dw"  />
+                                    <img width="60px" id="foto_OnLoginPageHome_Large" src="../images/blank.jpg" class="lazy center-img-drp-dwProfileSmall"  />
                                 </li>
                                 <li class="TextHeader-liMenu-UserLogin" >
                                     <font class="TextHeaderName"  id="nama_lengkap_OnLoginPageHome_Large"></font>
@@ -126,7 +126,7 @@
                     <li class="liListNone" id="userInfoLogin">
                         <ul class="ulLeft-liMenu-UserLogin">
                             <li class="liImageHeader-liMenu-UserLogin"> 
-                                <img width="60px"  src="../images/blank.jpg" id="foto_OnLoginPageHome_Small" class="lazy center-img-drp-dw"  />
+                                <img width="60px"  src="../images/blank.jpg" id="foto_OnLoginPageHome_Small" class="lazy center-img-drp-dwProfileSmall"  />
                             </li>
                             <li class="TextLeft-liMenu-UserLogin" >
                                 <font class="TextHeaderName" id="nama_lengkap_OnLoginPageHome_Small"></font>
@@ -154,7 +154,7 @@
                     <li class="menu-waves-block" id="password-link" >
                         <a id="waves-effect-this" >
                             <div class="icon-menu-img-left">
-                                <img src="../images/durian/Password.svg" width="20" height="20">
+                                <img src="../images/durian/password.svg" width="20" height="20">
                             </div>
                             <span>Ubah Password</span>
                         </a>

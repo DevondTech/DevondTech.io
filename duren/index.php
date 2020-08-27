@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <?php
+   error_reporting(0);
+  ?>
+  <?php
+    session_start();
+    if($_SESSION['id_status_user']!="5" ){
+        die("<script language='javascript'> document.location='openUserRoot'</script>");
+    }
+    else if($_SESSION['id_status_user']=="1"){
+        die("<script language='javascript'> document.location='../in/accounts-duren/open-admin/data.php'</script>");
+    }
+    else{
+
+    }
+  ?>
+
+
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,18 +54,13 @@
             <input id="input-search-small" type="" name="" class="input-search-small" placeholder="Search...">
             <img src="images/icon/close.png" id="close-search-small" class="img-close-icon-search" >
           </li>
-         <!--  <li id="search-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
-              <img src="images/icon/search.png" class="img-icon-top">
-            </a>
-          </li> -->
           <li id="login-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="login">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="in/accounts-duren/open-konsumen/data.php">
               <img src="images/icon/user.png" class="img-icon-top">
             </a>
           </li>
           <li id="buy-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="login">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="in/accounts-duren/open-konsumen/data.php">
               <img src="images/icon/buy.png" class="img-icon-top">
             </a>
           </li>
@@ -87,12 +99,12 @@
             </a>
           </li> -->
           <li id="login-icon-large" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="login">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="in/accounts-duren/open-konsumen/data.php">
               <img src="images/icon/user.png" class="img-icon-top">
             </a>
           </li>
           <li class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="login">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="in/accounts-duren/open-konsumen/data.php">
               <img src="images/icon/buy.png" class="img-icon-top">
             </a>
           </li>
@@ -138,257 +150,6 @@
     </div>
   </div>
  
- <!--  <div class="div-content-page" id="div-content-page"> -->
-    <!-- <ul>
-      <li id="next" class="li-next-page-outscroll">
-        <div class="card-next-page" id="next-page">
-          <div class="text-NextBackPage">    
-            <ul class="ul-TextNextBackPage">
-             <li class="li-TextNextBackPage">
-              <a class="link-NextBackPage">
-                <img id="imgNext1" data-src="images/icon/next-page.png" src="images/blank.png" class="lazy ImageLeft-NextBackPage" >
-                <img id="imgNext1Hover" data-src="images/icon/next-page-hover.png" src="images/blank.png" class="lazy ImageLeft-NextBackPage-OnHover" >
-                Next Page
-                <img id="imgNext2" data-src="images/icon/next-page.png" src="images/blank.png" class="lazy ImageRight-NextBackPage" >
-                <img id="imgNext2Hover" data-src="images/icon/next-page-hover.png" src="images/blank.png" class="lazy ImageRight-NextBackPage-OnHover"> 
-              </a> 
-            </li>
-          </ul>
-        </div>
-      </div>
-    </li>
-    <ul>
-      <li id="back" class="li-back-page">
-        <div class="card-next-page" id="back-page">
-          <div class="text-NextBackPage">    
-            <ul class="ul-TextNextBackPage">
-              <li class="li-TextNextBackPage">
-                <a class="link-NextBackPage">
-                  <img id="imgBack1" data-src="images/icon/back-page.png" src="images/blank.png" class="lazy ImageLeft-NextBackPage" >
-                  <img id="imgBack1Hover" data-src="images/icon/back-page-hover.png" src="images/blank.png" class="lazy ImageLeft-NextBackPage-OnHover" >
-                  Back Page
-                  <img id="imgBack2" data-src="images/icon/back-page.png" src="images/blank.png" class="lazy ImageRight-NextBackPage" >
-                  <img id="imgBack2Hover" data-src="images/icon/back-page-hover.png" src="images/blank.png" class="lazy ImageRight-NextBackPage-OnHover" > 
-                </a> 
-              </li>  
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul> -->
-    <!-- <section  id="slide-Small" class="section-slideSmall"  >
-      <div id="slideSmall">
-        <div class="special-text">
-          <div class="container-fluid">
-            <div id="carouselSmall" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">
-              <div class="carousel-inner row w80 mx-auto" role="listbox">
-                <div class="carousel-item col-md-4  active">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 1" class="thumb">
-                        <div>
-                          <div>
-                            <img  width="100%" data-src="images/bawor.jpeg" src="images/blank.png" class="lazy ">
-                          </div>
-                          <div class="text-slide-bold">
-                            DURIAN BAWOR
-                          </div>
-                          <div class="text-slide-regular">
-                            Premium Quality
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 3" class="thumb">
-                        <div>
-                          <div>
-                            <img  width="100%" data-src="images/bawor.jpeg" src="images/blank.png" class="lazy ">
-                          </div>
-                          <div class="text-slide-bold">
-                            DURIAN BAWOR
-                          </div>
-                          <div class="text-slide-regular">
-                            Premium Quality
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 3" class="thumb">
-                        <div>
-                          <div>
-                            <img  width="100%" data-src="images/bawor.jpeg" src="images/blank.png" class="lazy ">
-                          </div>
-                          <div class="text-slide-bold">
-                            DURIAN BAWOR
-                          </div>
-                          <div class="text-slide-regular">
-                            Premium Quality
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 3" class="thumb">
-                        <div>
-                          <div>
-                            <img  width="100%" data-src="images/bawor.jpeg" src="images/blank.png" class="lazy ">
-                          </div>
-                          <div class="text-slide-bold">
-                            DURIAN BAWOR
-                          </div>
-                          <div class="text-slide-regular">
-                            Premium Quality
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 3" class="thumb">
-                        <div>
-                          <div>
-                            <img  width="100%" data-src="images/bawor.jpeg" src="images/blank.png" class="lazy ">
-                          </div>
-                          <div class="text-slide-bold">
-                            DURIAN BAWOR
-                          </div>
-                          <div class="text-slide-regular">
-                            Premium Quality
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 3" class="thumb">
-                        <div>
-                          <div>
-                            <img  width="100%" data-src="images/bawor.jpeg" src="images/blank.png" class="lazy ">
-                          </div>
-                          <div class="text-slide-bold">
-                            DURIAN BAWOR
-                          </div>
-                          <div class="text-slide-regular">
-                            Premium Quality
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 3" class="thumb">
-                        <div>
-                          <div>
-                            <img  width="100%" data-src="images/bawor.jpeg" src="images/blank.png" class="lazy ">
-                          </div>
-                          <div class="text-slide-bold">
-                            DURIAN BAWOR
-                          </div>
-                          <div class="text-slide-regular">
-                            Premium Quality
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 3" class="thumb">
-                        <div>
-                          <div>
-                            <img  width="100%" data-src="images/bawor.jpeg" src="images/blank.png" class="lazy ">
-                          </div>
-                          <div class="text-slide-bold">
-                            DURIAN BAWOR
-                          </div>
-                          <div class="text-slide-regular">
-                            Premium Quality
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev " href="#carouselSmall" role="button" data-slide="prev" >
-                <div>
-                  <i class="fa fa-chevron-left fa-3x"> </i>
-                </div> 
-              </a>
-              <a class="carousel-control-next " href="#carouselSmall" role="button" data-slide="next" >
-                <div>
-                  <i class="fa fa-chevron-right fa-3x"> </i>
-                </div> 
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="" id="text1Content">
-      <div id="text1">
-        <div class="section-text1 row">
-          <div class="col-text1 col-md-4 ">
-            <div class="div-card-text1 ">
-              <div class="content-text1">
-                Lorem ipsum dolor?
-                <br />  
-                Lorem ipsum dolor sit amet
-                consectectur elit  
-              </div>
-            </div> 
-          </div>
-          <div class="col-text1 col-md-4 ">
-            <div class="div-card-text1 "> 
-              <div class="content-text1">
-                Lorem ipsum dolor?
-                <br />  
-                Lorem ipsum dolor sit amet
-                consectectur elit  
-              </div>
-            </div> 
-          </div>
-          <div class="col-text1 col-md-4 ">
-            <div class="div-card-text1 ">
-              <div class="content-text1">
-                Lorem ipsum dolor?
-                <br />  
-                Lorem ipsum dolor sit amet
-                consectectur elit
-              </div>  
-            </div> 
-          </div>
-        </div>
-      </div>
-    </section> -->
-   <!--  <section id="product-content">
-      <div id="product"></div>
-    </section> -->
     <section id="detail-product-content">
       <div id="detail-product" class="detail-product">
         <div class="container">
@@ -411,9 +172,9 @@
                   <div class="image-small-detailProduct">
                     <img data-src="images/detail-bawor.png" src="images/blank.png" class="lazy image-smallCenter-detailProduct">
                   </div>
-                  <div class="image-small-detailProduct">
+                 <!--  <div class="image-small-detailProduct">
                     <img data-src="images/detail-bawor.png" src="images/blank.png" class="lazy image-smallCenter-detailProduct">
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <div>

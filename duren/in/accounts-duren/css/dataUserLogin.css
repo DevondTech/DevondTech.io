@@ -184,6 +184,16 @@
     border-radius: 50%;
     margin: auto;
     width: 250px;
+    height: 250px;
+}
+
+.centerImgProfile{
+    display: block;
+    margin-right: auto;
+    border-radius: 50%;
+    margin: auto;
+    width: 250px;
+    height: 250px;
 }
 
 .card-buttonSelectPic{
@@ -300,3 +310,310 @@
     padding-top: 5px;
     margin-left: -5px;
 }   
+
+.li-buttonGreen{
+    float: left;
+    padding-right: 25px;
+    list-style: none;
+    padding-bottom: 12px;
+}
+
+.ul-buttonGreen{
+    padding-bottom: 20px;
+    margin-left: -40px;
+}
+
+.table-tdYellowHeader{
+    text-align: center; 
+    font-size: 18px; 
+    font-weight: bolder;
+    background-color: rgb(195, 223, 0);
+}
+
+/*------------------------------------*/
+              /*Product*/
+/*--------------------------------------*/
+
+.PaddingProduct20TopBotom{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.col-divProfileProduct{
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+}
+
+.card-textDataProduct{
+    width: 20%;
+    float: left;
+}
+
+.card-inputDataProduct{
+    width: 50%;
+    float: left;
+}
+
+.card-buttonDataProduct{
+    width: 20%;
+    float: left;
+}
+
+.card-inputDataProduct-false{
+    width: 50%;
+    float: left;
+    border-bottom: 1px solid #969191;
+}
+
+.textDataProduct{
+    text-align: end;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.input-textDataProduct{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #969191;
+    border-radius: 3px;
+}
+
+.input-textDataProduct-false{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.input-textDataProduct-false:hover{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    border-radius: 3px;
+}
+
+.Card-inputDataProduct-paddingTopBottom20px{
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.col-ProductDataEdit-left{
+    float: left;
+}
+
+.col-ProductDataEdit-right{
+    float: right;
+}
+
+
+
+@media(max-width: 870px){
+    .PaddingProduct20TopBotom{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+
+    .col-divProfileProduct{
+        padding-top: 40px;
+        padding-left: 10px;
+    }
+
+    .input-textDataProduct{
+        width: 100%;
+        height: 30px;
+        color: #000;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: 1px solid #969191;
+        border-radius: 3px;
+    }
+
+    .textDataProduct{
+        float: left;
+        text-align: initial;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 150px;
+    }
+
+    .card-inputDataProduct{
+        width: 80%;
+        float: initial;
+    }
+
+    .card-buttonDataProduct{
+        width: 20%;
+        float: initial;
+    }
+
+    .card-inputDataProduct-false{
+        width: 100%;
+        float: initial;
+        border-bottom: 1px solid #969191;
+    }
+
+    .Card-inputDataProduct-paddingTopBottom20px{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .col-divProfileProduct{
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .col-ProductDataEdit-left{
+        float: initial;
+        width: 100%;
+    }
+
+    .col-ProductDataEdit-right{
+        float: initial;
+        width: 100%;
+    }
+}
+
+.imgDetailProductAdmin{
+    width: 100%;
+    border: 3px solid #b9b9b9;
+    border-radius: 5px;
+}
+
+.divParent-inputDetailProductAdmin{
+    padding-top: 0px;
+    padding-bottom: 100px;
+}
+
+.div-imgDetailProductAdmin{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.divPosition-imgDetailProductAdmin{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.divParent-imgDetailProductAdmin{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.button-OpenModalDetailProductAdmin{
+    background-color: #2d472d;
+    color: white;
+    border: 1px solid #2d472d;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.button-OpenModalDetailProductAdmin:hover{
+    background-color: white;
+    color: #2d472d;
+    border: 1px solid #2d472d;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.divPosition-button-OpenModalDetailProductAdmin{
+    padding-top: 10px;
+}
+
+.div-button-EditDataDetailProductAdmin{
+    padding-left: 6px;
+    padding-right: 4px;
+}
+
+.div-imageSaveCancel30{
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#nama_product_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#detail1_produk_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#detail2_produk_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#jenis_produk_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#jumlah_stok_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#satuan_produk_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#harga_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+.buttonTypeDiv-Save{
+    background-color: #2d472d;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.buttonTypeDiv-Cancel{
+    background-color: #d62f2f;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.buttonTypeDiv-Save:hover{
+    background-color: #1d271d;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.buttonTypeDiv-Cancel:hover{
+    background-color: #8e0303;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.img-buttonTypeDiv{
+    height: 27px;
+    width: 27px;
+    margin: auto;
+    display: block;
+    padding-top: 2px;
+}
