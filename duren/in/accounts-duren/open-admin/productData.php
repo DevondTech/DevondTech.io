@@ -37,34 +37,37 @@
                 </li>
             </ul>
         </div>
-    <div id="" style="margin-left: 0px;margin-right: 0px; width: 100%;">
-        <div style="overflow-x: auto;">
-            <div style="margin-left: 25px;">
-                <table style="width: 100%;" border=1px; class="table table-bordered" id="dataProduk">
-                    <thead>
-                        <tr>
-                            <td class="table-tdYellowHeader">
-                                Nomor
-                            </td>
-                            <td class="table-tdYellowHeader">
-                                Nama Produk
-                            </td>
-                            <td class="table-tdYellowHeader">
-                                Jenis Produk
-                            </td>
-                            <td class="table-tdYellowHeader">
-                                Stok
-                            </td>
-                            <td class="table-tdYellowHeader">
-                                Aksi
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+        <div id="" style="margin-left: 0px;margin-right: 0px; width: 100%;">
+            <div style="overflow-x: auto;">
+                <div style="margin-left: 25px;">
+                    <table style="width: 100%;" border=1px; class="table table-bordered" id="dataProduk">
+                        <thead>
+                            <tr>
+                                <td class="table-tdYellowHeader">
+                                    Nomor
+                                </td>
+                                <td class="table-tdYellowHeader">
+                                    Nama Produk
+                                </td>
+                                <td class="table-tdYellowHeader">
+                                    Jenis Produk
+                                </td>
+                                <td class="table-tdYellowHeader">
+                                    Stok
+                                </td>
+                                <td class="table-tdYellowHeader">
+                                    Satuan
+                                </td>
+                                <td class="table-tdYellowHeader">
+                                    Aksi
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </div>
 <!-- Jquery Js -->

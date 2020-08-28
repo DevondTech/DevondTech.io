@@ -491,10 +491,112 @@
     }
 }
 
+.Card-imgDetailProductAdmin{
+    height: 155px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
 .imgDetailProductAdmin{
     width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline-flex;
+    height: 155px;
     border: 3px solid #b9b9b9;
     border-radius: 5px;
+}
+
+.divPosition-button-OpenModalDetailProductAdmin{
+    padding-top: 10px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+@media(max-width: 991px){
+
+    .Card-imgDetailProductAdmin{
+        height: auto;
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    .imgDetailProductAdmin{
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-flex;
+        height: auto;
+        border: 3px solid #b9b9b9;
+        border-radius: 5px;
+    }
+
+    .divPosition-button-OpenModalDetailProductAdmin{
+        padding-top: 10px;
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+}
+
+@media(max-width: 888px){
+
+    .Card-imgDetailProductAdmin{
+        height: auto;
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+
+    .imgDetailProductAdmin{
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-flex;
+        height: auto;
+        border: 3px solid #b9b9b9;
+        border-radius: 5px;
+    }
+
+    .divPosition-button-OpenModalDetailProductAdmin{
+        padding-top: 10px;
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+
+}
+
+@media(max-width: 500px){
+
+    .Card-imgDetailProductAdmin{
+        height: auto;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .imgDetailProductAdmin{
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-flex;
+        height: auto;
+        border: 3px solid #b9b9b9;
+        border-radius: 5px;
+    }
+
+    .divPosition-button-OpenModalDetailProductAdmin{
+        padding-top: 10px;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
 }
 
 .divParent-inputDetailProductAdmin{
@@ -542,10 +644,6 @@
     border-radius: 3px;
 }
 
-.divPosition-button-OpenModalDetailProductAdmin{
-    padding-top: 10px;
-}
-
 .div-button-EditDataDetailProductAdmin{
     padding-left: 6px;
     padding-right: 4px;
@@ -584,6 +682,22 @@
 }
 
 #harga_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#createDataUserSlide{
+    display:none;
+}
+
+.createDataUserSlide{
+    padding-bottom: 50px;
+}
+
+.disBlock{
+    display: block;
+}
+
+.disNone{
     display: none;
 }
 
