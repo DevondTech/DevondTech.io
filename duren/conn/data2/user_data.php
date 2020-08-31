@@ -38,7 +38,6 @@
         echo json_encode($callIDStatusUser);
     }
 
-
     if(isset($_GET['createDataUser'])){
         require 'config.php';
         $json = json_decode(file_get_contents('php://input'), true);
@@ -60,7 +59,7 @@
         else{
             if(strlen(trim($email))>0 && $email_check>0 ){
                 $userData = '';
-                $resultLastID = $db->query("select max(id_user) as last_data FROM tb_login_user");
+                $resultLastID = $db->query("select max(id_data_user) as last_data FROM tb_data_user");
                 $userDataLastID = $resultLastID->fetch_object();
                 $id_userLast=$userDataLastID->last_data;
                 $id_userLastPut = $id_userLast + 1;

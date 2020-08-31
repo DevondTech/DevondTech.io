@@ -140,7 +140,7 @@ $('document').ready(function()
           if(response == "KodeSign2"){
 
           $("#btn-login").html('Loading System...');
-            window.location.href = "../in/accounts-duren/open-konsumen/data.php";
+            window.location.href = "../";
           /*window.location.href = "../in/accounts-duren/test-admin";*/
             /*window.location.href = "../test/";*/
           }

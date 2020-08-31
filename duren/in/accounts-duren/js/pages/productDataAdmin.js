@@ -1,50 +1,6 @@
 
 $(document).ready(function(){
-  /*$.ajax({
-    type: "POST",
-    url: "../../../conn/data2/product_data.php/?callProductDataTable",
-    contentType: 'application/json; charset=utf-8',
-    dataType: 'json',
-    success: function(callProductDataPrintTable) { 
-      var callProductDataPrintTable = jQuery.parseJSON(callProductDataPrintTable);
-
-      console.log(callProductDataPrintTable);
-      var table = $('#dataProduk').DataTable({ 
-      "data" : callProductDataPrintTable,
-      "columns" : [
-        {
-          "data" : "id_produk"
-        },
-        {
-          "data" : "nama_produk"
-        },
-        {
-          "data" : "jenis_produk"
-        },
-        {
-          "data" : "jumlah_stok"
-        },
-        {
-          "data" : "id_produk"
-        },
-        ]
-      
-      });
-      table.on( 'order.dt search.dt', function () {
-            table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-                cell.innerHTML = i+1;
-            } );
-      }).draw();
-
-      $('#check').on('click',function(e){
-        table.ajax.reload();
-      });
-    }
-  });
-  */
   
-
-
     var table = $('#dataProduk').DataTable({ 
       "searchable": false,
       "orderable": false,
@@ -55,7 +11,7 @@ $(document).ready(function(){
        "orderable": false,
        "targets": -1,
        "data": null,
-       "defaultContent": "<center><button class='btn btn-success btn-xs tblDetail' style='margin-bottom: 10px;' type='submit' >Detail Data</button><form method='POST'>  <button id='HapusData' class='btn btn-danger btn-xs hapus-data'>Hapus Data</button></form></center>"
+       "defaultContent": "<center><button class='buttonDetail-Table tblDetail' style='margin-bottom: 10px;' type='submit' >Detail Data</button><form method='POST'>  <button id='HapusData' class='buttonDelete-Table hapus-data'>Hapus Data</button></form></center>"
     },
     {
       "order": [[ 2, "asc" ]],
@@ -103,6 +59,13 @@ $(document).ready(function(){
     });
   });
 
+  $('#btnCancelCreatedDataProduct').on('click', function(e){
+    $('#nama_produk').val('');
+    $('#detail1_produk').val('');
+    $('#detail2_produk').val('');
+    $('#jumlah_stok').val('');
+  });
+  
   $('#btnCreatedDataProduct').on('click',function(e){
     var nama_produk = $('#nama_produk').val();
     var id_jenis_produk = $('#id_jenis_produk').val();
@@ -149,7 +112,6 @@ $(document).ready(function(){
               });
             }*/  
           { 
-            
             $("#btnCreatedDataProduct").html('SIMPAN');
             alert('Data Berhasil Disimpan');
             $('#nama_produk').val('');

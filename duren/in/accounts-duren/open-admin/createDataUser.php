@@ -101,26 +101,10 @@
                                 <div class="card-inputDataUser">
                                     <ul class="ul-buttonGreen" style="margin: auto;float: left;padding-left: 0px;    padding-bottom: 0px;">
                                         <li class="li-buttonGreen">  
-                                            <button class="buttonMiddle-green" type="button" id="btnCancelCreateDataUserSlide" style="width: 109px;
-    max-width: 180px;
-    height: 40px;
-    font-size: 16px;
-    color: white;
-    background-color: #fb483a;
-    border-style: none;
-    border-radius: 5px;
-    border: 1px solid #fb483a;">BATAL</button>
+                                            <button class="buttonCancelCreate" type="button" id="btnCancelCreateDataUserSlide" >BATAL</button>
                                         </li>
                                         <li class="li-buttonGreen">  
-                                            <button class="buttonMiddle-green" type="button" id="btn-create-user" style="width: 109px;
-    max-width: 180px;
-    height: 40px;
-    font-size: 16px;
-    color: white;
-    background-color: #2d472c;
-    border-style: none;
-    border-radius: 5px;
-    border: 1px solid #2d472c;" >SIMPAN</button>
+                                            <button class="buttonSaveCreate" type="button" id="btn-create-user"  >SIMPAN</button>
                                         </li>
                                     </ul>
                                 </div>
@@ -138,10 +122,10 @@
             </div>
         </div>
         <br />
-        <div  id="btnCreateDataUserSlide">
+        <div  id="btnCreateDataUserSlide" class="NewDataUser">
             <ul class="ul-buttonGreen">
                 <li class="li-buttonGreen">
-                    <a  data-toggle="modal" data-target="#open-dataProduct" id="createNewDataProduct" >
+                    <a  data-toggle="modal" data-target="#open-dataProduct" id="NewDataUser" >
                     <button class="buttonMiddle-green" >Tambah User</button>
                     </a>
                 </li>

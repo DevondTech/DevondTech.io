@@ -6,11 +6,12 @@ $(document).ready(function(){
       "targets": 0,
       "ajax": "../../../conn/data2/user/user_data.php",
       "columnDefs": [ {
-       "searchable": false,
-       "orderable": false,
-       "targets": -1,
-       "data": null,
-       "defaultContent": "<center><button class='btn btn-success btn-xs tblDetail' style='margin-bottom: 10px;' type='submit' >Detail Data</button><form method='POST'>  <button id='HapusData' class='btn btn-danger btn-xs hapus-data'>Hapus Data</button></form></center>"
+      "searchable": false,
+      "orderable": false,
+      "targets": -1,
+      "data": null,
+/*       "defaultContent": "<center><button class='btn btn-success btn-xs tblDetail' style='margin-bottom: 10px;' type='submit' >Detail Data</button><form method='POST'>  <button id='HapusData' class='btn btn-danger btn-xs hapus-data'>Hapus Data</button></form></center>"*/
+      "defaultContent": "<form method='POST'>  <button id='HapusData' class='buttonDelete-Table hapus-data'>Hapus Data</button></form></center>"
     },
     {
       "order": [[ 2, "asc" ]],
@@ -24,8 +25,6 @@ $(document).ready(function(){
           cell.innerHTML = i+1;
       } );
   }).draw();
-
-
 
   $.ajax({
     type: "GET",
@@ -43,6 +42,31 @@ $(document).ready(function(){
     }
   });
 
+  $('#dataUser tbody').on( 'click', '.hapus-data', function (e){
+    var data = table.row( $(this).parents('tr') ).data();
+    e.preventDefault();
+    var confirmation = confirm("Anda yakin akan menghapus user ini?");
+    if (confirmation){
+      var id = data[0];
+      $.ajax({
+        type:"POST",
+        url:'../../../conn/data2/user/user_data.php/?deleteDataUser='+id,
+        data:data,
+        success:function(data){
+          if(data.success){
+           table.ajax.reload();
+           alert("Data berhasil dihapus");
+          }
+          else{
+          alert('error while update data');
+          }
+        }
+      });
+    }
+    else {
+      alert("Data tidak dihapus!");
+    } 
+  });
 
   $('#btn-create-user').on('click',function(e){
     var nama_lengkap = $('#nama_lengkap').val();
@@ -135,12 +159,17 @@ $(document).ready(function(){
 
 $('#btnCreateDataUserSlide').on('click',function(e){
   $('#createDataUserSlide').attr('style','display:block');
-  $('#btnCreateDataUserSlide').attr('style','display:none;padding-bottom: 50px;');
+  $('#btnCreateDataUserSlide').attr('style','display:none;padding-bottom: 20px;');
 });
 
 $('#btnCancelCreateDataUserSlide').on('click',function(e){
   $('#createDataUserSlide').attr('style','display:none');
-  $('#btnCreateDataUserSlide').attr('style','display:block;padding-bottom: 50px;');
+  $('#btnCreateDataUserSlide').attr('style','display:block;padding-bottom: 20px;');
+  $('#nama_lengkap').val('');
+  $('#nomor_hp').val('');
+  $('#username').val('');
+  $('#email').val('');
+  $('#password').val('');
 });
 
 

@@ -15,7 +15,7 @@
         $ekstensiGambar1Produk = strtolower(end($xGambar1Produk));
         $location = $fileFolderSavePic1Product.$datePic1Product.$id_barangGambar1.$Gambar1Produk;
         if(in_array($ekstensiGambar1Produk, $ekstensiAccept) === true){
-            $queryUpdateGambar1Produk = "UPDATE tb_produk SET gambar1_produk='$fileFolderPic1Product$datePic1Product$id_barangGambar1$Gambar1Produk' WHERE id_produk = $id_barangGambar1";
+            $queryUpdateGambar1Produk = "UPDATE tb_produk SET gambar1_produk='$datePic1Product$id_barangGambar1$Gambar1Produk' WHERE id_produk = $id_barangGambar1";
             $db->query($queryUpdateGambar1Produk);
             move_uploaded_file($_FILES['Gambar1Produk']['tmp_name'], $location);
             echo "Success";   
@@ -37,7 +37,7 @@
         $ekstensiGambar2Produk = strtolower(end($xGambar2Produk));
         $location = $fileFolderSavePic2Product.$datePic2Product.$id_barangPOSTGambar2.$Gambar2Produk;
         if(in_array($ekstensiGambar2Produk, $ekstensiAccept) === true){
-            $queryUpdateGambar2Produk = "UPDATE tb_produk SET gambar2_produk='$fileFolderPic2Product$datePic2Product$id_barangPOSTGambar2$Gambar2Produk' WHERE id_produk = $id_barangPOSTGambar2";
+            $queryUpdateGambar2Produk = "UPDATE tb_produk SET gambar2_produk='$datePic2Product$id_barangPOSTGambar2$Gambar2Produk' WHERE id_produk = $id_barangPOSTGambar2";
             $db->query($queryUpdateGambar2Produk);
             move_uploaded_file($_FILES['Gambar2Produk']['tmp_name'], $location);
             echo "Success";   
@@ -59,7 +59,7 @@
         $ekstensiGambar3Produk = strtolower(end($xGambar3Produk));
         $location = $fileFolderSavePic3Product.$datePic3Product.$id_barangPOSTGambar3.$Gambar3Produk;
         if(in_array($ekstensiGambar3Produk, $ekstensiAccept) === true){
-            $queryUpdateGambar3Produk = "UPDATE tb_produk SET gambar3_produk='$fileFolderPic3Product$datePic3Product$id_barangPOSTGambar3$Gambar3Produk' WHERE id_produk = $id_barangPOSTGambar3";
+            $queryUpdateGambar3Produk = "UPDATE tb_produk SET gambar3_produk='$datePic3Product$id_barangPOSTGambar3$Gambar3Produk' WHERE id_produk = $id_barangPOSTGambar3";
             $db->query($queryUpdateGambar3Produk);
             move_uploaded_file($_FILES['Gambar3Produk']['tmp_name'], $location);
             echo "Success";   
@@ -81,7 +81,7 @@
         $ekstensiGambar4Produk = strtolower(end($xGambar4Produk));
         $location = $fileFolderSavePic4Product.$datePic4Product.$id_barangPOSTGambar4.$Gambar4Produk;
         if(in_array($ekstensiGambar4Produk, $ekstensiAccept) === true){
-            $queryUpdateGambar4Produk = "UPDATE tb_produk SET gambar4_produk='$fileFolderPic4Product$datePic4Product$id_barangPOSTGambar4$Gambar4Produk' WHERE id_produk = $id_barangPOSTGambar4";
+            $queryUpdateGambar4Produk = "UPDATE tb_produk SET gambar4_produk='$datePic4Product$id_barangPOSTGambar4$Gambar4Produk' WHERE id_produk = $id_barangPOSTGambar4";
             $db->query($queryUpdateGambar4Produk);
             move_uploaded_file($_FILES['Gambar4Produk']['tmp_name'], $location);
             echo "Success";   

@@ -46,7 +46,7 @@ $(document).ready(function(){
 
             }
             else{
-                $('#gambar1_productView').attr('src', gambar1_productView);
+                $('#gambar1_productView').attr('src', '../images/produk/'+gambar1_productView);
             } 
 
             if(gambar2_productView == '' || gambar2_productView == null){
@@ -54,7 +54,7 @@ $(document).ready(function(){
 
             }
             else{
-                $('#gambar2_productView').attr('src', gambar2_productView);
+                $('#gambar2_productView').attr('src','../images/produk/'+gambar2_productView);
             } 
 
             if(gambar3_productView == '' || gambar3_productView == null){
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
             }
             else{
-                $('#gambar3_productView').attr('src', gambar3_productView);
+                $('#gambar3_productView').attr('src','../images/produk/'+gambar3_productView);
             }
 
             if(gambar4_productView == '' || gambar4_productView == null){
@@ -70,7 +70,7 @@ $(document).ready(function(){
 
             }
             else{
-                $('#gambar4_productView').attr('src', gambar4_productView);
+                $('#gambar4_productView').attr('src','../images/produk/'+gambar4_productView);
             } 
 
             $("#PrintDetail_nama_produk").attr('style','background-color:#f1e8e8;color: #505050;');

@@ -554,6 +554,7 @@
 <script type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript" src="scroll/js/scroll.js"></script>
 <script type="text/javascript" src="js/slideSmall.js"></script>
+<script type="text/javascript" src="js/durianIndexCust.js"></script>
 <script type="text/javascript" src="js/durian.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){

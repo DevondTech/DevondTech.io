@@ -15,7 +15,7 @@
         $ekstensiFoto = strtolower(end($xFoto));
         $location = $fileFolderSave.$data.$datePic.$id_barangGambar.$foto;
         if(in_array($ekstensiFoto, $ekstensiAccept) === true){
-            $queryUpdateFotoUser = "UPDATE tb_produk SET gambar1_produk='$fileFolder$data$datePic$id_barangGambar$foto' WHERE id_produk = $id_barangGambar";
+            $queryUpdateFotoUser = "UPDATE tb_produk SET gambar1_produk='$data$datePic$id_barangGambar$foto' WHERE id_produk = $id_barangGambar";
             $db->query($queryUpdateFotoUser);
             move_uploaded_file($_FILES['foto']['tmp_name'], $location);
             echo '<script language="javascript">alert("Anda Berhasil Mengupdate Data Gambar Produk 1");
@@ -43,7 +43,7 @@
         $ekstensiFoto = strtolower(end($xFoto));
         $location = $fileFolderSave.$data.$datePic.$id_barangGambar.$foto;
         if(in_array($ekstensiFoto, $ekstensiAccept) === true){
-            $queryUpdateFotoUser = "UPDATE tb_produk SET gambar2_produk='$fileFolder$data$datePic$id_barangGambar$foto' WHERE id_produk = $id_barangGambar";
+            $queryUpdateFotoUser = "UPDATE tb_produk SET gambar2_produk='$data$datePic$id_barangGambar$foto' WHERE id_produk = $id_barangGambar";
             $db->query($queryUpdateFotoUser);
             move_uploaded_file($_FILES['foto']['tmp_name'], $location);
             echo '<script language="javascript">alert("Anda Berhasil Mengupdate Data Gambar Produk 1");
@@ -71,7 +71,7 @@
         $ekstensiFoto = strtolower(end($xFoto));
         $location = $fileFolderSave.$data.$datePic.$id_barangGambar.$foto;
         if(in_array($ekstensiFoto, $ekstensiAccept) === true){
-            $queryUpdateFotoUser = "UPDATE tb_produk SET gambar3_produk='$fileFolder$data$datePic$id_barangGambar$foto' WHERE id_produk = $id_barangGambar";
+            $queryUpdateFotoUser = "UPDATE tb_produk SET gambar3_produk='$data$datePic$id_barangGambar$foto' WHERE id_produk = $id_barangGambar";
             $db->query($queryUpdateFotoUser);
             move_uploaded_file($_FILES['foto']['tmp_name'], $location);
             echo '<script language="javascript">alert("Anda Berhasil Mengupdate Data Gambar Produk 1");
@@ -99,7 +99,7 @@
         $ekstensiFoto = strtolower(end($xFoto));
         $location = $fileFolderSave.$data.$datePic.$id_barangGambar.$foto;
         if(in_array($ekstensiFoto, $ekstensiAccept) === true){
-            $queryUpdateFotoUser = "UPDATE tb_produk SET gambar4_produk='$fileFolder$data$datePic$id_barangGambar$foto' WHERE id_produk = $id_barangGambar";
+            $queryUpdateFotoUser = "UPDATE tb_produk SET gambar4_produk='$data$datePic$id_barangGambar$foto' WHERE id_produk = $id_barangGambar";
             $db->query($queryUpdateFotoUser);
             move_uploaded_file($_FILES['foto']['tmp_name'], $location);
             echo '<script language="javascript">alert("Anda Berhasil Mengupdate Data Gambar Produk 1");

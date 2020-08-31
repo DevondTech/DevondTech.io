@@ -21,14 +21,14 @@
 </head>
 <body class="bd-w" >
 <div id="dataProdukPage" >
-    <div style="padding-top: 30px;padding-bottom: 100px">
+    <div class="paddingtopData1">
         <div class="card-textTitleLarge-Black">
             <div class="textTitleLarge-Black" >
                Data Produk
             </div>
         </div>
         <br />
-        <div style="padding-bottom: 50px;">
+        <div class="paddingtop50px">
             <ul class="ul-buttonGreen">
                 <li class="li-buttonGreen">
                     <a  data-toggle="modal" data-target="#open-dataProduct" id="createNewDataProduct" >
@@ -37,9 +37,9 @@
                 </li>
             </ul>
         </div>
-        <div id="" style="margin-left: 0px;margin-right: 0px; width: 100%;">
-            <div style="overflow-x: auto;">
-                <div style="margin-left: 25px;">
+        <div id="" class="parrentDivTable" >
+            <div class="scrollTableX">
+                <div class="marginLeft25">
                     <table style="width: 100%;" border=1px; class="table table-bordered" id="dataProduk">
                         <thead>
                             <tr>
@@ -199,7 +199,7 @@
              
                     <div class="modal-edit" >
                         <div class="button-edit">
-                            <button class="button-text-grey" type="button" id="btn-batal-create"  data-dismiss="modal"> KELUAR </button> 
+                            <button class="button-text-grey" type="button" id="btnCancelCreatedDataProduct"  data-dismiss="modal"> KELUAR </button> 
                             <button class="button-text-green" type="button" id="btnCreatedDataProduct"  > SIMPAN </button>
                         </div>
                     </div>

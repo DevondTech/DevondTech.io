@@ -496,6 +496,7 @@
     width: 100%;
     display: block;
     margin: auto;
+    padding-bottom: 20px;
 }
 
 .imgDetailProductAdmin{
@@ -504,8 +505,11 @@
     margin-bottom: auto;
     display: inline-flex;
     height: 155px;
-    border: 3px solid #b9b9b9;
+    -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
     border-radius: 5px;
+    padding: 10px;
 }
 
 .divPosition-button-OpenModalDetailProductAdmin{
@@ -522,6 +526,7 @@
         width: 90%;
         display: block;
         margin: auto;
+        padding-bottom: 10px;
     }
 
     .imgDetailProductAdmin{
@@ -530,8 +535,11 @@
         margin-bottom: auto;
         display: inline-flex;
         height: auto;
-        border: 3px solid #b9b9b9;
+        -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
         border-radius: 5px;
+        padding: 10px;
     }
 
     .divPosition-button-OpenModalDetailProductAdmin{
@@ -550,6 +558,7 @@
         width: 80%;
         display: block;
         margin: auto;
+        padding-bottom: 10px;
     }
 
     .imgDetailProductAdmin{
@@ -558,8 +567,11 @@
         margin-bottom: auto;
         display: inline-flex;
         height: auto;
-        border: 3px solid #b9b9b9;
+        -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
         border-radius: 5px;
+        padding: 10px;
     }
 
     .divPosition-button-OpenModalDetailProductAdmin{
@@ -578,6 +590,7 @@
         width: 100%;
         display: block;
         margin: auto;
+        padding-bottom: 10px;
     }
 
     .imgDetailProductAdmin{
@@ -586,8 +599,11 @@
         margin-bottom: auto;
         display: inline-flex;
         height: auto;
-        border: 3px solid #b9b9b9;
+        -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
         border-radius: 5px;
+        padding: 10px;
     }
 
     .divPosition-button-OpenModalDetailProductAdmin{
@@ -689,6 +705,14 @@
     display:none;
 }
 
+#NewDataUser{
+    margin-left: 10px;
+}
+
+.NewDataUser{
+    padding-bottom: 30px;
+}
+
 .createDataUserSlide{
     padding-bottom: 50px;
 }
@@ -699,6 +723,110 @@
 
 .disNone{
     display: none;
+}
+
+.buttonDelete-Table{
+    background-color: #fb483a !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    border: none;
+    font-size: 13px;
+    height: 35px;
+    width: 90px;
+    color: white;
+}
+
+.buttonDelete-Table:hover{
+    background-color: #fff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    color: #fb483a;
+    border: 1px solid #fb483a;
+    font-size: 13px;
+    height: 35px;
+    width: 90px;
+}
+
+.buttonDetail-Table{
+    background-color: #3e60c8 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    border: none;
+    font-size: 13px;
+    height: 35px;
+    width: 90px;
+    color: white;
+}
+
+.buttonDetail-Table:hover{
+    background-color: #fff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #3e60c8;
+    font-size: 13px;
+    height: 35px;
+    width: 90px;
+    color: #3e60c8;
+}
+
+.buttonCancelCreate{
+    width: 109px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #fb483a;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #fb483a;
+}
+
+.buttonCancelCreate:hover{
+    width: 109px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: #fb483a;
+    background-color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #fb483a;
+}
+
+.buttonSaveCreate{
+    width: 109px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #2d472c;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #2d472c;
+}
+
+.buttonSaveCreate:hover{
+    width: 109px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: #2d472c;
+    background-color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #2d472c;
 }
 
 .buttonTypeDiv-Save{
@@ -736,3 +864,27 @@
     display: block;
     padding-top: 2px;
 }
+
+.paddingtopData1{
+    padding-top: 30px;
+    padding-bottom: 100px
+}
+
+.paddingtop50px{
+    padding-bottom: 50px;
+}
+
+.parrentDivTable{
+    margin-left: 0px;
+    margin-right: 0px; 
+    width: 100%;
+}
+
+.scrollTableX{
+    overflow-x: auto;
+}
+
+.marginLeft25{
+    margin-left: 25px;
+}
+
