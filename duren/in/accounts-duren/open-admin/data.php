@@ -146,7 +146,7 @@
                     <li class="menu-waves-block" id="account-edit-link">
                         <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
-                                <img src="../images/durian/user-edit.svg" width="20" height="20">
+                                <img src="../images/durian/edit-user.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Edit Akun</font></span>
                         </a>
@@ -154,7 +154,7 @@
                     <li class="menu-waves-block" id="create-user-link">
                         <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
-                                <img src="../images/durian/user-edit.svg" width="20" height="20">
+                                <img src="../images/durian/create-user.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Tambah User</font></span>
                         </a>
@@ -170,9 +170,33 @@
                     <li class="menu-waves-block" id="product-link">
                         <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
-                                <img src="../images/durian/user-edit.svg" width="20" height="20">
+                                <img src="../images/durian/data-product.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Data Produk</font></span>
+                        </a>
+                    </li>
+                    <li class="menu-waves-block" id="company-profile">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/company-edit.svg" width="20" height="20">
+                            </div>
+                            <span><font class="icon-menu-active">Profil Perusahaan</font></span>
+                        </a>
+                    </li>
+                    <li class="displayLink-none menu-waves-block" id="about-link" >
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/company-edit.svg" width="20" height="20">
+                            </div>
+                            <span><font class="icon-menu-active">Tentang Kami</font></span>
+                        </a>
+                    </li>
+                    <li class="displayLink-none menu-waves-block" id="medsos-link">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/link/medsos.svg" width="20" height="20">
+                            </div>
+                            <span><font class="icon-menu-active">Media Sosial</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="notification-link">

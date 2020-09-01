@@ -1,7 +1,11 @@
-/*This padding margin*/
+/*This padding margin & padding*/
 
 .margin-auto{
 	margin: auto;
+}
+
+.paddingTop50px{
+    padding-top: 50px;
 }
 
 /*This Text*/

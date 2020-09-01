@@ -270,5 +270,5 @@ $('#orderCancel-link').on('click',function(e){
 	$("#orderFinish-link").attr("class","displayLink-block menu-waves-block");
 	$("#orderAll-link").attr("class","displayLink-block menu-waves-block");
 
-	$("#orderCancel-link").attr("class","displayLink-block active-menu-right");
+	$("#orderCancel-link").attr("class","displayLink-block active-menu-right");	
 });

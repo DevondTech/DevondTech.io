@@ -146,7 +146,7 @@
                     <li class="menu-waves-block" id="account-edit-link">
                         <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
-                                <img src="../images/durian/user-edit.svg" width="20" height="20">
+                                <img src="../images/durian/edit-user.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Edit Akun</font></span>
                         </a>
