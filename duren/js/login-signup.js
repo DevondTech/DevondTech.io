@@ -154,4 +154,52 @@ $('document').ready(function()
     return false;
     }      
   });
+
+  document.querySelector('#password').addEventListener("keyup",function(e){
+    if (e.keyCode === 13) 
+    {
+      var username = $('#username').val();
+      var password = $('#password').val();
+      if(username == ''){
+        alert('Silahkan isi dulu usernamenya')
+      }
+      else if(password == ''){
+        alert('Silahkan isi dulu passwordnya')
+      }  
+      else if(username != '' && password != ''){
+         var data = $("#login-form").serialize();
+         console.log(data);
+      $.ajax({
+         type : 'POST',
+         url  : '../conn/data2/user_login.php/?login',
+         data : data,
+         beforeSend: function()
+         { 
+          $("#error").fadeOut();
+          $("#btn-login").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
+         }, 
+        success :  function(response)
+        {      
+         if(response == "KodeSign1"){
+       
+         $("#btn-login").html('Loading System...');
+          window.location.href = "../in/accounts-duren/open-admin/data.php";
+         }
+         else{
+            if(response == "KodeSign2"){
+
+            $("#btn-login").html('Loading System...');
+              window.location.href = "../";
+            }
+            else{
+              alert('Anda Belum Terdaftar') ; 
+              $("#btn-login").html('Login');
+            }
+          }
+        }
+      });
+      return false;
+      } 
+    }     
+  });
 });

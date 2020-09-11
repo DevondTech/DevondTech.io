@@ -222,13 +222,13 @@
                     </li> -->
                 </ul>
             </div>
-            <div class="legal">
+            <!-- <div class="legal">
                 <div class="copyright">
                 </div>
                 <div class="version">
                     <b>Version: </b> 1.0.0
                 </div>
-            </div>
+            </div> -->
         </aside>
     </section>
 
