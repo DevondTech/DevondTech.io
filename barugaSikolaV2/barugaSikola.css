@@ -106,9 +106,9 @@ a.button {
     width: 180px;
     position: fixed;
     background-color: #fff;
-    /*border: 1px solid #53C2BB;*/
-    padding: 0px;
-    /*box-shadow: 2px 2px 2px rgba(0,0,0,0.8);*/
+    border: 1px solid #53C2BB;
+    padding: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
 }
 
 @media (max-width: 768px) {
@@ -350,7 +350,6 @@ a.button {
     z-index: 2;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
     border-bottom: transparent;
-    margin-top: -1px;
 }
 
 .top-header .container {
@@ -375,8 +374,7 @@ a.button {
 }
 
 .top-header .header-brand-img {
-    max-height: 35px;
-    margin-top: 2px;
+    max-height: 40px;
 }
 
 .top-header .logo-img {
@@ -441,12 +439,11 @@ a.button {
     -ms-user-select: none;
     user-select: none;
     border: 1px solid #fff;
-    margin-top: -3px;
 }
 
 .top-header .nav-unread {
-    top: 7px;
-    right: 2px;
+    top: .25rem;
+    right: .25rem;
     width: .5rem;
     height: .5rem;
     border-radius: 50%;
