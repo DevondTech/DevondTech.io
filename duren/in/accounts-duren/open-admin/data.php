@@ -215,20 +215,8 @@
                             <span><font class="icon-menu-active">Logout</font></span>
                         </a>
                     </li>
-                    
-                    <!-- <li class="menu-waves-block">
-                        <a id="waves-effect-this">
-                        </a>
-                    </li> -->
                 </ul>
             </div>
-            <!-- <div class="legal">
-                <div class="copyright">
-                </div>
-                <div class="version">
-                    <b>Version: </b> 1.0.0
-                </div>
-            </div> -->
         </aside>
     </section>
 
@@ -261,7 +249,7 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/adminData.js"></script>
+<script type="text/javascript" src="../js/pages/admin/adminData.js"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

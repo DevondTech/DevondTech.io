@@ -105,6 +105,10 @@
 }
 
 
+.inputTypeTransparent{
+    padding-right: 20px;
+    padding-left: 10px;
+}
 
 /*-----------------------------------------------*/
 /*-----------------Content Profile---------------*/
@@ -384,6 +388,7 @@
     padding-right: 5px;
     border: 1px solid #969191;
     border-radius: 3px;
+    padding-bottom: 5px;
 }
 
 .input-textDataProduct-false{
@@ -395,6 +400,7 @@
     border: 0px solid #969191;
     background-color: white;
     border-radius: 3px;
+    padding-bottom: 5px;
 }
 
 .input-textDataProduct-false:hover{
@@ -405,6 +411,44 @@
     padding-right: 5px;
     border: 0px solid #969191;
     border-radius: 3px;
+    padding-bottom: 5px;
+}
+
+.textArea-textDataProduct{
+    width: 100%;
+    height: 70px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #969191;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    resize: none;
+}
+
+.textArea-textDataProduct-false{
+    width: 100%;
+    height: 70px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    background-color: white;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    resize: none;
+}
+
+.textArea-textDataProduct-false:hover{
+    width: 100%;
+    height: 70px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    resize: none;
 }
 
 .Card-inputDataProduct-paddingTopBottom20px{
@@ -420,7 +464,9 @@
     float: right;
 }
 
-
+.textArea-modeInputDataProduct{
+    height: 80px;
+}
 
 @media(max-width: 870px){
     .PaddingProduct20TopBotom{
@@ -442,6 +488,19 @@
         padding-right: 5px;
         border: 1px solid #969191;
         border-radius: 3px;
+        padding-bottom: 5px;
+    }
+
+    .textArea-textDataProduct{
+        width: 100%;
+        height: 70px;
+        color: #000;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: 1px solid #969191;
+        border-radius: 3px;
+        padding-bottom: 5px;
+        resize: none;
     }
 
     .textDataProduct{
@@ -892,3 +951,60 @@
     margin-left: 25px;
 }
 
+.col-divCartData{
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+}
+
+.CartAlamatCartData{
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
+}
+
+.CartBarangCartData{
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.rowAlamatTop{
+    padding-left: 16px;
+    padding-top: 15px;
+}
+
+.rowAlamatMiddle{
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 2;
+}
+
+@media(max-width: 870px){
+
+    .col-divCartData{
+        padding-top: 40px;
+        padding-left: 0px;
+    }
+
+    .col-divCartData{
+        padding-top: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media(max-width: 767px){
+
+    .rowAlamatMiddle{
+        padding-left: 25px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .rowAlamatTop{
+        padding-left: 28px;
+        padding-top: 15px;
+    }
+
+}

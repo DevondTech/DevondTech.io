@@ -2434,6 +2434,17 @@ section.content {
   -webkit-transition: 0.5s;
   transition: 0.5s; }
 
+@media(max-width: 504px){
+  section.content  {
+      margin: 45px 15px 0 315px;
+          margin-left: 315px;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+  }
+}
+
 /* Dashboard =================================== */
 .dashboard-flot-chart {
   height: 275px; }

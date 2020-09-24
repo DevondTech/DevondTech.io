@@ -1,16 +1,13 @@
 $(window).on('load',function(e){
-    $("#content-profile").load("profile.php");
-/*  	$.get( "../../../conn/data2/user_data.php/?callUserDatas", function( dataUserCallBack ) {
-        var dataUserName = dataUserCallBack;
-  		console.log( dataUserName ); 
-    });
-*/
-	$.ajax({
-     	type: "GET",
-     	url: "../../../conn/data2/user_data.php/?callUserDatas",
-     	contentType: 'application/json; charset=utf-8',
-        dataType: 'json',
-     	success: function(callUserData) { 
+	var textData = $('#textData').val();
+	if(textData=='home')
+	{	
+		$.ajax({
+	     	type: "GET",
+	     	url: "../../../conn/data2/user_data.php/?callUserDatas",
+	     	contentType: 'application/json; charset=utf-8',
+	        dataType: 'json',
+	     	success: function(callUserData) { 
 
      			var DataUser = jQuery.parseJSON(callUserData);
      			var DataIdUser = DataUser[0].id_user;
@@ -34,13 +31,113 @@ $(window).on('load',function(e){
 	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFoto);
 	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFoto);	
 	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFoto);
+	            }
+	        }
+	    });
 
+		$("#content-profile").load("profile.php");
+		$("#account-edit-link").attr("class","menu-waves-block");
+		$("#account-link").attr("class","menu-waves-block");
+		$("#password-link").attr("class","menu-waves-block");
+		$("#notification-link").attr("class","menu-waves-block");
+		$("#logout-link").attr("class","menu-waves-block");
+		$("#order-link").attr("class","menu-waves-block");
+		$("#orderAll-link").attr("class","displayLink-block menu-waves-block");
+		$("#orderProcess-link").attr("class","displayLink-block menu-waves-block");
+		$("#orderFinish-link").attr("class","displayLink-block menu-waves-block");
+		$("#orderCancel-link").attr("class","displayLink-block menu-waves-block");
+		$("#orderCart-link").attr("class","displayLink-block active-menu-right");
+	}
+
+	if(textData=='cart')
+	{	
+		$.ajax({
+	     	type: "GET",
+	     	url: "../../../conn/data2/user_data.php/?callUserDatas",
+	     	contentType: 'application/json; charset=utf-8',
+	        dataType: 'json',
+	     	success: function(callUserData) { 
+
+     			var DataUser = jQuery.parseJSON(callUserData);
+     			var DataIdUser = DataUser[0].id_user;
+     			var DataUserName = DataUser[0].username;
+     			var DataNamaLengkap = DataUser[0].nama_lengkap;
+     			var DataEmail = DataUser[0].email;
+     			var DataFoto = DataUser[0].foto;
+
+	            $('#nama_lengkap_OnLoginPageHome_Small').text(DataNamaLengkap);
+	            $('#nama_lengkap_OnLoginPageHome_Large').text(DataNamaLengkap);
+	            $('#email_OnLoginPageHome_Small').text(DataEmail);
+	            $('#email_OnLoginPageHome_Large').text(DataEmail);
+	            var DataFotoNull = '../images/user.png';
+	            var DataFotoNull2 = '../images/user2.png';
+	            if(DataFoto == '' || DataFoto == null){
+	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFotoNull);
+	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFotoNull2);
+	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFotoNull2);
+	            }
+	            else{
+	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFoto);
+	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFoto);	
+	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFoto);
+	            }
+	        }
+	    });
+
+		$("#content-profile").load("cartData.php");
+		$("#account-edit-link").attr("class","menu-waves-block");
+		$("#account-link").attr("class","menu-waves-block");
+		$("#password-link").attr("class","menu-waves-block");
+		$("#notification-link").attr("class","menu-waves-block");
+		$("#logout-link").attr("class","menu-waves-block");
+		$("#order-link").attr("class","menu-waves-block");
+		$("#orderAll-link").attr("class","displayLink-block menu-waves-block");
+		$("#orderProcess-link").attr("class","displayLink-block menu-waves-block");
+		$("#orderFinish-link").attr("class","displayLink-block menu-waves-block");
+		$("#orderCancel-link").attr("class","displayLink-block menu-waves-block");
+		$("#orderCart-link").attr("class","displayLink-block active-menu-right");
+	}
+
+	if(textData=='')
+	{	
+		$.ajax({
+	     	type: "GET",
+	     	url: "../../../conn/data2/user_data.php/?callUserDatas",
+	     	contentType: 'application/json; charset=utf-8',
+	        dataType: 'json',
+	     	success: function(callUserData) { 
+
+     			var DataUser = jQuery.parseJSON(callUserData);
+     			var DataIdUser = DataUser[0].id_user;
+     			var DataUserName = DataUser[0].username;
+     			var DataNamaLengkap = DataUser[0].nama_lengkap;
+     			var DataEmail = DataUser[0].email;
+     			var DataFoto = DataUser[0].foto;
+
+     			$("#content-profile").load("profile.php");
+	            $('#nama_lengkap_OnLoginPageHome_Small').text(DataNamaLengkap);
+	            $('#nama_lengkap_OnLoginPageHome_Large').text(DataNamaLengkap);
+	            $('#email_OnLoginPageHome_Small').text(DataEmail);
+	            $('#email_OnLoginPageHome_Large').text(DataEmail);
+	            var DataFotoNull = '../images/user.png';
+	            var DataFotoNull2 = '../images/user2.png';
+	            if(DataFoto == '' || DataFoto == null){
+	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFotoNull);
+	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFotoNull2);
+	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFotoNull2);
+	            }
+	            else{
+	            	$('#foto_OnLoginPageHome_Small').attr('src', DataFoto);
+	            	$('#foto_OnLoginPageHome_Large').attr('src', DataFoto);	
+	            	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFoto);
 	            }
 	           
 	          /*  $('#foto_OnLoginPageHome_Large').data-src(DataFoto);*/
 	          
 	        }
 	    });
+	}
+
 });
 
 /*if click button*/

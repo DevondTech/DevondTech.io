@@ -18,7 +18,7 @@
 <!-- css datatables -->
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"/>
-<link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
+<link href="../css/dataUserLogin.css?v=1.0.1" rel="stylesheet" />
 </head>
 <body>
 
@@ -167,7 +167,7 @@
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/aboutusDataAdmin.js"></script>
+<script type="text/javascript" src="../js/pages/admin/aboutusDataAdmin.js"></script>
 </body>
 
 </html>

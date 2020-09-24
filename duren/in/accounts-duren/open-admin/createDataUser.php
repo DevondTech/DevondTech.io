@@ -174,7 +174,7 @@
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
-<script src="../js/pages/createDataUser.js"></script>
+<script src="../js/pages/admin/createDataUserAdmin.js"></script>
 </body>
 </html>
 

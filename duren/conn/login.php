@@ -47,7 +47,7 @@
 						die();
 					}
 					elseif($_SESSION['id_status_user']=='5'){
-						header("Location: ../in/accounts-duren/open-konsumen/data.php");
+						header("Location: ../in/accounts-duren/open-konsumen/");
 						die();
 					}
 				}

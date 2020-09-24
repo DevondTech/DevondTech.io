@@ -133,16 +133,12 @@ $('document').ready(function()
      
        $("#btn-login").html('Loading System...');
         window.location.href = "../in/accounts-duren/open-admin/data.php";
-       /* window.location.href = "../in/accounts-duren/test-user";*/
-        /*window.location.href = "../test/";*/
        }
        else{
           if(response == "KodeSign2"){
 
           $("#btn-login").html('Loading System...');
             window.location.href = "../";
-          /*window.location.href = "../in/accounts-duren/test-admin";*/
-            /*window.location.href = "../test/";*/
           }
           else{
             alert('Anda Belum Terdaftar') ; 

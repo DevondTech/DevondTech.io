@@ -125,7 +125,7 @@
             </form>
         </div>
 
-        <div class="Card-inputDataProduct PaddingProduct20TopBotom">
+        <div class="Card-inputDataProduct textArea-modeInputDataProduct PaddingProduct20TopBotom">
             <form method="POST" id="updateDetail1Form">
                 <div class="card-textDataProduct ">
                     <div class="textDataProduct">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="card-inputDataProduct">
-                    <textarea name="PrintDetail_detail1_produk" id="PrintDetail_detail1_produk" style="padding-top: 4px;" class="input-textDataProduct" disabled></textarea>
+                    <textarea name="PrintDetail_detail1_produk" id="PrintDetail_detail1_produk" style="padding-top: 4px;" class="textArea-textDataProduct" disabled></textarea>
                     <input type="hidden" name="id_barang_nama_produk" id="id_barang_nama_produk" value="<?= $id_barang; ?>">
                 </div>
                 <div class="card-buttonDataProduct">
@@ -158,7 +158,7 @@
             </form>
         </div>
 
-        <div class="Card-inputDataProduct PaddingProduct20TopBotom">
+        <div class="Card-inputDataProduct textArea-modeInputDataProduct PaddingProduct20TopBotom">
             <form method="POST" id="updateDetail2Form">
                 <div class="card-textDataProduct ">
                     <div class="textDataProduct">
@@ -166,7 +166,7 @@
                     </div>
                 </div>
                 <div class="card-inputDataProduct">
-                    <textarea name="PrintDetail_detail2_produk" id="PrintDetail_detail2_produk" style="padding-top: 4px;" class="input-textDataProduct" disabled></textarea>
+                    <textarea name="PrintDetail_detail2_produk" id="PrintDetail_detail2_produk" style="padding-top: 4px;" class="textArea-textDataProduct" disabled></textarea>
                     <input type="hidden" name="id_barang_nama_produk" id="id_barang_nama_produk" value="<?= $id_barang; ?>">
                 </div>
                 <div class="card-buttonDataProduct">
@@ -329,8 +329,8 @@
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/productDetailDataAdmin.js"></script>
-<script type="text/javascript" src="../js/pages/gambarUploadProdukAdmin.js"></script>
+<script type="text/javascript" src="../js/pages/admin/productDetailDataAdmin.js"></script>
+<script type="text/javascript" src="../js/pages/admin/gambarUploadProdukAdmin.js"></script>
 <div id="open-uploadGambar1Produk" class="modal fade" >
     <div class="modal-dialog modal-sm">
         <div class="modal-content w100">

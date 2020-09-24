@@ -19,6 +19,7 @@
 
     echo 'ID User : ';
     echo $id_user;
+    $textData = $_POST['textData'];
     ?>
    
     <meta charset="UTF-8">
@@ -40,15 +41,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Core Css -->
-    <link href="../plugins/bootstrap/css/bootstrap.css?v=1.1.1" rel="stylesheet" />
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <!-- Waves Effect Css -->
-    <link href="../plugins/node-waves/waves.css?v=1.1.1" rel="stylesheet" />
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
     <!-- Animation Css -->
-    <link href="../plugins/animate-css/animate.css?v=1.1.1" rel="stylesheet" />
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
     <!-- Custom Css -->
     <link href="../css/style.css?v=1.1.1" rel="stylesheet" />
     <!-- Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="../css/themes/all-themes.css?v=1.1.1" rel="stylesheet" />
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
     <link href="../css/modif-style.css?v=1.1.1" rel="stylesheet" />
     <link href="../css/flexible.css?v=1.1.1" rel="stylesheet" />
 <!--     <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
@@ -223,6 +224,7 @@
                             <span>Logout</span>
                         </a>
                     </li>
+                    <input type="hidden" name="textData" id="textData" value="<?php echo$textData; ?>">
                     
                     <!-- <li class="menu-waves-block">
                         <a id="waves-effect-this">
@@ -245,6 +247,7 @@
 <section class="content" id="content">
     <div class="pad20top container-fluid" id="maxDasboardItem">
         <div id="content-profile">
+            
 
         </div>
     </div>
@@ -269,7 +272,7 @@
 <!-- Demo Js -->
 <script src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script src="../js/pages/konsumenData.js"></script>
+<script src="../js/pages/konsumen/konsumenData.js"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 

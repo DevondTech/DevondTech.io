@@ -55,14 +55,20 @@
             <img src="images/icon/close.png" id="close-search-small" class="img-close-icon-search" >
           </li>
           <li id="login-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="in/accounts-duren/open-konsumen/data.php">
-              <img src="images/icon/user.png" class="img-icon-top">
-            </a>
+            <form method="post" action="in/accounts-duren/open-konsumen/">
+              <input type="hidden" name="textData" value="home">
+              <button class="link-img-icon-top form-inline my-2 my-lg-0" type="submit" style="background: transparent;border: 0px solid;">
+                <img src="images/icon/user.png" class="img-icon-top">
+              </button>
+            </form>
           </li>
           <li id="buy-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="in/accounts-duren/open-konsumen/data.php">
-              <img src="images/icon/buy.png" class="img-icon-top">
-            </a>
+            <form method="post" action="in/accounts-duren/open-konsumen/">
+              <input type="hidden" name="textData"  value="cart">
+              <button class="link-img-icon-top form-inline my-2 my-lg-0" type="submit" style="background: transparent;border: 0px solid;">
+                <img src="images/icon/buy.png" class="img-icon-top">
+              </button>
+            </form>
           </li>
           <li id="nav-icon-small" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -99,14 +105,20 @@
             </a>
           </li> -->
           <li id="login-icon-large" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="in/accounts-duren/open-konsumen/data.php">
-              <img src="images/icon/user.png" class="img-icon-top">
-            </a>
+            <form method="POST" action="in/accounts-duren/open-konsumen/">
+              <input type="hidden" name="textData"  value="home">
+              <button class="link-img-icon-top form-inline my-2 my-lg-0" type="submit" style="background: transparent;border: 0px solid;">
+                <img src="images/icon/user.png" class="img-icon-top">
+              </button>
+            </form>
           </li>
           <li class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="in/accounts-duren/open-konsumen/data.php">
-              <img src="images/icon/buy.png" class="img-icon-top">
-            </a>
+            <form method="POST" action="in/accounts-duren/open-konsumen/">
+              <input type="hidden" name="textData"  value="cart">
+              <button class="link-img-icon-top form-inline my-2 my-lg-0" type="submit" style="background: transparent;border: 0px solid;">
+                <img src="images/icon/buy.png" class="img-icon-top">
+              </button>
+            </form>
           </li>
         </ul>
       </div>
