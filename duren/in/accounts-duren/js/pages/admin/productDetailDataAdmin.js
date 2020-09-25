@@ -12,8 +12,6 @@ $(document).ready(function(){
      	success: function(select) { 
 
  			var DataDetailProduk = jQuery.parseJSON(select);
-
-            /*console.log(DataDetailProduk);*/
  			var PrintDetail_id_produk = DataDetailProduk[0].id_produk;
  			var PrintDetail_nama_produk = DataDetailProduk[0].nama_produk;
  			var PrintDetail_detail1_produk = DataDetailProduk[0].detail1_produk;
@@ -29,8 +27,6 @@ $(document).ready(function(){
             var gambar2_productView = DataDetailProduk[0].gambar2_produk;
             var gambar3_productView = DataDetailProduk[0].gambar3_produk;
             var gambar4_productView = DataDetailProduk[0].gambar4_produk;
-            
-            console.log(gambar1_productView);
 
             $('#PrintDetail_nama_produk').val(PrintDetail_nama_produk);
             $('#PrintDetail_detail1_produk').val(PrintDetail_detail1_produk);

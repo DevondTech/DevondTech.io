@@ -52,7 +52,7 @@
     <link href="../css/themes/all-themes.css" rel="stylesheet" />
     <link href="../css/modif-style.css?v=1.1.1" rel="stylesheet" />
     <link href="../css/flexible.css?v=1.1.1" rel="stylesheet" />
-<!--     <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
+    <!--<link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
 </head>
 
 <body class="bd-w">
@@ -216,6 +216,14 @@
                             <span>notifikasi</span>
                         </a>
                     </li>
+                    <li class="menu-waves-block" id="home-link">
+                        <a href="../../../" id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/company-edit.svg" width="20" height="20">
+                            </div>
+                            <span>Halaman Order</span>
+                        </a>
+                    </li>
                     <li class="menu-waves-block" id="logout-link">
                         <a href="../../../conn/logout.php" id="waves-effect-this">
                             <div class="icon-menu-img-left">
@@ -224,57 +232,42 @@
                             <span>Logout</span>
                         </a>
                     </li>
-                    <input type="text" name="textData" id="textData" value="<?php echo$textData; ?>">
-                    
-                    <!-- <li class="menu-waves-block">
-                        <a id="waves-effect-this">
-                        </a>
-                    </li> -->
+                    <input type="hidden" name="textData" id="textData" value="<?php echo$textData; ?>">
                 </ul>
             </div>
-            <!-- <div class="legal">
-                <div class="copyright">
-                </div>
-                <div class="version">
-                    <b>Version: </b> 1.0.0
-                </div>
-            </div> -->
         </aside>
     </section>
 
-<!-- CONTECT INPUT IN HERE -->
-
-<section class="content" id="content">
-    <div class="pad20top container-fluid" id="maxDasboardItem">
-        <div id="content-profile">
-            
-
+    <section class="content" id="content">
+        <div class="pad20top container-fluid" id="maxDasboardItem">
+            <div id="content-profile">
+                <!-- CONTECT INPUT IN HERE -->
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Jquery Js -->
-<script type="text/javascript"  src="../js/jquery.js" ></script>
-<!-- Jquery Ajax Js -->
-<script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<!-- Jquery Core Js -->
-<script src="../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap Core Js -->
-<script src="../plugins/bootstrap/js/bootstrap.js"></script>
-<!-- Select Plugin Js -->
-<script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
-<!-- Slimscroll Plugin Js -->
-<script src="../plugins/jquery-slimscroll/jquery.slimscroll.js?v=1.1.1"></script>
-<!-- Waves Effect Plugin Js -->
-<script src="../plugins/node-waves/waves.js"></script>
-<!-- Custom Js -->
-<script src="../js/admin.js"></script>
-<!-- Demo Js -->
-<script src="../js/demo.js"></script>
-<!-- Flash Js -->
-<script src="../js/pages/konsumen/konsumenData.js"></script>
-<!-- Scrol -->
-<!-- <script src="../css/scroll/js/scroll.js"></script> -->
+    <!-- Jquery Js -->
+    <script type="text/javascript"  src="../js/jquery.js" ></script>
+    <!-- Jquery Ajax Js -->
+    <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+    <!-- Select Plugin Js -->
+    <script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+    <!-- Slimscroll Plugin Js -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.js?v=1.1.1"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+    <!-- Custom Js -->
+    <script src="../js/admin.js"></script>
+    <!-- Demo Js -->
+    <script src="../js/demo.js"></script>
+    <!-- Flash Js -->
+    <script src="../js/pages/konsumen/konsumenData.js"></script>
+    <!-- Scrol -->
+    <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
 </body>
 </html>

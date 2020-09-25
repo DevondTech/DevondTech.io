@@ -18,6 +18,14 @@
 </head>
 <style type="text/css">
 
+    .cardBorderBottomGrey{
+        border-bottom: 1px solid #887777;
+    }
+
+    .floatLeftItemData{
+        float: left;
+    }
+
     .floatLeftCartData{
         float: left;
     }
@@ -93,22 +101,88 @@
     }
 
     .positionCardDetailOrder{
-        margin-top: 25px;
+        margin-top: 28px;
         line-height: 2;
         font-size: 16px;
         padding-bottom: 10px;
-        border-bottom: 1px solid #887777;
+        /*border-bottom: 1px solid #887777;*/
         width: 90%;
+    }
+
+    .titleDetailOrder{
+        font-weight: bold;
+        padding-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
     }
 
     .positionTextDetailOrder{
         width: 100%;
         display: flex;
+        padding-bottom: 10px;
     }
 
     .positionPrintOutTextDetailOrder{
         width: 120px;
-        text-align: right;
+        text-align: left;
+    }
+
+    .divPrentTypeButtonPlusMinus{
+        margin-top: 0px;
+    }
+
+    .divTypeButtonPlusMinus{
+        width: 35px;
+        height: 30px;
+        background-color: #2d472c;
+        float: left;border-radius: 3px;
+    }
+
+    .divTypeButtonPlusMinus:hover{
+        width: 35px;
+        height: 30px;
+        background-color: #111710;
+        float: left;border-radius: 3px;
+    }
+
+    .positionIconDivTypeButtonPlusMinus{
+        margin: auto;width: 70%;
+    }
+
+    .iconDivTypeButtonPlusMinus{
+        height: 20px;
+        margin: auto;
+        margin-top: -5px;
+        margin-left: 2px;
+    }
+
+    .input-textDataUser-false {
+        width: width: 317px;
+        height: 30px;
+        color: #000;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: 0px solid #969191;
+        background-color: white;
+        border-radius: 3px;
+        width: 320px;
+    }
+
+    .inputTextPlusMinus{
+        color: #737373;
+        width: 50px;
+        text-align: center;
+    }
+
+    .inputTextPlusMinus:hover{
+        color: #737373;
+        width: 50px;
+        text-align: center;
+    }
+
+    .cursorPointer{
+        cursor: pointer;
     }
 
     @media(max-width: 991px){
@@ -123,7 +197,7 @@
             line-height: 2;
             font-size: 16px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #887777;
+            /*border-bottom: 1px solid #887777;*/
             width: 90%;
             margin-left: 30px;
             margin-bottom: 40px;
@@ -133,9 +207,28 @@
             text-align: left;
         }
 
+        .titleDetailOrder{
+            font-weight: bold;
+            padding-bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+        }
+
     }
 
     @media(max-width: 767px){
+
+        .positionTextDetailOrder{
+            width: 100%;
+            display: flex;
+            padding-bottom: 0px;
+        }
+
+        .divPrentTypeButtonPlusMinus {
+            margin-top: 7px;
+            padding-bottom: 7px;
+        }
 
         .padLeft20CartData{
             padding-left: 0px;
@@ -143,7 +236,12 @@
 
         .positionPrintOutTextDetailOrder {
             width: 85px;
-            text-align: right;
+            text-align: left;
+            font-size: 12px;
+        }
+
+        .textMid {
+            text-align: left;
             font-size: 12px;
         }
 
@@ -152,15 +250,95 @@
             line-height: 2;
             font-size: 16px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #887777;
+           /* border-bottom: 1px solid #887777;*/
             width: 80%;
             margin-left: 30px;
             margin-bottom: 40px;
         }
 
+        .input-textDataUser-false {
+            width: 100%;
+            height: 30px;
+            color: #000;
+            padding-left: 5px;
+            padding-right: 5px;
+            border: 0px solid #969191;
+            background-color: white;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        .textValuePrintOutTextDetailOrder{
+            margin-top: -6px;
+        }
+
+        .textSpanValuePrintOutTextDetailOrder{
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+        .divPrentTypeButtonPlusMinus{
+            margin-top: 7px;
+        }
+
+        .iconDivTypeButtonPlusMinus {
+            height: 18px;
+            margin: auto;
+                margin-top: auto;
+            margin-top: auto;
+            margin-top: -7px;
+        }
+
+        .divTypeButtonPlusMinus {
+            width: 27px;
+            height: 27px;
+            background-color: #2d472c;
+            float: left;
+            border-radius: 3px;
+            margin-top: 4px;
+        }
+
+        .divTypeButtonPlusMinus:hover {
+            width: 27px;
+            height: 27px;
+            background-color: #111710;
+            float: left;
+            border-radius: 3px;
+            margin-top: 4px;
+        }
+
+        .inputTextPlusMinus{
+            color: #737373;
+            width: 30px;
+            text-align: center;
+        }
+
+        .inputTextPlusMinus:hover{
+            color: #737373;
+            width: 30px;
+            text-align: center;
+        }
+        
+    }
+
+    .marginLeft10{
+        margin-left: 10px;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
     }
 
 </style>
+
 <body class="bd-w">
 <div>
     <div class="card-textTitleLarge-Black">
@@ -170,7 +348,7 @@
     </div>
     <div class="padLeft20CartData">
         <div class="col-divCartData">
-            <div>
+            <div id="alamatUser">
                 <div class="CartAlamatCartData">
                     <div id="rowAlamatTop" class="rowAlamatTop">
                         <div class="row">
@@ -225,28 +403,84 @@
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-12">
                         <div class="positionCardDetailOrder">
-                            <div class="positionTextDetailOrder">
-                                <div class="positionPrintOutTextDetailOrder floatLeftCartData">
-                                    Jenis Produk : 
+                            <div class="">
+                                <div class="titleDetailOrder TitleTextBarang">
+                                Detail Pemesanan
                                 </div>
-                                <div class="floatLeftCartData">
-                                    
+                                <div class="positionTextDetailOrder">
+                                    <div class="positionPrintOutTextDetailOrder floatLeftCartData">
+                                        Jenis Produk  
+                                    </div>
+                                    <div class="textMid floatLeftCartData">
+                                        :  
+                                    </div>
+                                    <div class="marginLeft10 floatLeftCartData">
+                                        <div class="textValuePrintOutTextDetailOrder floatLeftCartData">
+                                            <input type="text" name="" value="Durian" style="color: #737373;" id="jenis_produk" class="input-textDataUser-false" disabled>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="positionTextDetailOrder">
-                                <div class="positionPrintOutTextDetailOrder floatLeftCartData" >
-                                    Jumlah :
+                                <div class="divPrentTypeButtonPlusMinus positionTextDetailOrder">
+                                    <div class="positionPrintOutTextDetailOrder floatLeftCartData" >
+                                        Jumlah 
+                                    </div>
+                                    <div class="textMid floatLeftCartData">
+                                        :  
+                                    </div>
+                                    <div class="marginLeft10 floatLeftCartData">
+
+                                        <div class="textValuePrintOutTextDetailOrder floatLeftCartData">
+                                            <div style="margin-left: 5px;" class="floatLeftItemData cursorPointer" id="btnPlus" >
+                                                <div class="divTypeButtonPlusMinus" id="divTypeButtonPlusClick">
+                                                    <div class="positionIconDivTypeButtonPlusMinus">
+                                                        <img src="../images/icon png/plus.png" class="iconDivTypeButtonPlusMinus">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="floatLeftItemData">
+                                                <input type="number" name="" value="1" id="jumlah_pemesanan" class="inputTextPlusMinus input-textDataUser-false">
+                                            </div>
+                                            <div style="margin-left: 5px;" class="floatLeftItemData cursorPointer" id="btnMinus">
+                                                <div class="divTypeButtonPlusMinus" id="divTypeButtonMinusClick">
+                                                    <div class="positionIconDivTypeButtonPlusMinus">
+                                                        <img src="../images/icon png/minus.png" class="iconDivTypeButtonPlusMinus">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="floatLeftCartData">
-                                    
+                                <div class="positionTextDetailOrder">
+                                    <div class="positionPrintOutTextDetailOrder floatLeftCartData" >
+                                        Harga Satuan 
+                                    </div>
+                                    <div class="textMid floatLeftCartData">
+                                        :  
+                                    </div>
+                                    <div class="textValuePrintOutTextDetailOrder floatLeftCartData">
+                                        <!-- <div class="textSpanValuePrintOutTextDetailOrder floatLeftCartData" style="color: #737373"> Rp</div> -->
+                                        <div class="marginLeft10 floatLeftCartData">
+                                            <input type="text" name="harga" value="1230000" style="color: #737373;" id="harga" class="input-textDataUser-false" disabled>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="positionTextDetailOrder">
-                                <div class="positionPrintOutTextDetailOrder floatLeftCartData" >
-                                    Harga Satuan :
-                                </div>
-                                <div class="floatLeftCartData">
-                                    <input type="" name="" placeholder="">
+                                <div class="cardBorderBottomGrey" style="width: 80%"></div>
+                                <div style="margin-top: 10px;">
+                                    <div class="positionTextDetailOrder">
+                                        <div class="positionPrintOutTextDetailOrder floatLeftCartData" >
+                                            Total Harga 
+                                        </div>
+                                        <div class="textMid floatLeftCartData">
+                                            :  
+                                        </div>
+                                        <div class="textValuePrintOutTextDetailOrder floatLeftCartData">
+                                            <!-- <div class="textSpanValuePrintOutTextDetailOrder floatLeftCartData" style="color: #737373"> Rp</div> -->
+                                            <div class="marginLeft10 floatLeftCartData">
+                                                <input type="text" name="total_harga_pemesanan" value="" style="color: #737373;" id="total_harga_pemesanan" class="input-textDataUser-false" disabled>
+                                                <input type="hidden" name="total_harga_pemesanan_hidden" value="" style="color: #737373;" id="total_harga_pemesanan_hidden" class="input-textDataUser-false" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
