@@ -70,8 +70,8 @@
                   Halaman Login 
                 </div>
                 <div class="paddingTopBottom10">
-                  Username
-                  <input type="text" class="form-control" name="username" id="username" placeholder="Ex : Devond2020" >
+                  E-mail or No. Handphone
+                  <input type="text" class="form-control" name="emailNomorHP" id="emailNomorHP" placeholder="Ex : 08994190773 or devond@gmail.com" >
                 </div>
                 <div class="paddingTopBottom10" style="padding-bottom: 40px;" >
                   Password

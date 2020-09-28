@@ -18,7 +18,7 @@
 <!-- <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
 </head>
 <body class="bd-w">
-<div>
+<div class="divPositionContentTop">
     <div class="card-textTitleLarge-Black">
         <div class="textTitleLarge-Black" >
             Profile Saya
@@ -49,16 +49,6 @@
             <div class="col-UserDataEdit-left col-lg-8 col-md-6 col-sm-6">
                 <div>
                     <form method="POST" id="updateDataUser">
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                    Username :
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser-false">
-                                <input type="text" name="" style="color: #737373" id="dataUsername" class="input-textDataUser-false"  disabled>
-                            </div>
-                        </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
@@ -116,69 +106,9 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser-false">
-                                <textarea style="color: #737373" id="dataAlamat" class="input-textDataUser-false" disabled></textarea>
+                                <textarea style="color: #737373; height: auto;" id="dataAlamat" class="input-textDataUser-false" disabled></textarea>
                             </div>
                         </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                    Negara :
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser-false">
-                                <input type="text" name="" style="color: #737373" id="dataNegara" class="input-textDataUser-false"  disabled>
-                            </div>
-                        </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                    Provinsi :
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser-false">
-                                <input type="text" name="" style="color: #737373" id="dataProvinsi" class="input-textDataUser-false"  disabled>
-                            </div>
-                        </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                    Kabupaten :
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser-false">
-                                <input type="text" name="" style="color: #737373" id="dataKabupaten" class="input-textDataUser-false"  disabled>
-                            </div>
-                        </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                    Kota :
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser-false"> 
-                                <input type="text" name="" style="color: #737373" id="dataKota" class="input-textDataUser-false"  disabled>
-                            </div>
-                        </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                    Kode Pos :
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser-false">
-                                <input type="number" name="" style="color: #737373" id="dataKodePos" class="input-textDataUser-false" disabled>
-                            </div>
-                        </div>
-                        <!-- <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                  
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser">
-                                <button class="buttonLarge-green" type="button" id="SaveDataUser">SIMPAN</button>
-                            </div>
-                        </div> -->
                     </form>
                 </div>
             </div>

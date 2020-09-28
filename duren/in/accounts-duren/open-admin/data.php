@@ -46,7 +46,7 @@
     <!-- Animation Css -->
     <link href="../plugins/animate-css/animate.css?v=1.1.1" rel="stylesheet" />
     <!-- Custom Css -->
-    <link href="../css/style.css?v=1.1.1" rel="stylesheet" />
+    <link href="../css/style.css?v=1.1.2" rel="stylesheet" />
     <!-- Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="../css/themes/all-themes.css?v=1.1.1" rel="stylesheet" />
     <link href="../css/modif-style.css?v=1.1.1" rel="stylesheet" />

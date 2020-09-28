@@ -22,6 +22,7 @@
         }
         else{ echo "dataCheck"; }
     }
+    
     if(isset($_GET['uploadGambar2Produk'])){
         session_start();
         require '../config.php';
@@ -44,6 +45,7 @@
         }
         else{ echo "dataCheck"; }
     }
+
     if(isset($_GET['uploadGambar3Produk'])){
         session_start();
         require '../config.php';
@@ -66,6 +68,7 @@
         }
         else{ echo "dataCheck"; }
     }
+
     if(isset($_GET['uploadGambar4Produk'])){
         session_start();
         require '../config.php';
@@ -88,6 +91,5 @@
         }
         else{ echo "dataCheck"; }
     }
-
 
 ?>

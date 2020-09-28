@@ -60,7 +60,7 @@ $(document).ready(function(){
         }
     });             
 
-    /*facebook edit*/
+    /*Alamat edit*/
     $("#alamat_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
     $("#PrintDetail_link_alamat").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
 
@@ -115,7 +115,7 @@ $(document).ready(function(){
         } 
     });
 
-    /*instagram edit*/
+    /*No HP edit*/
     $("#nomor_hp1_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
     $("#PrintDetail_link_nomor_hp1").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
 
@@ -170,7 +170,7 @@ $(document).ready(function(){
         } 
     });
 
-    /*Whatsapp edit*/
+    /*No HP edit*/
     $("#nomor_hp2_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
     $("#PrintDetail_link_nomor_hp2").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
 
@@ -225,7 +225,7 @@ $(document).ready(function(){
         } 
     });
 
-    /*Twitter edit*/
+    /*Mail edit*/
     $("#email_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
     $("#PrintDetail_link_email").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
 
@@ -237,7 +237,7 @@ $(document).ready(function(){
         $("#email_EditDataDetailProductAdmin").attr('style','display:none;');
     });
 
-    $('#Twitter_ubahCancel').on('click', function(){
+    $('#email_ubahCancel').on('click', function(){
         $("#PrintDetail_link_email").prop('enable', false);
         $("#PrintDetail_link_email").prop('disabled', true);
         $("#PrintDetail_link_email").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');

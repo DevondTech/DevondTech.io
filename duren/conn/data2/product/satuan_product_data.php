@@ -1,4 +1,5 @@
 <?php
+
     if(isset($_GET['callIDSatuanProduct'])){
         session_start();
         require '../config.php'; 
@@ -10,4 +11,5 @@
         $callIDSatuanProduct=json_encode($callIDSatuanProduct);
         echo json_encode($callIDSatuanProduct);
     }
+    
 ?> 

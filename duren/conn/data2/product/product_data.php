@@ -1,4 +1,5 @@
 <?php
+
     require( '../../ssp.class.php' );
     $dbDetails = array(
         'host' => 'localhost',
@@ -47,7 +48,6 @@
         $db = SSP::sql_connect($dbDetails);
         $sql = "DELETE from tb_produk WHERE id_produk='".$_GET['deleteDataProduct']."'";
         $result = SSP::sql_exec_update($db,null,$sql);
-        //var_dump($sql);die;
         header("Content-Type: application/json");
         if($result){
             echo json_encode(array("success"=>true));exit;
@@ -68,6 +68,7 @@
     echo json_encode(
         SSP::simple( $_GET, $dbDetails, $table, $primaryKey, $columns )
     );
+    
 ?> 
 
 

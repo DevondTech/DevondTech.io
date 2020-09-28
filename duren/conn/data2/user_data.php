@@ -18,7 +18,7 @@
         require 'config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        $query = "SELECT * FROM view_data_all_user where id_user = '$id_user' ";
+        $query = "SELECT id_user, nama_lengkap, foto, nomor_hp, id_jenis_kelamin, jenis_kelamin, tanggal_lahir, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos FROM view_data_all_user where id_user = '$id_user' ";
         $result = $db->query($query); 
 
         $callDetailUserDatas = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -104,7 +104,6 @@
         if(in_array($ekstensiFoto, $ekstensiAccept) === true){
             $queryUpdateFotoUser = "UPDATE tb_login_user SET foto='$fileFolder$datePic$id_user$foto' WHERE id_user = $id_user";
             $db->query($queryUpdateFotoUser);
-            /*move_uploaded_file($_FILES['foto']['tmp_name'], $fileFolder.$datePic.$_FILES['foto']['name']);*/
             move_uploaded_file($_FILES['foto']['tmp_name'], $location);
             echo "Success";   
         }

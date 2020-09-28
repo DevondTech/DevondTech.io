@@ -2,6 +2,16 @@
     margin-top: -19px;
 }  
 
+.divPositionContentTop{
+  margin-top: 0px;
+}
+
+@media(max-width: 504px){
+  .divPositionContentTop{
+    margin-top: 50px;
+  }
+}
+
 /* Navbar ====================================== */
 @import url(materialize.css);
 

@@ -1,4 +1,5 @@
 <?php	
+
 	if(isset($_GET['callIDProduct'])){
         session_start();
         require '../config.php'; 
@@ -22,4 +23,5 @@
         $select=json_encode($select);
         echo json_encode($select);
     }
+    
 ?>

@@ -1,4 +1,5 @@
 <?php
+
     require( '../../ssp.class.php' );
     $dbDetails = array(
         'host' => 'localhost',
@@ -45,6 +46,7 @@
     echo json_encode(
         SSP::simple( $_GET, $dbDetails, $table, $primaryKey, $columns )
     );
+    
 ?> 
 
 

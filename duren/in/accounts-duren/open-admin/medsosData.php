@@ -21,7 +21,7 @@
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
 </head>
 <body>
-
+<div class="divPositionContentTop">
 	 <div class="card-textTitleLarge-Black">
         <div class="textTitleLarge-Black" >
            Data Media Sosial
@@ -159,11 +159,9 @@
                 </form>
             </div>
         </div>
-        
     </div>
-
-    
-     <!-- Jquery Js -->
+</div>
+<!-- Jquery Js -->
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>

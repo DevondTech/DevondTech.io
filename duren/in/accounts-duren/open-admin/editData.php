@@ -17,7 +17,7 @@
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
 </head>
 <body class="bd-w">
-<div>
+<div class="divPositionContentTop">
     <div class="card-textTitleLarge-Black">
         <div class="textTitleLarge-Black" >
             Ubah Profile
@@ -48,16 +48,6 @@
             <div class="col-UserDataEdit-left col-lg-8 col-md-6 col-sm-6">
                 <div>
                     <form method="POST" id="updateDataUser">
-                        <!-- <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                    Username
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser">
-                                <input type="text" name="usernameUpdate" id="usernameUpdate" class="input-textDataUser" placeholder="Ex : wuri123" >
-                            </div>
-                        </div> -->
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
@@ -68,16 +58,6 @@
                                 <input type="text" name="nama_lengkapUpdate" id="nama_lengkapUpdate" class="input-textDataUser" placeholder="Ex : Tri Wuri Kinanti">
                             </div>
                         </div>
-                       <!--  <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
-                                    E-mail
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser">
-                                <input type="mail" name="emailUpdate" id="emailUpdate" class="input-textDataUser" placeholder="Ex : devondtech@gmail.com">
-                            </div>
-                        </div> -->
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
@@ -164,6 +144,26 @@
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
+                                    Kecamatan
+                                </div>
+                            </div>
+                            <div class="card-inputDataUser">
+                                <input type="text" name="kecamatanUpdate" id="kecamatanUpdate" class="input-textDataUser" placeholder="Ex : Kec. Sawangan">
+                            </div>
+                        </div>
+                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                            <div class="card-textDataUser">
+                                <div class="textDataUser">
+                                    Kelurahan
+                                </div>
+                            </div>
+                            <div class="card-inputDataUser">
+                                <input type="text" name="kelurahanUpdate"  id="kelurahanUpdate" class="input-textDataUser" placeholder="Ex : Kedaung">
+                            </div>
+                        </div>
+                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                            <div class="card-textDataUser">
+                                <div class="textDataUser">
                                     Kode Pos
                                 </div>
                             </div>
@@ -196,6 +196,7 @@
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 <script type="text/javascript" src="../js/pages/updateDataFoto.js"></script>
+<script src="../js/pages/editDataTampil.js"></script>
 <script src="../js/pages/editData.js"></script>
 
 <div id="open-updateFoto" class="modal fade" >

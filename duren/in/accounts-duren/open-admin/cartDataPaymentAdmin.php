@@ -20,42 +20,44 @@
 <link href="../css/dataUserLogin.css?v=1.1.10" rel="stylesheet" />
 </head>
 <body class="bd-w">
-<div id="dataPaymentPage" >
-    <div class="paddingtopData1">
-        <div class="card-textTitleLarge-Black">
-            <div class="textTitleLarge-Black" >
-               Data Konfirmasi Pembayaran
+<div class="divPositionContentTop">
+    <div id="dataPaymentPage" >
+        <div class="paddingtopData1">
+            <div class="card-textTitleLarge-Black">
+                <div class="textTitleLarge-Black" >
+                   Data Konfirmasi Pembayaran
+                </div>
             </div>
-        </div>
-        <br />
-        <div id="" class="parrentDivTable" >
-            <div class="scrollTableX">
-                <div class="marginLeft25">
-                    <table style="width: 100%;" border=1px; class="table table-bordered" id="dataProduk">
-                        <thead>
-                            <tr>
-                                <td class="table-tdYellowHeader">
-                                    Nomor
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Nama Pemesan
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    No Transaksi Pembayaran
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Stok
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Satuan
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Aksi
-                                </td>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+            <br />
+            <div id="" class="parrentDivTable" >
+                <div class="scrollTableX">
+                    <div class="marginLeft25">
+                        <table style="width: 100%;" border=1px; class="table table-bordered" id="dataProduk">
+                            <thead>
+                                <tr>
+                                    <td class="table-tdYellowHeader">
+                                        Nomor
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Nama Pemesan
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        No Transaksi Pembayaran
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Stok
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Satuan
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Aksi
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

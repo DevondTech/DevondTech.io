@@ -16,9 +16,6 @@
           document.location='../../../login'</script>");
       }
     $id_user = $_SESSION['id_user'];
-
-    echo 'ID User : ';
-    echo $id_user;
     $textData = $_POST['textData'];
     ?>
    
@@ -26,16 +23,13 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <title>King Fruit | User Account</title>
     <!-- Favicon-->
-   
 
     <!-- description -->
     <meta name="description" content="" />
     <!-- Keywords -->
     <meta name="keywords" content="" />
-
     <!-- <meta name="google" content="notranslate" />
     <meta http-equiv="Content-Language" content="en_US" /> -->
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
@@ -47,7 +41,7 @@
     <!-- Animation Css -->
     <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
     <!-- Custom Css -->
-    <link href="../css/style.css?v=1.1.1" rel="stylesheet" />
+    <link href="../css/style.css?v=1.1.2" rel="stylesheet" />
     <!-- Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="../css/themes/all-themes.css" rel="stylesheet" />
     <link href="../css/modif-style.css?v=1.1.1" rel="stylesheet" />
@@ -56,7 +50,6 @@
 </head>
 
 <body class="bd-w">
-     
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
@@ -77,12 +70,14 @@
         <div class="navbar-header nav-background" id="id-col-roght">
             <!-- <a href="javascript:void(0);" class="bars"  ></a> -->
             <a href="javascript:void(0);" class="bars" style="color: white"></a>
-            <a class="image-logoLoginLeft navbar-brand" >
+            <a href="../../../" class="image-logoLoginLeft navbar-brand" >
                 <img src="../../../images/logo-king-fruit.png" width="70">
             </a>
             <ul class="ul-right-menu navbar-right" >
                 <li class="image-logoLogin li-right-menu">
-                    <img src="../../../images/logo-king-fruit.png" width="70">
+                    <a href="../../../"> 
+                        <img src="../../../images/logo-king-fruit.png" width="70">
+                    </a>
                 </li>
                 <li class="image-userLogin li-right-menu">
                     <a data-toggle="dropdown" role="button" id="menu-icon-a">

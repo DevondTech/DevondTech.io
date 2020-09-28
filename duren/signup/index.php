@@ -48,11 +48,11 @@
                   </div>
                   <div class="inputSingleSignup">
                     Username
-                    <input type="text" class="form-control" name="username" id="username" placeholder="Ex : Wuri678" >
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Ex : Devond678" >
                   </div>
                   <div class="inputSingleSignup">
                     E-mail
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Ex : mail@gmail.com" >
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Ex : devond@gmail.com" >
                   </div>
                   <div class="inputDoubleSignup">
                     Password

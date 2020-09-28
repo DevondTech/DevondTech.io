@@ -14,11 +14,8 @@
 			$password=$_POST['password'];
 			$password = hash('ripemd160', $password);
 			$op=$_GET['op'];
-
-			//echo" $username $password";
 			if($op=="in")
 			{
-
 				$query="select * from tb_login_user where username='$username' and password='$password'"; 
 				$result = mysqli_query($db,$query);
 				if(mysqli_num_rows($result)==1)
@@ -33,14 +30,10 @@
 		            $_SESSION['foto']=$baris['foto'];
 		            $_SESSION['email']=$baris['email'];
 		            $email = $baris['email'];
-
-		            //echo"email :";
-					//echo $_SESSION['id_status_user'];
 					
 		            $id_status_user =  $baris['id_status_user'];
 		            echo $_SESSION['id_status_user'];
 					if($_SESSION['id_status_user'] =='1'){
-						//echo 'halaman sukses';
 						echo $_SESSION['id_status_user']; 
 						echo "this";
 						header("Location: ../in/accounts-duren/open-admin/data.php");
@@ -65,10 +58,10 @@
 				header("Location:../login");
 			}
 			?>
-			<br><Br>
+			<br />
+			<br />
 
 		</div>
 	</div>
-	
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>

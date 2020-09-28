@@ -20,51 +20,53 @@
 <link href="../css/dataUserLogin.css?v=1.1.10" rel="stylesheet" />
 </head>
 <body class="bd-w" >
-<div id="dataProdukPage" >
-    <div class="paddingtopData1">
-        <div class="card-textTitleLarge-Black">
-            <div class="textTitleLarge-Black" >
-               Data Produk
+<div class="divPositionContentTop">
+    <div id="dataProdukPage" >
+        <div class="paddingtopData1">
+            <div class="card-textTitleLarge-Black">
+                <div class="textTitleLarge-Black" >
+                   Data Produk
+                </div>
             </div>
-        </div>
-        <br />
-        <div class="paddingtop50px">
-            <ul class="ul-buttonGreen">
-                <li class="li-buttonGreen">
-                    <a  data-toggle="modal" data-target="#open-dataProduct" id="createNewDataProduct" >
-                    <button class="buttonMiddle-green" >Tambah Produk</button>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div id="" class="parrentDivTable" >
-            <div class="scrollTableX">
-                <div class="marginLeft25">
-                    <table style="width: 100%;" border=1px; class="table table-bordered" id="dataProduk">
-                        <thead>
-                            <tr>
-                                <td class="table-tdYellowHeader">
-                                    Nomor
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Nama Produk
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Jenis Produk
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Stok
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Satuan
-                                </td>
-                                <td class="table-tdYellowHeader">
-                                    Aksi
-                                </td>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+            <br />
+            <div class="paddingtop50px">
+                <ul class="ul-buttonGreen">
+                    <li class="li-buttonGreen">
+                        <a  data-toggle="modal" data-target="#open-dataProduct" id="createNewDataProduct" >
+                        <button class="buttonMiddle-green" >Tambah Produk</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="" class="parrentDivTable" >
+                <div class="scrollTableX">
+                    <div class="marginLeft25">
+                        <table style="width: 100%;" border=1px; class="table table-bordered" id="dataProduk">
+                            <thead>
+                                <tr>
+                                    <td class="table-tdYellowHeader">
+                                        Nomor
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Nama Produk
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Jenis Produk
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Stok
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Satuan
+                                    </td>
+                                    <td class="table-tdYellowHeader">
+                                        Aksi
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

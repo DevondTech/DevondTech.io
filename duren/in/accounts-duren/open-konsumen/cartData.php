@@ -18,6 +18,17 @@
 </head>
 <style type="text/css">
 
+    .card-textDataUser {
+        width: 20%;
+        float: left;
+    }
+
+    .textDataUser {
+        text-align: left;
+        padding-right: 20px;
+        padding-top: 5px;
+    }
+
     .cardBorderBottomGrey{
         border-bottom: 1px solid #887777;
     }
@@ -28,6 +39,11 @@
 
     .floatLeftCartData{
         float: left;
+    }
+
+    .floatRightbutton {
+        float: right;
+        padding-left: 20px;
     }
 
     .textIconLargeCartData{
@@ -49,7 +65,7 @@
         background-color: #2d472c;
         border: 1px solid #2d472c;
         color: white;
-        height: 30px;
+        height: 32px;
         border-radius: 4px;
         text-align: center;
         padding-left: 20px;
@@ -60,7 +76,7 @@
         background-color: white;
         border: 1px solid #2d472c;
         color: #2d472c;
-        height: 30px;
+        height: 32px;
         border-radius: 4px;
         padding-left: 20px;
         padding-right: 20px;
@@ -325,6 +341,14 @@
         margin-left: 10px;
     }
 
+    .hiddenAlamatUpdate{
+        display: none;
+    }
+
+    .showAlamatUpdate{
+        display: none;
+    }
+
     /* Chrome, Safari, Edge, Opera */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -340,7 +364,115 @@
 </style>
 
 <body class="bd-w">
-<div>
+<div class="divPositionContentTop">
+    <div class="hiddenAlamatUpdate" id="ubahAlamat">
+        <div class="card-textTitleLarge-Black">
+            <div class="textTitleLarge-Black">
+                Ubah Alamat
+            </div>
+        </div>
+        <div class="padLeft20CartData">
+            <div class="col-divCartData">
+                <form method="POST" id="updateDataAlamatUser">
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                                Alamat
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <input type="text" name="alamatUpdate" id="alamatUpdate" class="input-textDataUser" placeholder="Ex : JL. Jend Sudirman Gang Mawar No 505 ">
+                        </div>
+                    </div>
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                                Negara
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <input type="text" name="negaraUpdate" id="negaraUpdate" class="input-textDataUser" placeholder="Ex : Indonesia">
+                        </div>
+                    </div>
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                                Provinsi
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <input type="text" name="provinsiUpdate" id="provinsiUpdate" class="input-textDataUser" placeholder="Ex : Jawa Barat ">
+                        </div>
+                    </div>
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                                Kabupaten
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <input type="text" name="kabupatenUpdate"  id="kabupatenUpdate" class="input-textDataUser" placeholder="Ex : Depok">
+                        </div>
+                    </div>
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                                Kota
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <input type="text" name="kotaUpdate"  id="kotaUpdate" class="input-textDataUser" placeholder="Ex : Depok">
+                        </div>
+                    </div>
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                                Kecamatan
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <input type="text" name="kecamatanUpdate" id="kecamatanUpdate" class="input-textDataUser" placeholder="Ex : Kec. Sawangan">
+                        </div>
+                    </div>
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                                Kelurahan
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <input type="text" name="kelurahanUpdate"  id="kelurahanUpdate" class="input-textDataUser" placeholder="Ex : Kedaung">
+                        </div>
+                    </div>
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                                Kode Pos
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <input type="number" name="kode_posUpdate" id="kode_posUpdate" class="input-textDataUser" placeholder="Ex : 61523">
+                        </div>
+                    </div>
+                    <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="textDataUser">
+                              
+                            </div>
+                        </div>
+                        <div class="card-inputDataUser">
+                            <div class="floatRightbutton">
+                                <button class="buttonLarge-green" type="button" id="btnUpdateDataAlamatUser">SIMPAN</button>
+                            </div>
+                            <div class="floatRightbutton">
+                                <button class="buttonLarge-red" type="button" id="btnCancelUpdateDataAlamatUser">BATAL</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="card-textTitleLarge-Black">
         <div class="textTitleLarge-Black">
             Data Pesanan
@@ -364,22 +496,33 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-3 col-sm-12">
                                 <div class="p5pxCartData">
-                                    <div class="fontBoldCartData inputTypeTransparent" id="nama_lengkap">Mohamad Eko Prasetyo, S .Kom</div> 
-                                    <div class="inputTypeTransparent" id="nomor_hp">
-                                        (+62)183642786236
+                                    <div class="fontBoldCartData inputTypeTransparent" id="namaLengkapPrint">  
+                                    </div> 
+                                    <input type="hidden" name="nama_lengkap" id="nama_lengkap" >
+                                    <div class="inputTypeTransparent" id="nomorHpPrint">
                                     </div>
+                                    <input type="hidden" name="nomor_hp" id="nomor_hp" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="p5pxCartData">
-                                    <div id="alamat" class="inputTypeTransparent ">Citra Lake Sawangan Blok A02/06 Jl Raya Cinangka Km. 3 Bojongsari Baru, Kedaung, Kec. Sawangan, Kota Depok, Jawa Barat 16516</div>
-                                    
+                                    <div id="alamatPrint" class="inputTypeTransparent ">
+                                        
+                                    </div>
+                                    <input type="hidden" name="alamatInput" id="alamatInput" >
+                                    <input type="hidden" name="negaraInput" id="negaraInput" >
+                                    <input type="hidden" name="provinsiInput" id="provinsiInput" >
+                                    <input type="hidden" name="kabupatenInput" id="kabupatenInput" >
+                                    <input type="hidden" name="kecamatanInput" id="kecamatanInput" >
+                                    <input type="hidden" name="kelurahanInput" id="kelurahanInput" >
+                                    <input type="hidden" name="kotaInput" id="kotaInput" >  
+                                    <input type="hidden" name="kodePOSInput" id="kodePOSInput" >
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-12">
                                 <div class="centerPosition1 p5pxCartData">
                                     <div class="pad8Px">
-                                        <button class="inputTypeTransparent buttonOrderAlamatCartData">Ubah</button>
+                                        <button class="inputTypeTransparent buttonOrderAlamatCartData" id="buttonUbahAlamat">Ubah</button>
                                     </div>
                                 </div>
                             </div>
@@ -460,7 +603,8 @@
                                     <div class="textValuePrintOutTextDetailOrder floatLeftCartData">
                                         <!-- <div class="textSpanValuePrintOutTextDetailOrder floatLeftCartData" style="color: #737373"> Rp</div> -->
                                         <div class="marginLeft10 floatLeftCartData">
-                                            <input type="text" name="harga" value="1230000" style="color: #737373;" id="harga" class="input-textDataUser-false" disabled>
+                                            <input type="hidden" name="harga" value="1230000" style="color: #737373;" id="harga" class="input-textDataUser-false" disabled>
+                                            <input type="text" name="harga_tampil" value="1230000" style="color: #737373;" id="harga_tampil" class="input-textDataUser-false" disabled>
                                         </div>
                                     </div>
                                 </div>
@@ -476,8 +620,8 @@
                                         <div class="textValuePrintOutTextDetailOrder floatLeftCartData">
                                             <!-- <div class="textSpanValuePrintOutTextDetailOrder floatLeftCartData" style="color: #737373"> Rp</div> -->
                                             <div class="marginLeft10 floatLeftCartData">
-                                                <input type="text" name="total_harga_pemesanan" value="" style="color: #737373;" id="total_harga_pemesanan" class="input-textDataUser-false" disabled>
-                                                <input type="hidden" name="total_harga_pemesanan_hidden" value="" style="color: #737373;" id="total_harga_pemesanan_hidden" class="input-textDataUser-false" disabled>
+                                                <input type="text" name="total_harga_pemesanan_tampil" value="" style="color: #737373;" id="total_harga_pemesanan_tampil" class="input-textDataUser-false" disabled>
+                                                <input type="hidden" name="total_harga_pemesanan" value="" style="color: #737373;" id="total_harga_pemesanan_hidden" class="input-textDataUser-false" disabled>
                                             </div>
                                         </div>
                                     </div>

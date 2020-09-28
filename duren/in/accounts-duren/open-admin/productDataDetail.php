@@ -22,7 +22,7 @@
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
 </head>
 <body>
-
+<div class="divPositionContentTop">
 	 <div class="card-textTitleLarge-Black">
         <div class="textTitleLarge-Black" >
            Data Produk Detail
@@ -323,7 +323,7 @@
             </form>
         </div>
     </div>
-
+</div>
     
      <!-- Jquery Js -->
 <script type="text/javascript"  src="../js/jquery.js" ></script>

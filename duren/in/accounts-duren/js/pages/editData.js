@@ -1,55 +1,3 @@
-$(document).ready(function () {
-	$.ajax({
-     	type: "GET",
-     	url: "../../../conn/data2/user_data.php/?callDetailUserDatas",
-     	contentType: 'application/json; charset=utf-8',
-        dataType: 'json',
-     	success: function(callDetailUserDatas) { 
-
- 			var DataUser = jQuery.parseJSON(callDetailUserDatas);
- 			var EditDataIdUser = DataUser[0].id_user;
- 			/*var EditDataUserName = DataUser[0].username;*/
- 			var EditDataNamaLengkap = DataUser[0].nama_lengkap;
- 			/*var EditDataEmail = DataUser[0].email;*/
- 			var EditDataFoto = DataUser[0].foto;
-      var EditDataNomorHP = DataUser[0].nomor_hp;
-      var EditDataJenisKelamin = DataUser[0].id_jenis_kelamin;
-      var EditDataTanggalLahir = DataUser[0].tanggal_lahir;
-      var EditDataAlamat = DataUser[0].alamat;
-      var EditDataNegara = DataUser[0].negara;
-      var EditDataProvinsi = DataUser[0].provinsi;
-      var EditDataKabupaten = DataUser[0].kabupaten;
-      var EditDataKota = DataUser[0].kota;
-      var EditDataKodePos = DataUser[0].kode_pos;
-      
-      /*$('#usernameUpdate').val(EditDataUserName);*/
-      $('#nama_lengkapUpdate').val(EditDataNamaLengkap);
-      /*$('#emailUpdate').val(EditDataEmail);*/
-      $('#nomor_hpUpdate').val(EditDataNomorHP);
-      $('#id_jenis_kelaminUpdate').val(EditDataJenisKelamin);
-      $('#tanggal_lahirUpdate').val(EditDataTanggalLahir);
-      $('#alamatUpdate').val(EditDataAlamat);
-      $('#negaraUpdate').val(EditDataNegara);
-      $('#provinsiUpdate').val(EditDataProvinsi);
-      $('#kabupatenUpdate').val(EditDataKabupaten);
-      $('#kotaUpdate').val(EditDataKota);
-      $('#kode_posUpdate').val(EditDataKodePos);
-
-      var DataFotoNull = '../images/userProfile.png';
-      if(EditDataFoto == '' || EditDataFoto == null){
-          $('#fotoOnProfile').attr('src', DataFotoNull);
-
-      }
-      else{
-          $('#fotoOnProfile').attr('src', EditDataFoto);
-      } 
-    
-	   }
-	});
-});
-
-
-
 $('document').ready(function(){ 
   $('#btnUpdateDataUser').on('click',function(e){
 
@@ -62,6 +10,8 @@ $('document').ready(function(){
   var provinsiUpdate = $('#provinsiUpdate').val();
   var kabupatenUpdate = $('#kabupatenUpdate').val();
   var kotaUpdate = $('#kotaUpdate').val();
+  var kecamatanUpdate = $('#kecamatanUpdate').val();
+  var kelurahanUpdate = $('#kelurahanUpdate').val();
   var kode_posUpdate = $('#kode_posUpdate').val();
 
 
@@ -87,6 +37,12 @@ $('document').ready(function(){
   else if(kotaUpdate == ''){
     alert('Silahkan Isi Data Kota')
   }  
+  else if(kecamatanUpdate == ''){
+    alert('Silahkan Isi Data Kecamatan')
+  }  
+  else if(kelurahanUpdate == ''){
+    alert('Silahkan Isi Data Kelurahan')
+  }  
   else if(kode_posUpdate == ''){
     alert('Silahkan Isi Data Kode Pos')
   }  
@@ -96,7 +52,6 @@ $('document').ready(function(){
 
   else if(nama_lengkapUpdate != ''){
      var data = $("#updateDataUser").serialize();
-     /*console.log(data);*/
     $.ajax({
 
         type : 'POST',
@@ -112,15 +67,6 @@ $('document').ready(function(){
           if(response == "updataUserProfile"){
             $("#btnUpdateDataUser").html('SIMPAN');
             alert('Ubah data berhasil');
-           /* $('#kabupatenUpdate').val('');
-            $('#provinsiUpdate').val('');
-            $('#tanggal_lahirUpdate').val('');
-            $('#nama_lengkapUpdate').val('');
-            $('#nomor_hpUpdate').val('');
-            $('#alamatUpdate').val('');
-            $('#negaraUpdate').val('');
-            $('#kotaUpdate').val('');
-            $('#kode_posUpdate').val('');*/
             location.reload();
           }
           else{

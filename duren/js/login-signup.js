@@ -1,5 +1,4 @@
 /*signup script*/
-
 $('document').ready(function()
 { 
   $('#btn-signup').on('click',function(e){
@@ -35,8 +34,6 @@ $('document').ready(function()
       alert('Silahkan centang checkbox')
     }
     else if(username != '' && password != ''){
-
-     /* session_start();*/
       var data = $("#signup-form").serialize();
       console.log(data);
       $.ajax({
@@ -76,7 +73,6 @@ $('document').ready(function()
                 }
                 else{
                   if(response == "Success"){
-
                     $("#btn-signup").html('Signup');
                     alert('Pendaftaran Anda Berhasil');
                     $('#nama_lengkap').val('');
@@ -102,20 +98,20 @@ $('document').ready(function()
   });
 });
 
-/*login script*/
 
+/*login script*/
 $('document').ready(function()
 { 
   $('#btn-login').on('click',function(e){
-    var username = $('#username').val();
+    var emailNomorHP = $('#emailNomorHP').val();
     var password = $('#password').val();
-    if(username == ''){
+    if(emailNomorHP == ''){
       alert('Silahkan isi dulu usernamenya')
     }
     else if(password == ''){
       alert('Silahkan isi dulu passwordnya')
     }  
-    else if(username != '' && password != ''){
+    else if(emailNomorHP != '' && password != ''){
        var data = $("#login-form").serialize();
        console.log(data);
     $.ajax({
@@ -154,15 +150,15 @@ $('document').ready(function()
   document.querySelector('#password').addEventListener("keyup",function(e){
     if (e.keyCode === 13) 
     {
-      var username = $('#username').val();
+      var emailNomorHP = $('#emailNomorHP').val();
       var password = $('#password').val();
-      if(username == ''){
+      if(emailNomorHP == ''){
         alert('Silahkan isi dulu usernamenya')
       }
       else if(password == ''){
         alert('Silahkan isi dulu passwordnya')
       }  
-      else if(username != '' && password != ''){
+      else if(emailNomorHP != '' && password != ''){
          var data = $("#login-form").serialize();
          console.log(data);
       $.ajax({

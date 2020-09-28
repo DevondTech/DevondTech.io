@@ -1,4 +1,5 @@
-<?php    
+<?php 
+
     if(isset($_GET['updateFacebook'])){
         require '../config.php';
         $json = json_decode(file_get_contents('php://input'), true);
@@ -58,4 +59,5 @@
            echo 'userCheck';
         }
     }
+    
 ?>

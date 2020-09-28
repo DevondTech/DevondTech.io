@@ -66,5 +66,4 @@
         echo json_encode($viewDataAboutUSCallBack);
     }
 
-
 ?>

@@ -18,7 +18,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"/>
 </head>
 <body class="bd-w">
-<div>
+<div class="divPositionContentTop">
     <div id="createDataUserSlide">
         <div class="card-textTitleLarge-Black">
             <div class="textTitleLarge-Black" >

@@ -17,7 +17,7 @@
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
 </head>
 <body class="bd-w">
-<div>
+<div class="divPositionContentTop">
     <div class="card-textTitleLarge-Black">
         <div class="textTitleLarge-Black" >
             Ubah Profile
@@ -138,7 +138,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="text" name="provinsiUpdate" id="provinsiUpdate" class="input-textDataUser" placeholder="Ex : Jawa Barat">
+                                <input type="text" name="provinsiUpdate" id="provinsiUpdate" class="input-textDataUser" placeholder="Ex : Jawa Barat ">
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -159,6 +159,26 @@
                             </div>
                             <div class="card-inputDataUser">
                                 <input type="text" name="kotaUpdate"  id="kotaUpdate" class="input-textDataUser" placeholder="Ex : Depok">
+                            </div>
+                        </div>
+                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                            <div class="card-textDataUser">
+                                <div class="textDataUser">
+                                    Kecamatan
+                                </div>
+                            </div>
+                            <div class="card-inputDataUser">
+                                <input type="text" name="kecamatanUpdate" id="kecamatanUpdate" class="input-textDataUser" placeholder="Ex : Kec. Sawangan">
+                            </div>
+                        </div>
+                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                            <div class="card-textDataUser">
+                                <div class="textDataUser">
+                                    Kelurahan
+                                </div>
+                            </div>
+                            <div class="card-inputDataUser">
+                                <input type="text" name="kelurahanUpdate"  id="kelurahanUpdate" class="input-textDataUser" placeholder="Ex : Kedaung">
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -196,6 +216,7 @@
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 <script type="text/javascript" src="../js/pages/updateDataFoto.js"></script>
+<script src="../js/pages/editDataTampil.js"></script>
 <script src="../js/pages/editData.js"></script>
 
 <div id="open-updateFoto" class="modal fade" >
