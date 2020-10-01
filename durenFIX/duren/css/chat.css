@@ -1,0 +1,360 @@
+/*#open-chat-modal{
+  float: right;
+}*/
+.div-icon-chat{
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 60px;
+  cursor: pointer;
+}
+
+@media(max-width: 760px){
+  .div-icon-chat{
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 60px;
+    margin-bottom: -5px;
+    cursor: pointer;
+  }
+}
+
+.button-icon-chat{
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+}
+
+.button-icon-chat:hover{
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+}
+
+.button-icon-chat:active{
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+}
+
+.card-button-sendChat{
+  width: 33px;
+  margin-left: 6px;
+  background-color: transparent;
+}
+
+.card-button-sendChat:hover{
+  width: 33px;
+  margin-left: 6px;
+  border: 1px solid #046730;
+  border-radius: 5px;
+}
+
+.icon-chat{
+  width: 100%
+}
+
+.open-chat-modal{
+  background-color: transparent;
+  color: white;
+  padding: 0px 20px;
+  border: transparent;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 23px;
+  /*right: -8px;*/
+}
+
+.button-open-chat{
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.card-chat{
+  height: 224px;
+  width: 260px;
+  background-color: white;
+  border: 1px solid #b3aeae;
+  -webkit-box-shadow: 0px 4px 21px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 21px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 21px 2px rgba(0,0,0,0.75);>    
+}
+
+.content-title-chat{
+  background-color: #046730;
+  color: white;
+}
+
+.text-title-chat{
+  margin-left: 6px;
+  padding-top: 2px;
+}
+
+.button-close-chat{
+  display: flex;
+  float: right;
+  margin-top: -27px;
+  font-weight: bold;
+  background-color: #046730;
+  color: aliceblue;
+  border: transparent;
+  height: 2px;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.card-text-sendChat{
+  width: 245px;
+}
+
+.content-text-sendChat{
+  position: fixed;
+  bottom: 32px;
+}
+
+.div-input-sendChat{
+  width: 218px;
+  float: left;
+  margin-left: 0px;
+}
+
+.input-sendChat{
+  padding-left: 7px;
+  width: 200px;
+  border-radius: 5px;
+  color: #1e1e1e;
+  font-size: 16px;
+  height: 35px;
+}
+
+.div-button-sendChat{
+  width: 20px;
+  float: right;
+  margin-left: -17px;
+}
+
+.button-sendChat{
+  border: transparent;
+  background-color: white;
+  cursor: pointer;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+  max-height: 220px;
+  bottom: 20px;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  max-height: 130px;
+  height: 130px;
+  
+
+  overflow-x: auto;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 0px;
+  margin: -3px 0 0px 0;
+  border: none;
+  background: #ffffff;
+  resize: none;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* Loader */
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1001;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+
+    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+    -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(0);  /* IE 9 */
+    transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(-100%);  /* IE 9 */
+            transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(100%);  /* IE 9 */
+            transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;  
+            transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+    visibility: hidden;
+
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateY(-100%);  /* IE 9 */
+            transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+    display: none;
+}

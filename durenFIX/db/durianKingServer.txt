@@ -1,0 +1,19 @@
+Detail Login FTP (Upload File Website)
+
+Anda dapat menggunakan salah satu alamat berikut untuk mengelola website melalui file transfer.
+
+IP FTP
+
+: 46.17.173.207
+
+Hostname FTP
+
+: kingfruit.co.id
+
+Username FTP
+
+: u1091076
+
+Password FTP
+
+: #xcWeZj4bd

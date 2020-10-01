@@ -1,0 +1,1032 @@
+/*This padding margin & padding*/
+
+.margin-auto{
+	margin: auto;
+}
+
+.paddingTop50px{
+    padding-top: 50px;
+}
+
+/*This Text*/
+
+.text-grey{
+    color: #737373
+}
+
+.textTitleLarge-Black{
+	font-size: 30px;
+    font-weight: bold;
+}
+
+@media(max-width: 767px){
+	.textTitleLarge-Black{
+		font-size: 20px;
+	    font-weight: bold;
+	}
+}
+
+.card-textTitleLarge-Black{
+	border-bottom: 2px solid #c5bebe;
+    padding-bottom: 15px;
+}
+
+.buttonLarge-grey{
+	width: 140px;
+    height: 40px;
+    font-size: 16px;
+    color: #404040;
+}
+
+.buttonLarge-grey{
+	width: 140px;
+    height: 40px;
+    font-size: 16px;
+    color: #404040;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.buttonLarge-green{
+	width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #2d472c;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #2d472c;
+}
+
+.buttonLarge-red{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #f93434;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #f93434;
+}
+
+.buttonLarge-grey:hover{
+	width: 140px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #2d472c;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.buttonLarge-green:hover{
+	width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #2d472c;
+    background-color: white;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #2d472c;
+}
+
+.buttonLarge-red:hover{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #f93434;
+    background-color: white;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #f93434;
+}
+
+.buttonMiddle-green{
+    width: 180px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #2d472c;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #2d472c;
+}
+
+.buttonMiddle-green:hover{
+    width: 180px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: #2d472c;
+    background-color: white;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #2d472c;
+}
+
+
+.inputTypeTransparent{
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+/*-----------------------------------------------*/
+/*-----------------Content Profile---------------*/
+/*-----------------------------------------------*/
+
+.col-divProfileUser{
+	padding-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+}
+
+.card-textDataUser{
+	width: 30%;
+	float: left;
+}
+
+.card-inputDataUser{
+	width: 70%;
+	float: left;
+}
+
+.card-inputDataUser-false{
+	width: 70%;
+    float: left;
+    border-bottom: 1px solid #969191;
+}
+
+.textDataUser{
+    text-align: end;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.input-textDataUser{
+	width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #969191;
+    border-radius: 3px;
+}
+
+.input-textDataUser-false{
+	width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.input-textDataUser-false:hover{
+	width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    border-radius: 3px;
+}
+
+.Card-inputDataUser-paddingTopBottom20px{
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.col-UserDataEdit-left{
+	float: left;
+}
+
+.col-UserDataEdit-right{
+	float: right;
+}
+
+.center-img-drp-dw2 {
+    display: block;
+    margin-right: auto;
+    border-radius: 50%;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+}
+
+.centerImgProfile{
+    display: block;
+    margin-right: auto;
+    border-radius: 50%;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+}
+
+.card-buttonSelectPic{
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin: auto;
+    display: flex;
+}
+
+.text-buttonSelectPic{
+	margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+@media(max-width: 870px){
+
+	.col-divProfileUser{
+		padding-top: 40px;
+	    padding-left: 10px;
+	}
+
+	.input-textDataUser{
+		width: 100%;
+	    height: 30px;
+	    color: #000;
+	    padding-left: 5px;
+	    padding-right: 5px;
+	    border: 1px solid #969191;
+    	border-radius: 3px;
+	}
+
+	.textDataUser{
+	    float: left;
+	    text-align: initial;
+	    padding-right: 20px;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	    width: 150px;
+	}
+
+	.card-inputDataUser{
+		width: 100%;
+		float: initial;
+	}
+
+	.card-inputDataUser-false{
+		width: 100%;
+	    float: initial;
+	    border-bottom: 1px solid #969191;
+	}
+
+	.Card-inputDataUser-paddingTopBottom20px{
+		padding-bottom: 5px;
+    	padding-top: 5px;
+	}
+	.col-divProfileUser{
+		padding-top: 40px;
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}
+
+	.col-UserDataEdit-left{
+		float: initial;
+        width: 100%;
+	}
+
+	.col-UserDataEdit-right{
+		float: initial;
+        width: 100%;
+	}
+
+}
+
+
+.input-textData{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #969191;
+    border-radius: 3px;
+    padding-top: 3px;
+}
+
+.textData{
+    float: left;
+    text-align: initial;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+}
+
+.card-inputData{
+    width: 100%;
+    float: initial;
+}
+
+.padding-card-textData{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.img-inputData{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+    padding-top: 5px;
+    margin-left: -5px;
+}   
+
+.li-buttonGreen{
+    float: left;
+    padding-right: 25px;
+    list-style: none;
+    padding-bottom: 12px;
+}
+
+.ul-buttonGreen{
+    padding-bottom: 20px;
+    margin-left: -40px;
+}
+
+.table-tdYellowHeader{
+    text-align: center; 
+    font-size: 18px; 
+    font-weight: bolder;
+    background-color: rgb(195, 223, 0);
+}
+
+/*------------------------------------*/
+              /*Product*/
+/*--------------------------------------*/
+
+.PaddingProduct20TopBotom{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.col-divProfileProduct{
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+}
+
+.card-textDataProduct{
+    width: 20%;
+    float: left;
+}
+
+.card-inputDataProduct{
+    width: 50%;
+    float: left;
+}
+
+.card-buttonDataProduct{
+    width: 20%;
+    float: left;
+}
+
+.card-inputDataProduct-false{
+    width: 50%;
+    float: left;
+    border-bottom: 1px solid #969191;
+}
+
+.textDataProduct{
+    text-align: end;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.input-textDataProduct{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #969191;
+    border-radius: 3px;
+    padding-bottom: 5px;
+}
+
+.input-textDataProduct-false{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    background-color: white;
+    border-radius: 3px;
+    padding-bottom: 5px;
+}
+
+.input-textDataProduct-false:hover{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    border-radius: 3px;
+    padding-bottom: 5px;
+}
+
+.textArea-textDataProduct{
+    width: 100%;
+    height: 70px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #969191;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    resize: none;
+}
+
+.textArea-textDataProduct-false{
+    width: 100%;
+    height: 70px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    background-color: white;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    resize: none;
+}
+
+.textArea-textDataProduct-false:hover{
+    width: 100%;
+    height: 70px;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px solid #969191;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    resize: none;
+}
+
+.Card-inputDataProduct-paddingTopBottom20px{
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.col-ProductDataEdit-left{
+    float: left;
+}
+
+.col-ProductDataEdit-right{
+    float: right;
+}
+
+.textArea-modeInputDataProduct{
+    height: 80px;
+}
+
+@media(max-width: 870px){
+    .PaddingProduct20TopBotom{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+
+    .col-divProfileProduct{
+        padding-top: 40px;
+        padding-left: 10px;
+    }
+
+    .input-textDataProduct{
+        width: 100%;
+        height: 30px;
+        color: #000;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: 1px solid #969191;
+        border-radius: 3px;
+        padding-bottom: 5px;
+    }
+
+    .textArea-textDataProduct{
+        width: 100%;
+        height: 70px;
+        color: #000;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: 1px solid #969191;
+        border-radius: 3px;
+        padding-bottom: 5px;
+        resize: none;
+    }
+
+    .textDataProduct{
+        float: left;
+        text-align: initial;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 150px;
+    }
+
+    .card-textDataProduct{
+        width: 100%;
+        float: left;
+    }
+
+    .card-inputDataProduct{
+        width: 70%;
+        float: left;
+    }
+
+    .card-buttonDataProduct{
+        width: 30%;
+        float: left;
+    }
+
+    .card-inputDataProduct-false{
+        width: 100%;
+        float: initial;
+        border-bottom: 1px solid #969191;
+    }
+
+    .Card-inputDataProduct-paddingTopBottom20px{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .col-divProfileProduct{
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .col-ProductDataEdit-left{
+        float: initial;
+        width: 100%;
+    }
+
+    .col-ProductDataEdit-right{
+        float: initial;
+        width: 100%;
+    }
+}
+
+.Card-imgDetailProductAdmin{
+    height: 155px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.imgDetailProductAdmin{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline-flex;
+    height: 155px;
+    -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.divPosition-button-OpenModalDetailProductAdmin{
+    padding-top: 10px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+@media(max-width: 991px){
+
+    .Card-imgDetailProductAdmin{
+        height: auto;
+        width: 90%;
+        display: block;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    .imgDetailProductAdmin{
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-flex;
+        height: auto;
+        -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .divPosition-button-OpenModalDetailProductAdmin{
+        padding-top: 10px;
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+}
+
+@media(max-width: 888px){
+
+    .Card-imgDetailProductAdmin{
+        height: auto;
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    .imgDetailProductAdmin{
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-flex;
+        height: auto;
+        -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .divPosition-button-OpenModalDetailProductAdmin{
+        padding-top: 10px;
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+
+}
+
+@media(max-width: 500px){
+
+    .Card-imgDetailProductAdmin{
+        height: auto;
+        width: 100%;
+        display: block;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    .imgDetailProductAdmin{
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-flex;
+        height: auto;
+        -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .divPosition-button-OpenModalDetailProductAdmin{
+        padding-top: 10px;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+}
+
+.divParent-inputDetailProductAdmin{
+    padding-top: 0px;
+    padding-bottom: 100px;
+}
+
+.div-imgDetailProductAdmin{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.divPosition-imgDetailProductAdmin{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.divParent-imgDetailProductAdmin{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.button-OpenModalDetailProductAdmin{
+    background-color: #2d472d;
+    color: white;
+    border: 1px solid #2d472d;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.button-OpenModalDetailProductAdmin:hover{
+    background-color: white;
+    color: #2d472d;
+    border: 1px solid #2d472d;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.div-button-EditDataDetailProductAdmin{
+    padding-left: 6px;
+    padding-right: 4px;
+}
+
+.div-imageSaveCancel30{
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#nama_product_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#detail1_produk_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#detail2_produk_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#jenis_produk_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#jumlah_stok_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#satuan_produk_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#harga_SaveCancelDataDetailProductAdmin{
+    display: none;
+}
+
+#createDataUserSlide{
+    display:none;
+}
+
+#NewDataUser{
+    margin-left: 10px;
+}
+
+.NewDataUser{
+    padding-bottom: 30px;
+}
+
+.createDataUserSlide{
+    padding-bottom: 50px;
+}
+
+.disBlock{
+    display: block;
+}
+
+.disNone{
+    display: none;
+}
+
+.buttonDelete-Table{
+    background-color: #fb483a !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    border: none;
+    font-size: 13px;
+    height: 35px;
+    width: 90px;
+    color: white;
+}
+
+.buttonDelete-Table:hover{
+    background-color: #fff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    color: #fb483a;
+    border: 1px solid #fb483a;
+    font-size: 13px;
+    height: 35px;
+    width: 90px;
+}
+
+.buttonDetail-Table{
+    background-color: #3e60c8 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    border: none;
+    font-size: 13px;
+    height: 35px;
+    width: 90px;
+    color: white;
+}
+
+.buttonDetail-Table:hover{
+    background-color: #fff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #3e60c8;
+    font-size: 13px;
+    height: 35px;
+    width: 90px;
+    color: #3e60c8;
+}
+
+.buttonCancelCreate{
+    width: 109px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #fb483a;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #fb483a;
+}
+
+.buttonCancelCreate:hover{
+    width: 109px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: #fb483a;
+    background-color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #fb483a;
+}
+
+.buttonSaveCreate{
+    width: 109px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #2d472c;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #2d472c;
+}
+
+.buttonSaveCreate:hover{
+    width: 109px;
+    max-width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: #2d472c;
+    background-color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #2d472c;
+}
+
+.buttonTypeDiv-Save{
+    background-color: #2d472d;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.buttonTypeDiv-Cancel{
+    background-color: #d62f2f;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.buttonTypeDiv-Save:hover{
+    background-color: #1d271d;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.buttonTypeDiv-Cancel:hover{
+    background-color: #8e0303;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.img-buttonTypeDiv{
+    height: 27px;
+    width: 27px;
+    margin: auto;
+    display: block;
+    padding-top: 2px;
+}
+
+.paddingtopData1{
+    padding-top: 30px;
+    padding-bottom: 100px
+}
+
+.paddingtop50px{
+    padding-bottom: 50px;
+}
+
+.parrentDivTable{
+    margin-left: 0px;
+    margin-right: 0px; 
+    width: 100%;
+}
+
+.scrollTableX{
+    overflow-x: auto;
+}
+
+.marginLeft25{
+    margin-left: 25px;
+}
+
+.col-divCartData{
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+}
+
+.CartAlamatCartData{
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
+}
+
+.CartBarangCartData{
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.rowAlamatTop{
+    padding-left: 16px;
+    padding-top: 15px;
+}
+
+.rowAlamatMiddle{
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 2;
+}
+
+@media(max-width: 870px){
+
+    .col-divCartData{
+        padding-top: 40px;
+        padding-left: 0px;
+    }
+
+    .col-divCartData{
+        padding-top: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media(max-width: 767px){
+
+    .rowAlamatMiddle{
+        padding-left: 25px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .rowAlamatTop{
+        padding-left: 28px;
+        padding-top: 15px;
+    }
+
+}
