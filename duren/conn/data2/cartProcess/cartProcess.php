@@ -110,9 +110,11 @@
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        $resultSearchData = $db->query("select * from tb_pemesanan where id_user='$id_user' and id_proses_pemesanan='1' or '' ");
+        $resultSearchData = $db->query("select * from tb_pemesanan where id_user='$id_user' and id_proses_pemesanan='6' or '' ");
         $rowCount=$resultSearchData->num_rows;
-        if($rowCount==0){      
+        $resultSearchDataByUser = $db->query("select * from tb_pemesanan where id_user='$id_user'");
+        $rowCountByUser=$resultSearchDataByUser->num_rows;
+        if($rowCount!=0 || $rowCountByUser==0){      
             $resultLastID = $db->query("select max(id_pemesanan) as last_data_pemesanan FROM tb_pemesanan");
             $pemesananDataLastID = $resultLastID->fetch_object();
             $pemesananLast=$pemesananDataLastID->last_data_pemesanan;
