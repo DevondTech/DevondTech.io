@@ -119,7 +119,22 @@
         margin-left: -5px;
     }
 
+    .textbottomImgBukti{
+        text-align: center;
+        width: 200px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
     @media(max-width: 767px){
+
+        .imgBukti{
+            margin-top: 40px;
+        }
+
+        .textBukti{
+            font-weight: bold;
+        }
 
         .textDataUser {
             float: left;
@@ -197,16 +212,16 @@
 </style>
 </head>
 <body class="bd-w">
-<div class="divPositionContentTop">
+<div class="divPositionContentTop" style="padding-bottom: 100px;">
     <div class="hiddenAlamatUpdate" id="confirmationDataCard" style="display: none;">
-        <div class="card-textTitleLarge-Black">
-            <div class="textTitleLarge-Black">
-                Konfirmasi Pembayaran
+        <form method="post" id="confirmationFormDataTransfer">
+            <div class="card-textTitleLarge-Black">
+                <div class="textTitleLarge-Black">
+                    Konfirmasi Pembayaran
+                </div>
             </div>
-        </div>
-        <div class="padLeft20CartData">
-            <div class="col-divCartData">
-                <form method="POST" id="updateDataAlamatUser">
+            <div class="padLeft20CartData">
+                <div class="col-divCartData">
                     <div class="Card-inputDataUser-paddingTopBottom20px">
                         <div class="card-textDataUser">
                             <div class="textDataUser">
@@ -215,6 +230,7 @@
                         </div>
                         <div class="card-inputDataUser">
                             <input type="text" name="nama_pemilik_rekening" id="nama_pemilik_rekening" class="input-textDataUser" placeholder="Ex : Mohamad Prasetyo">
+                            <input type="hidden" name="foto_check" id="foto_check" class="input-textDataUser" >
                         </div>
                     </div>
                     <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -249,12 +265,17 @@
                     </div>
                     <div class="Card-inputDataUser-paddingTopBottom20px">
                         <div class="card-textDataUser">
-                            <div class="textDataUser">
+                            <div class="textDataUser textBukti">
                                 Bukti Transfer
                             </div>
                         </div>
                         <div class="card-inputDataUser">
-                            <input type="file" name="gambar_bukti_pembayaran"  id="gambar_bukti_pembayaran" class="input-textDataUser" style="padding-top: 2px;border: transparent;margin-left: -7px;" >
+                            <!-- <input type="file" name="gambar_bukti_pembayaran"  id="gambar_bukti_pembayaran" class="input-textDataUser" style="padding-top: 2px;border: transparent;margin-left: -7px;" accept="image/x-png,image/jpeg" > -->
+                            <div class="imgBukti">
+                                <img id="dataFotoPayment" data-toggle="modal" data-target="#open-updateFoto" src="../images/uploadImage.png" width="200" style="cursor: pointer;">
+                                <div class="textbottomImgBukti">Klik Untuk Upload / Ganti</div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="Card-inputDataUser-paddingTopBottom20px" style="margin-top: 10px;">
@@ -263,7 +284,7 @@
                               
                             </div>
                         </div>
-                        <div class="card-inputDataUser">
+                        <div class="card-inputDataUser" style="padding-bottom: 100px;">
                             <div class="floatRightbutton">
                                 <button class="buttonLarge-green" type="button" id="btnUpdateConfirmationDetailPayment">SIMPAN</button>
                             </div>
@@ -272,9 +293,9 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
     <div id="confirmationDetailPayment">
         <div class="card-textTitleLarge-Black">
@@ -295,7 +316,7 @@
                                 <div style="margin-left: 4px;">
                                     <div class="positionTextDetailOrder">
                                         <div class="textTotalHarga floatLeftCartData"  style="font-weight: bold;padding-bottom: 13px;">
-                                            Berkut pembayaran yang harus anda tranfer 
+                                            Berkut pembayaran yang harus anda transfer 
                                         </div>
                                     </div>
                                 </div>
@@ -379,7 +400,39 @@
     </div>
 </div>
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionPaymentConfirmation.js?v=1.1.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionPaymentConfirmation.js?v=1.1.4"></script>
+<script type="text/javascript" src="../js/pages/updateDataFotoPayment.js"></script>
+<div id="open-updateFoto" class="modal fade" >
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content w100">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-t20">Update Foto Profile</h4>
+            </div>
+            <div class="modal-body" id="modal-body-pad"  >
+                <form  method="post" action="" enctype="multipart/form-data" id="myform">
+                    <div class="padding-card-textData">
+                        <div class="card-textData">
+                            <div class="textData">
+                                Gambar Profil
+                            </div>
+                        </div>
+                        <div class="card-inputData">
+                            <input  type="file" id="foto" name="foto" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept=".jpg,.png" >
+                        </div>  
+                    </div>
+             
+                    <div class="modal-edit" >
+                        <div class="button-edit">
+                            <button class="button-text-grey" type="button" id="btn-batal-create"  data-dismiss="modal"> KELUAR </button> 
+                            <button class="button-text-green" type="button" id="btnUpdateFoto"  > SIMPAN </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

@@ -1,2 +1,0 @@
-Format Gambar To Text:
-../images/user + username + id_user + tanggal + bulan + tahun + jam + Menit + Detik

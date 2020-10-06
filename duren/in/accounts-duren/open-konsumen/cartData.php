@@ -799,8 +799,8 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCart.js?v=1.1.2"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOut.js?v=1.1.2"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenCart.js?v=1.2.5"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOut.js?v=1.2.5"></script>
 
 </body>
 </html>

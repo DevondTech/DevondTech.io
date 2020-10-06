@@ -206,14 +206,14 @@
                             <span>Pesanan Dibatalkan</span>
                         </a>
                     </li>
-                    <li class="menu-waves-block" id="notification-link">
+                    <!-- <li class="menu-waves-block" id="notification-link">
                         <a  id="waves-effect-this">
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/notification.svg" width="20" height="20">
                             </div>
                             <span>notifikasi</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="menu-waves-block" id="home-link">
                         <a href="../../../" id="waves-effect-this">
                             <div class="icon-menu-img-left">
@@ -263,7 +263,7 @@
     <!-- Demo Js -->
     <script src="../js/demo.js"></script>
     <!-- Flash Js -->
-    <script src="../js/pages/konsumen/konsumenData.js?v=1.1.4"></script>
+    <script src="../js/pages/konsumen/konsumenData.js?v=1.1.6"></script>
     <!-- Scrol -->
     <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 

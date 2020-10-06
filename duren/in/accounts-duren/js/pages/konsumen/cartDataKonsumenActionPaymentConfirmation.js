@@ -9,6 +9,7 @@ $(document).ready(function(){
             var totalHargaPerproduk = DataPayment[0].total_harga_perproduk;
             var ongkosKirim = DataPayment[0].ongkos_kirim;
             var totalHarga = DataPayment[0].total_harga_yang_harus_dibayar;
+            var DataFoto = DataPayment[0].gambar_bukti_pembayaran;
 
             var totalHargaPerprodukNumberString = totalHargaPerproduk.toString(),
                 totalHargaPerprodukSisa    = totalHargaPerprodukNumberString.length % 3,
@@ -40,6 +41,17 @@ $(document).ready(function(){
             }
             $('#totalBayarKeseluruhan').val(totalHargaRupiah);
             $('#totalBayarKeseluruhan_tampil').val('Rp '+totalHargaRupiah+',00');
+
+            
+            var DataFotoNull = '../images/uploadImage.png';
+            if(DataFoto == '' || DataFoto == null){
+                $('#dataFotoPayment').attr('src', DataFotoNull);
+                $('#foto_check').val('0');
+            }
+            else{
+                $('#dataFotoPayment').attr('src', DataFoto);
+                $('#foto_check').val('1');
+            } 
         }
     });
 
@@ -56,5 +68,65 @@ $(document).ready(function(){
         $('#no_rekening').val('');
         $('#bank_asal').val('');
         $('#gambar_bukti_pembayaran').val('');
+    });
+
+    $('#btnUpdateConfirmationDetailPayment').on('click',function(e){
+
+        var nama_pemilik_rekening = $('#nama_pemilik_rekening').val();
+        var tanggal_transfer = $('#tanggal_transfer').val();
+        var no_rekening = $('#no_rekening').val();
+        var bank_asal = $('#bank_asal').val();
+        var check_foto_data = $('#foto_check').val();
+
+        if(check_foto_data == '0' ){
+            alert('Lengkapi atau upload foto transfer');
+        }
+        else{
+            if(nama_pemilik_rekening == '' ){
+                alert('Isi data nama pemilik rekening');
+            }
+            else{
+                if(tanggal_transfer == '' ){
+                    alert('Isi data tanggal transfer');
+                }
+                else{
+                    if(no_rekening == '' ){
+                        alert('Isi data nomor rekening');
+                    }
+                    else{
+                        if(bank_asal == '' ){
+                            alert('Isi data bank untuk mentransfer');
+                        }
+                        else{
+                            var data = $("#confirmationFormDataTransfer").serialize();
+                            $.ajax({
+
+                                type : 'POST',
+                                url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateConfirmationPaymentTransfer',
+                                data : data,
+                                beforeSend: function()
+                                { 
+                                  $("#error").fadeOut();
+                                  $("#checkOutActionButton").html('<span class="glyphicon glyphicon-transfer"></span>   Process ');
+                                }, 
+                                success :  function(response)
+                                {
+                                  if(response == "updateConfirmationPaymentTransferSuccess"){
+                                    $("#btnUpdateConfirmationDetailPayment").html('SIMPAN');
+                                    alert('Transaksi Berhasil');
+                                    location.reload();
+                                  }
+                                  else{
+                                    alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');
+                                    $("#btnUpdateConfirmationDetailPayment").html('SIMPAN');
+                                  }
+                                }    
+                            });
+                        return false;
+                        }
+                    }
+                }
+            }
+        }
     });
 });

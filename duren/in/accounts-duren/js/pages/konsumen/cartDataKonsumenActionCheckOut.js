@@ -16,27 +16,27 @@ $('#checkOutActionButton').on('click',function(e){
   var data = $("#checkOutActionForm").serialize();
   $.ajax({
 
-      type : 'POST',
-      url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateCheckOutByUser',
-      data : data,
-      beforeSend: function()
-      { 
-        $("#error").fadeOut();
-        $("#checkOutActionButton").html('<span class="glyphicon glyphicon-transfer"></span>   Process ');
-      }, 
-      success :  function(response)
-      {
-        if(response == "updateCheckOutByUserSuccess"){
-          $("#checkOutActionButton").html('Check Out');
-          alert('Pemesanan Berhasil');
-          $("#content-profile").load("cartDataInputPayment.php");
-        }
-        else{
-          alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');
-          $("#checkOutActionButton").html('Check Out');
-        }
-      }    
-    });
-    return false;
-
+    type : 'POST',
+    url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateCheckOutByUser',
+    data : data,
+    beforeSend: function()
+    { 
+      $("#error").fadeOut();
+      $("#checkOutActionButton").html('<span class="glyphicon glyphicon-transfer"></span>   Process ');
+    }, 
+    success :  function(response)
+    {
+      if(response == "updateCheckOutByUserSuccess"){
+        $("#checkOutActionButton").html('Check Out');
+        alert('Pemesanan Berhasil');
+        $("#content-profile").load("cartDataInputPayment.php");
+      }
+      else{
+        alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');
+        $("#checkOutActionButton").html('Check Out');
+      }
+    }    
   });
+  return false;
+
+});

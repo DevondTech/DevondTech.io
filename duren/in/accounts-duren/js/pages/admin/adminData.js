@@ -73,15 +73,70 @@ $(window).on('load',function(e){
   this.location.reload(false); 
 });*/
 
+$('#ontheway-link').on('click',function(e){
+	$("#content-profile").load("cartDataOnTheWayAdmin.php");
+	
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#medsos-link").attr("class","displayLink-none");
+	$("#about-link").attr("class","displayLink-none");
+
+	$("#ontheway-link").attr("class","active-menu-right");
+});
+
+$('#shipped-link').on('click',function(e){
+	$("#content-profile").load("cartDataProcessConfirmationShippedAdmin.php");
+	
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#medsos-link").attr("class","displayLink-none");
+	$("#about-link").attr("class","displayLink-none");
+
+	$("#shipped-link").attr("class","active-menu-right");
+});
+
+$('#payment-link').on('click',function(e){
+	$("#content-profile").load("cartDataPaymentAdmin.php");
+
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#medsos-link").attr("class","displayLink-none");
+	$("#about-link").attr("class","displayLink-none");
+
+	$("#payment-link").attr("class","active-menu-right");
+});
+
 $('#account-edit').on('click',function(e){
 	$("#content-profile").load("editData.php");
 
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#create-user-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#account-edit-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
@@ -93,12 +148,14 @@ $('#product-link').on('click',function(e){
 	$("#content-profile").load("productData.php");
 
 	$("#account-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
-	
+	$("#shipped-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#create-user-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#product-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
@@ -112,12 +169,15 @@ $('#product-link').on('click',function(e){
 $('#create-user-link').on('click',function(e){
 	$("#content-profile").load("createDataUser.php");
 
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#create-user-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
@@ -130,12 +190,15 @@ $('#create-user-link').on('click',function(e){
 $('#account-edit-link').on('click',function(e){
 	$("#content-profile").load("editData.php");
 
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
 	$("#create-user-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#account-edit-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
@@ -148,12 +211,15 @@ $('#account-edit-link').on('click',function(e){
 $('#account-link').on('click',function(e){
 	$("#content-profile").load("profile.php");
 
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
 	$("#create-user-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#account-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
@@ -166,12 +232,15 @@ $('#account-link').on('click',function(e){
 $('#password-link').on('click',function(e){
 	$("#content-profile").load("password.php");
 
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
 	$("#create-user-link").attr("class","menu-waves-block");
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#password-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
@@ -184,12 +253,15 @@ $('#password-link').on('click',function(e){
 $('#notification-link').on('click',function(e){
 	$("#content-profile").load("notificationData.php");
 
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
 	$("#create-user-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#notification-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
@@ -201,6 +273,8 @@ $('#notification-link').on('click',function(e){
 $('#company-profile').on('click',function(e){
 	$("#content-profile").load("aboutusData.php");
 
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
@@ -208,6 +282,7 @@ $('#company-profile').on('click',function(e){
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#about-link").attr("class","displayLink-block active-menu-right");
 	$("#medsos-link").attr("class","displayLink-block menu-waves-block");
@@ -216,6 +291,8 @@ $('#company-profile').on('click',function(e){
 $('#about-link').on('click',function(e){
 	$("#content-profile").load("aboutusData.php");
 
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
@@ -223,6 +300,7 @@ $('#about-link').on('click',function(e){
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#about-link").attr("class","displayLink-block active-menu-right");
 	$("#medsos-link").attr("class","displayLink-block menu-waves-block");
@@ -231,6 +309,8 @@ $('#about-link').on('click',function(e){
 $('#medsos-link').on('click',function(e){
 	$("#content-profile").load("medsosData.php");
 
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#product-link").attr("class","menu-waves-block");
@@ -238,6 +318,7 @@ $('#medsos-link').on('click',function(e){
 	$("#notification-link").attr("class","menu-waves-block");
 	$("#logout-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#medsos-link").attr("class","displayLink-block active-menu-right");
 	$("#about-link").attr("class","displayLink-block menu-waves-block");

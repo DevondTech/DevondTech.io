@@ -30,6 +30,11 @@ $('#btnUpdateFoto').on('click', function(e){
               $('#foto').val('');
              
             }     
+            if(response == "dataCheck"){
+              alert('Gagal Mengganti Foto');
+              location.reload();
+            }     
+
             else{
               $("#error").fadeIn(1000, function(){   
               $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>  Error Upload Data.</div>');

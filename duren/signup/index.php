@@ -91,8 +91,8 @@
 <script type="text/javascript" src="../js/bootstrap.js" ></script>
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
-<script type="text/javascript" src="../js/durian.js"></script>
-<script type="text/javascript" src="../js/login-signup.js"></script>
+<script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
+<script type="text/javascript" src="../js/login-signup.js?v=1.2.1"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

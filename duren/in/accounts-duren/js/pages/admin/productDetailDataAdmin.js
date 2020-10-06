@@ -1,9 +1,6 @@
 $(document).ready(function(){
 	var IDProdukCallBack = $('#a').val();
-	/*console.log("This Page Detail : ID "); 
-	console.log(IDProdukCallBack); */
     var id = IDProdukCallBack;
-    /*console.log(id);*/ 
 	$.ajax({
      	type: 'POST',
      	url: '../../../conn/data2/product/product_select_data.php?select='+id,

@@ -18,7 +18,7 @@
         require 'config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        $query = "SELECT id_user, nama_lengkap, foto, nomor_hp, id_jenis_kelamin, jenis_kelamin, tanggal_lahir, alamat, negara, provinsi, kabupaten, id_kota, kecamatan, kelurahan, kode_pos FROM view_data_all_user where id_user = '$id_user' ";
+        $query = "SELECT id_user, nama_lengkap, email, foto, nomor_hp, id_jenis_kelamin, jenis_kelamin, tanggal_lahir, alamat, negara, provinsi, kabupaten, id_kota, kecamatan, kelurahan, kode_pos FROM view_data_all_user where id_user = '$id_user' ";
         $result = $db->query($query); 
 
         $callDetailUserDatas = mysqli_fetch_all($result,MYSQLI_ASSOC);

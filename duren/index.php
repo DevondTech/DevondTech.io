@@ -10,7 +10,7 @@
         die("<script language='javascript'> document.location='openUserRoot'</script>");
     }
     else if($_SESSION['id_status_user']=="1"){
-        die("<script language='javascript'> document.location='../in/accounts-duren/open-admin/data.php'</script>");
+        die("<script language='javascript'> document.location='../in/accounts-duren/open-admin/'</script>");
     }
     else{
 
@@ -571,8 +571,8 @@
 <!-- <script type="text/javascript" src="scroll/js/scroll.js"></script> -->
 <script type="text/javascript" src="js/slideSmall.js"></script>
 <!-- <script type="text/javascript" src="js/durianIndexCust.js"></script> -->
-<script type="text/javascript" src="js/durian.js?v=1.1.1"></script>
-<script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.1.1"></script>
+<script type="text/javascript" src="js/durian.js?v=1.1.4"></script>
+<script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.1.4"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

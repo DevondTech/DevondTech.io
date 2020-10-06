@@ -81,6 +81,7 @@ $('document').ready(function()
                     $('#email').val('');
                     $('#password').val('');
                     $('#password_re').val('');
+                    window.location.href = "../login";
                   }
                   else{
                     $("#error").fadeIn(1000, function(){   
@@ -128,7 +129,7 @@ $('document').ready(function()
        if(response == "KodeSign1"){
      
        $("#btn-login").html('Loading System...');
-        window.location.href = "../in/accounts-duren/open-admin/data.php";
+        window.location.href = "../in/accounts-duren/open-admin/";
        }
        else{
           if(response == "KodeSign2"){
@@ -175,7 +176,7 @@ $('document').ready(function()
          if(response == "KodeSign1"){
        
          $("#btn-login").html('Loading System...');
-          window.location.href = "../in/accounts-duren/open-admin/data.php";
+          window.location.href = "../in/accounts-duren/open-admin/";
          }
          else{
             if(response == "KodeSign2"){

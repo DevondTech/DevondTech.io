@@ -53,12 +53,13 @@ $(document).ready(function(){
                     $('#namaLengkapPrint').text(DataNamaLengkap);
                     $('#nomorHpPrint').text(DataNomorHP);
 
-                    if(DataAlamat == '' ){
+                    if(DataAlamat == '' || DataAlamat == null){
                         $('#alamatPrint').text('( Silahkan Lengkapi Data Alamat Anda )');
-                        $('#alamatPrint').attr('style','color:red')
+                        $('#alamatPrint').attr('style','color:red');
                     }
                     else{
                         $('#alamatPrint').text(DataAlamat+' , Kelurahan '+DataKelurahan+' , Kecamatan '+DataKecamatan+' , Kota '+DataKota+' , Kabupaten '+DataKabupaten+' , '+DataProvinsi+' , '+DataNegara+' (Kode POS :'+DataKodePos+') ');
+                        $('#alamatPrint').attr('style','color:#333');
                     }
                     $('#dataNegara').val(DataNegara);
                     $('#dataProvinsi').val(DataProvinsi);
@@ -246,6 +247,9 @@ $(document).ready(function(){
                     if(DataProsesPemesanan == '6'){
                         $("#content-profile").load("cartDataFinish.php");
                     }
+                    if(DataProsesPemesanan == '7'){
+                        $("#content-profile").load("cartDataNull.php");
+                    }                    
                 }
             }
           
@@ -376,6 +380,7 @@ $(document).ready(function(){
                             }
                             else{
                                 $('#alamatPrint').text(DataAlamat+' , Kelurahan '+DataKelurahan+' , Kecamatan '+DataKecamatan+' , Kota '+DataKota+' , Kabupaten '+DataKabupaten+' , '+DataProvinsi+' , '+DataNegara+' (Kode POS :'+DataKodePos+') ');
+                                $('#alamatPrint').attr('style','color:#333');
                             }
                             $('#dataNegara').val(DataNegara);
                             $('#dataProvinsi').val(DataProvinsi);

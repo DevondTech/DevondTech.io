@@ -38,6 +38,15 @@
         margin-top: 20px;
     }
 
+    @media(max-width: 796){
+        .textClickToProduct{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    }
+    
     @media(max-width: 767px){
         .imgDataNull{
             display: block;
@@ -66,12 +75,12 @@
 <div>
     <div class="positionDataNull">
         <a  style="color:#2d472c;">
-            <img src="../images/durian/cart.svg" class="imgDataNull">
+            <img src="../images/icon png/pembayaran-diperiksa.png" class="imgDataNull">
             <div class="textClickToProduct">Pembayaran Anda Sedang Dicek Admin</div>
         </a>
     </div>
 </div>
-<script src="../js/action.js"></script>
+<script src="../js/action.js?v=1.2.1"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

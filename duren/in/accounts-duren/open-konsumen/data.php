@@ -272,7 +272,7 @@
 <!-- Demo Js -->
 <script src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script src="../js/pages/konsumen/konsumenData.js"></script>
+<script src="../js/pages/konsumen/konsumenData.js?v=1.1.1"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
