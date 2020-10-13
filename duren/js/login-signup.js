@@ -4,7 +4,6 @@ $('document').ready(function()
   $('#btn-signup').on('click',function(e){
     var nama_lengkap = $('#nama_lengkap').val();
     var nomor_hp = $('#nomor_hp').val();
-    var username = $('#username').val();
     var email = $('#email').val();
     var password = $('#password').val();
     var password_re = $('#password_re').val();
@@ -14,9 +13,6 @@ $('document').ready(function()
     }  
     else if(nomor_hp == ''){
       alert('Silahkan Isi Data Nomor Hp')
-    }  
-    else if(username == ''){
-      alert('Silahkan Isi Data Username')
     }  
     else if(email == ''){
       alert('Silahkan Isi Data E-mail')
@@ -33,7 +29,7 @@ $('document').ready(function()
     else if(checkSignup.checked == false){
       alert('Silahkan centang checkbox')
     }
-    else if(username != '' && password != ''){
+    else if(password != ''){
       var data = $("#signup-form").serialize();
       console.log(data);
       $.ajax({
@@ -49,18 +45,18 @@ $('document').ready(function()
           success :  function(response)
           {      
             if(response == "userCheck"){
-            alert('Email / Username sudah dipakai');
+            alert('Email / Nomor HP sudah dipakai');
             $("#btn-signup").html('Signup');
             $("#btn-signup").attr('class','buttonYellow');
-            $('#username').val('');
+            $('#nomor_hp').val('');
             $('#email').val('');
             }
             else{
               if(response == "Kode3"){
-                alert('Email / Username sudah dipakai');
+                alert('Email / nomor_hp sudah dipakai');
                 $("#btn-signup").html('Signup');
                 $("#btn-signup").attr('class','buttonYellow');
-                $('#username').val('');
+                $('#nomor_hp').val('');
                 $('#email').val('');
               }
               else{
@@ -68,7 +64,7 @@ $('document').ready(function()
                   alert('Ulangi kembali email bukan tipe email');
                   $("#btn-signup").html('Signup');
                   $("#btn-signup").attr('class','buttonYellow');
-                  $('#username').val('');
+                  $('#nomor_hp').val('');
                   $('#email').val('');
                 }
                 else{
@@ -77,7 +73,6 @@ $('document').ready(function()
                     alert('Pendaftaran Anda Berhasil');
                     $('#nama_lengkap').val('');
                     $('#nomor_hp').val('');
-                    $('#username').val('');
                     $('#email').val('');
                     $('#password').val('');
                     $('#password_re').val('');

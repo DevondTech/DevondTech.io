@@ -7,7 +7,7 @@
         die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     if($_SESSION['id_status_user']!="5"){
-        die("<script language='javascript'>alert('Anda Bukan Andmin / Manager'); document.location='../../../login'</script>");
+        die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     $id_user = $_SESSION['id_user'];
 ?>

@@ -15,7 +15,7 @@
       }
       if($_SESSION['id_status_user']!="5"){
         die("
-          <script language='javascript'>alert('Anda Bukan Andmin / Manager');
+          <script language='javascript'>alert('Silahkan Login Dahulu');
           document.location='../../../login'</script>");
       }
     $id_user = $_SESSION['id_user'];
@@ -139,7 +139,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/user.svg" width="20" height="20">
                             </div>
-                            <span><font class="icon-menu-active">Akun Saya</font></span>
+                            <span>Akun Saya</span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="account-edit-link">
@@ -147,7 +147,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/edit-user.svg" width="20" height="20">
                             </div>
-                            <span id=""><font class="icon-menu-active">Edit Akun</font></span>
+                            <span id="">Edit Akun</span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="password-link" >
@@ -158,7 +158,7 @@
                             <span>Ubah Password</span>
                         </a>
                     </li>
-                    <li class="menu-waves-block" id="order-link">
+                   <!--  <li class="menu-waves-block" id="order-link">
                         <a  id="waves-effect-this">
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/cart.svg" width="20" height="20">
@@ -174,7 +174,8 @@
                             <span>Pesanan Saya</span>
                         </a>
                     </li>
-                 <!--    <li class="displayLink-none menu-waves-block" id="orderAll-link" >
+
+                    <li class="displayLink-none menu-waves-block" id="orderAll-link" >
                         <a  id="waves-effect-this">
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/link/all.svg" width="20" height="20">
@@ -189,7 +190,9 @@
                             </div>
                             <span>Dalam Proses</span>
                         </a>
-                    </li> -->
+                    </li>
+
+
                     <li class="displayLink-none menu-waves-block" id="orderFinish-link">
                         <a  id="waves-effect-this">
                             <div class="icon-menu-img-left">
@@ -198,12 +201,21 @@
                             <span>Pesanan Selesai</span>
                         </a>
                     </li>
+
                     <li class="displayLink-none menu-waves-block" id="orderCancel-link" >
                         <a  id="waves-effect-this">
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/link/cancel.svg" width="20" height="20">
                             </div>
                             <span>Pesanan Dibatalkan</span>
+                        </a>
+                    </li> -->
+                    <li class="menu-waves-block" id="order-while-link">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/link/buy.svg" width="20" height="20">
+                            </div>
+                            <span>Pesanan Saya</span>
                         </a>
                     </li>
                     <!-- <li class="menu-waves-block" id="notification-link">
@@ -214,6 +226,22 @@
                             <span>notifikasi</span>
                         </a>
                     </li> -->
+                    <li class="menu-waves-block" id="history-link">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/data-product.svg" width="20" height="20">
+                            </div>
+                            <span>Histori Transaksi</span>
+                        </a>
+                    </li>
+                    <li class="menu-waves-block" id="retur-link">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/data-product.svg" width="20" height="20">
+                            </div>
+                            <span>Data Retur</span>
+                        </a>
+                    </li>
                     <li class="menu-waves-block" id="home-link">
                         <a href="../../../" id="waves-effect-this">
                             <div class="icon-menu-img-left">
@@ -229,6 +257,8 @@
                             </div>
                             <span>Logout</span>
                         </a>
+                    </li>
+                    <li class="menu-waves-block" id="logout-link" style="padding-bottom: 50px;">
                     </li>
                     <input type="hidden" name="textData" id="textData" value="<?php echo$textData; ?>">
                 </ul>
@@ -263,7 +293,7 @@
     <!-- Demo Js -->
     <script src="../js/demo.js"></script>
     <!-- Flash Js -->
-    <script src="../js/pages/konsumen/konsumenData.js?v=1.1.6"></script>
+    <script src="../js/pages/konsumen/konsumenData.js?v=1.4.1"></script>
     <!-- Scrol -->
     <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 

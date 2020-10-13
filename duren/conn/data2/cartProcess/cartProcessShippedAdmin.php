@@ -1,12 +1,8 @@
 <?php
 
     require( '../../ssp.class.php' );
-    $dbDetails = array(
-        'host' => 'localhost',
-        'user' => 'root',
-        'pass' => '',
-        'db'   => 'db_durian'
-    );
+    require( '../configTwo.php' );
+    
     $table = 'view_pemesanan_konfirmasi_pengiriman_admin';
     $primaryKey = 'kode_pemesanan';
 

@@ -178,7 +178,7 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/admin/cartDataOnTheWayAndFinishShippedDetailAdmin.js?v=1.1.1"></script>
+<script type="text/javascript" src="../js/pages/admin/cartDataOnTheWayAndFinishShippedDetailAdmin.js?v=1.2.1"></script>
 
 </body>
 

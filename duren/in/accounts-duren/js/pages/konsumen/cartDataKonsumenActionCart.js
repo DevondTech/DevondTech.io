@@ -14,7 +14,7 @@ $('#updateCheckOutByUserButton').on('click', function(e){
     success :  function(response)
     {      
       if(response == "dataFound"){
-        alert('Anda Sudah Memesan Produk Ini');
+        alert('Harap Menunggu Sampai Transaksi Pesanan Anda Selesai');
         window.location.href = "in/accounts-duren/open-konsumen/";
       }
       else{

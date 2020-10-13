@@ -150,15 +150,16 @@ $(document).ready(function(){
       var PrintDetail_nama_produk = DataDetailProduk[0].nama_produk;
       var PrintDetail_detail1_produk = DataDetailProduk[0].detail1_produk;
       var PrintDetail_detail2_produk = DataDetailProduk[0].detail2_produk;
-
       var PrintDetail_harga = DataDetailProduk[0].harga;
 
       var gambar1_productView = DataDetailProduk[0].gambar1_produk;
       var gambar2_productView = DataDetailProduk[0].gambar2_produk;
       var gambar3_productView = DataDetailProduk[0].gambar3_produk;
       var gambar4_productView = DataDetailProduk[0].gambar4_produk;
+      var CheckHarga = DataDetailProduk[0].harga;
+      var CheckHargaAfter =  DataDetailProduk[0].harga_setelah_diskon;
 
-      console.log(gambar4_productView);
+      //console.log(gambar4_productView);
       var harga = DataDetailProduk[0].harga;
       var hargaNumberString = harga.toString(),
           hargaSisa    = hargaNumberString.length % 3,
@@ -182,7 +183,16 @@ $(document).ready(function(){
       $('#detail2Produk').text(PrintDetail_detail2_produk);
       $('#hargaProduk').text('Rp '+hargaRupiah+',00');
       $('#hargaDiskon').text('Rp '+hargaDiskonRupiah+',00');
+
+      $('#hargaReal').text('Rp '+hargaRupiah+',00');
       
+      if(CheckHarga == CheckHargaAfter){
+        $('#dataHarga').attr('style','display:none;');
+      }
+      else{
+        $('#dataHargaReal').attr('style','display:none;');
+      }
+
       var PrintDetail_DataFotoNull = 'in/accounts-duren/images/seimpleProduk.png';
       if(gambar1_productView == '' || gambar1_productView == null){
         $('#imgDataLarge').attr('src', PrintDetail_DataFotoNull);
@@ -216,4 +226,35 @@ $(document).ready(function(){
       }
     }
   }); 
+  $.ajax({
+    type: 'POST',
+    url: 'conn/data2/companyProfile/about_us_data.php?dataAboutUs',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    success: function(dataAboutUs) { 
+      var AboutUS = jQuery.parseJSON(dataAboutUs);
+      var alamatOffice = AboutUS[0].alamat;
+      var number1Office = AboutUS[0].nomor_hp1;
+      var number2Office = AboutUS[0].nomor_hp2;
+      var emailOffice = AboutUS[0].email;
+      $('#alamatOffice').text(alamatOffice);
+      if(number1Office!=''){
+        $('#number1Office').text('+'+number1Office);
+      }
+      else{
+        $('#number1Office').attr('style','display:none');
+      }
+      if(number2Office!=''){
+        $('#number2Office').text('+'+number2Office);
+      }
+      else{
+        $('#number2Office').attr('style','display:none');
+      }
+     
+      $('#emailOffice').text(emailOffice);
+      $('#linkEmail').attr('href','mailto:'+emailOffice);
+      $('#linkNumber1').attr('href','https://api.whatsapp.com/send?phone='+number1Office);
+      $('#linkNumber2').attr('href','https://api.whatsapp.com/send?phone='+number2Office);
+    }
+  });
 });

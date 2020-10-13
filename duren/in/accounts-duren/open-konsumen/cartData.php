@@ -7,7 +7,7 @@
         die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     if($_SESSION['id_status_user']!="5"){
-        die("<script language='javascript'>alert('Anda Bukan Andmin / Manager'); document.location='../../../login'</script>");
+        die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     $id_user = $_SESSION['id_user'];
 ?>
@@ -470,16 +470,6 @@
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
-                                    Kabupaten
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser">
-                                <input type="text" name="kabupatenUpdate"  id="kabupatenUpdate" class="input-textDataUser" placeholder="Ex : Depok">
-                            </div>
-                        </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
                                     Kota
                                 </div>
                             </div>
@@ -646,20 +636,20 @@
                                                 </div>
                                                 <div class="marginLeft10 floatLeftCartData">
                                                     <div class="textValuePrintOutTextDetailOrder floatLeftCartData">
-                                                        <div style="margin-left: 5px;" class="floatLeftItemData cursorPointer" id="btnPlus" >
-                                                            <div class="divTypeButtonPlusMinus" id="divTypeButtonPlusClick">
+                                                        <div style="margin-left: 5px;" class="floatLeftItemData cursorPointer" id="btnMinus">
+                                                            <div class="divTypeButtonPlusMinus" id="divTypeButtonMinusClick">
                                                                 <div class="positionIconDivTypeButtonPlusMinus">
-                                                                    <img src="../images/icon png/plus.png" class="iconDivTypeButtonPlusMinus">
+                                                                    <img src="../images/icon png/minus.png" class="iconDivTypeButtonPlusMinus">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="floatLeftItemData">
                                                             <input type="number" name="" value="1" id="jumlah_pemesanan" class="inputTextPlusMinus input-textDataUser-false" disabled>
                                                         </div>
-                                                        <div style="margin-left: 5px;" class="floatLeftItemData cursorPointer" id="btnMinus">
-                                                            <div class="divTypeButtonPlusMinus" id="divTypeButtonMinusClick">
+                                                        <div style="margin-left: 5px;" class="floatLeftItemData cursorPointer" id="btnPlus">
+                                                            <div class="divTypeButtonPlusMinus" id="divTypeButtonPlusClick">
                                                                 <div class="positionIconDivTypeButtonPlusMinus">
-                                                                    <img src="../images/icon png/minus.png" class="iconDivTypeButtonPlusMinus">
+                                                                    <img src="../images/icon png/plus.png" class="iconDivTypeButtonPlusMinus">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -679,7 +669,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="positionTextDetailOrder">
+
+                                            <!-- ----------------THIS UPDATE--------------- -->
+                                            <div class="positionTextDetailOrder" style="display: none;">
                                                 <div class="positionPrintOutTextDetailOrder floatLeftCartData" >
                                                     Harga Setelah Diskon 
                                                 </div>
@@ -689,10 +681,12 @@
                                                 <div class="textValuePrintOutTextDetailOrder floatLeftCartData">
                                                     <div class="marginLeft10 floatLeftCartData">
                                                         <input type="hidden" name="harga"  style="color: #737373;" id="harga" class="input-textDataUser-false" disabled>
-                                                        <input type="text" name="harga_tampil"  style="color: #737373;" id="harga_tampil" class="input-textDataUser-false" disabled>
+                                                        <input type="hidden" name="harga_tampil"  style="color: #737373;" id="harga_tampil" class="input-textDataUser-false" disabled>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- ------------------------------------------------------------ -->
+
                                             <div class="widthBorder cardBorderBottomGrey" ></div>
                                             <div style="margin-top: 10px;">
                                                 <div class="positionTextDetailOrder">
@@ -799,8 +793,8 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCart.js?v=1.2.5"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOut.js?v=1.2.5"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenCart.js?v=1.5.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOut.js?v=1.5.1"></script>
 
 </body>
 </html>

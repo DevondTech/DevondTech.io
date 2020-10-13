@@ -19,7 +19,7 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>King Fruit</title>
+  <title>King Fruit | KING OF THE KING</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <meta name="description" content="durian">
@@ -34,6 +34,19 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css?v=1.0.1">
   <link rel="stylesheet" type="text/css" href="../css/chat.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
+  <style type="text/css">
+    .aLink{
+      color: white;
+    }
+
+    .alink:hover {
+      color: #fbc893;
+    }
+
+    .alink:active {
+      color: #fbc893;
+    }
+  </style>
 </head>
 <body class="halamanUtama">
   <div id="loader-wrapper">
@@ -119,10 +132,11 @@
         <div style="background-color: #cda32b">
           <div class="card-textTop">
             <div>
-              Lorem ipsum dolor 
+            King Fruit  
             </div>
             <div style="font-size: 14px;">
-              Lorem ipsum dolor sit amet consectectur elit ipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet 
+            Kini waktunya durian LOKAL jadi FENOMENAL!
+            King Fruit menghadirkan buah durian dengan jaminan kualitas rasa terbaik dari masa panen pilihan, dengan PREMIUM QUALITY tergambar dalam ketebalan daging, konsisten rasa yang LEGIT, MANIS dan pasti TIDAK TERLU
             </div>
           </div>      
         </div>
@@ -461,11 +475,14 @@
                   </div>
                 </div>
                 <br />
-                <div class="margin-TopBottom-detailProduct">
-                  <div class="textBlack25-boldLarge-detailProduct" id="hargaProduk" style="color:#c81a1a;">
-                  </div>
+                <div class="margin-TopBottom-detailProduct" id="dataHarga">
+                  <div class="textBlack25-boldLarge-detailProduct" id="hargaProduk" style="color:#c81a1a;"></div>
                   <div style="border-bottom: 2px solid #c81a1a;width: 170px;margin-top: -19px;"></div>
                   <div class="textBlack25-boldLarge-detailProduct" id="hargaDiskon" style="margin-top: 10px;">
+                  </div>
+                </div>
+                <div class="margin-TopBottom-detailProduct" id="dataHargaReal">
+                  <div class="textBlack25-boldLarge-detailProduct" id="hargaReal" style="margin-top: 10px;">
                   </div>
                 </div>
                 <div class="margin-TopBottom-detailProduct">
@@ -550,7 +567,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="margin-TopBottom-detailProduct">
+                <!-- <div class="margin-TopBottom-detailProduct">
                   <div class="textblack12-regular-detailProduct">
                     <div>
                       <b>
@@ -561,7 +578,7 @@
                       Lorem ipsum dolor sit amet consectectur elit ipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet 
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="margin-TopBottom-detailProduct">
                   <div class="textblack14-regular-detailProduct">
                     Share to:
@@ -666,20 +683,22 @@
               </div>
               <div class="paddingTopBottom10">
                 <b>Address:</b>
-                <br />
-                Lorem ipsum dolor sit amet consectectur elit ipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum dolor sit amet consectectur elitipsum 
+                <div id="alamatOffice"></div>
               </div>
               <div class="paddingTopBottom10">
-                <b>Phone</b>
-                <br />
-                0899-7364-2358
-                <br />
-                0281-836473
+                <div><b>Phone</b></div>
+                <a id="linkNumber1">
+                  <div class="aLink" id="number1Office"></div>
+                </a>
+                <a id="linkNumber2">
+                  <div class="aLink" id="number2Office"></div>
+                </a>
               </div>
               <div class="paddingTopBottom10">
                 <b>Any Question?</b>
-                <br />
-                Support@gmail.com
+                <a  id="linkEmail">
+                  <div id="emailOffice" class="aLink"></div>
+                </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -742,26 +761,30 @@
                   </div>
                 </div>
               <div>
-                
               </div>
             </div>
           </div>
         </div>
-      
-        <div class="footer-content3">
-          <div>
-            Deployment by: PT DEVOND TEKNOLOGI INDONESIA, Copyright 2020
-          </div>
-        </div>     
       </div>
     </div>
   </section>
-  <div id="open-chat-modal">
+ <!--  <div id="open-chat-modal">
     <div class="open-chat-modal" style="right: -5px">
       <div class="div-icon-chat" >
         <div class="button-icon-chat" id="openForm">
           <img class="icon-chat" src="../images/icon/chat.png"> 
         </div>
+      </div>
+    </div>
+  </div> -->
+  <div id="">
+    <div class="open-chat-modal" style="right: -5px">
+      <div class="div-icon-chat" >
+        <a href="https://api.whatsapp.com/send?phone=6281311993939">
+          <div class="button-icon-chat" style="background: #00b551;padding-left: 5px;padding-right: 5px;border-radius: 10px;padding-top: 5px;padding-bottom: 5px;">
+            <img class="icon-chat" src="../images/wa.png"> 
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -810,9 +833,8 @@
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 <script type="text/javascript" src="../js/bootstrap.js" ></script>
-<!-- <script type="text/javascript" src="../scroll/js/scroll.js"></script> -->
 <script type="text/javascript" src="../js/slideSmall.js"></script>
-<script type="text/javascript" src="../js/durianRoot.js?v=1.1.4"></script>
+<script type="text/javascript" src="../js/durianRoot.js?v=1.3.1"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

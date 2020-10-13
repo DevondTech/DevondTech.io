@@ -124,16 +124,6 @@
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
-                                    Kabupaten
-                                </div>
-                            </div>
-                            <div class="card-inputDataUser">
-                                <input type="text" name="kabupatenUpdate"  id="kabupatenUpdate" class="input-textDataUser" placeholder="Ex : Depok">
-                            </div>
-                        </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
-                            <div class="card-textDataUser">
-                                <div class="textDataUser">
                                     Kota
                                 </div>
                             </div>
@@ -197,8 +187,8 @@
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 <script type="text/javascript" src="../js/pages/updateDataFoto.js"></script>
-<script src="../js/pages/editDataTampil.js?v=1.1.4"></script>
-<script src="../js/pages/editData.js?v=1.1.4"></script>
+<script src="../js/pages/editDataTampil.js?v=1.2.1"></script>
+<script src="../js/pages/editData.js?v=1.2.1"></script>
 
 <div id="open-updateFoto" class="modal fade" >
     <div class="modal-dialog modal-sm">

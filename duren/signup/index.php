@@ -47,10 +47,6 @@
                     <input type="number" class="form-control" name="nomor_hp" id="nomor_hp" placeholder="Ex : 08994190773" >
                   </div>
                   <div class="inputSingleSignup">
-                    Username
-                    <input type="text" class="form-control" name="username" id="username" placeholder="Ex : Devond678" >
-                  </div>
-                  <div class="inputSingleSignup">
                     E-mail
                     <input type="email" class="form-control" name="email" id="email" placeholder="Ex : devond@gmail.com" >
                   </div>
@@ -92,7 +88,7 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
-<script type="text/javascript" src="../js/login-signup.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/login-signup.js?v=1.5.1"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

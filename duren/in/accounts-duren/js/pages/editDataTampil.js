@@ -31,7 +31,7 @@ $(document).ready(function () {
       var EditDataAlamat = DataUser[0].alamat;
       var EditDataNegara = DataUser[0].negara;
       var EditDataProvinsi = DataUser[0].provinsi;
-      var EditDataKabupaten = DataUser[0].kabupaten;
+     /* var EditDataKabupaten = DataUser[0].kabupaten;*/
      // var EditDataKota = DataUser[0].id_kota;
       var EditDataKecamatan = DataUser[0].kecamatan;
       var EditDataKelurahan = DataUser[0].kelurahan;
@@ -45,7 +45,7 @@ $(document).ready(function () {
       $('#alamatUpdate').val(EditDataAlamat);
       $('#negaraUpdate').val(EditDataNegara);
       $('#provinsiUpdate').val(EditDataProvinsi);
-      $('#kabupatenUpdate').val(EditDataKabupaten);
+      /*$('#kabupatenUpdate').val(EditDataKabupaten);*/
       //$('#id_kota').val(EditDataKota);
       $('#kecamatanUpdate').val(EditDataKecamatan);
       $('#kelurahanUpdate').val(EditDataKelurahan);

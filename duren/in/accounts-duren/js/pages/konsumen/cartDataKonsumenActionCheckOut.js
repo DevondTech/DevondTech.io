@@ -29,7 +29,7 @@ $('#checkOutActionButton').on('click',function(e){
       if(response == "updateCheckOutByUserSuccess"){
         $("#checkOutActionButton").html('Check Out');
         alert('Pemesanan Berhasil');
-        $("#content-profile").load("cartDataInputPayment.php");
+        $("#content-profile").load("cartDataConfirmation.php");
       }
       else{
         alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');

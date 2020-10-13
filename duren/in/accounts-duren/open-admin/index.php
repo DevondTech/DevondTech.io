@@ -194,9 +194,33 @@
                     <li class="menu-waves-block" id="ontheway-link">
                         <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
-                                <img src="../images/durian/company-edit.svg" width="20" height="20">
+                                <img src="../images/durian/data-product.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Dalam Pengiriman</font></span>
+                        </a>
+                    </li>
+                    <li class="menu-waves-block" id="retur-link">
+                        <a  id="waves-effect-this" >
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/company-edit.svg" width="20" height="20">
+                            </div>
+                            <span id=""><font class="icon-menu-active">Pengajuan Retur</font></span>
+                        </a>
+                    </li>
+                    <li class="menu-waves-block" id="retur-all-link">
+                        <a  id="waves-effect-this" >
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/data-product.svg" width="20" height="20">
+                            </div>
+                            <span id=""><font class="icon-menu-active">Data Retur</font></span>
+                        </a>
+                    </li>
+                    <li class="menu-waves-block" id="sales-link">
+                        <a  id="waves-effect-this" >
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/data-product.svg" width="20" height="20">
+                            </div>
+                            <span id=""><font class="icon-menu-active">Data Penjualan</font></span>
                         </a>
                     </li>
                   <!--   <li class="menu-waves-block" id="shipped-link">
@@ -239,13 +263,15 @@
                             <span><font class="icon-menu-active">notifikasi</font></span>
                         </a>
                     </li> -->
-                    <li class="menu-waves-block" id="logout-link">
+                    <li class="menu-waves-block" id="logout-link" >
                         <a href="../../../conn/logout.php" id="waves-effect-this">
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/logout.svg" width="20" height="20">
                             </div>
                             <span><font class="icon-menu-active">Logout</font></span>
                         </a>
+                    </li>
+                    <li class="menu-waves-block" id="logout-link" style="padding-bottom: 50px;">
                     </li>
                 </ul>
             </div>
@@ -281,7 +307,7 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.1.3"></script>
+<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.3.1"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

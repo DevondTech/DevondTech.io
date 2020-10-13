@@ -22,4 +22,37 @@
         echo json_encode($selectPrintProcess);
     }
 
+    if(isset($_GET['dataReturCallData'])){
+        session_start();
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT id_retur, kode_retur, waktu_retur, nama_lengkap, pesan_retur, nomor_hp, email, nama_pemilik_rekening, no_rekening, bank_asal, total_harga_yang_harus_dibayar, gambar_barang_retur FROM view_detail_pengajuan_retur_produk where id_retur ='".$_GET['dataReturCallData']."'";
+        $result = $db->query($query); 
+        $dataReturCallData = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $dataReturCallData=json_encode($dataReturCallData);
+        echo json_encode($dataReturCallData);
+    }
+
+    if(isset($_GET['dataReturCallDataAll'])){
+        session_start();
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT id_retur, kode_retur, waktu_retur, nama_lengkap, email, nomor_hp, gambar_barang_retur, status_retur, pesan_retur, admin_tanggal_transfer, admin_total_pengembalian_dana FROM view_data_retur_all where id_retur ='".$_GET['dataReturCallDataAll']."'";
+        $result = $db->query($query); 
+        $dataReturCallDataAll = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $dataReturCallDataAll=json_encode($dataReturCallDataAll);
+        echo json_encode($dataReturCallDataAll);
+    }
+
+    if(isset($_GET['selectPrintSales'])){
+        session_start();
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT kode_penjualan, waktu_penjualan, nama_lengkap, email, nomor_hp, foto, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, nama_produk, jenis_produk, satuan_produk, jumlah_penjualan, teks_berat_produk, konfersi_berat_produk_perkilogram, ongkos_kirim, jenis_voucher, metode_pembayaran, pesan_bukti_pembayaran, nama_pemilik_rekening, tanggal_transfer, no_rekening, bank_asal, gambar_bukti_pembayaran, total_harga_perproduk, total_penjualan FROM view_data_penjualan where kode_penjualan ='".$_GET['selectPrintSales']."'";
+        $result = $db->query($query); 
+        $selectPrintSales = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $selectPrintSales=json_encode($selectPrintSales);
+        echo json_encode($selectPrintSales);
+    }
 ?>
+

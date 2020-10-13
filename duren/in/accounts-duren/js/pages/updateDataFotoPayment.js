@@ -7,7 +7,7 @@ $('#btnUpdateFoto').on('click', function(e){
         var fd = new FormData();
         var files = $('#foto')[0].files[0];
         fd.append('foto',files);
-        console.log(fd);
+        /*console.log(fd);*/
         $.ajax({
           url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateDataFotoPayment',
           type : 'POST',
@@ -22,9 +22,8 @@ $('#btnUpdateFoto').on('click', function(e){
           success :  function(response)
           { 
             if(response == "Success"){
-              $("#btnUpdateFoto").html('SIMPAN');
-              $('#foto').val('');
-              $('#open-updateFoto').modal('hide');
+              /*$("#btnUpdateFoto").html('SIMPAN');
+              $('#uploadModal').modal('hide');*/
               $.ajax({
                 type: "GET",
                 url: "../../../conn/data2/cartProcess/cartProcess.php/?selectToDataFotoPayment",
@@ -36,11 +35,13 @@ $('#btnUpdateFoto').on('click', function(e){
                     var DataFotoNull = '../images/uploadImage.png';
                     if(DataFoto == '' || DataFoto == null){
                         $('#dataFotoPayment').attr('src', DataFotoNull);
-                        $('#foto_check').val('0');
+                        $('#foto_check').val('0');  
+                        window.location = "../../../in/accounts-duren/open-konsumen";                      
                     }
                     else{
                         $('#dataFotoPayment').attr('src', DataFoto);
                         $('#foto_check').val('1');
+                        window.location = "../../../in/accounts-duren/open-konsumen";  
                     } 
                 }
               });

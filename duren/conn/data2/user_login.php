@@ -76,7 +76,6 @@
     if(isset($_GET['signup'])){
     	require 'config.php';
     	$json = json_decode(file_get_contents('php://input'), true);
-    	$username = $_POST['username'];
     	$password = $_POST['password'];
         $nama_lengkap = $_POST['nama_lengkap'];
         $nomor_hp = $_POST['nomor_hp'];
@@ -98,12 +97,12 @@
                 $userDataLastID = $resultLastID->fetch_object();
                 $id_userLast=$userDataLastID->last_data;
                 $id_userLastPut = $id_userLast + 1;
-                $result = $db->query("select * from tb_login_user where username='$username' or email='$email'");
+                $result = $db->query("select * from tb_login_user where nomor_hp='$nomor_hp' or email='$email'");
                 $rowCount=$result->num_rows;
                 if($rowCount==0)
                 {           
-                    $query = "INSERT INTO tb_login_user(tanggal_mendaftar,username,nama_lengkap,email,nomor_hp,password,id_status_user)
-                                VALUES('$tanggal_mendaftar','$username','$nama_lengkap','$email','$nomor_hp','$password','$id_status_user')";   
+                    $query = "INSERT INTO tb_login_user(tanggal_mendaftar,nama_lengkap,email,nomor_hp,password,id_status_user)
+                                VALUES('$tanggal_mendaftar','$nama_lengkap','$email','$nomor_hp','$password','$id_status_user')";   
                     $result = $db->query($query);    
                     $query = "INSERT INTO tb_data_user(id_user)
                                 VALUES('$id_userLastPut')";   
@@ -149,7 +148,6 @@
         $alamatUpdate = $_POST['alamatUpdate']; 
         $negaraUpdate = $_POST['negaraUpdate']; 
         $provinsiUpdate = $_POST['provinsiUpdate']; 
-        $kabupatenUpdate = $_POST['kabupatenUpdate']; 
         $kotaUpdate = $_POST['kotaUpdate']; 
         $kecamatanUpdate = $_POST['kecamatanUpdate']; 
         $kelurahanUpdate = $_POST['kelurahanUpdate']; 
@@ -159,7 +157,7 @@
             $queryUpdateTBLoginUser = "UPDATE tb_login_user SET nama_lengkap='$nama_lengkapUpdate', nomor_hp='$nomor_hpUpdate' WHERE id_user = $id_user";
             $db->query($queryUpdateTBLoginUser);
 
-            $queryUpdateTBDataUser = "UPDATE tb_data_user SET id_jenis_kelamin='$id_jenis_kelaminUpdate', tanggal_lahir='$tanggal_lahirUpdate', alamat='$alamatUpdate', negara='$negaraUpdate', provinsi='$provinsiUpdate', kabupaten='$kabupatenUpdate', id_kota='$kotaUpdate', kecamatan='$kecamatanUpdate', kelurahan='$kelurahanUpdate', kode_pos='$kode_posUpdate' WHERE id_user = $id_user";
+            $queryUpdateTBDataUser = "UPDATE tb_data_user SET id_jenis_kelamin='$id_jenis_kelaminUpdate', tanggal_lahir='$tanggal_lahirUpdate', alamat='$alamatUpdate', negara='$negaraUpdate', provinsi='$provinsiUpdate', id_kota='$kotaUpdate', kecamatan='$kecamatanUpdate', kelurahan='$kelurahanUpdate', kode_pos='$kode_posUpdate' WHERE id_user = $id_user";
             $db->query($queryUpdateTBDataUser);
 
             echo "updataUserProfile";   
@@ -176,14 +174,13 @@
         $alamatUpdate = $_POST['alamatUpdate']; 
         $negaraUpdate = $_POST['negaraUpdate']; 
         $provinsiUpdate = $_POST['provinsiUpdate']; 
-        $kabupatenUpdate = $_POST['kabupatenUpdate']; 
         $kotaUpdate = $_POST['id_kota']; 
         $kecamatanUpdate = $_POST['kecamatanUpdate']; 
         $kelurahanUpdate = $_POST['kelurahanUpdate']; 
         $kode_posUpdate = $_POST['kode_posUpdate']; 
 
         if($alamatUpdate!=''){
-            $queryUpdateTBDataUser = "UPDATE tb_data_user SET alamat='$alamatUpdate', negara='$negaraUpdate', provinsi='$provinsiUpdate', kabupaten='$kabupatenUpdate', id_kota='$kotaUpdate', kecamatan='$kecamatanUpdate', kelurahan='$kelurahanUpdate', kode_pos='$kode_posUpdate' WHERE id_user = $id_user";
+            $queryUpdateTBDataUser = "UPDATE tb_data_user SET alamat='$alamatUpdate', negara='$negaraUpdate', provinsi='$provinsiUpdate', id_kota='$kotaUpdate', kecamatan='$kecamatanUpdate', kelurahan='$kelurahanUpdate', kode_pos='$kode_posUpdate' WHERE id_user = $id_user";
             $db->query($queryUpdateTBDataUser);
 
             echo "updataUserProfile";   

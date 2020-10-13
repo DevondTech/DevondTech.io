@@ -1,0 +1,38 @@
+<?php
+
+ 	/*if(isset($_GET['updateProsesUser'])){
+        session_start();
+        $userDataID = $_SESSION['id_user'];
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "UPDATE tb_pemesanan set id_proses_pemesanan ='7' where waktu_pemesanan < date_sub(now(),interval 48 hour) and id_proses_pemesanan = '5' ";
+        $db->query($query);
+        echo "updateProsesUserSuccess";   
+    }*/
+
+    /*if(isset($_GET['updateDataFotoRetur'])){
+        session_start();
+        require '../config.php';
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        date_default_timezone_set('Asia/Jakarta');
+        $datePic = date ("Y-m-d");
+        $foto = $_FILES['foto']['name'];
+        $fileFolder = '../images/buktitransfer/';
+        $fileFolderSave = '../../../in/accounts-duren/images/buktitransfer/';
+        $ekstensiAccept = array('png','jpg','jpeg','JPG');
+        $xFoto = explode('.', $foto);
+        $ekstensiFoto = strtolower(end($xFoto));
+        $location = $fileFolderSave.$datePic.$id_user.$foto;
+        if(in_array($ekstensiFoto, $ekstensiAccept) === true){
+            $queryUpdateFotoUser = "UPDATE tb_pemesanan SET gambar_bukti_pembayaran='$fileFolder$datePic$id_user$foto' WHERE id_user = $id_user and id_proses_pemesanan='2'";
+            $db->query($queryUpdateFotoUser);
+            move_uploaded_file($_FILES['foto']['tmp_name'], $location);
+            echo "Success";   
+        }
+        else{
+            echo "dataCheck";
+        }
+    }*/
+
+?>

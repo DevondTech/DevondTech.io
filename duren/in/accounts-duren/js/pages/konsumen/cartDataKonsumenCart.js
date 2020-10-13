@@ -15,6 +15,7 @@ $(document).ready(function(){
         }
     });
 
+
     $.ajax({
         type: "GET",
         url: "../../../conn/data2/cartProcess/cartProcess.php/?selectCartDataByUser",
@@ -36,7 +37,6 @@ $(document).ready(function(){
                     var DataAlamat = DataUser[0].alamat;
                     var DataNegara = DataUser[0].negara;
                     var DataProvinsi = DataUser[0].provinsi;
-                    var DataKabupaten = DataUser[0].kabupaten;
                     var DataKecamatan = DataUser[0].kecamatan;
                     var DataKelurahan = DataUser[0].kelurahan;
                     var DataKota = DataUser[0].kota;
@@ -58,12 +58,11 @@ $(document).ready(function(){
                         $('#alamatPrint').attr('style','color:red');
                     }
                     else{
-                        $('#alamatPrint').text(DataAlamat+' , Kelurahan '+DataKelurahan+' , Kecamatan '+DataKecamatan+' , Kota '+DataKota+' , Kabupaten '+DataKabupaten+' , '+DataProvinsi+' , '+DataNegara+' (Kode POS :'+DataKodePos+') ');
+                        $('#alamatPrint').text(DataAlamat+' , Kelurahan '+DataKelurahan+' , Kecamatan '+DataKecamatan+' , Kota '+DataKota+' , '+DataProvinsi+' , '+DataNegara+' (Kode POS :'+DataKodePos+') ');
                         $('#alamatPrint').attr('style','color:#333');
                     }
                     $('#dataNegara').val(DataNegara);
                     $('#dataProvinsi').val(DataProvinsi);
-                    $('#dataKabupaten').val(DataKabupaten);
                     $('#dataKota').val(DataKota);
                     $('#dataKodePos').val(DataKodePos);
                     $('#nama_lengkap').val(DataNamaLengkap);
@@ -71,7 +70,6 @@ $(document).ready(function(){
                     $('#alamatInput').val(DataAlamat);
                     $('#negaraInput').val(DataNegara);
                     $('#provinsiInput').val(DataProvinsi);
-                    $('#kabupatenInput').val(DataKabupaten);
                     $('#kotaInput').val(DataKota);
                     $('#kecamatanInput').val(DataKecamatan);
                     $('#kelurahanInput').val(DataKelurahan);
@@ -80,8 +78,8 @@ $(document).ready(function(){
                     $('#harga_sebelum_diskon').val(DataHarga);
                     $('#harga_tampil').val(DataHargaSetelahDiskon);
                     $('#harga').val(DataHargaSetelahDiskon);          
-                    $('#ongkir').val('15000');
-                    $('#ongkir_tampil').val('15000');
+                    $('#ongkir').val('0');
+                    $('#ongkir_tampil').val('0');
                     var ongkir = $('#ongkir').val();
                     var ongkirNumberString = ongkir.toString(),
                         ongkirSisa    = ongkirNumberString.length % 3,
@@ -161,7 +159,7 @@ $(document).ready(function(){
                         }
 
                         jumlahPemesanan = $('#jumlah_pemesanan').val();
-                        var ongkirCallBack =  '15000';
+                        var ongkirCallBack =  '0';
                         var dataBeratPemesanan = jumlahPemesanan * ongkirCallBack;
                         
                         //$('#ongkir').val();
@@ -233,7 +231,7 @@ $(document).ready(function(){
                 }
                 else{
                     if(DataProsesPemesanan == '2'){
-                        $("#content-profile").load("cartDataInputPayment.php");
+                        $("#content-profile").load("cartDataConfirmation.php");
                     }
                     if(DataProsesPemesanan == '3'){
                         $("#content-profile").load("cartDataProcessConfirmation.php");
@@ -284,7 +282,6 @@ $(document).ready(function(){
         $('#alamatUpdate').val('');
         $('#negaraUpdate').val('');  
         $('#provinsiUpdate').val('');
-        $('#kabupatenUpdate').val('');
         $('#kotaUpdate').val('');
         $('#kecamatanUpdate').val('');
         $('#kelurahanUpdate').val('');
@@ -295,7 +292,6 @@ $(document).ready(function(){
         var alamatUpdate = $('#alamatUpdate').val();
         var negaraUpdate = $('#negaraUpdate').val();  
         var provinsiUpdate = $('#provinsiUpdate').val();
-        var kabupatenUpdate = $('#kabupatenUpdate').val();
         var kotaUpdate = $('#kotaUpdate').val();
         var kecamatanUpdate = $('#kecamatanUpdate').val();
         var kelurahanUpdate = $('#kelurahanUpdate').val();
@@ -306,9 +302,6 @@ $(document).ready(function(){
         }  
         else if(negaraUpdate == ''){
             alert('Silahkan Isi Data Negara')
-        }  
-        else if(kabupatenUpdate == ''){
-            alert('Silahkan Isi Data Kabupaten')
         }  
         else if(kotaUpdate == ''){
             alert('Silahkan Isi Data Kota')
@@ -348,7 +341,6 @@ $(document).ready(function(){
                     $('#alamatUpdate').val('');
                     $('#negaraUpdate').val('');  
                     $('#provinsiUpdate').val('');
-                    $('#kabupatenUpdate').val('');
                     $('#id_kota').val('');
                     $('#kecamatanUpdate').val('');
                     $('#kelurahanUpdate').val('');
@@ -366,7 +358,6 @@ $(document).ready(function(){
                             var DataAlamat = DataUser[0].alamat;
                             var DataNegara = DataUser[0].negara;
                             var DataProvinsi = DataUser[0].provinsi;
-                            var DataKabupaten = DataUser[0].kabupaten;
                             var DataKecamatan = DataUser[0].kecamatan;
                             var DataKelurahan = DataUser[0].kelurahan;
                             var DataKota = DataUser[0].kota;
@@ -379,12 +370,11 @@ $(document).ready(function(){
                                 $('#alamatPrint').attr('style','color:red')
                             }
                             else{
-                                $('#alamatPrint').text(DataAlamat+' , Kelurahan '+DataKelurahan+' , Kecamatan '+DataKecamatan+' , Kota '+DataKota+' , Kabupaten '+DataKabupaten+' , '+DataProvinsi+' , '+DataNegara+' (Kode POS :'+DataKodePos+') ');
+                                $('#alamatPrint').text(DataAlamat+' , Kelurahan '+DataKelurahan+' , Kecamatan '+DataKecamatan+' , Kota '+DataKota+' , '+DataProvinsi+' , '+DataNegara+' (Kode POS :'+DataKodePos+') ');
                                 $('#alamatPrint').attr('style','color:#333');
                             }
                             $('#dataNegara').val(DataNegara);
                             $('#dataProvinsi').val(DataProvinsi);
-                            $('#dataKabupaten').val(DataKabupaten);
                             $('#dataKota').val(DataKota);
                             $('#dataKodePos').val(DataKodePos);
                             $('#nama_lengkap').val(DataNamaLengkap);
@@ -392,7 +382,6 @@ $(document).ready(function(){
                             $('#alamatInput').val(DataAlamat);
                             $('#negaraInput').val(DataNegara);
                             $('#provinsiInput').val(DataProvinsi);
-                            $('#kabupatenInput').val(DataKabupaten);
                             $('#kotaInput').val(DataKota);
                             $('#kecamatanInput').val(DataKecamatan);
                             $('#kelurahanInput').val(DataKelurahan);

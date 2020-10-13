@@ -73,10 +73,75 @@ $(window).on('load',function(e){
   this.location.reload(false); 
 });*/
 
+$('#sales-link').on('click',function(e){
+	$("#content-profile").load("historySalesAdmin.php");
+	
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#medsos-link").attr("class","displayLink-none");
+	$("#about-link").attr("class","displayLink-none");
+
+	$("#sales-link").attr("class","active-menu-right");
+});
+
+$('#retur-all-link').on('click',function(e){
+	$("#content-profile").load("cartDataReturALLAdmin.php");
+	
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#medsos-link").attr("class","displayLink-none");
+	$("#about-link").attr("class","displayLink-none");
+
+	$("#retur-all-link").attr("class","active-menu-right");
+});
+
+$('#retur-link').on('click',function(e){
+	$("#content-profile").load("cartDataReturAdmin.php");
+	
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#medsos-link").attr("class","displayLink-none");
+	$("#about-link").attr("class","displayLink-none");
+
+	$("#retur-link").attr("class","active-menu-right");
+});
+
 $('#ontheway-link').on('click',function(e){
 	$("#content-profile").load("cartDataOnTheWayAndFinishShippedAdmin.php");
 	
-
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#payment-link").attr("class","menu-waves-block");
@@ -95,6 +160,9 @@ $('#ontheway-link').on('click',function(e){
 $('#shipped-link').on('click',function(e){
 	$("#content-profile").load("cartDataProcessConfirmationShippedAdmin.php");
 	
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
 	$("#payment-link").attr("class","menu-waves-block");
@@ -113,6 +181,9 @@ $('#shipped-link').on('click',function(e){
 $('#payment-link').on('click',function(e){
 	$("#content-profile").load("cartDataPaymentAdmin.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
@@ -131,6 +202,9 @@ $('#payment-link').on('click',function(e){
 $('#account-edit').on('click',function(e){
 	$("#content-profile").load("editData.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
@@ -150,6 +224,9 @@ $('#account-edit').on('click',function(e){
 $('#product-link').on('click',function(e){
 	$("#content-profile").load("productData.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
 	$("#password-link").attr("class","menu-waves-block");
@@ -172,6 +249,9 @@ $('#product-link').on('click',function(e){
 $('#create-user-link').on('click',function(e){
 	$("#content-profile").load("createDataUser.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
@@ -193,6 +273,9 @@ $('#create-user-link').on('click',function(e){
 $('#account-edit-link').on('click',function(e){
 	$("#content-profile").load("editData.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-link").attr("class","menu-waves-block");
@@ -214,6 +297,9 @@ $('#account-edit-link').on('click',function(e){
 $('#account-link').on('click',function(e){
 	$("#content-profile").load("profile.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
@@ -235,6 +321,9 @@ $('#account-link').on('click',function(e){
 $('#password-link').on('click',function(e){
 	$("#content-profile").load("password.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
@@ -256,6 +345,9 @@ $('#password-link').on('click',function(e){
 $('#notification-link').on('click',function(e){
 	$("#content-profile").load("notificationData.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
@@ -276,6 +368,9 @@ $('#notification-link').on('click',function(e){
 $('#company-profile').on('click',function(e){
 	$("#content-profile").load("aboutusData.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
@@ -294,6 +389,9 @@ $('#company-profile').on('click',function(e){
 $('#about-link').on('click',function(e){
 	$("#content-profile").load("aboutusData.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");
@@ -312,6 +410,9 @@ $('#about-link').on('click',function(e){
 $('#medsos-link').on('click',function(e){
 	$("#content-profile").load("medsosData.php");
 
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
 	$("#ontheway-link").attr("class","menu-waves-block");
 	$("#shipped-link").attr("class","menu-waves-block");
 	$("#account-edit-link").attr("class","menu-waves-block");

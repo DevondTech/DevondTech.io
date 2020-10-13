@@ -1,6 +1,21 @@
 $(window).on('load',function(e){
     $("#content-profile").load("profile.php");
 
+ /*   $.ajax({
+     	type: "GET",
+     	url: "../../../conn/data2/cartProcess/cartProcess.php/?updateProsesUser",
+     	contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success :  function(response){
+	        if(response == "updateProsesUserSuccess"){
+	            
+	        }
+	        else{
+	            
+	        }
+        }    
+ 	});*/
+
 	$.ajax({
      	type: "GET",
      	url: "../../../conn/data2/user_data.php/?callUserDatas",

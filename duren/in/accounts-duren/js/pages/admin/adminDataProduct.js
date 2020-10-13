@@ -39,47 +39,10 @@ $(window).on('load',function(e){
             	$('#foto_OnLoginPageHome_Large').attr('src', DataFoto);	
             	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFoto);
             } 
-
-            /*if data-src*/
-
-            /*var DataFotoNull = '../images/user.png';
-            var DataFotoNull2 = '../images/user2.png';
-            if(DataFoto == '' || DataFoto == null){
-
-            	var imgs = document.getElementsByTagName('img');
-
-				for(var i = 0; i < imgs.length; i++) {
-				  	var currentSrc = imgs[i].getAttribute('src');
-				  	imgs[i].setAttribute('src',''); // remove old src data 
-				  	imgs[i].setAttribute('data-src','currentSrc');
-				  	$('#foto_OnLoginPageHome_Small').attr('data-src', DataFotoNull);
-	            	$('#foto_OnLoginPageHome_Large').attr('data-src', DataFotoNull2);
-	            	$('#foto_OnLoginPageHome_Large_Down').attr('data-src', DataFotoNull2);
-	            	
-				}
-            }
-            else{
-            	var imgs = document.getElementsByTagName('img');
-
-				for(var i = 0; i < imgs.length; i++) {
-				  	var currentSrc = imgs[i].getAttribute('src');
-				  	imgs[i].setAttribute('src',''); // remove old src data 
-				  	imgs[i].setAttribute('data-src','currentSrc');
-	            	$('#foto_OnLoginPageHome_Small').attr('data-src', DataFoto);
-	            	$('#foto_OnLoginPageHome_Large').attr('data-src', DataFoto);	
-	            	$('#foto_OnLoginPageHome_Large_Down').attr('data-src', DataFoto);
-	            }
-            } */         
         }
 	});
 });
 
-//refresh page on browser resize
-/*$(window).bind('resize', function(e)
-{
-  console.log('window resized..');
-  this.location.reload(false); 
-});*/
 
 $('#account-edit').on('click',function(e){
 	$("#content-profile").load("editData.php");

@@ -8,7 +8,7 @@ $('document').ready(function(){
   var alamatUpdate = $('#alamatUpdate').val();
   var negaraUpdate = $('#negaraUpdate').val();  
   var provinsiUpdate = $('#provinsiUpdate').val();
-  var kabupatenUpdate = $('#kabupatenUpdate').val();
+/*  var kabupatenUpdate = $('#kabupatenUpdate').val();*/
   var kotaUpdate = $('#kotaUpdate').val();
   var kecamatanUpdate = $('#kecamatanUpdate').val();
   var kelurahanUpdate = $('#kelurahanUpdate').val();
@@ -31,9 +31,9 @@ $('document').ready(function(){
   else if(negaraUpdate == ''){
     alert('Silahkan Isi Data Negara')
   }  
-  else if(kabupatenUpdate == ''){
+/*  else if(kabupatenUpdate == ''){
     alert('Silahkan Isi Data Kabupaten')
-  }  
+  }  */
   else if(kecamatanUpdate == ''){
     alert('Silahkan Isi Data Kecamatan')
   }  

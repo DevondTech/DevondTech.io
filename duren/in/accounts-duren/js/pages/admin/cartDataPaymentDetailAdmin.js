@@ -39,7 +39,7 @@ $(document).ready(function(){
             $('#nama_lengkap').val(nama_lengkap); //Data1@dataKonsumen
             $('#email').val(email); //Data1@dataKonsumen
             $('#nomor_hp').val(nomor_hp); //Data1@dataKonsumen
-            $('#alamat').val(alamat+' , Kelurahan '+kelurahan+' , Kecamatan '+kecamatan+' , Kota '+kota+' , Kabupaten '+kabupaten+' , '+provinsi+' , '+negara+' (Kode POS :'+kode_pos+') '); //Data1@dataKonsumen
+            $('#alamat').val(alamat+' , Kelurahan '+kelurahan+' , Kecamatan '+kecamatan+' , Kabupaten / Kota '+kota+' , '+provinsi+' , '+negara+' (Kode POS :'+kode_pos+') '); //Data1@dataKonsumen
             $('#jumlah_pemesanan').val(jumlah_pemesanan+' '+satuan_produk); //Data3@dataPemesanan
             $('#teks_berat_produk').val(teks_berat_produk); //Data3@dataPemesanan
             $('#nama_pemilik_rekening').val(nama_pemilik_rekening); //Data4@dataPembayaran

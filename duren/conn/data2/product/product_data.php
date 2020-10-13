@@ -1,12 +1,8 @@
 <?php
 
     require( '../../ssp.class.php' );
-    $dbDetails = array(
-        'host' => 'localhost',
-        'user' => 'root',
-        'pass' => '',
-        'db'   => 'db_durian'
-    );
+    require( '../configTwo.php' );
+    
     $table = 'view_data_produk';
     $primaryKey = 'id_produk';
 

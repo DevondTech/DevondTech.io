@@ -48,4 +48,17 @@
         echo json_encode($emailCallBack);
     }
 
+    if(isset($_GET['dataAboutUs'])){
+        session_start();
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT * FROM tb_about_us where id_about_us='1'";
+        $result = $db->query($query); 
+        $dataAboutUs = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $dataAboutUs=json_encode($dataAboutUs);
+        echo json_encode($dataAboutUs);
+    }
+
+
+
 ?>

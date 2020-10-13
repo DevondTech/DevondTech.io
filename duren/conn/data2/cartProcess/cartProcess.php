@@ -1,5 +1,97 @@
 <?php	
 
+    if(isset($_GET['updateConfirmationReturTransfer'])){
+        session_start();
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $admin_tanggal_transfer = $_POST['admin_tanggal_transfer'];
+        $admin_nama_pemilik_rekening = $_POST['admin_nama_pemilik_rekening']; 
+        $admin_nomor_rekening = $_POST['admin_nomor_rekening']; 
+        $admin_bank_asal = $_POST['admin_bank_asal']; 
+        $admin_total_pengembalian_dana = $_POST['admin_total_pengembalian_dana']; 
+        $id_retur = $_POST['a']; 
+        $id_status_retur = 2;
+        if($id_user!=''){
+            $query = "UPDATE tb_retur_pembelian SET  admin_nama_pemilik_rekening='$admin_nama_pemilik_rekening', admin_tanggal_transfer='$admin_tanggal_transfer', admin_nomor_rekening='$admin_nomor_rekening', admin_bank_asal='$admin_bank_asal', admin_total_pengembalian_dana='$admin_total_pengembalian_dana', id_status_retur='$id_status_retur' WHERE id_retur = '$id_retur' ";
+            $db->query($query);
+            echo "updateConfirmationReturTransferSuccess";   
+        }
+        else{
+            echo "erorDATA";
+        }
+    }
+
+    if(isset($_GET['confirmationFormDataRefuse'])){
+        session_start();
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $id_retur = $_POST['b']; 
+        $id_status_retur = 3;
+        $admin_total_pengembalian_dana = 0;
+        if($id_user!=''){
+            $query = "UPDATE tb_retur_pembelian SET admin_total_pengembalian_dana='$admin_total_pengembalian_dana', id_status_retur='$id_status_retur' WHERE id_retur = '$id_retur' ";
+            $db->query($query);
+            echo "confirmationFormDataRefuseSuccess";   
+        }
+        else{
+            echo "erorDATA";
+        }
+    }
+
+    if(isset($_GET['selectToDataFotoRetur'])){
+        session_start();
+        $userDataID = $_SESSION['id_user'];
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT id_user, id_proses_pemesanan, gambar_bukti_pembayaran FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan='2'";
+        $result = $db->query($query);      
+        if($result){
+            $selectToDataFotoRetur = mysqli_fetch_all($result,MYSQLI_ASSOC);
+            $selectToDataFotoRetur=json_encode($selectToDataFotoRetur);
+            echo json_encode($selectToDataFotoRetur);
+        }else{
+            $selectToDataFotoRetur ='';
+            echo json_encode($selectToDataFotoRetur);
+        }
+    }
+
+    if(isset($_GET['selectCartDataByUserToPayment'])){
+        session_start();
+        $userDataID = $_SESSION['id_user'];
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT * FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan = '2'";
+        $result = $db->query($query); 
+        if($result){
+            $selectCartDataByUserToPayment = mysqli_fetch_all($result,MYSQLI_ASSOC);
+            $selectCartDataByUserToPayment=json_encode($selectCartDataByUserToPayment);
+            echo json_encode($selectCartDataByUserToPayment);
+        }else{
+            $selectCartDataByUserToPayment ='';
+            echo json_encode($selectCartDataByUserToPayment);
+        }
+    }
+
+    if(isset($_GET['selectCartDataByUserToPaymentCall'])){
+        session_start();
+        $userDataID = $_SESSION['id_user'];
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT kode_pemesanan, waktu_pemesanan, id_user, username, nama_lengkap, email, nomor_hp, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, pesan_pemesanan, id_proses_pemesanan, proses_pemesanan, nama_produk, detail1_produk, jenis_produk, jumlah_pemesanan, harga, diskon, harga_setelah_diskon, total_harga_perproduk, ongkos_kirim, total_harga_yang_harus_dibayar, gambar1_produk, id_satuan_produk, satuan_produk, id_berat_produk, teks_berat_produk, konfersi_berat_produk_perkilogram, id_voucher, kode_voucher, jenis_voucher, total_voucher, waktu_berlaku,  status_voucher, metode_pembayaran, kode_link_pembayaran, pesan_bukti_pembayaran, gambar_bukti_pembayaran, nama_pemilik_rekening,
+tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan = '2'";
+        $result = $db->query($query); 
+        if($result){
+            $selectCartDataByUserToPayment = mysqli_fetch_all($result,MYSQLI_ASSOC);
+            $selectCartDataByUserToPayment=json_encode($selectCartDataByUserToPayment);
+            echo json_encode($selectCartDataByUserToPayment);
+        }else{
+            $selectCartDataByUserToPayment ='';
+            echo json_encode($selectCartDataByUserToPayment);
+        }
+    }
+
 	if(isset($_GET['selectDataUserDetailAlamat'])){
         session_start();
         $userDataID = $_SESSION['id_user'];
@@ -19,7 +111,6 @@
         $json = json_decode(file_get_contents('php://input'), true);
         $query = "SELECT * FROM view_data_semua_pesanan where id_user ='$userDataID' order by id_proses_pemesanan ASC";
         $result = $db->query($query); 
-       
         if($result){
             $selectCartDataByUser = mysqli_fetch_all($result,MYSQLI_ASSOC);
             $selectCartDataByUser=json_encode($selectCartDataByUser);
@@ -61,7 +152,6 @@
         $totalBayarKeseluruhan = $_POST['totalBayarKeseluruhan']; 
         $id_proses_pemesanan = 2;
         $id_proses_pemesanan_from_DB = 1;
-
         if($alamatInput!=''){
             $query = "UPDATE tb_pemesanan SET  jumlah_pemesanan='$jumlah_pemesanan', alamat='$alamatInput', negara='$negaraInput', provinsi='$provinsiInput', kabupaten='$kabupatenInput', kota='$kotaInput', kecamatan='$kecamatanInput', kelurahan='$kelurahanInput', kode_pos='$dataKodePos', id_berat_produk='$id_berat_produk', id_proses_pemesanan='$id_proses_pemesanan', ongkos_kirim='$ongkir', total_harga_perproduk='$total_harga_pemesanan', total_harga_yang_harus_dibayar='$totalBayarKeseluruhan' WHERE id_user = $id_user and id_proses_pemesanan='1'";
             $db->query($query);
@@ -93,7 +183,6 @@
         $totalBayarKeseluruhan = $_POST['totalBayarKeseluruhan']; 
         $id_proses_pemesanan = 2;
         $id_proses_pemesanan_from_DB = 1;
-
         if($alamatInput!=''){
             $query = "UPDATE tb_pemesanan SET  jumlah_pemesanan='$jumlah_pemesanan', alamat='$alamatInput', negara='$negaraInput', provinsi='$provinsiInput', kabupaten='$kabupatenInput', kota='$kotaInput', kecamatan='$kecamatanInput', kelurahan='$kelurahanInput', kode_pos='$dataKodePos', id_berat_produk='$id_berat_produk', id_proses_pemesanan='$id_proses_pemesanan', ongkos_kirim='$ongkir', total_harga_perproduk='$total_harga_pemesanan', total_harga_yang_harus_dibayar='$totalBayarKeseluruhan' WHERE id_user = $id_user and id_proses_pemesanan='1'";
             $db->query($query);
@@ -110,7 +199,7 @@
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        $resultSearchDataByUser = $db->query("select * from tb_pemesanan where id_user='$id_user' and id_proses_pemesanan!='6'");
+        $resultSearchDataByUser = $db->query("select * from tb_pemesanan where id_user='$id_user' and id_proses_pemesanan!='7'");
         $rowCountByUser=$resultSearchDataByUser->num_rows;
         if($rowCountByUser==0){  
             $resultLastID = $db->query("select max(id_pemesanan) as last_data_pemesanan FROM tb_pemesanan");
@@ -181,23 +270,87 @@
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
+        $IdPemesanan = $_POST['IdPemesanan']; 
+        $IdProduk = $_POST['IdProduk']; 
+        date_default_timezone_set('Asia/Jakarta');
+        $WaktuPemesanan = date('Y-m-d H:i:s');
+        $JumlahPemesanan = $_POST['JumlahPemesanan']; 
+        $IdBeratProduk = $_POST['IdBeratProduk']; 
+        $TotalPenjualan = $_POST['TotalPenjualan']; 
         $nama_pemilik_rekening = $_POST['nama_pemilik_rekening']; 
         $tanggal_transfer = $_POST['tanggal_transfer']; 
         $no_rekening = $_POST['no_rekening']; 
-        $bank_asal = $_POST['bank_asal']; 
-        $id_proses_pemesanan = 3;
- 
+        $bank_asal = $_POST['bank_asal'];
+        $IdKonsumen = $_POST['IdKonsumen']; 
+        $AlamatKonsumen = $_POST['AlamatKonsumen']; 
+        $NegaraKonsumen = $_POST['NegaraKonsumen']; 
+        $ProvinsiKonsumen = $_POST['ProvinsiKonsumen']; 
+        $KabupatenKonsumen = $_POST['KabupatenKonsumen']; 
+        $KotaKonsumen = $_POST['KotaKonsumen']; 
+        $KecamatanKonsumen = $_POST['KecamatanKonsumen']; 
+        $KelurahanKonsumen = $_POST['KelurahanKonsumen']; 
+        $KodePosKonsumen = $_POST['KodePosKonsumen']; 
+        $Ongkir = $_POST['Ongkir']; 
+        $IdVoucher = $_POST['IdVoucher']; 
+        $MetodePembayaran = $_POST['MetodePembayaran']; 
+        $gambar_bukti_pembayaran = $_POST['Gambar']; 
+        $total_harga_perproduk = $_POST['TotalPerProduk']; 
 
+        $id_proses_pemesanan = 3;
         if($id_user!=''){
+            $queryPenjualan = "INSERT INTO tb_penjualan(kode_penjualan, waktu_penjualan, id_produk, jumlah_penjualan, id_berat_produk, total_penjualan, id_user, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, ongkos_kirim, id_voucher, metode_pembayaran, nama_pemilik_rekening, tanggal_transfer, no_rekening, bank_asal, gambar_bukti_pembayaran, total_harga_perproduk )
+                            VALUES('$IdPemesanan','$WaktuPemesanan','$IdProduk','$JumlahPemesanan','$IdBeratProduk','$TotalPenjualan','$IdKonsumen','$AlamatKonsumen','$NegaraKonsumen','$ProvinsiKonsumen','$KabupatenKonsumen','$KotaKonsumen','$KecamatanKonsumen','$KelurahanKonsumen','$KodePosKonsumen','$Ongkir','$IdVoucher','$MetodePembayaran','$nama_pemilik_rekening','$tanggal_transfer','$no_rekening','$bank_asal','$gambar_bukti_pembayaran','$total_harga_perproduk')";   
+            $db->query($queryPenjualan);     
             $query = "UPDATE tb_pemesanan SET  nama_pemilik_rekening='$nama_pemilik_rekening', tanggal_transfer='$tanggal_transfer', no_rekening='$no_rekening', bank_asal='$bank_asal', id_proses_pemesanan='$id_proses_pemesanan' WHERE id_user = $id_user and id_proses_pemesanan='2'";
             $db->query($query);
-
             echo "updateConfirmationPaymentTransferSuccess";   
         }
         else{
             echo "erorDATA";
         }
     }
+
+
+    if(isset($_GET['deleteImageConfirmationPaymentTransfer'])){
+        require '../config.php'; 
+        session_start();
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $gambar_bukti_pembayaran = ''; 
+        $id_proses_pemesanan = 2;
+        if($id_user!=''){
+
+            $query = "UPDATE tb_pemesanan SET  gambar_bukti_pembayaran='$gambar_bukti_pembayaran' WHERE id_user = $id_user and id_proses_pemesanan =$id_proses_pemesanan" ;
+            $db->query($query);
+
+            echo "deleteImageConfirmationPaymentTransferSuccess";   
+        }
+        else{
+            echo "erorDATA";
+        }
+    }
+
+    if(isset($_GET['confirmationFormPicHalu'])){
+        require '../config.php'; 
+        session_start();
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $gambar_bukti_pembayaran = ''; 
+        $id_proses_pemesanan = 2;
+        if($id_user!=''){
+
+            $query = "UPDATE tb_pemesanan SET  gambar_bukti_pembayaran='a' WHERE id_user = $id_user and id_proses_pemesanan =$id_proses_pemesanan" ;
+            $db->query($query);
+
+            echo "confirmationFormPicHaluSuccess";   
+        }
+        else{
+            echo "erorDATA";
+        }
+    }
+
 
     /*retur*/
     /*process 1 >> select data to print data shipped*/
@@ -237,8 +390,9 @@
             date_default_timezone_set('Asia/Jakarta');
             $waktu_retur = date('Y-m-d H:i:s'); 
             $id_produk  = 1;
-            $query = "INSERT INTO tb_retur_pembelian(kode_retur, id_pemesanan, waktu_retur, id_user_retur)
-                            VALUES('$kode_text$kode_retur','$id_pemesanan','$waktu_retur','$id_user')";   
+            $id_status_retur  = 1;
+            $query = "INSERT INTO tb_retur_pembelian(kode_retur, id_pemesanan, waktu_retur, id_user_retur, id_status_retur)
+                            VALUES('$kode_text$kode_retur','$id_pemesanan','$waktu_retur','$id_user','$id_status_retur')";   
             $db->query($query);       
             echo "Success"; 
         }
@@ -279,7 +433,6 @@
         $json = json_decode(file_get_contents('php://input'), true);
         $query = "SELECT id_user_retur, gambar_barang_retur FROM tb_retur_pembelian where id_user_retur ='$id_user' and pesan_retur IS NULL";
         $result = $db->query($query); 
-       
         if($result){
             $selectToDataFotoRetur = mysqli_fetch_all($result,MYSQLI_ASSOC);
             $selectToDataFotoRetur=json_encode($selectToDataFotoRetur);
@@ -300,7 +453,6 @@
         $id_proses_pemesanan = 7;
         date_default_timezone_set('Asia/Jakarta');
         $waktu_retur = date('Y-m-d H:i:s'); 
-
         if($id_user!=''){
             $query = "UPDATE tb_retur_pembelian SET  waktu_retur='$waktu_retur', pesan_retur='$pesan_retur' WHERE id_pemesanan='$id_pemesanan'";
             $db->query($query);
@@ -321,7 +473,6 @@
         $id_user = $_SESSION['id_user'];
         $id_pemesanan = $_POST['b']; 
         $id_proses_pemesanan = 6;
-
         if($id_user!=''){
             $queryPemesanan = "UPDATE tb_pemesanan SET  id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan='$id_pemesanan'";
             $db->query($queryPemesanan);
@@ -341,7 +492,6 @@
         $json = json_decode(file_get_contents('php://input'), true);
         $query = "SELECT id_user, id_produk, id_pemesanan, id_proses_pemesanan FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan='6'";
         $result = $db->query($query); 
-       
         if($result){
             $selectCartDataToComment = mysqli_fetch_all($result,MYSQLI_ASSOC);
             $selectCartDataToComment=json_encode($selectCartDataToComment);
