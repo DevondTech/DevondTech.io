@@ -9,29 +9,37 @@
         $password = hash('ripemd160', $password);
         $userData =''; $query = "select * from tb_login_user where email='$emailNomorHP' or nomor_hp ='$emailNomorHP' and password='$password'"; 
         $result = mysqli_query($db,$query);
-        if(mysqli_num_rows($result)==1)
-        {
-            $baris= mysqli_fetch_array($result);
-            $_SESSION['id_user']= $baris['id_user'];
-            $_SESSION['id_status_user']= $baris['id_status_user'];
-            $_SESSION['username']=$baris['username'];
-            $_SESSION['nama_lengkap']=$baris['nama_lengkap'];
-            $_SESSION['foto']=$baris['foto'];
-            $_SESSION['email']=$baris['email'];
-            $id_status_user =  $baris['id_status_user'];
-            if($id_status_user=='1'){
-                echo "KodeSign1";
+        $baris= mysqli_fetch_array($result);
+        $cekKOde= $baris['kode'];
+        if($cekKOde=='c47907abd2a80492ca9388b05c0e382518ff3960'){
+            if(mysqli_num_rows($result)==1)
+            {
+                
+                $_SESSION['id_user']= $baris['id_user'];
+                $_SESSION['id_status_user']= $baris['id_status_user'];
+                $_SESSION['nama_lengkap']=$baris['nama_lengkap'];
+                $_SESSION['foto']=$baris['foto'];
+                $_SESSION['email']=$baris['email'];
+                $id_status_user =  $baris['id_status_user'];
+                if($id_status_user=='1'){
+                    echo "KodeSign1";
+                }
+                if($id_status_user=='5'){
+                    echo "KodeSign2";
+                }
             }
-            if($id_status_user=='5'){
-                echo "KodeSign2";
+            else 
+            {
+                echo '{"error":"Wrong password a"} <br />';
+                echo 'Password : ('. json_encode( $password ) .') <br />';
             }
         }
         else 
         {
-            echo '{"error":"Wrong username and password"} <br />';
-            echo 'Username : ('. json_encode( $username ) .') <br />';
+            echo '{"error":"Wrong password"} <br />';
             echo 'Password : ('. json_encode( $password ) .') <br />';
         }
+
     }
 
 
@@ -50,7 +58,6 @@
 
             $_SESSION['id_user']= $baris['id_user'];
             $_SESSION['id_status_user']= $baris['id_status_user'];
-            $_SESSION['username']=$baris['username'];
             $_SESSION['nama_lengkap']=$baris['nama_lengkap'];
             $_SESSION['foto']=$baris['foto'];
             $_SESSION['email']=$baris['email'];

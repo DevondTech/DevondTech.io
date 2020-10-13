@@ -40,23 +40,23 @@
                 <div>
                   <div class="inputDoubleSignup">
                     Full Name
-                    <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap"  >
+                    <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap" placeholder="Ex : Try Wuri Kinanti" >
                   </div>
                   <div class="inputDoubleSignup">
                     Phone Number
-                    <input type="number" class="form-control" name="nomor_hp" id="nomor_hp" >
+                    <input type="number" class="form-control" name="nomor_hp" id="nomor_hp" placeholder="Ex : 08994190773" >
                   </div>
                   <div class="inputSingleSignup">
                     E-mail
-                    <input type="email" class="form-control" name="email" id="email" >
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Ex : devond@gmail.com" >
                   </div>
                   <div class="inputDoubleSignup">
                     Password
-                    <input type="password" name="password" id="password" class="form-control"  >
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Your Password" >
                   </div>
                   <div class="inputDoubleSignup">
                     Repeat Password
-                    <input type="password" name="password_re" id="password_re" class="form-control" >
+                    <input type="password" name="password_re" id="password_re" class="form-control" placeholder="Repeat Your Password">
                   </div>
                   <div style="float: left">
                   <label class="text-forgot cursorPointer container" >
@@ -88,7 +88,7 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
-<script type="text/javascript" src="../js/loginSignup.js?v=1.1.1"></script>
+<script type="text/javascript" src="../js/login-signup.js?v=1.5.1"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

@@ -76,7 +76,7 @@ $('document').ready(function()
                     $('#email').val('');
                     $('#password').val('');
                     $('#password_re').val('');
-                    window.location.href = "../login";
+                    window.location.href = "../verifikasiAkun/?mail="+email;
                   }
                   else{
                     $("#error").fadeIn(1000, function(){   
@@ -133,7 +133,7 @@ $('document').ready(function()
             window.location.href = "../";
           }
           else{
-            alert('Anda Belum Terdaftar Atau Silahkan Verifikasi Email Jika Sudah Mendaftar') ; 
+            alert('Anda Belum Terdaftar') ; 
             $("#btn-login").html('Login');
           }
         }
@@ -180,7 +180,7 @@ $('document').ready(function()
               window.location.href = "../";
             }
             else{
-              alert('Anda Belum Terdaftar Atau Silahkan Verifikasi Email Jika Sudah Mendaftar') ; 
+              alert('Anda Belum Terdaftar') ; 
               $("#btn-login").html('Login');
             }
           }

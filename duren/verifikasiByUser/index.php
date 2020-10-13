@@ -1,3 +1,4 @@
+<?php include '../mail/sendbyuser.php'; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,6 +16,7 @@
     else{
 
     }
+
   ?>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -34,11 +36,19 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css?v=1.0.1">
   <link rel="stylesheet" type="text/css" href="../css/durianLoginSignup.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
-  <style type="text/css">
-  </style>
 </head>
-<body>
+<style type="text/css">
+@media(max-width: 992px){
+  .rightLoginDiv{
+    height: 100vh;
+    padding-top: 60px;
+  }
 
+}
+
+  </style>
+<body>
+  <?php echo $alert; ?>
   <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
@@ -65,35 +75,30 @@
             <div class="tabletPhone-logoLogin">
               <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
             </div>
-            <form method="POST" id="login-form">
+            <form method="post">
           <!--   <form method="POST" action="../conn/login.php?op=in"> -->
               <div>
                 <div class="titleLogin">
-                  Halaman Login 
+                  Kirim Verifikasi
                 </div>
                 <div class="paddingTopBottom10">
-                  E-mail or No. Handphone
-                  <input type="text" class="form-control" name="emailNomorHP" id="emailNomorHP"  >
+                  E-mail Anda
+                  <input class="form-control" type="email" name="email" >
                 </div>
-                <div class="paddingTopBottom10" style="padding-bottom: 40px;" >
-                  Password
-                  <input type="password" name="password" id="password" class="form-control" >
+                <div class="paddingTopBottom10" style="color:#CEA32B;font-size: 15px;" >
+                  Silahkan Klik Untuk Melanjutkan Konfirmasi Ke E-mail Anda 
                 </div>
                 <div class="text-forgot" >
                  <!--  <a href="" style=""> Forgot Password?</a> -->
                  <br />
                 </div>
-                <div style="padding-bottom: 20px;">
-                  <button type="button" id="btn-login" class="buttonYellow">Login</button>
+                <div class="paddingTopBottom10">
+                  <button type="submit" name="submit" class="buttonYellow">Send To E-mail</button>
                 </div>
               </div>
             </form>
-            <div style="text-align: center;">
-              <a href="../signup"  > Create Account</a>
-            </div>
-            <div style="text-align: center;color: #CEA32B;">Or</div>
-            <div style="text-align: center;">
-              <a href="../verifikasiByUser" > Verifikasi Akun Anda</a>
+            <div>
+              <a class="a-createAccount"> Pastikan E-mail Anda Benar</a>
             </div>
           </div>
         </div>
@@ -108,7 +113,7 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
-<script type="text/javascript" src="../js/login-signup.js?v=1.4.1"></script>
+<!-- <script type="text/javascript" src="../js/login-signup.js?v=1.2.1"></script> -->
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
