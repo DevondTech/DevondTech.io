@@ -6,14 +6,18 @@ require_once 'phpmailer/PHPMailer.php';
 require_once 'phpmailer/SMTP.php';
 
 $mail = new PHPMailer(true);
-
 $alert = '';
 
-if(isset($_POST['submit'])){
 
-  $email = 'support@kingfruit.co.id';
-  $emailTo = $_GET['mail'];
- $massages = '<html>
+  $emailTo = $_GET['email_send'];
+  $kode_pemesanan_send = $_GET['kode_pemesanan_send'];
+  $waktu_pemesanan_send = $_GET['waktu_pemesanan_send'];
+  $produk_send = $_GET['produk_send'];
+  $jumlah_send = $_GET['jumlah_send'];
+  $total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
+
+  $email = 'admin@kingfruit.co.id';
+  $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -82,24 +86,36 @@ if(isset($_POST['submit'])){
     font-family: sans-serif;
     line-height: 20px;">
   <div style="color: #3a3a3a">
-    Terimakasih atas pendaftaran anda, silahkan klik untuk lanjutkan
+    Terimakasih atas pemesanan & kepercayaan anda kepada kami. Berikut detail pemesanan anda yang telah terkonfirmasi pembayaran:
   </div>
-  <div style="margin-top: 20px;">
-    <a href="https://kingfruit.co.id/a/verifikasiAkun/d361cf7ca4bd9da86292f8f78aed8e8ee2833bea-8db01937f19dba34689b76ee3b326df7395bd580.php?callM='.$emailTo.'&&callD=c47907abd2a80492ca9388b05c0e382518ff3960">
-      <button style="background-color: #CEA32B;
-      border: 1px solid #CEA32B;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      padding-bottom: 5px;
-        padding-top: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        cursor: pointer;">
-      Klik Disini</button>
-    </a>  
+  <div style="color: #3a3a3a;margin-top: 10px;">
+    <div style="width: 100px;float: left">No. Order</div>
+    <div style="float: left;">: '.$kode_pemesanan_send.'</div>
   </div>
+  <br />
+  <div style="color: #3a3a3a;margin-top: 5px;">
+    <div style="width: 100px;float: left">Waktu</div>
+    <div style="float: left;">: '.$waktu_pemesanan_send.'</div>
+  </div>
+  <br />
+  <div style="color: #3a3a3a;margin-top: 5px;">
+    <div style="width: 100px;float: left">Produk</div>
+    <div style="float: left;">: '.$produk_send.'</div>
+  </div>
+  <br />
+  <div style="color: #3a3a3a;margin-top: 5px;">
+    <div style="width: 100px;float: left">Jumlah</div>
+    <div style="float: left;">: '.$jumlah_send.'</div>
+  </div>
+  <br />
+  <div style="color: #3a3a3a;margin-top: 5px;">
+    <div style="width: 100px;float: left">Total</div>
+    <div style="float: left;">: '.$total_harga_yang_harus_dibayar_send.'</div>
+  </div>
+  <br />
 </div>
+<br />
+
 </body>
 </html>';
 
@@ -116,7 +132,7 @@ if(isset($_POST['submit'])){
     $mail->addAddress($emailTo); 
 
     $mail->isHTML(true);
-    $mail->Subject = 'Verifikasi Akun kingfruit.co.id';
+    $mail->Subject = 'Konfirmasi Pembayaran kingfruit.co.id';
     $mail->Body = $massages; 
                  
 
@@ -129,5 +145,5 @@ if(isset($_POST['submit'])){
                 <span>Silahkan Isi E-mail Anda</span>
               </div>';
   }
-}
+
 ?>

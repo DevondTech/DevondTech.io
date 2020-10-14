@@ -273,7 +273,7 @@
                             </div>
                             <div class="card-inputDataUser">
                                 <div style="border-bottom: 1px solid #969191;">
-                                    <input type="text" name="nama_pemilik_rekening" id="nama_pemilik_rekening" class="input-textDataUser" placeholder="Ex : Mohamad Prasetyo" style="border:transparent;">
+                                    <input type="text" name="nama_pemilik_rekening" id="nama_pemilik_rekening" class="input-textDataUser"  style="border:transparent;">
                                     <input type="hidden" name="foto_check" id="foto_check" class="input-textDataUser" >
                                 </div>
                             </div>
@@ -298,7 +298,7 @@
                             </div>
                             <div class="card-inputDataUser">
                                 <div style="border-bottom: 1px solid #969191;">
-                                    <input type="number" name="no_rekening" id="no_rekening" class="input-textDataUser" placeholder="Ex : 170431992 " style="border:transparent;">
+                                    <input type="number" name="no_rekening" id="no_rekening" class="input-textDataUser"  style="border:transparent;">
                                 </div>
                             </div>
                         </div>
@@ -310,7 +310,7 @@
                             </div>
                             <div class="card-inputDataUser" style="padding-bottom: 20px;">
                                 <div style="border-bottom: 1px solid #969191;">
-                                    <input type="text" name="bank_asal"  id="bank_asal" class="input-textDataUser" placeholder="Ex : BCA" style="border:transparent;">
+                                    <input type="text" name="bank_asal"  id="bank_asal" class="input-textDataUser"  style="border:transparent;">
                                 </div>   
                             </div>
                         </div>

@@ -444,7 +444,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="text" name="alamatUpdate" id="alamatUpdate" class="input-textDataUser" placeholder="Ex : JL. Jend Sudirman Gang Mawar No 505 ">
+                                <input type="text" name="alamatUpdate" id="alamatUpdate" class="input-textDataUser">
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -454,7 +454,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="text" name="negaraUpdate" id="negaraUpdate" class="input-textDataUser" placeholder="Ex : Indonesia">
+                                <input type="text" name="negaraUpdate" id="negaraUpdate" class="input-textDataUser" >
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -464,7 +464,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="text" name="provinsiUpdate" id="provinsiUpdate" class="input-textDataUser" placeholder="Ex : Jawa Barat ">
+                                <input type="text" name="provinsiUpdate" id="provinsiUpdate" class="input-textDataUser" >
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -485,7 +485,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="text" name="kecamatanUpdate" id="kecamatanUpdate" class="input-textDataUser" placeholder="Ex : Sawangan">
+                                <input type="text" name="kecamatanUpdate" id="kecamatanUpdate" class="input-textDataUser" >
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -495,7 +495,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="text" name="kelurahanUpdate"  id="kelurahanUpdate" class="input-textDataUser" placeholder="Ex : Kedaung">
+                                <input type="text" name="kelurahanUpdate"  id="kelurahanUpdate" class="input-textDataUser" >
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -505,7 +505,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="number" name="kode_posUpdate" id="kode_posUpdate" class="input-textDataUser" placeholder="Ex : 61523">
+                                <input type="number" name="kode_posUpdate" id="kode_posUpdate" class="input-textDataUser" >
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">

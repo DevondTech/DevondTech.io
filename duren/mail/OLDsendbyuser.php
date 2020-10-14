@@ -10,10 +10,10 @@ $mail = new PHPMailer(true);
 $alert = '';
 
 if(isset($_POST['submit'])){
-
+  $emailTo = $_POST['email'];
   $email = 'support@kingfruit.co.id';
-  $emailTo = $_GET['mail'];
- $massages = '<html>
+  $massages = '<!DOCTYPE html>
+<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,13 +54,7 @@ if(isset($_POST['submit'])){
     }
   }
 </style>
-<body style="border: 1px solid #2d472c;
-            margin-left: -10px;
-            margin-right: -10px;
-            margin-top: -1px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
-            padding-bottom: 22px;
-            border-radius: 5px;">
+<body>
 <div style="padding: 0px;
     background-color: #2d472c;
     color: white;
@@ -105,10 +99,10 @@ if(isset($_POST['submit'])){
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'kingfruit.co.id';
     $mail->SMTPAuth = true;
-    $mail->Username = 'mohamad.kingfruit@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = 'kingfruit2020'; // Gmail address Password
+    $mail->Username = 'support@kingfruit.co.id'; 
+    $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 

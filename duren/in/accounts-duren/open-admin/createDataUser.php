@@ -37,7 +37,7 @@
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser">
-                                    <input type="text" name="username" id="username" class="input-textDataUser" placeholder="Ex : wuri123" >
+                                    <input type="text" name="username" id="username" class="input-textDataUser"  >
                                 </div>
                             </div>
                             <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser">
-                                    <input type="text" name="nama_lengkap" id="nama_lengkap" class="input-textDataUser" placeholder="Ex : Tri Wuri Kinanti">
+                                    <input type="text" name="nama_lengkap" id="nama_lengkap" class="input-textDataUser" >
                                 </div>
                             </div>
                             <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -57,7 +57,7 @@
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser">
-                                    <input type="mail" name="email" id="email" class="input-textDataUser" placeholder="Ex : devondtech@gmail.com">
+                                    <input type="mail" name="email" id="email" class="input-textDataUser" >
                                 </div>
                             </div>
                             <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser">
-                                    <input type="number" name="nomor_hp" id="nomor_hp" class="input-textDataUser" placeholder="Ex : 08994190773">
+                                    <input type="number" name="nomor_hp" id="nomor_hp" class="input-textDataUser" >
                                 </div>
                             </div>
                             <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -77,7 +77,7 @@
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser">
-                                    <input type="password" name="password" id="password" class="input-textDataUser" placeholder="Password">
+                                    <input type="password" name="password" id="password" class="input-textDataUser" >
                                 </div>
                             </div>
                              <div class="Card-inputDataUser-paddingTopBottom20px">

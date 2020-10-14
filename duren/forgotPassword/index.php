@@ -1,4 +1,4 @@
-<?php include '../mail/sendbyuser.php'; ?>
+<?php /*include '../mail/send.php';*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,11 +17,12 @@
 
     }
 
+    $callMail = $_GET['mail'];
   ?>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>King Fruit | Verifikasi E-mail</title>
+  <title>King Fruit | Forgot Password</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <link href="../font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <meta name="description" content="durian">
@@ -75,25 +76,26 @@
             <div class="tabletPhone-logoLogin">
               <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
             </div>
-            <form method="post">
+            <form method="POST" id="actionForgotPasswordForm">
           <!--   <form method="POST" action="../conn/login.php?op=in"> -->
               <div>
                 <div class="titleLogin">
-                  Kirim Verifikasi
+                  Forgot Password
                 </div>
                 <div class="paddingTopBottom10">
                   E-mail Anda
-                  <input class="form-control" type="email" name="email" >
+                  <input type="email" class="form-control" name="email" id="email" value="<?php echo $callMail; ?>" >
+                  <input type="hidden" class="form-control" name="checkCode" id="checkCode"  >
                 </div>
                 <div class="paddingTopBottom10" style="color:#CEA32B;font-size: 15px;" >
-                  Silahkan Klik Untuk Melanjutkan Konfirmasi Ke E-mail Anda 
+                  Silahkan Klik Untuk Melanjutkan Kirim Kode Ke E-mail Anda 
                 </div>
                 <div class="text-forgot" >
                  <!--  <a href="" style=""> Forgot Password?</a> -->
                  <br />
                 </div>
                 <div class="paddingTopBottom10">
-                  <button type="submit" name="submit" class="buttonYellow">Send To E-mail</button>
+                  <button type="button" name="submit" id="actionForgotPasswordButton" class="buttonYellow">Send To E-mail</button>
                 </div>
               </div>
             </form>
@@ -112,7 +114,8 @@
 <script type="text/javascript" src="../js/bootstrap.js" ></script>
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
-<script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
+<script type="text/javascript" src="../js/durianJSLoad.js?v=1.1.1"></script>
+<script type="text/javascript" src="../js/forgotPassword.js?v=1.1.1"></script>
 <!-- <script type="text/javascript" src="../js/login-signup.js?v=1.2.1"></script> -->
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){

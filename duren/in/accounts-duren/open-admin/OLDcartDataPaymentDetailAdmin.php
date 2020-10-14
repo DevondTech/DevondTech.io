@@ -38,7 +38,7 @@
     </div>
     <div class="col-divProfileUser">
         <div class="row">
-            <form method="POST" id="cartDataPaymentDetailAdminForm">
+            <form method="post" id="cartDataPaymentDetailAdminForm">
                 <div class="col-UserDataEdit-right col-lg-4 col-md-6 col-sm-6">
                     <div>
                         <div>
@@ -53,18 +53,12 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" name="a" id="a" value="<?= $kodeCallBack; ?>">
-                        <input type="hidden" name="email_send"  style="color: #737373" id="email_send" class="input-textDataUser-false" >
-                        <input type="hidden" name="kode_pemesanan_send"  style="color: #737373" id="kode_pemesanan_send" class="input-textDataUser-false" >
-                        <input type="hidden" name="waktu_pemesanan_send" style="color: #737373" id="waktu_pemesanan_send" class="input-textDataUser-false"  >
-                        <input type="hidden" name="produk_send" style="color: #737373" id="produk_send" class="input-textDataUser-false"  >
-                        <input type="hidden" name="jumlah_send" style="color: #737373" id="jumlah_send" class="input-textDataUser-false"  >
-                        <input type="hidden" name="total_harga_yang_harus_dibayar_send" style="color: #737373" id="total_harga_yang_harus_dibayar_send" class="input-textDataUser-false" >
                         <div class="card-buttonSelectPic">
                             <div class="margin-auto">
-                                <button type="button" name="submit" class="buttonLarge-grey" id="cartDataPaymentDetailAdminButton">Konfirmasi</button>
+                                <button class="buttonLarge-grey" id="cartDataPaymentDetailAdminButton" >Konfirmasi</button>
                             </div>
                         </div>  
+                        <input type="hidden" name="a" id="a" value="<?= $kodeCallBack; ?>">
                     </div>
                 </div>
             </form>
@@ -209,7 +203,9 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/admin/cartDataPaymentDetailAdmin.js?v=1.3.1"></script>
-<script type="text/javascript" src="../js/pages/admin/cartDataPaymentConfirmationAdmin.js?v=1.3.1"></script>
+<script src="../js/pages/admin/cartDataPaymentDetailAdmin.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/pages/admin/cartDataPaymentConfirmationAdmin.js?v=1.2.1"></script>
+
 </body>
+
 </html>

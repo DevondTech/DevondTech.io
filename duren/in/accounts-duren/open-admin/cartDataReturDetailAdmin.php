@@ -111,7 +111,7 @@
                             </div>
                         </div>
                         <div class="w80 card-inputDataUser">
-                            <input type="text" name="admin_nama_pemilik_rekening" id="admin_nama_pemilik_rekening" class="input-textDataUser" placeholder="Ex : Mohamad Prasetyo">
+                            <input type="text" name="admin_nama_pemilik_rekening" id="admin_nama_pemilik_rekening" class="input-textDataUser" >
                            <!--  <input type="hidden" name="foto_check" id="foto_check" class="input-textDataUser" > -->
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                         <div class="card-inputDataUser">
-                            <input type="number" name="admin_nomor_rekening" id="admin_nomor_rekening" class="input-textDataUser" placeholder="Ex : 170431992 ">
+                            <input type="number" name="admin_nomor_rekening" id="admin_nomor_rekening" class="input-textDataUser" >
                         </div>
                     </div>
                     <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -142,7 +142,7 @@
                             </div>
                         </div>
                         <div class="w80 card-inputDataUser">
-                            <input type="text" name="admin_bank_asal"  id="admin_bank_asal" class="input-textDataUser" placeholder="Ex : BCA">
+                            <input type="text" name="admin_bank_asal"  id="admin_bank_asal" class="input-textDataUser" >
                         </div>
                     </div>
                     <div class="Card-inputDataUser-paddingTopBottom20px">

@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	var IDProdukCallBack = $('#a').val();
-    var id = IDProdukCallBack;
+    var id = 'IDProdukCallBack';
 	$.ajax({
      	type: 'POST',
-     	url: '../../../conn/data2/cartProcess/cartProcessAdminSelect.php?selectPrintProcess='+id,
+     	url: 'conn/data2/cartProcess/cartProcessAdminSelect.php?selectPrintProcess='+id,
      	contentType: 'application/json; charset=utf-8',
         dataType: 'json',
      	success: function(selectPrintProcess) { 
@@ -79,7 +79,6 @@ $(document).ready(function(){
             } 
 
             $('#kode_pemesanan_send').val(kode_pemesanan); 
-            $('#email_send').val(email); 
             $('#waktu_pemesanan_send').val(waktu_pemesanan); 
             $('#produk_send').val(nama_produk); 
             $('#jumlah_send').val(jumlah_pemesanan+' '+satuan_produk); 

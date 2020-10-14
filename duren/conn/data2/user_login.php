@@ -7,7 +7,7 @@
         $emailNomorHP = $_POST['emailNomorHP']; 
         $password = $_POST['password']; 
         $password = hash('ripemd160', $password);
-        $userData =''; $query = "select * from tb_login_user where email='$emailNomorHP' or nomor_hp ='$emailNomorHP' and password='$password'"; 
+        $userData =''; $query = "select * from tb_login_user where email='$emailNomorHP' and password='$password'"; 
         $result = mysqli_query($db,$query);
         $baris= mysqli_fetch_array($result);
         $cekKOde= $baris['kode'];
@@ -81,13 +81,13 @@
 
     /*Signup option action*/
     if(isset($_GET['signup'])){
-    	require 'config.php';
-    	$json = json_decode(file_get_contents('php://input'), true);
-    	$password = $_POST['password'];
+        require 'config.php';
+        $json = json_decode(file_get_contents('php://input'), true);
+        $password = $_POST['password'];
         $nama_lengkap = $_POST['nama_lengkap'];
         $nomor_hp = $_POST['nomor_hp'];
-    	$password = hash('ripemd160', $password);
-    	$email = $_POST['email'];
+        $password = hash('ripemd160', $password);
+        $email = $_POST['email'];
         date_default_timezone_set('Asia/Jakarta');
         $tanggal_mendaftar = date('Y-m-d H:i:s');
         $id_status_user = '5';
@@ -194,6 +194,60 @@
         }
         else{
             echo "erorDATA";
+        }
+    }
+
+    if(isset($_GET['forgotPassword'])){
+        require 'config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $email = $_POST['email']; 
+        $checkCode = $_POST['checkCode']; 
+        $result = $db->query("select * from tb_login_user where email='$email' ");
+        $rowCount=$result->num_rows;
+        if($rowCount!=0)
+        {
+            $queryForgotPassword = "UPDATE tb_login_user SET kode_forgot_password='$checkCode' WHERE email = '$email'";
+            $db->query($queryForgotPassword);
+            echo "foundData";   
+        }
+        else{
+            echo $checkCode;   
+        }
+    }
+
+    if(isset($_GET['checkCode'])){
+        require 'config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $email = $_POST['email']; 
+        $kode = $_POST['kode']; 
+        $result = $db->query("select * from tb_login_user where email='$email' and kode_forgot_password='$kode' ");
+        $rowCount=$result->num_rows;
+        if($rowCount!=0)
+        {
+            echo "foundData";   
+        }
+        else{
+            echo "notFound";   
+        }
+    }
+
+    if(isset($_GET['resetPassword'])){
+        require 'config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $email = $_POST['email']; 
+        $kode = $_POST['kode']; 
+        $password = $_POST['password']; 
+        $password = hash('ripemd160', $password);
+        $result = $db->query("select * from tb_login_user where email='$email' and kode_forgot_password='$kode' ");
+        $rowCount=$result->num_rows;
+        if($rowCount!=0)
+        {
+            $queryForgotPassword = "UPDATE tb_login_user SET password='$password' WHERE email = '$email'";
+            $db->query($queryForgotPassword);
+            echo "foundData";   
+        }
+        else{
+            echo $kode;   
         }
     }
 

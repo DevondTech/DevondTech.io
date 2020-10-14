@@ -538,7 +538,7 @@
     <div class="open-chat-modal" style="right: -5px">
       <div class="div-icon-chat" >
         <a href="https://api.whatsapp.com/send?phone=6281311993939">
-          <div class="button-icon-chat" style="background: #00b551;padding-left: 5px;padding-right: 5px;border-radius: 10px;padding-top: 5px;padding-bottom: 5px;">
+          <div class="button-icon-chat" style="background: #00b551;padding-left: 8px;padding-right: 8px;border-radius: 10px;padding-top: 8px;padding-bottom: 8px;">
             <img class="icon-chat" src="images/wa.png"> 
           </div>
         </a>

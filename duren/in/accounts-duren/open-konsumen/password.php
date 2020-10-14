@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="password" name="passwordUpdate" id="passwordUpdate" class="input-textDataUser" placeholder="New Password" >
+                                <input type="password" name="passwordUpdate" id="passwordUpdate" class="input-textDataUser"  >
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="password" name="passwordUpdate_re" id="passwordUpdate_re" class="input-textDataUser" placeholder="Repeat New Password">
+                                <input type="password" name="passwordUpdate_re" id="passwordUpdate_re" class="input-textDataUser" >
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">

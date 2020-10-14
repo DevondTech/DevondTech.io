@@ -22,7 +22,7 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>King Fruit | Login User</title>
+  <title>King Fruit | Verifikasi E-mail</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <link href="../font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <meta name="description" content="durian">

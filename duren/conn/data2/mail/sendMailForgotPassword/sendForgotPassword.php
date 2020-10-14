@@ -6,14 +6,13 @@ require_once 'phpmailer/PHPMailer.php';
 require_once 'phpmailer/SMTP.php';
 
 $mail = new PHPMailer(true);
-
 $alert = '';
 
-if(isset($_POST['submit'])){
+  $emailTo = $_GET['email'];
+  $checkCode = $_GET['checkCode'];
 
-  $email = 'support@kingfruit.co.id';
-  $emailTo = $_GET['mail'];
- $massages = '<html>
+  $email = 'admin@kingfruit.co.id';
+  $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -81,25 +80,15 @@ if(isset($_POST['submit'])){
     padding: 10px;
     font-family: sans-serif;
     line-height: 20px;">
-  <div style="color: #3a3a3a">
-    Terimakasih atas pendaftaran anda, silahkan klik untuk lanjutkan
+  <div style="color: #3a3a3a; font-size: 16px;">
+    Terimakasih atas kepercayaan anda kepada kami. Berikut kode anda, copy lalu anda dapat mereset password anda:
   </div>
-  <div style="margin-top: 20px;">
-    <a href="https://kingfruit.co.id/a/verifikasiAkun/d361cf7ca4bd9da86292f8f78aed8e8ee2833bea-8db01937f19dba34689b76ee3b326df7395bd580.php?callM='.$emailTo.'&&callD=c47907abd2a80492ca9388b05c0e382518ff3960">
-      <button style="background-color: #CEA32B;
-      border: 1px solid #CEA32B;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      padding-bottom: 5px;
-        padding-top: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        cursor: pointer;">
-      Klik Disini</button>
-    </a>  
+  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:20px;">
+    <div >Kode : '.$checkCode.' </div>
   </div>
 </div>
+<br />
+
 </body>
 </html>';
 
@@ -116,7 +105,7 @@ if(isset($_POST['submit'])){
     $mail->addAddress($emailTo); 
 
     $mail->isHTML(true);
-    $mail->Subject = 'Verifikasi Akun kingfruit.co.id';
+    $mail->Subject = 'Forgot Password kingfruit.co.id';
     $mail->Body = $massages; 
                  
 
@@ -129,5 +118,5 @@ if(isset($_POST['submit'])){
                 <span>Silahkan Isi E-mail Anda</span>
               </div>';
   }
-}
+
 ?>

@@ -13,7 +13,8 @@ if(isset($_POST['submit'])){
 
   $email = 'support@kingfruit.co.id';
   $emailTo = $_GET['mail'];
- $massages = '<html>
+  $massages = '<!DOCTYPE html>
+<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,13 +55,10 @@ if(isset($_POST['submit'])){
     }
   }
 </style>
-<body style="border: 1px solid #2d472c;
+<body style="border: 1px solid #6a6767;
             margin-left: -10px;
             margin-right: -10px;
-            margin-top: -1px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
-            padding-bottom: 22px;
-            border-radius: 5px;">
+            margin-top: -1px;">
 <div style="padding: 0px;
     background-color: #2d472c;
     color: white;
@@ -105,10 +103,10 @@ if(isset($_POST['submit'])){
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'kingfruit.co.id';
     $mail->SMTPAuth = true;
-    $mail->Username = 'mohamad.kingfruit@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = 'kingfruit2020'; // Gmail address Password
+    $mail->Username = 'support@kingfruit.co.id'; 
+    $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 
@@ -125,8 +123,8 @@ if(isset($_POST['submit'])){
                <span>Terimakasih, Silahkan Cek E-mail Anda. </span>
               </div>';
   } catch (Exception $e){
-    $alert = '<div class="alert-error" style="text-align:center;background-color: #ffcbb9;">
-                <span>Silahkan Isi E-mail Anda</span>
+    $alert = '<div class="alert-error">
+                <span>'.$e->getMessage().'</span>
               </div>';
   }
 }

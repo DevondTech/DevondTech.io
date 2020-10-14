@@ -72,7 +72,7 @@
                   Halaman Login 
                 </div>
                 <div class="paddingTopBottom10">
-                  E-mail or No. Handphone
+                  Your E-mail 
                   <input type="text" class="form-control" name="emailNomorHP" id="emailNomorHP"  >
                 </div>
                 <div class="paddingTopBottom10" style="padding-bottom: 40px;" >
@@ -80,7 +80,7 @@
                   <input type="password" name="password" id="password" class="form-control" >
                 </div>
                 <div class="text-forgot" >
-                 <!--  <a href="" style=""> Forgot Password?</a> -->
+                  <a href="../forgotPassword" style=""> Forgot Password?</a>
                  <br />
                 </div>
                 <div style="padding-bottom: 20px;">
@@ -108,7 +108,7 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
-<script type="text/javascript" src="../js/login-signup.js?v=1.4.1"></script>
+<script type="text/javascript" src="../js/login-signup.js?v=1.5.1"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
