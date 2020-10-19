@@ -40,20 +40,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Core Css -->
-    <link href="../plugins/bootstrap/css/bootstrap.css?v=1.1.1" rel="stylesheet" />
+    <link href="../plugins/bootstrap/css/bootstrap.css?v=1.2.1" rel="stylesheet" />
     <!-- Waves Effect Css -->
-    <link href="../plugins/node-waves/waves.css?v=1.1.1" rel="stylesheet" />
+    <link href="../plugins/node-waves/waves.css?v=1.2.1" rel="stylesheet" />
     <!-- Animation Css -->
-    <link href="../plugins/animate-css/animate.css?v=1.1.1" rel="stylesheet" />
+    <link href="../plugins/animate-css/animate.css?v=1.2.1" rel="stylesheet" />
     <!-- Custom Css -->
-    <link href="../css/style.css?v=1.1.2" rel="stylesheet" />
+    <link href="../css/style.css?v=1.2.1" rel="stylesheet" />
     <!-- Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="../css/themes/all-themes.css?v=1.1.1" rel="stylesheet" />
-    <link href="../css/modif-style.css?v=1.1.1" rel="stylesheet" />
-    <link href="../css/flexible.css?v=1.1.1" rel="stylesheet" />
+    <link href="../css/themes/all-themes.css?v=1.2.1" rel="stylesheet" />
+    <link href="../css/modif-style.css?v=1.2.1" rel="stylesheet" />
+    <link href="../css/flexible.css?v=1.2.1" rel="stylesheet" />
     <!-- <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
 </head>
-
 <body class="bd-w">
      
     <div class="page-loader-wrapper">

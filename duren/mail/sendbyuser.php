@@ -11,7 +11,7 @@ $alert = '';
 
 if(isset($_POST['submit'])){
   $emailTo = $_POST['email'];
-  $email = 'admin@kingfruit.co.id';
+  $email = 'support@kingfruit.co.id';
   $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -81,7 +81,7 @@ if(isset($_POST['submit'])){
     font-family: sans-serif;
     line-height: 20px;">
   <div style="color: #3a3a3a">
-    Terimakasih atas pendaftaran anda, silahkan klik untuk lanjutkan
+    Selamat, pendaftaran akun kamu telah berhasil. Untuk melakukan Verifikasi Akun, silahkan "klik disini". 
   </div>
   <div style="margin-top: 20px;">
     <a href="https://kingfruit.co.id/a/verifikasiAkun/d361cf7ca4bd9da86292f8f78aed8e8ee2833bea-8db01937f19dba34689b76ee3b326df7395bd580.php?callM='.$emailTo.'&&callD=c47907abd2a80492ca9388b05c0e382518ff3960">
@@ -104,10 +104,10 @@ if(isset($_POST['submit'])){
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'srv103.niagahoster.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'mohamad.kingfruit@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = 'kingfruit2020'; // Gmail address Password
+    $mail->Username = 'support@kingfruit.co.id'; 
+    $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 

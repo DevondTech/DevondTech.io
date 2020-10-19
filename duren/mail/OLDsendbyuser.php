@@ -99,14 +99,14 @@ if(isset($_POST['submit'])){
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'kingfruit.co.id';
+    $mail->Host = 'srv103.niagahoster.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'support@kingfruit.co.id'; 
     $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = '587';
+    $mail->Port = '465';
 
-    $mail->setFrom($email); 
+    $mail->setFrom('support@kingfruit.co.id'); 
     $mail->addAddress($emailTo); 
 
     $mail->isHTML(true);

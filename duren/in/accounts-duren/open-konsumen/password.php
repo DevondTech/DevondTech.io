@@ -51,6 +51,16 @@
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
+                                    Current Password
+                                </div>
+                            </div>
+                            <div class="card-inputDataUser">
+                                <input type="password" name="passwordOld" id="passwordOld" class="input-textDataUser"  >
+                            </div>
+                        </div>
+                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                            <div class="card-textDataUser">
+                                <div class="textDataUser">
                                     Password
                                 </div>
                             </div>
@@ -86,7 +96,7 @@
     
 </div>
 
-<script src="../js/pages/password.js"></script>
+<script src="../js/pages/password.js?v=1.1.3"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

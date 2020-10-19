@@ -387,8 +387,8 @@
 <script src="../js/action.js"></script>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionConfirmationPayment.js?v=1.2.1"></script>
-<script type="text/javascript" src="../js/pages/updateDataFotoPayment.js"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionConfirmationPayment.js?v=1.3.1"></script>
+<script type="text/javascript" src="../js/pages/updateDataFotoPayment.js?v=1.3.1"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

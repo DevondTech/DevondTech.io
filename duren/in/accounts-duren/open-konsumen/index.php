@@ -44,11 +44,11 @@
     <!-- Animation Css -->
     <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
     <!-- Custom Css -->
-    <link href="../css/style.css?v=1.1.2" rel="stylesheet" />
+    <link href="../css/style.css?v=1.2.1" rel="stylesheet" />
     <!-- Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="../css/themes/all-themes.css" rel="stylesheet" />
-    <link href="../css/modif-style.css?v=1.1.1" rel="stylesheet" />
-    <link href="../css/flexible.css?v=1.1.1" rel="stylesheet" />
+    <link href="../css/modif-style.css?v=1.2.1" rel="stylesheet" />
+    <link href="../css/flexible.css?v=1.2.1" rel="stylesheet" />
     <!--<link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
 </head>
 

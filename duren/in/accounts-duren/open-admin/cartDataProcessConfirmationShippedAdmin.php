@@ -40,7 +40,7 @@
                                         Kode Transakasi
                                     </td>
                                     <td class="table-tdYellowHeader">
-                                        Username
+                                        Tanggal Pembayaran
                                     </td>
                                     <td class="table-tdYellowHeader">
                                         Nama Konsumen

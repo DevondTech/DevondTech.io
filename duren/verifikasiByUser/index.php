@@ -5,19 +5,7 @@
   <?php
    error_reporting(0);
   ?>
-  <?php
-    session_start();
-    if($_SESSION['id_status_user']=="5"){
-        die("<script language='javascript'> document.location='../in/accounts-duren/open-konsumen/'</script>");
-    }
-    else if($_SESSION['id_status_user']=="1"){
-        die("<script language='javascript'> document.location='../in/accounts-duren/open-admin/'</script>");
-    }
-    else{
-
-    }
-
-  ?>
+ 
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,7 +52,7 @@
             </div>
             <div class="image-leftDuren-login" >
               <div>
-                <img data-src="../images/gambar-duren.png" src="../images/blank.png" class="lazy" width="80%" >
+                <img data-src="../images/gambarDuren.png" src="../images/blank.png" class="lazy" width="80%" >
               </div>
               <div class="image-leftText-login">
                 <img src="../images/icon/text-top.png"  width="90%">
@@ -85,20 +73,23 @@
                   E-mail Anda
                   <input class="form-control" type="email" name="email" >
                 </div>
-                <div class="paddingTopBottom10" style="color:#CEA32B;font-size: 15px;" >
+                <!-- <div class="paddingTopBottom10" style="color:#CEA32B;font-size: 15px;" >
                   Silahkan Klik Untuk Melanjutkan Konfirmasi Ke E-mail Anda 
-                </div>
+                </div> -->
                 <div class="text-forgot" >
                  <!--  <a href="" style=""> Forgot Password?</a> -->
                  <br />
                 </div>
-                <div class="paddingTopBottom10">
-                  <button type="submit" name="submit" class="buttonYellow">Send To E-mail</button>
+                <div class="paddingTopBottom10" style="margin-top: 10px;">
+                  <button type="submit" name="submit" class="buttonYellow">Kirim ke E-mail Verifikasi</button>
                 </div>
               </div>
             </form>
-            <div>
+            <!-- <div>
               <a class="a-createAccount"> Pastikan E-mail Anda Benar</a>
+            </div> -->
+            <div>
+              <a href="../" class="a-createAccount">Klik Kembali</a>
             </div>
           </div>
         </div>

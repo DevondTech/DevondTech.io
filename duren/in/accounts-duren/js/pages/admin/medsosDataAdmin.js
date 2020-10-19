@@ -11,7 +11,7 @@ $(document).ready(function(){
  			var PrintDetail_nama_medsos_facebook = DataFacebook[0].nama_medsos;
  			var PrintDetail_link_medsos_facebook = DataFacebook[0].link_medsos;
             
-            console.log(facebookCallBack);
+            /*console.log(facebookCallBack);*/
 
             $('#PrintDetail_nama_medsos_facebook').val(PrintDetail_nama_medsos_facebook);
             $('#PrintDetail_link_medsos_facebook').val(PrintDetail_link_medsos_facebook);
@@ -30,7 +30,7 @@ $(document).ready(function(){
             var PrintDetail_nama_medsos_instagram = DataInstagram[0].nama_medsos;
             var PrintDetail_link_medsos_instagram = DataInstagram[0].link_medsos;
             
-            console.log(instagramCallBack);
+            /*console.log(instagramCallBack);*/
 
             $('#PrintDetail_nama_medsos_instagram').val(PrintDetail_nama_medsos_instagram);
             $('#PrintDetail_link_medsos_instagram').val(PrintDetail_link_medsos_instagram);
@@ -49,7 +49,7 @@ $(document).ready(function(){
             var PrintDetail_nama_medsos_twitter = DataTwiter[0].nama_medsos;
             var PrintDetail_link_medsos_twitter = DataTwiter[0].link_medsos;
             
-            console.log(twitterCallBack);
+            /*console.log(twitterCallBack);*/
 
             $('#PrintDetail_nama_medsos_twitter').val(PrintDetail_nama_medsos_twitter);
             $('#PrintDetail_link_medsos_twitter').val(PrintDetail_link_medsos_twitter);
@@ -68,7 +68,7 @@ $(document).ready(function(){
             var PrintDetail_nama_medsos_whatsapp = DataWhatsapp[0].nama_medsos;
             var PrintDetail_link_medsos_whatsapp = DataWhatsapp[0].link_medsos;
             
-            console.log(whatsappCallBack);
+           /* console.log(whatsappCallBack);*/
 
             $('#PrintDetail_nama_medsos_whatsapp').val(PrintDetail_nama_medsos_whatsapp);
             $('#PrintDetail_link_medsos_whatsapp').val(PrintDetail_link_medsos_whatsapp);

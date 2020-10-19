@@ -1,7 +1,7 @@
 $(function () {
     $('#forgot_password').validate({
         highlight: function (input) {
-            console.log(input);
+            /*console.log(input);*/
             $(input).parents('.form-line').addClass('error');
         },
         unhighlight: function (input) {

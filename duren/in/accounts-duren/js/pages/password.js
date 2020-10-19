@@ -6,6 +6,7 @@ $('document').ready(function()
 	$('#SavePassword').on('click',function(e){
   var passwordUpdate = $('#passwordUpdate').val();
   var passwordUpdate_re = $('#passwordUpdate_re').val();
+  var passwordOld = $('#passwordOld').val();
  
   if(passwordUpdate == ''){
     alert('Silahkan Isi Data Password')
@@ -15,6 +16,9 @@ $('document').ready(function()
   }  
   else if(passwordUpdate_re != passwordUpdate){
     alert('Password Tidak Sama')
+  }  
+  else if(passwordOld == ''){
+    alert('Silahkan Isi Password Lama')
   }  
   else if(passwordUpdate != ''){
      var data = $("#updatePassword").serialize();
@@ -36,6 +40,13 @@ $('document').ready(function()
             alert('Ubah password berhasil');
             $('#passwordUpdate').val('');
             $('#passwordUpdate_re').val('');
+            $('#passwordOld').val('');
+          }
+          else if(response == "checkOldPassword")
+          {
+            alert('Password Lama Anda Tidak Sesuai, Silahkan Ulangi');
+            $("#SavePassword").html('SIMPAN');
+            $('#passwordOld').val('');
           }
           else
           {
@@ -43,6 +54,7 @@ $('document').ready(function()
             $("#SavePassword").html('SIMPAN');
             $('#passwordUpdate').val('');
             $('#passwordUpdate_re').val('');
+            $('#passwordOld').val('');
           }
         }    
 	    });

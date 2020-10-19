@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var IDProdukCallBack = $('#a').val();
     var id = IDProdukCallBack;
-    console.log(id);
+    /*console.log(id);*/
 	$.ajax({
      	type: 'POST',
      	url: '../../../conn/data2/cartProcess/cartProcessAdminSelect.php?dataReturCallDataAll='+id,

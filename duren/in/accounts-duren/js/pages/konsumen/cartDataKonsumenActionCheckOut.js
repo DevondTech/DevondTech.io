@@ -31,6 +31,10 @@ $('#checkOutActionButton').on('click',function(e){
         alert('Pemesanan Berhasil');
         $("#content-profile").load("cartDataConfirmation.php");
       }
+      else if(response == "checkVerificationUser"){
+        alert('Silahkan Konfirmasi Email Anda');
+        window.location.href = "../../../verifikasiByUser";
+      }
       else{
         alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');
         $("#checkOutActionButton").html('Check Out');

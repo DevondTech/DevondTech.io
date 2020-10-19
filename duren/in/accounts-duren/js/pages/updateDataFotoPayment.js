@@ -46,18 +46,18 @@ $('#btnUpdateFoto').on('click', function(e){
                 }
               });
             }     
-            if(response == "dataCheck"){
+            else if(response == "dataCheck"){
               alert('Gagal Mengupload Foto, Silahkan Pastikan Foto Anda Tipe Foto');
               $("#content-profile").load("cartData.php");
               $('#confirmationDataCard').attr('style','display:block');
               $('#confirmationDetailPayment').attr('style','display:none');
+              window.location = "../../../in/accounts-duren/open-konsumen";  
             }     
 
             else{
-              $("#error").fadeIn(1000, function(){   
               $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>  Error Upload Data.</div>');
-                   $("#btnUpdateFoto").html('SIMPAN');
-              });
+              $("#btnUpdateFoto").html('SIMPAN');
+              window.location = "../../../in/accounts-duren/open-konsumen";  
             }          
           } 
         });

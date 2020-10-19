@@ -21,8 +21,8 @@ $(window).on('load',function(e){
  			var print_persentase_penilaian = DataDuren[0].persentase_penilaian;
  			var print_rata_rata_bintang_penilaian = DataDuren[0].rata_rata_bintang_penilaian;
 			
-			console.log(DataDuren);
-			console.log(print_rata_rata_bintang_penilaian);
+			/*console.log(DataDuren);
+			console.log(print_rata_rata_bintang_penilaian);*/
 			
             $('#insert_nama_produk').text(print_nama_produk);
             $('#insert_detail1_produk').text(print_detail1_produk);

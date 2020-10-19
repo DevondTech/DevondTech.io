@@ -335,7 +335,6 @@ $(document).ready(function(){
                 {
                   if(response == "updataUserProfile"){
                     $("#btnUpdateDataAlamatUser").html('SIMPAN');
-                    alert('Ubah data alamat berhasil');
                     $('#ubahAlamat').attr('style','display:none');
                     $('#alamatUser').attr('style','display:block');
                     $('#alamatUpdate').val('');
@@ -372,6 +371,7 @@ $(document).ready(function(){
                             else{
                                 $('#alamatPrint').text(DataAlamat+' , Kelurahan '+DataKelurahan+' , Kecamatan '+DataKecamatan+' , Kota '+DataKota+' , '+DataProvinsi+' , '+DataNegara+' (Kode POS :'+DataKodePos+') ');
                                 $('#alamatPrint').attr('style','color:#333');
+                                alert("Alamat berhasil ditambahkan");
                             }
                             $('#dataNegara').val(DataNegara);
                             $('#dataProvinsi').val(DataProvinsi);

@@ -11,15 +11,15 @@ $alert = '';
 
 if(isset($_POST['submit'])){
 
-  $email = 'me.serj.adam@gmail.com';
+  $email = 'support@kingfruit.co.id';
 
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'srv103.niagahoster.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'me.serj.adam@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = '03September92'; // Gmail address Password
+    $mail->Username = 'support@kingfruit.co.id'; 
+    $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 

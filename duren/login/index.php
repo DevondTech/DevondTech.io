@@ -54,7 +54,7 @@
             </div>
             <div class="image-leftDuren-login" >
               <div>
-                <img data-src="../images/gambar-duren.png" src="../images/blank.png" class="lazy" width="80%" >
+                <img data-src="../images/gambarDuren.png" src="../images/blank.png" class="lazy" width="80%" >
               </div>
               <div class="image-leftText-login">
                 <img src="../images/icon/text-top.png"  width="90%">
@@ -79,21 +79,17 @@
                   Password
                   <input type="password" name="password" id="password" class="form-control" >
                 </div>
-                <div class="text-forgot" >
-                  <a href="../forgotPassword" style=""> Forgot Password?</a>
+               <!--  <div class="text-forgot" >
+                  <a style="color: transparent;">&nbesp;</a>
                  <br />
-                </div>
+                </div> -->
                 <div style="padding-bottom: 20px;">
                   <button type="button" id="btn-login" class="buttonYellow">Login</button>
                 </div>
               </div>
             </form>
             <div style="text-align: center;">
-              <a href="../signup"  > Create Account</a>
-            </div>
-            <div style="text-align: center;color: #CEA32B;">Or</div>
-            <div style="text-align: center;">
-              <a href="../verifikasiByUser" > Verifikasi Akun Anda</a>
+              <a href="../signup"  > Create Account</a> | <a href="../forgotPassword"  >Forgot Password</a>
             </div>
           </div>
         </div>
@@ -108,7 +104,7 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
-<script type="text/javascript" src="../js/login-signup.js?v=1.5.1"></script>
+<script type="text/javascript" src="../js/login-signup.js?v=1.7.1"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

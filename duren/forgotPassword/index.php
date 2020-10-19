@@ -65,7 +65,7 @@
             </div>
             <div class="image-leftDuren-login" >
               <div>
-                <img data-src="../images/gambar-duren.png" src="../images/blank.png" class="lazy" width="80%" >
+                <img data-src="../images/gambarDuren.png" src="../images/blank.png" class="lazy" width="80%" >
               </div>
               <div class="image-leftText-login">
                 <img src="../images/icon/text-top.png"  width="90%">
@@ -87,21 +87,21 @@
                   <input type="email" class="form-control" name="email" id="email" value="<?php echo $callMail; ?>" >
                   <input type="hidden" class="form-control" name="checkCode" id="checkCode"  >
                 </div>
-                <div class="paddingTopBottom10" style="color:#CEA32B;font-size: 15px;" >
+                <!-- <div class="paddingTopBottom10" style="color:#CEA32B;font-size: 15px;" >
                   Silahkan Klik Untuk Melanjutkan Kirim Kode Ke E-mail Anda 
-                </div>
+                </div> -->
                 <div class="text-forgot" >
                  <!--  <a href="" style=""> Forgot Password?</a> -->
                  <br />
                 </div>
-                <div class="paddingTopBottom10">
+                <div class="paddingTopBottom10" style="padding-top: 20px;">
                   <button type="button" name="submit" id="actionForgotPasswordButton" class="buttonYellow">Send To E-mail</button>
                 </div>
               </div>
             </form>
-            <div>
+            <!-- <div>
               <a class="a-createAccount"> Pastikan E-mail Anda Benar</a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

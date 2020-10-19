@@ -7624,7 +7624,8 @@ fieldset[disabled] .form-control {
   font-family: "Roboto", sans-serif;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   width: 100%;
-  background: url(../images/durian/background-left.svg);
+  background-color: white;
+  /*background: url(../images/durian/background-left.svg);*/
   -webkit-box-shadow: 11px 0px 18px 2px rgba(196,196,196,1);
   -moz-box-shadow: 11px 0px 18px 2px rgba(196,196,196,1);
   box-shadow: 11px 0px 18px 2px rgba(196,196,196,1);
@@ -7655,7 +7656,8 @@ fieldset[disabled] .form-control {
   font-family: "Roboto", sans-serif;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   width: 100%;
-  background: url(../images/durian/background-left.svg);
+  background-color: white;
+  /*background: url(../images/durian/background-left.svg);*/
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
   box-shadow:0;

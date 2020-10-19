@@ -295,7 +295,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShipped.js?v=1.2.1"></script>
-<script type="text/javascript" src="../js/pages/updateDataFotoRetur.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShipped.js?v=1.2.5"></script>
+<script type="text/javascript" src="../js/pages/updateDataFotoRetur.js?v=1.2.5"></script>
 </body>
 </html>

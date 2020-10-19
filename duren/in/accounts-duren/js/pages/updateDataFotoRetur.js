@@ -7,7 +7,7 @@ $('#btnUpdateFoto').on('click', function(e){
         var fd = new FormData();
         var files = $('#foto')[0].files[0];
         fd.append('foto',files);
-        console.log(fd);
+       /* console.log(fd);*/
         $.ajax({
           url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateDataFotoRetur',
           type : 'POST',
@@ -25,6 +25,7 @@ $('#btnUpdateFoto').on('click', function(e){
               $("#btnUpdateFoto").html('SIMPAN');
               $('#foto').val('');
               $('#open-updateFoto').modal('hide');
+              
               $.ajax({
                 type: "GET",
                 url: "../../../conn/data2/cartProcess/cartProcess.php/?selectToDataFotoRetur",
@@ -45,18 +46,18 @@ $('#btnUpdateFoto').on('click', function(e){
                 }
               });
             }     
-            if(response == "dataCheck"){
+            else if(response == "dataCheck"){
               alert('Gagal Mengupload Foto, Silahkan Pastikan Foto Anda Tipe Foto');
               $("#content-profile").load("cartData.php");
               $('#confirmationDataCard').attr('style','display:block');
               $('#confirmationDetailPayment').attr('style','display:none');
+              window.location = "../../../in/accounts-duren/open-konsumen";  
             }     
 
             else{
-              $("#error").fadeIn(1000, function(){   
-              $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>  Error Upload Data.</div>');
-                   $("#btnUpdateFoto").html('SIMPAN');
-              });
+                $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>  Error Upload Data.</div>');
+                $("#btnUpdateFoto").html('SIMPAN');
+                window.location = "../../../in/accounts-duren/open-konsumen";  
             }          
           } 
         });

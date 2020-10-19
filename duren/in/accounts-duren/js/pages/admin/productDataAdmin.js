@@ -85,7 +85,7 @@ $(document).ready(function(){
     else if(nama_produk != ''){
 
       var data = $("#createDataProduct").serialize();
-      console.log(data);
+      /*console.log(data);*/
       $.ajax({
          type : 'POST',
          url  : '../../../conn/data2/product/product_data.php/?createDataProduct',
@@ -149,7 +149,7 @@ $(document).ready(function(){
     var data = table.row( $(this).parents('tr') ).data();
     e.preventDefault();
     var id = data[0];
-    console.log(id);
+    /*console.log(id);*/
     $('#dataProdukPage').load('productDataDetail.php?id='+id);
   });
   $('#dataProduk tbody').on( 'click', '.hapus-data', function (e){

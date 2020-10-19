@@ -31,7 +31,7 @@
   <meta name="author" content="devond" />
   <meta name="generator" content="devond" />
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css?v=1.0.1">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=1.3.1">
   <link rel="stylesheet" type="text/css" href="css/chat.css?v=1.0.1">
   <link href="scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <style type="text/css">
@@ -45,6 +45,57 @@
 
     .alink:active {
       color: #fbc893;
+    }
+
+    .cardAdvantagesColor{
+      height: 100%;
+      /* background-color: #ddf7df; */
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #9f9f9f;
+    }
+
+    .paddingBottomCardMinTablet{
+      padding-bottom: 0px;
+    }
+
+    .detail-product {
+      /* height: 100vh; */
+      font-size: 20px;
+      /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); */
+      width: 100%;
+      /* background: url(../images/detail-bg.png); */
+      padding-bottom: 60px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      padding-top: 80px;
+    }
+
+    .advantages-content {
+      background-color: #f5f5f5;
+      color: #333232;
+      padding-bottom: 50px;
+      padding-top: 25px;
+      padding-top: 40px;
+    }
+
+    @media(max-width: 991px){
+      .paddingBottomCardMinTablet{
+        padding-bottom: 15px;
+      }
+    }
+
+    @media(max-width: 575px){
+      .cardAdvantagesColor {
+        height: 100%;
+        /* background-color: #ddf7df; */
+        margin: 5px;
+        border-radius: 8px;
+        border: 1px solid #9f9f9f;
+        margin-left: 15px;
+      }
     }
   </style>
 </head>
@@ -94,14 +145,17 @@
             <a class="text-nav" href="#">Home </a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#">Healt Facts </a>
-          </li>
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#">Distribution</a>
+            <a class="text-nav" href="#detail-product-content">Order </a>
           </li>
           <li class="nav-li-link nav-item">
             <a class="text-nav" href="#">About US</a>
           </li>
+          <li class="nav-li-link nav-item">
+            <a class="text-nav" href="conn/logout.php">Logout</a>
+          </li>
+          <!-- <li class="nav-li-link nav-item">
+            <a class="text-nav" href="#">Testimoni</a>
+          </li> -->
         </ul>
       </div>
       <div class="nav-icon-link-large">
@@ -151,7 +205,7 @@
         </div>
       </div>
       <div class="div-img-imageTop col-sm-6" >
-        <img src="images/gambar-duren.png"  class="lazy" width="80%" >
+        <img src="images/gambarDuren.png"  class="lazy" width="80%" >
       </div>
       <div class="div-img-textTop">
         <img src="images/icon/text-top.png"   class=" text-durian-top">
@@ -263,7 +317,7 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="margin-Bottom-detailProduct">
+                <div class="margin-Bottom-detailProduct" style="margin-top: 5px;">
                   <div class="textBlack18-boldLarge-detailProduct">
                     Costumer Reviews
                   </div>
@@ -368,8 +422,8 @@
       <div class="advantages-content">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6">
-              <div>
+            <div class="paddingBottomCardMinTablet col-lg-3 col-md-6 col-sm-6">
+              <div class="cardAdvantagesColor">
                 <div class="content-text-advantages">
                   <div class="col20-card-top">
                     <img src="images/icon/duren-1.png"  class="lazy " width="130px">
@@ -379,8 +433,8 @@
                 </div>
               </div>
             </div>
-            <div class=" col-lg-3 col-md-3 col-sm-6">
-              <div>
+            <div class="paddingBottomCardMinTablet col-lg-3 col-md-6 col-sm-6">
+              <div class="cardAdvantagesColor">
                 <div class="content-text-advantages">
                   <div class="col20-card-top">
                     <img src="images/icon/duren-2.png"  class="lazy " width="130px">
@@ -394,8 +448,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-              <div>
+            <div class="paddingBottomCardMinTablet col-lg-3 col-md-6 col-sm-6">
+              <div class="cardAdvantagesColor">
                 <div class="content-text-advantages">
                   <div class="col20-card-top">
                     <img src="images/icon/duren-3.png"  class="lazy " width="130px">
@@ -409,8 +463,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-              <div>
+            <div class="paddingBottomCardMinTablet col-lg-3 col-md-6 col-sm-6">
+              <div class="cardAdvantagesColor">
                 <div class="content-text-advantages">
                   <div class="col20-card-top">
                     <img src="images/icon/duren-4.png" class="lazy " width="130px">
@@ -430,169 +484,169 @@
     </section>
 <!--   </div> -->
   
-  <section id="footer-content">
-    <div id="footer">
-      <div class="div-footer-content">
-        <div class="paddingTopBootom35 container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="titleFooter paddingTopBottom10">
-                ABOUT US
-              </div>
-              <div class="paddingTopBottom10">
-                <b>Address:</b>
-                <div id="alamatOffice"></div>
-              </div>
-              <div class="paddingTopBottom10">
-                <div><b>Phone</b></div>
-                <a id="linkNumber1">
-                  <div class="aLink" id="number1Office"></div>
-                </a>
-                <a id="linkNumber2">
-                  <div class="aLink" id="number2Office"></div>
-                </a>
-              </div>
-              <div class="paddingTopBottom10">
-                <b>Any Question?</b>
-                <a  id="linkEmail">
-                  <div id="emailOffice" class="aLink"></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="titleFooter paddingTopBottom10">
-                INFORMATION
-              </div>
-              <div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">About Us</a>
+    <section id="footer-content">
+      <div id="footer">
+        <div class="div-footer-content">
+          <div class="paddingTopBootom35 container">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="titleFooter paddingTopBottom10">
+                  ABOUT US
                 </div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">More Search</a>
+                <div class="paddingTopBottom10">
+                  <b>Address:</b>
+                  <div id="alamatOffice"></div>
                 </div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">Blog</a>
+                <div class="paddingTopBottom10">
+                  <div><b>Phone</b></div>
+                  <a id="linkNumber1">
+                    <div class="aLink" id="number1Office"></div>
+                  </a>
+                  <a id="linkNumber2">
+                    <div class="aLink" id="number2Office"></div>
+                  </a>
                 </div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">Testimonial</a>
-                </div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">Event</a>
+                <div class="paddingTopBottom10">
+                  <b>Any Question?</b>
+                  <a  id="linkEmail">
+                    <div id="emailOffice" class="aLink"></div>
+                  </a>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="titleFooter paddingTopBottom10">
-                HELPFUL LINKS
-              </div>
-              <div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">Services</a>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="titleFooter paddingTopBottom10">
+                  INFORMATION
                 </div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">Support</a>
-                </div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">Terms and Condition</a>
-                </div>
-                <div class="padding-linkFooter">
-                <a href="" class="a-colorWhite">Privacy Policy</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="titleFooter paddingTopBottom10">     
-                FOLLOW US
-              </div>
-              <div class="">
-                  <div class="image-small-detailProduct">
-                    <img src="images/icon/facebook-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                <div>
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">About Us</a>
                   </div>
-                  <div class="image-small-detailProduct">
-                    <img src="images/icon/whatsapp-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">More Search</a>
                   </div>
-                  <div class="image-small-detailProduct">
-                    <img src="images/icon/twitter-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">Blog</a>
                   </div>
-                  <div class="image-small-detailProduct">
-                    <img src="images/icon/instagram-2.png" class="lazy imageMedsos-smallCenter-detailProduct">
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">Testimonial</a>
+                  </div>
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">Event</a>
                   </div>
                 </div>
-              <div></div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="titleFooter paddingTopBottom10">
+                  HELPFUL LINKS
+                </div>
+                <div>
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">Services</a>
+                  </div>
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">Support</a>
+                  </div>
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">Terms and Condition</a>
+                  </div>
+                  <div class="padding-linkFooter">
+                  <a href="" class="a-colorWhite">Privacy Policy</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="titleFooter paddingTopBottom10">     
+                  FOLLOW US
+                </div>
+                <div class="">
+                    <div class="image-small-detailProduct">
+                      <img src="images/icon/facebook-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                    </div>
+                    <div class="image-small-detailProduct">
+                      <img src="images/icon/whatsapp-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                    </div>
+                    <div class="image-small-detailProduct">
+                      <img src="images/icon/twitter-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                    </div>
+                    <div class="image-small-detailProduct">
+                      <img src="images/icon/instagram-2.png" class="lazy imageMedsos-smallCenter-detailProduct">
+                    </div>
+                  </div>
+                <div></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- <div id="open-chat-modal">
-    <div class="open-chat-modal" style="right: -5px">
-      <div class="div-icon-chat" >
-        <div class="button-icon-chat" id="openForm">
-          <img class="icon-chat" src="images/icon/chat.png"> 
+    </section>
+    <!-- <div id="open-chat-modal">
+      <div class="open-chat-modal" style="right: -5px">
+        <div class="div-icon-chat" >
+          <div class="button-icon-chat" id="openForm">
+            <img class="icon-chat" src="images/icon/chat.png"> 
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div id="">
+      <div class="open-chat-modal" style="right: -5px">
+        <div class="div-icon-chat" >
+          <a href="https://api.whatsapp.com/send?phone=6281311993939">
+            <div class="button-icon-chat" style="background: #00b551;padding-left: 8px;padding-right: 8px;border-radius: 10px;padding-top: 8px;padding-bottom: 8px;">
+              <img class="icon-chat" src="images/wa.png"> 
+            </div>
+          </a>
         </div>
       </div>
     </div>
-  </div> -->
-  <div id="">
-    <div class="open-chat-modal" style="right: -5px">
-      <div class="div-icon-chat" >
-        <a href="https://api.whatsapp.com/send?phone=6281311993939">
-          <div class="button-icon-chat" style="background: #00b551;padding-left: 8px;padding-right: 8px;border-radius: 10px;padding-top: 8px;padding-bottom: 8px;">
-            <img class="icon-chat" src="images/wa.png"> 
+    <div class="chat-popup" id="myForm" >
+      <div class="card-chat">
+        <div class="content-title-chat">
+          <div class="text-title-chat">
+            Live Chat
           </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="chat-popup" id="myForm" >
-    <div class="card-chat">
-      <div class="content-title-chat">
-        <div class="text-title-chat">
-          Live Chat
+          <div>
+            <div type="button" class="button-close-chat" id="closeForm">X</div> 
+          </div>
         </div>
         <div>
-          <div type="button" class="button-close-chat" id="closeForm">X</div> 
-        </div>
-      </div>
-      <div>
-        <div id="chatSend" class="form-container">
-          <div class="font-size14">
-            <div>
-            Haloo...
-            </div>
-            <div>
+          <div id="chatSend" class="form-container">
+            <div class="font-size14">
               <div>
-                <div id="output-chat">
+              Haloo...
+              </div>
+              <div>
+                <div>
+                  <div id="output-chat">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card-text-sendChat">
-            <div class="content-text-sendChat">
-              <div class="div-input-sendChat">
-                <input placeholder="Ketik........" name="chat" class="input-sendChat" id="chat-text">
-              </div>
-              <div class="div-button-sendChat">
-                <a id="chatSend2" type="button" class="button-sendChat" >
-                  <div class="card-button-sendChat">
-                    <img src="images/icon/send.png" width="30px;">
-                  </div>
-                </a>
+            <div class="card-text-sendChat">
+              <div class="content-text-sendChat">
+                <div class="div-input-sendChat">
+                  <input placeholder="Ketik........" name="chat" class="input-sendChat" id="chat-text">
+                </div>
+                <div class="div-button-sendChat">
+                  <a id="chatSend2" type="button" class="button-sendChat" >
+                    <div class="card-button-sendChat">
+                      <img src="images/icon/send.png" width="30px;">
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 <script type="text/javascript"  src="js/jquery.js" ></script>
 <script type="text/javascript" src="js/ajax/jquery.min.js" ></script>
 <script type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript" src="js/slideSmall.js"></script>
-<script type="text/javascript" src="js/durian.js?v=1.4.1"></script>
-<script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.4.1"></script>
+<script type="text/javascript" src="js/durian.js?v=1.5.1"></script>
+<script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.6.1"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

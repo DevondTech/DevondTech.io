@@ -1,7 +1,9 @@
 <?php	
+session_start();
+$id_user = $_SESSION['id_user'];
+if($id_user!=''){
 
     if(isset($_GET['updateConfirmationReturTransfer'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -23,7 +25,6 @@
     }
 
     if(isset($_GET['confirmationFormDataRefuse'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -41,7 +42,6 @@
     }
 
     if(isset($_GET['selectToDataFotoRetur'])){
-        session_start();
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -58,7 +58,6 @@
     }
 
     if(isset($_GET['selectCartDataByUserToPayment'])){
-        session_start();
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -75,11 +74,10 @@
     }
 
     if(isset($_GET['selectCartDataByUserToPaymentCall'])){
-        session_start();
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT kode_pemesanan, waktu_pemesanan, id_user, username, nama_lengkap, email, nomor_hp, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, pesan_pemesanan, id_proses_pemesanan, proses_pemesanan, nama_produk, detail1_produk, jenis_produk, jumlah_pemesanan, harga, diskon, harga_setelah_diskon, total_harga_perproduk, ongkos_kirim, total_harga_yang_harus_dibayar, gambar1_produk, id_satuan_produk, satuan_produk, id_berat_produk, teks_berat_produk, konfersi_berat_produk_perkilogram, id_voucher, kode_voucher, jenis_voucher, total_voucher, waktu_berlaku,  status_voucher, metode_pembayaran, kode_link_pembayaran, pesan_bukti_pembayaran, gambar_bukti_pembayaran, nama_pemilik_rekening,
+        $query = "SELECT kode_pemesanan, waktu_pemesanan, id_user, username, nama_lengkap, email, nomor_hp, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, pesan_pemesanan, id_proses_pemesanan, proses_pemesanan, id_produk, nama_produk, detail1_produk, jenis_produk, jumlah_pemesanan, harga, diskon, harga_setelah_diskon, total_harga_perproduk, ongkos_kirim, total_harga_yang_harus_dibayar, gambar1_produk, id_satuan_produk, satuan_produk, id_berat_produk, teks_berat_produk, konfersi_berat_produk_perkilogram, id_voucher, kode_voucher, jenis_voucher, total_voucher, waktu_berlaku,  status_voucher, metode_pembayaran, kode_link_pembayaran, pesan_bukti_pembayaran, gambar_bukti_pembayaran, nama_pemilik_rekening,
 tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan = '2'";
         $result = $db->query($query); 
         if($result){
@@ -93,7 +91,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
 	if(isset($_GET['selectDataUserDetailAlamat'])){
-        session_start();
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -105,7 +102,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['selectCartDataByUser'])){
-        session_start();
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -122,7 +118,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['selectDataWeightProduct'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $query = "SELECT * FROM rt_berat_produk_pemesanan";
@@ -133,7 +128,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['updateCheckOutByUser'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -152,19 +146,28 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         $totalBayarKeseluruhan = $_POST['totalBayarKeseluruhan']; 
         $id_proses_pemesanan = 2;
         $id_proses_pemesanan_from_DB = 1;
-        if($alamatInput!=''){
-            $query = "UPDATE tb_pemesanan SET  jumlah_pemesanan='$jumlah_pemesanan', alamat='$alamatInput', negara='$negaraInput', provinsi='$provinsiInput', kabupaten='$kabupatenInput', kota='$kotaInput', kecamatan='$kecamatanInput', kelurahan='$kelurahanInput', kode_pos='$dataKodePos', id_berat_produk='$id_berat_produk', id_proses_pemesanan='$id_proses_pemesanan', ongkos_kirim='$ongkir', total_harga_perproduk='$total_harga_pemesanan', total_harga_yang_harus_dibayar='$totalBayarKeseluruhan' WHERE id_user = $id_user and id_proses_pemesanan='1'";
-            $db->query($query);
 
-            echo "updateCheckOutByUserSuccess";   
+        $userData =''; $query = "select * from tb_login_user where id_user='$id_user'"; 
+        $result = mysqli_query($db,$query);
+        $baris= mysqli_fetch_array($result);
+        $cekKOde= $baris['kode'];
+        if($cekKOde=='c47907abd2a80492ca9388b05c0e382518ff3960'){
+            if($alamatInput!=''){
+                $query = "UPDATE tb_pemesanan SET  jumlah_pemesanan='$jumlah_pemesanan', alamat='$alamatInput', negara='$negaraInput', provinsi='$provinsiInput', kabupaten='$kabupatenInput', kota='$kotaInput', kecamatan='$kecamatanInput', kelurahan='$kelurahanInput', kode_pos='$dataKodePos', id_berat_produk='$id_berat_produk', id_proses_pemesanan='$id_proses_pemesanan', ongkos_kirim='$ongkir', total_harga_perproduk='$total_harga_pemesanan', total_harga_yang_harus_dibayar='$totalBayarKeseluruhan' WHERE id_user = $id_user and id_proses_pemesanan='1'";
+                $db->query($query);
+
+                echo "updateCheckOutByUserSuccess";   
+            }
+            else{
+                echo "erorDATA";
+            }
         }
         else{
-            echo "erorDATA";
+            echo "checkVerificationUser";
         }
     }
 
     if(isset($_GET['updateConfirmationPayment'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -195,7 +198,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['cartActionByUser'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -223,7 +225,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['updateDataFotoPayment'])){
-        session_start();
         require '../config.php';
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -248,7 +249,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['selectToDataFotoPayment'])){
-        session_start();
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -266,7 +266,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['updateConfirmationPaymentTransfer'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -313,8 +312,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
 
     if(isset($_GET['deleteImageConfirmationPaymentTransfer'])){
         require '../config.php'; 
-        session_start();
-        require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
         $gambar_bukti_pembayaran = ''; 
@@ -332,8 +329,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['confirmationFormPicHalu'])){
-        require '../config.php'; 
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -355,7 +350,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     /*retur*/
     /*process 1 >> select data to print data shipped*/
     if(isset($_GET['selectDataForConfirmationFinishShipped'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -371,8 +365,7 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         }
     }
 
-    if(isset($_GET['createDataRetur'])){
-        session_start();
+    if(isset($_GET['createDataRetur'])){ 
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -402,7 +395,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['updateDataFotoRetur'])){
-        session_start();
         require '../config.php';
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -427,7 +419,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['selectToDataFotoRetur'])){
-        session_start();
         $id_user = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -444,7 +435,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['createDataReturProduct'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -467,7 +457,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['createConfirFinishData'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -486,7 +475,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
 
     //komentar
     if(isset($_GET['selectCartDataToComment'])){
-        session_start();
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -503,7 +491,6 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
     }
 
     if(isset($_GET['createDataCommentProduct'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -527,5 +514,10 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
             echo 'dataFound';
         }  
     }
+
+}
+else{
+    header('Location: https://kingfruit.co.id/');
+}
 
 ?>

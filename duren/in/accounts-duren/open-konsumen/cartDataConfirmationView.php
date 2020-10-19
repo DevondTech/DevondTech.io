@@ -246,17 +246,18 @@
                                     </div>
                                 </div>
                                 <div style="margin-left: 4px;">
-                                    <div class="positionTextDetailOrder">
-                                        <div class="w150 textTotalHarga floatLeftCartData" >
-                                            Harga Keseluruhan
+                                    <div class="positionTextDetailOrder"> 
+                                        <div class="w150 textTotalHarga floatLeftCartData" id="detailPembayaranInfo">
+                                            <!-- Harga Keseluruhan -->
                                         </div>
                                         <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">
                                             :  
                                         </div>
                                         <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
                                             <div class="marginLeft10 floatLeftCartData">
+                                                <div id="detailPembayaranInfoTotal"></div>
                                                 <input type="hidden" name="total_harga_pemesanan"  style="color: #737373;" id="total_harga_pemesanan" class="input-textDataUser-false" disabled>
-                                                <input type="text" name="total_harga_pemesanan_tampil"  style="color: #737373;" id="total_harga_pemesanan_tampil" class="input-textDataUser-false" disabled>
+                                                <input type="text" name="total_harga_pemesanan_tampil"  style="color: #3c3838;background-color: transparent;" id="total_harga_pemesanan_tampil" class="input-textDataUser-false" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +273,7 @@
                                         <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
                                             <div class="marginLeft10 floatLeftCartData">
                                                 <input type="hidden" name="ongkir"  style="color: #737373;" id="ongkir" class="input-textDataUser-false" >
-                                                <input type="text" name="ongkir_tampil"  style="color: #737373;" id="ongkir_tampil" class="input-textDataUser-false" disabled>
+                                                <input type="text" name="ongkir_tampil"  style="color: #3c3838;    background-color: transparent;" id="ongkir_tampil" class="input-textDataUser-false" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -280,18 +281,18 @@
                                 <div class="positionTextDetailOrder">
                                      <div class="widthBorder2 cardBorderBottomGrey" style="margin-bottom: 5px;margin-left: 4px;"></div>
                                 </div>
-                                <div style="margin-left: 4px;">
+                                <div style="margin-left: 4px;font-weight: bold;margin-top: 2px;" >
                                     <div class="positionTextDetailOrder">
-                                        <div class="w150 textTotalHarga floatLeftCartData" >
-                                            Total Keseluruhan
+                                        <div class="w150 textTotalHarga floatLeftCartData"  >
+                                            Total
                                         </div>
                                         <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">
                                             :  
                                         </div>
                                         <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
                                             <div class="marginLeft10 floatLeftCartData">
-                                                <input type="hidden" name="totalBayarKeseluruhan"  style="color: #737373;" id="totalBayarKeseluruhan" class="input-textDataUser-false"  >
-                                                <input type="text" name="totalBayarKeseluruhan_tampil"  style="color: #737373;" id="totalBayarKeseluruhan_tampil" class="input-textDataUser-false" disabled>
+                                                <input type="hidden" name="totalBayarKeseluruhan"   id="totalBayarKeseluruhan" class="input-textDataUser-false"  >
+                                                <input type="text" name="totalBayarKeseluruhan_tampil"  style="color: #3c3838;" id="totalBayarKeseluruhan_tampil" class="input-textDataUser-false" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -330,7 +331,7 @@
 <script src="../js/action.js"></script>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmationView.js?v=1.2.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmationView.js?v=1.3.1"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

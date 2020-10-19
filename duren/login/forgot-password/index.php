@@ -37,7 +37,7 @@
             </div>
             <div class="image-leftDuren-login" >
               <div>
-                <img data-src="../../images/gambar-duren.png" src="../../images/blank.png" class="lazy" width="80%" >
+                <img data-src="../../images/gambarDuren.png" src="../../images/blank.png" class="lazy" width="80%" >
               </div>
               <div class="image-leftText-login">
                 <img src="../../images/icon/text-top.png"  width="90%">

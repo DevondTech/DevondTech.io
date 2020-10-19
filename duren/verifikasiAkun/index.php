@@ -65,7 +65,7 @@
             </div>
             <div class="image-leftDuren-login" >
               <div>
-                <img data-src="../images/gambar-duren.png" src="../images/blank.png" class="lazy" width="80%" >
+                <img data-src="../images/gambarDuren.png" src="../images/blank.png" class="lazy" width="80%" >
               </div>
               <div class="image-leftText-login">
                 <img src="../images/icon/text-top.png"  width="90%">
@@ -86,21 +86,24 @@
                   E-mail Anda
                   <input type="text" class="form-control" name="emailNomorHP" id="emailNomorHP" value="<?php echo $callMail; ?>" disabled>
                 </div>
-                <div class="paddingTopBottom10" style="color:#CEA32B;font-size: 15px;" >
+               <!--  <div class="paddingTopBottom10" style="color:#CEA32B;font-size: 15px;" >
                   Silahkan Klik Untuk Melanjutkan Konfirmasi Ke E-mail Anda 
-                </div>
+                </div> -->
                 <div class="text-forgot" >
                  <!--  <a href="" style=""> Forgot Password?</a> -->
                  <br />
                 </div>
-                <div class="paddingTopBottom10">
-                  <button type="submit" name="submit" class="buttonYellow">Send To E-mail</button>
+                <div class="paddingTopBottom10" style="margin-top: 10px;">
+                  <button type="submit" name="submit" class="buttonYellow">Kirim ke E-mail Verifikasi</button>
                 </div>
               </div>
             </form>
             <div>
-              <a class="a-createAccount"> Pastikan E-mail Anda Benar</a>
+              <a href="../login" class="a-createAccount">Login Account</a>
             </div>
+           <!--  <div>
+              <a class="a-createAccount"> Pastikan E-mail Anda Benar</a>
+            </div> -->
           </div>
         </div>
       </div>

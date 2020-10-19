@@ -10,7 +10,7 @@ $('#btnUpdateFoto').on('click', function(e){
         var fd = new FormData();
         var files = $('#foto')[0].files[0];
         fd.append('foto',files);
-        console.log(fd);
+        /*console.log(fd);*/
         $.ajax({
           url  : '../../../conn/data2/user_data.php/?updateDataFoto',
           type : 'POST',
@@ -30,7 +30,7 @@ $('#btnUpdateFoto').on('click', function(e){
               $('#foto').val('');
              
             }     
-            if(response == "dataCheck"){
+            else if(response == "dataCheck"){
               alert('Gagal Mengganti Foto');
               location.reload();
             }     

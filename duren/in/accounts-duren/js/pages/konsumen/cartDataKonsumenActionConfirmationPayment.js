@@ -26,6 +26,7 @@ $(document).ready(function(){
             var MetodePembayaran = DataPayment[0].id_metode_pembayaran ;
             var Gambar = DataPayment[0].gambar_bukti_pembayaran;
             var TotalPerProduk = DataPayment[0].total_harga_perproduk ;
+            
             $('#IdPemesanan').val(IdPemesanan);
             $('#IdPemesananDelete').val(IdPemesanan);
             $('#IdProduk').val(IdProduk);

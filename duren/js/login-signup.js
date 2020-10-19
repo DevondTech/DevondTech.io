@@ -31,7 +31,7 @@ $('document').ready(function()
     }
     else if(password != ''){
       var data = $("#signup-form").serialize();
-      console.log(data);
+      /*console.log(data);*/
       $.ajax({
 
          type : 'POST',
@@ -109,33 +109,33 @@ $('document').ready(function()
     }  
     else if(emailNomorHP != '' && password != ''){
        var data = $("#login-form").serialize();
-       console.log(data);
+       /*console.log(data);*/
     $.ajax({
-       type : 'POST',
-       url  : '../conn/data2/user_login.php/?login',
-       data : data,
-       beforeSend: function()
-       { 
+      type : 'POST',
+      url  : '../conn/data2/user_login.php/?login',
+      data : data,
+      beforeSend: function()
+      { 
         $("#error").fadeOut();
         $("#btn-login").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
-       }, 
+      }, 
       success :  function(response)
       {      
-       if(response == "KodeSign1"){
-     
-       $("#btn-login").html('Loading System...');
-        window.location.href = "../in/accounts-duren/open-admin/";
-       }
-       else{
-          if(response == "KodeSign2"){
-
+        if(response == "checkPassword"){
+          alert('Password Yang Anda Masukan Salah Atau Anda Belum Terdaftar') ; 
+          $("#btn-login").html('Login');
+        }
+        else if(response == "KodeSign1"){
+          $("#btn-login").html('Loading System...');
+          window.location.href = "../in/accounts-duren/open-admin/";
+        }
+        else if(response == "KodeSign2"){
           $("#btn-login").html('Loading System...');
             window.location.href = "../";
-          }
-          else{
-            alert('Anda Belum Terdaftar Atau Silahkan Verifikasi Email Jika Sudah Mendaftar') ; 
-            $("#btn-login").html('Login');
-          }
+        }
+        else{
+          alert('Anda Belum Terdaftar') ; 
+          $("#btn-login").html('Login');
         }
       }
     });
@@ -156,33 +156,33 @@ $('document').ready(function()
       }  
       else if(emailNomorHP != '' && password != ''){
          var data = $("#login-form").serialize();
-         console.log(data);
+         /*console.log(data);*/
       $.ajax({
-         type : 'POST',
-         url  : '../conn/data2/user_login.php/?login',
-         data : data,
-         beforeSend: function()
-         { 
+        type : 'POST',
+        url  : '../conn/data2/user_login.php/?login',
+        data : data,
+        beforeSend: function()
+        { 
           $("#error").fadeOut();
           $("#btn-login").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
-         }, 
+        }, 
         success :  function(response)
         {      
-         if(response == "KodeSign1"){
-       
-         $("#btn-login").html('Loading System...');
-          window.location.href = "../in/accounts-duren/open-admin/";
-         }
-         else{
-            if(response == "KodeSign2"){
-
+          if(response == "checkPassword"){
+            alert('Password Yang Anda Masukan Salah Anda Belum Terdaftar') ; 
+            $("#btn-login").html('Login');
+          }
+          else if(response == "KodeSign1"){
+            $("#btn-login").html('Loading System...');
+            window.location.href = "../in/accounts-duren/open-admin/";
+          }
+          else if(response == "KodeSign2"){
             $("#btn-login").html('Loading System...');
               window.location.href = "../";
-            }
-            else{
-              alert('Anda Belum Terdaftar Atau Silahkan Verifikasi Email Jika Sudah Mendaftar') ; 
-              $("#btn-login").html('Login');
-            }
+          }
+          else{
+            alert('Anda Belum Terdaftar') ; 
+            $("#btn-login").html('Login');
           }
         }
       });

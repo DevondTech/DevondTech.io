@@ -1,6 +1,6 @@
 $('#updateCheckOutByUserButton').on('click', function(e){
   var data = $("#updateCheckOutByUserForm").serialize();
-  console.log(data);
+  /*console.log(data);*/
   $.ajax({
 
    type : 'POST',
@@ -14,11 +14,11 @@ $('#updateCheckOutByUserButton').on('click', function(e){
     success :  function(response)
     {      
       if(response == "dataFound"){
-        alert('Harap Menunggu Sampai Transaksi Pesanan Anda Selesai');
+        alert('Harap Menunggu Sampai Transaksi Anda Selesai');
         window.location.href = "in/accounts-duren/open-konsumen/";
       }
       else{
-        alert('Pemesanan Anda Berhasil, Silahkan Klik Untuk Lanjutkan');
+        alert('Pesanan Anda Berhasil, Silahkan Klik OK Untuk Melanjutkan');
         window.location.href = "in/accounts-duren/open-konsumen/";
       }
     }

@@ -37,7 +37,7 @@ $(document).ready(function(){
     var data = table.row( $(this).parents('tr') ).data();
     e.preventDefault();
     var id = data[3];
-    console.log(id);
+    /*console.log(id);*/
     $('#dataConfirmationRetur').load('cartDataReturDetailAdmin.php?id='+id);
   });
   

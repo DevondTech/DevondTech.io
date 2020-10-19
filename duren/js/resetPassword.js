@@ -8,7 +8,7 @@ $(window).on('load',function(e){
 	    if(password == resetPassword){
 	    	if(kode != ''){
 		      	var data = $("#sendDataReset").serialize();
-		      	console.log(data);
+		      	/*console.log(data);*/
 		      	$.ajax({
 
 			        type : 'POST',

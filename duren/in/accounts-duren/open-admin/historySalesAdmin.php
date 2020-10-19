@@ -43,7 +43,7 @@
                                         Tanggal
                                     </td>
                                     <td class="table-tdYellowHeader">
-                                        Produk
+                                        Nama Pembeli
                                     </td>
                                     <td class="table-tdYellowHeader">
                                         Aksi 

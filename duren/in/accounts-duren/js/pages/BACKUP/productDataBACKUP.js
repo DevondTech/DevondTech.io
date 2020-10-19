@@ -8,7 +8,7 @@ $(document).ready(function(){
     success: function(callProductDataPrintTable) { 
       var callProductDataPrintTable = jQuery.parseJSON(callProductDataPrintTable);
 
-      console.log(callProductDataPrintTable);
+      /*console.log(callProductDataPrintTable);*/
       var table = $('#dataProduk').DataTable({ 
       "data" : callProductDataPrintTable,
       "columns" : [
@@ -73,7 +73,7 @@ $(document).ready(function(){
     else if(nama_produk != ''){
 
       var data = $("#createDataProduct").serialize();
-      console.log(data);
+      /*console.log(data);*/
       $.ajax({
          type : 'POST',
          url  : '../../../conn/data2/product_data.php/?createDataProduct',

@@ -136,7 +136,7 @@
         <div class="divPositionContentTop">
             <div class="card-textTitleLarge-Black">
                 <div class="textTitleLarge-Black" >
-                    Proses Pemesanan
+                    Status Pemesanan
                 </div>
             </div>
         </div>

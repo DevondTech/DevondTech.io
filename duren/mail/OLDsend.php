@@ -103,7 +103,7 @@ if(isset($_POST['submit'])){
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'kingfruit.co.id';
+    $mail->Host = 'mail.kingfruit.co.id';
     $mail->SMTPAuth = true;
     $mail->Username = 'support@kingfruit.co.id'; 
     $mail->Password = 'kingfruit'; 

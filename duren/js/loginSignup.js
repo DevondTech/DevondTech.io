@@ -31,7 +31,7 @@ $('document').ready(function()
     }
     else if(password != ''){
       var data = $("#signup-form").serialize();
-      console.log(data);
+      /*console.log(data);*/
       $.ajax({
 
          type : 'POST',
@@ -109,7 +109,7 @@ $('document').ready(function()
     }  
     else if(emailNomorHP != '' && password != ''){
        var data = $("#login-form").serialize();
-       console.log(data);
+      /* console.log(data);*/
     $.ajax({
        type : 'POST',
        url  : '../conn/data2/user_login.php/?login',
@@ -156,7 +156,7 @@ $('document').ready(function()
       }  
       else if(emailNomorHP != '' && password != ''){
          var data = $("#login-form").serialize();
-         console.log(data);
+         /*console.log(data);*/
       $.ajax({
          type : 'POST',
          url  : '../conn/data2/user_login.php/?login',

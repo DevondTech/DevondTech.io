@@ -27,6 +27,8 @@ $(document).ready(function(){
             var MetodePembayaran = DataPayment[0].id_metode_pembayaran ;
             var Gambar = DataPayment[0].gambar_bukti_pembayaran;
             var TotalPerProduk = DataPayment[0].total_harga_perproduk ;
+            var NamaProduk = DataPayment[0].nama_produk;
+            var hargaProduk = DataPayment[0].harga;
             $('#IdPemesanan').val(IdPemesanan);
             $('#IdPemesananDelete').val(IdPemesanan);
             $('#IdProduk').val(IdProduk);
@@ -95,7 +97,18 @@ $(document).ready(function(){
                 $('#dataFotoPayment').attr('src', DataFoto);
                 $('#foto_check').val('1');
             } 
-           
+            var hargaPerprodukNumberString = hargaProduk.toString(),
+                hargaPerprodukSisa    = hargaPerprodukNumberString.length % 3,
+                hargaPerprodukRupiah  = hargaPerprodukNumberString.substr(0, hargaPerprodukSisa),
+                hargaPerprodukRibuan  = hargaPerprodukNumberString.substr(hargaPerprodukSisa).match(/\d{3}/g);         
+            if (hargaPerprodukRibuan) {
+                hargaPerprodukSeparator = hargaPerprodukSisa ? '.' : '';
+                hargaPerprodukRupiah += hargaPerprodukSeparator + hargaPerprodukRibuan.join('.');
+            }
+            $('#total_harga_pemesanan').val(totalHargaPerproduk);
+            $('#total_harga_pemesanan_tampil').val('Rp '+totalHargaPerprodukRupiah+',00');
+            $('#detailPembayaranInfo').text(JumlahPemesanan+' x Rp '+hargaPerprodukRupiah+',00');
+            /*$('#detailPembayaranInfoTotal').text('Rp '+totalHargaPerprodukRupiah+',00' );*/
         }
     });
     

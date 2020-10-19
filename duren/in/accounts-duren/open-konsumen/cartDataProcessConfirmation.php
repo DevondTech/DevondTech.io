@@ -68,7 +68,7 @@
 <div class="divPositionContentTop">
     <div class="card-textTitleLarge-Black">
         <div class="textTitleLarge-Black" >
-            Proses Pemesanan
+            Status Pemesanan
         </div>
     </div>
 </div>
@@ -76,7 +76,7 @@
     <div class="positionDataNull">
         <a  style="color:#2d472c;">
             <img src="../images/icon png/pembayaran-diperiksa.png" class="imgDataNull">
-            <div class="textClickToProduct">Pembayaran Anda Sedang Dicek Admin</div>
+            <div class="textClickToProduct">Pesanan Sedang di Proses</div>
         </a>
     </div>
 </div>

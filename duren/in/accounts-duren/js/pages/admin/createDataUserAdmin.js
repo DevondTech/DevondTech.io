@@ -95,7 +95,7 @@ $(document).ready(function(){
     else if(username != '' && password != ''){
 
       var data = $("#createDataUser").serialize();
-      console.log(data);
+      /*console.log(data);*/
       $.ajax({
          type : 'POST',
          url  : '../../../conn/data2/user_data.php/?createDataUser',

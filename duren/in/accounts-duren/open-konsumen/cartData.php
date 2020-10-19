@@ -447,14 +447,14 @@
                                 <input type="text" name="alamatUpdate" id="alamatUpdate" class="input-textDataUser">
                             </div>
                         </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="Card-inputDataUser-paddingTopBottom20px" style="display: none;">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
                                     Negara
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
-                                <input type="text" name="negaraUpdate" id="negaraUpdate" class="input-textDataUser" >
+                                <input type="hidden" name="negaraUpdate" id="negaraUpdate" class="input-textDataUser" value="Indonesia">
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
@@ -793,9 +793,8 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCart.js?v=1.5.1"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOut.js?v=1.5.1"></script>
-
+<script src="../js/pages/konsumen/cartDataKonsumenCart.js?v=2.2.2"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOut.js?v=2.2.2"></script>
 </body>
 </html>
 

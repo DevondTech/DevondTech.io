@@ -5,7 +5,7 @@ $(window).on('load',function(e){
 	    var email = $('#email').val();
 	    if(kode != ''){
 	      	var data = $("#actionCheckCodeForm").serialize();
-	      	console.log(data);
+	      	/*console.log(data);*/
 	      	$.ajax({
 
 		        type : 'POST',

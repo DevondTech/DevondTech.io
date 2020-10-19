@@ -14,7 +14,7 @@ $(window).on('load',function(e){
 	   	var checkCode = $('#checkCode').val();
 	    if(email != ''){
 	      	var data = $("#actionForgotPasswordForm").serialize();
-	      	console.log(data);
+	      	/*console.log(data);*/
 	      	$.ajax({
 
 		        type : 'POST',
