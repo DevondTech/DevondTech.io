@@ -63,7 +63,7 @@
 <!-- Datatables -->
 <script type="text/javascript" src="../datatable/newJS/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
-<script src="../js/pages/admin/cartDataOnTheWayAndFinishShippedAdmin.js"></script>
+<script src="../js/pages/admin/cartDataOnTheWayAndFinishShippedAdmin.js?v=1.2.1"></script>
 </body>
 </html>
 

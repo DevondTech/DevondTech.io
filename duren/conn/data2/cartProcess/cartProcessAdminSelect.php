@@ -26,7 +26,7 @@
         session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT id_retur, kode_retur, waktu_retur, nama_lengkap, pesan_retur, nomor_hp, email, nama_pemilik_rekening, no_rekening, bank_asal, total_harga_yang_harus_dibayar, gambar_barang_retur FROM view_detail_pengajuan_retur_produk where id_retur ='".$_GET['dataReturCallData']."'";
+        $query = "SELECT id_retur, kode_retur, waktu_retur, nama_lengkap, pesan_retur, nomor_hp, email, nama_pemilik_rekening, no_rekening, bank_asal, total_harga_yang_harus_dibayar, gambar_barang_retur, id_pemesanan FROM view_detail_pengajuan_retur_produk where id_retur ='".$_GET['dataReturCallData']."'";
         $result = $db->query($query); 
         $dataReturCallData = mysqli_fetch_all($result,MYSQLI_ASSOC);
         $dataReturCallData=json_encode($dataReturCallData);

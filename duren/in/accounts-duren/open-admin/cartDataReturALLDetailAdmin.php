@@ -26,7 +26,7 @@
     display: block;
     margin: auto;
     width: 250px;
-    height: 250px;
+    height: auto;
 }
 
 .hiddenReturConfir{
@@ -180,7 +180,7 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/admin/cartDataReturDetailAdminAll.js?v=1.3.1"></script>
+<script src="../js/pages/admin/cartDataReturDetailAdminAll.js?v=1.4.1"></script>
 <!-- <script type="text/javascript" src="../js/pages/uploadDataFotoTransferAdmin.js"></script> -->
 <!-- <div id="openupdatefoto" class="modal fade" >
     <div class="modal-dialog modal-sm">

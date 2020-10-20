@@ -49,7 +49,18 @@ $(document).ready(function(){
                     var gambarProductView = DataUser[0].gambar1_produk;
                     var dataOngkir = DataUser[0].ongkos_kirim;
                     var dataBerat = DataUser[0].konfersi_berat_produk_perkilogram;
-
+                    var email_send = DataUser[0].email;
+                    var kode_pemesanan_send = DataUser[0].kode_pemesanan;
+                    var produk_send = DataNamaProduk;
+                    
+                    var waktu_pemesanan_send = DataUser[0].waktu_pemesanan;
+                   
+                    $('#email_send').val(email_send);
+                    $('#kode_pemesanan_send').val(kode_pemesanan_send);
+                    $('#produk_send').val(produk_send);
+                    $('#jumlah_send_data').val('1');
+                    $('#waktu_pemesanan_send').val(waktu_pemesanan_send);
+            
                     $('#namaLengkapPrint').text(DataNamaLengkap);
                     $('#nomorHpPrint').text(DataNomorHP);
 
@@ -124,6 +135,7 @@ $(document).ready(function(){
                     $('#total_harga_pemesanan_tampil2').val('Rp '+hargaRupiah+',00');
                     $('#total_harga_pemesanan2').val(harga);
                     $('#totalBayarKeseluruhan').val(+harga + +ongkir);
+
                     var totalBayarKeseluruhanCall = $('#totalBayarKeseluruhan').val();
                     var totalBayarKeseluruhanCallNumberString = totalBayarKeseluruhanCall.toString(),
                         totalBayarKeseluruhanCallSisa    = totalBayarKeseluruhanCallNumberString.length % 3,
@@ -134,12 +146,16 @@ $(document).ready(function(){
                             totalBayarKeseluruhanCallRupiah += totalBayarKeseluruhanCallSeparator + totalBayarKeseluruhanCallRibuan.join('.');
                         }
                         $('#totalBayarKeseluruhan_tampil').val('Rp '+totalBayarKeseluruhanCallRupiah+',00');
+                        var total_harga_yang_harus_dibayar_send = 'Rp '+totalBayarKeseluruhanCallRupiah+',00';
+                        $('#total_harga_yang_harus_dibayar_send').val(total_harga_yang_harus_dibayar_send);
+
                     $('#btnPlus, #btnMinus').click(function () {
                         if (this.id == 'btnPlus') {
                             var checkDataJumlah = $('#jumlah_pemesanan').val();
                             var jumlahPemesanan = +$('#jumlah_pemesanan').val() + 1;
                             $('#jumlah_pemesanan').val(jumlahPemesanan);
                             $('#jumlahPemesanan').val(jumlahPemesanan);
+                            $('#jumlah_send_data').val(jumlahPemesanan);
                             var harga = $('#harga').val();
                             var totalHarga = jumlahPemesanan * harga;
                         }
@@ -153,6 +169,7 @@ $(document).ready(function(){
                                 var jumlahPemesanan = +$('#jumlah_pemesanan').val() - 1;
                                 $('#jumlah_pemesanan').val(jumlahPemesanan);
                                 $('#jumlahPemesanan').val(jumlahPemesanan);
+                                $('#jumlah_send_data').val(jumlahPemesanan);
                                 var harga = $('#harga').val();
                                 var totalHarga = jumlahPemesanan * harga;
                             }
@@ -161,6 +178,7 @@ $(document).ready(function(){
                         jumlahPemesanan = $('#jumlah_pemesanan').val();
                         var ongkirCallBack =  '0';
                         var dataBeratPemesanan = jumlahPemesanan * ongkirCallBack;
+                        $('#jumlah_send_data').val(jumlahPemesanan);
                         
                         //$('#ongkir').val();
                         //$('#ongkir_tampil').val();
@@ -222,11 +240,14 @@ $(document).ready(function(){
                             totalBayarKeseluruhanRupiah += totalBayarKeseluruhanSeparator + totalBayarKeseluruhanRibuan.join('.');
                         }
 
+                        var total_harga_yang_harus_dibayar_send = 'Rp '+totalBayarKeseluruhanRupiah+',00';
                         $('#totalBayarKeseluruhan_tampil').val('Rp '+totalBayarKeseluruhanRupiah+',00');
                         $('#totalBayarKeseluruhan').val(totalYangHarusDibayar);
-                        //$('#totalBayarKeseluruhan_tampil').val(totalYangHarusDibayar);
-                        /*var totalBayarKeseluruhan = $('#totalBayarKeseluruhan').val();
-                        var totalBayarKeseluruhan_tampil = $('#totalBayarKeseluruhan_tampil').val();*/
+
+                        /*var total_harga_yang_harus_dibayar_send = +harga + +ongkir;*/
+                        $('#total_harga_yang_harus_dibayar_send').val(total_harga_yang_harus_dibayar_send);
+                        
+
                     });
                 }
                 else{
@@ -247,6 +268,12 @@ $(document).ready(function(){
                     }
                     if(DataProsesPemesanan == '7'){
                         $("#content-profile").load("cartDataNull.php");
+                    }  
+                    if(DataProsesPemesanan == '8'){
+                        $("#content-profile").load("cartDataNull.php");
+                    }    
+                    if(DataProsesPemesanan == '9'){
+                        $("#content-profile").load("cartDataProcessReturSeeing.php");
                     }                    
                 }
             }
@@ -279,8 +306,7 @@ $(document).ready(function(){
     $('#btnCancelUpdateDataAlamatUser').on('click', function(){
         $('#ubahAlamat').attr('style','display:none');
         $('#alamatUser').attr('style','display:block');
-        $('#alamatUpdate').val('');
-        $('#negaraUpdate').val('');  
+        $('#alamatUpdate').val('');  
         $('#provinsiUpdate').val('');
         $('#kotaUpdate').val('');
         $('#kecamatanUpdate').val('');
@@ -338,7 +364,6 @@ $(document).ready(function(){
                     $('#ubahAlamat').attr('style','display:none');
                     $('#alamatUser').attr('style','display:block');
                     $('#alamatUpdate').val('');
-                    $('#negaraUpdate').val('');  
                     $('#provinsiUpdate').val('');
                     $('#id_kota').val('');
                     $('#kecamatanUpdate').val('');

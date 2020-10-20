@@ -95,10 +95,6 @@
             <div style="text-align: center;">
               <a href="../signup" > Create Account</a>
             </div>
-            <div style="text-align: center;color: #CEA32B;">Or</div>
-            <div style="text-align: center;">
-              <a href="../verifikasiByUser" > Verifikasi Akun Anda</a>
-            </div>
           </div>
         </div>
       </div>

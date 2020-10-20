@@ -237,7 +237,7 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/admin/adminDataProduct.js"></script>
+<script type="text/javascript" src="../js/pages/admin/adminDataProduct.js?v=1.2.1"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

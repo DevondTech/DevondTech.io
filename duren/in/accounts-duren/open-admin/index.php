@@ -198,6 +198,14 @@
                             <span id=""><font class="icon-menu-active">Dalam Pengiriman</font></span>
                         </a>
                     </li>
+                    <li class="menu-waves-block" id="finish-link">
+                        <a  id="waves-effect-this" >
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/data-product.svg" width="20" height="20">
+                            </div>
+                            <span id=""><font class="icon-menu-active">Pesanan Selesai</font></span>
+                        </a>
+                    </li>
                     <li class="menu-waves-block" id="retur-link">
                         <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
@@ -306,7 +314,7 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.3.1"></script>
+<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.5.1"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

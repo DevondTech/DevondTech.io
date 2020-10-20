@@ -121,7 +121,7 @@
 <!-- Datatables -->
 <script type="text/javascript" src="../datatable/newJS/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
-<script src="../js/pages/konsumen/cartDataReturKonsumenAll.js?v=1.4.1"></script>
+<script src="../js/pages/konsumen/cartDataReturKonsumenAll.js?v=1.5.1"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

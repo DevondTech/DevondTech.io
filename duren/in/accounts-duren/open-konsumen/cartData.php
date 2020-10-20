@@ -585,7 +585,7 @@
                                     <div class="m30">
                                         <div class="">
                                             <div class="TitleTextBarang" id="nama_produk">
-                                                
+
                                             </div>
                                         </div>
                                         <div class="cardBarang">
@@ -738,6 +738,13 @@
                                                     <input type="hidden" name="kotaInput" id="kotaInput" >  
                                                     <input type="hidden" name="dataKodePos" id="dataKodePos" >
                                                     <input type="hidden" name="jumlahPemesanan" value="1" id="jumlahPemesanan">
+
+                                                    <input type="hidden" name="email_send" style="color: #737373;" id="email_send" >
+                                                    <input type="hidden" name="kode_pemesanan_send" style="color: #737373;" id="kode_pemesanan_send"  >
+                                                    <input type="hidden" name="produk_send" style="color: #737373;" id="produk_send" >
+                                                    <input type="hidden" name="jumlah_send_data" style="color: #737373;" id="jumlah_send_data"  >
+                                                    <input type="hidden" name="waktu_pemesanan_send" style="color: #737373;" id="waktu_pemesanan_send"  >   
+                                                    <input type="hidden" name="total_harga_yang_harus_dibayar_send" style="color: #737373;" id="total_harga_yang_harus_dibayar_send" >
                                                 </div>
                                             </div>
                                         </div>
@@ -753,7 +760,7 @@
                                             <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
                                                 <div class="marginLeft10 floatLeftCartData">
                                                     <input type="hidden" name="ongkir"  style="color: #737373;" id="ongkir" class="input-textDataUser-false" >
-                                                    <input type="text" name="ongkir_tampil"  style="color: #737373;" id="ongkir_tampil" class="input-textDataUser-false" disabled>
+                                                    <input type="text" name="ongkir_tampil"  style="color: #737373;background-color: transparent;" id="ongkir_tampil" class="input-textDataUser-false" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -772,7 +779,7 @@
                                             <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
                                                 <div class="marginLeft10 floatLeftCartData">
                                                     <input type="hidden" name="totalBayarKeseluruhan"  style="color: #737373;" id="totalBayarKeseluruhan" class="input-textDataUser-false"  >
-                                                    <input type="text" name="totalBayarKeseluruhan_tampil"  style="color: #737373;" id="totalBayarKeseluruhan_tampil" class="input-textDataUser-false" disabled>
+                                                    <input type="text" name="totalBayarKeseluruhan_tampil"  style="color: #737373;background-color: transparent;" id="totalBayarKeseluruhan_tampil" class="input-textDataUser-false" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -793,8 +800,8 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCart.js?v=2.2.2"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOut.js?v=2.2.2"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenCartV1.js?v=1.1.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV1.js?v=1.1.1"></script>
 </body>
 </html>
 

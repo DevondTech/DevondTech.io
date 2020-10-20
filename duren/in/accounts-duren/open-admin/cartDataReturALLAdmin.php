@@ -26,7 +26,7 @@
         <div class="paddingtopData1">
             <div class="card-textTitleLarge-Black">
                 <div class="textTitleLarge-Black" >
-                   Pengajuan Retur
+                   Data Retur
                 </div>
             </div>
             <br />
@@ -63,7 +63,7 @@
 <!-- Datatables -->
 <script type="text/javascript" src="../datatable/newJS/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
-<script src="../js/pages/admin/cartDataReturAdminAll.js"></script>
+<script src="../js/pages/admin/cartDataReturAdminAll.js?v=1.2.1"></script>
 </body>
 </html>
 

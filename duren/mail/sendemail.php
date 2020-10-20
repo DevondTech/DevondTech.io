@@ -11,20 +11,21 @@ $alert = '';
 
 if(isset($_POST['submit'])){
 
-  $email = 'support@kingfruit.co.id';
+  $email = 'admin@kingfruit.co.id';
 
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'srv103.niagahoster.com';
+    $mail->Host = 'kingfruit.co.id';
     $mail->SMTPAuth = true;
-    $mail->Username = 'support@kingfruit.co.id'; 
+    $mail->Username = 'admin@kingfruit.co.id'; 
     $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 
     $mail->setFrom($email); // Gmail address which you used as SMTP server
-    $mail->addAddress('echorockers@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+    $mail->addAddress('echorockers@gmail.com'); 
+    $mail->addBcc('infokingfruit@gmail.com');
 
     $mail->isHTML(true);
     $mail->Subject = 'Message Received (Contact Page)';

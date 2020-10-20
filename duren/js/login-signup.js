@@ -122,7 +122,7 @@ $('document').ready(function()
       success :  function(response)
       {      
         if(response == "checkPassword"){
-          alert('Password Yang Anda Masukan Salah Atau Anda Belum Terdaftar') ; 
+          alert('E-mail Yang Anda Masukan Salah Atau Anda Belum Terdaftar') ; 
           $("#btn-login").html('Login');
         }
         else if(response == "KodeSign1"){
@@ -169,7 +169,7 @@ $('document').ready(function()
         success :  function(response)
         {      
           if(response == "checkPassword"){
-            alert('Password Yang Anda Masukan Salah Anda Belum Terdaftar') ; 
+            alert('E-mail Yang Anda Masukan Salah Anda Belum Terdaftar') ; 
             $("#btn-login").html('Login');
           }
           else if(response == "KodeSign1"){

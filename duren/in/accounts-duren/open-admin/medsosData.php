@@ -165,7 +165,7 @@
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/admin/medsosDataAdmin.js"></script>
+<script type="text/javascript" src="../js/pages/admin/medsosDataAdmin.js?v=1.2.1"></script>
 </body>
 
 </html>

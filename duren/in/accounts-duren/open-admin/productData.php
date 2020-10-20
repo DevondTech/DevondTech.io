@@ -81,7 +81,7 @@
 <!-- Datatables -->
 <script type="text/javascript" src="../datatable/newJS/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
-<script src="../js/pages/admin/productDataAdmin.js"></script>
+<script src="../js/pages/admin/productDataAdmin.js?v=1.2.1"></script>
 <script src="../js/jquery.redirect.js"></script>
 
 <!-- <div id="open-updateStokProduct" class="modal fade" >

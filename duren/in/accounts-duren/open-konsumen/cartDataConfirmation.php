@@ -227,7 +227,7 @@
 <script src="../js/action.js"></script>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmation.js?v=1.9.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmation.js?v=2.1.1"></script>
 
 </body>
 </html>

@@ -22,29 +22,7 @@ $('#btnUpdateFoto').on('click', function(e){
           success :  function(response)
           { 
             if(response == "Success"){
-              $("#btnUpdateFoto").html('SIMPAN');
-              $('#foto').val('');
-              $('#open-updateFoto').modal('hide');
-              
-              $.ajax({
-                type: "GET",
-                url: "../../../conn/data2/cartProcess/cartProcess.php/?selectToDataFotoRetur",
-                contentType: 'application/json; charset=utf-8',
-                dataType: 'json',
-                success: function(selectToDataFotoRetur) { 
-                    var DataPayment = jQuery.parseJSON(selectToDataFotoRetur);
-                    var DataFoto = DataPayment[0].gambar_barang_retur;
-                    var DataFotoNull = '../images/uploadImage.png';
-                    if(DataFoto == '' || DataFoto == null){
-                        $('#dataFotoRetur').attr('src', DataFotoNull);
-                        $('#foto_check').val('0');
-                    }
-                    else{
-                        $('#dataFotoRetur').attr('src', DataFoto);
-                        $('#foto_check').val('1');
-                    } 
-                }
-              });
+              location.reload();
             }     
             else if(response == "dataCheck"){
               alert('Gagal Mengupload Foto, Silahkan Pastikan Foto Anda Tipe Foto');

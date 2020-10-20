@@ -279,8 +279,8 @@
     </div>
 </div>
 <script src="../js/action.js"></script>
-<script type="text/javascript" src="../js/pages/konsumen/cartDataKonsumenCartCommentProduct.js"></script>
-<script type="text/javascript" src="../js/pages/konsumen/createDataCommentProduct.js"></script>
+<script type="text/javascript" src="../js/pages/konsumen/cartDataKonsumenCartCommentProduct.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/pages/konsumen/createDataCommentProduct.js?v=1.2.1"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

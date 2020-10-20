@@ -80,7 +80,7 @@
         </a>
     </div>
 </div>
-<script src="../js/action.js?v=1.2.1"></script>
+<script src="../js/action.js?v=1.3.1"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

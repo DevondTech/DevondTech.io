@@ -132,51 +132,10 @@
 </head>
 <body class="bd-w">
 <div id="FinishingProcess">
-    <div id="contentDataFinishingProcess">
-        <div class="divPositionContentTop">
-            <div class="card-textTitleLarge-Black">
-                <div class="textTitleLarge-Black" >
-                    Status Pemesanan
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="positionDataNull">
-                <div class="row">
-                    <div class="borderImgLeft col-lg-6 col-md-6 col-sm-6">
-                        <a  style="color:#2d472c;">
-                            <img src="../images/icon png/barang-dikirim.png" class="imgDataNull">
-                            <div class="textClickToProduct">Barang Anda Sedang Dikirim</div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="card-buttonSelectPic">
-                            <div class="margin-auto">
-                                <form method="POST" id="createConfirFinishDataForm">
-                                    <input type="hidden" name="b" id="b">
-                                    <button id="buttonComment" class="buttonGreen">Konfirmasi Barang Diterima</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="textOr">Or</div>
-                        </div>
-                        <div class="card-buttonSelectPic">
-                            <div class="margin-auto">
-                                <form method="POST" id="createReturDataForm">
-                                    <input type="hidden" name="f" id="f">
-                                    <button id="buttonRetur" class="buttonGreen">Pengembalian Barang</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 </div>
 <script src="../js/action.js"></script>
-<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShipped.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShipped.js?v=1.4.1"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

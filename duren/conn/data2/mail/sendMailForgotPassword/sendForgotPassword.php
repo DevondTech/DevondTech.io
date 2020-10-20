@@ -11,7 +11,7 @@ $alert = '';
   $emailTo = $_GET['email'];
   $checkCode = $_GET['checkCode'];
 
-  $email = 'support@kingfruit.co.id';
+  $email = 'admin@kingfruit.co.id';
   $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -94,9 +94,9 @@ $alert = '';
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'srv103.niagahoster.com';
+    $mail->Host = 'kingfruit.co.id';
     $mail->SMTPAuth = true;
-    $mail->Username = 'support@kingfruit.co.id'; 
+    $mail->Username = 'admin@kingfruit.co.id'; 
     $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';

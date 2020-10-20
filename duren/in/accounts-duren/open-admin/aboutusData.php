@@ -167,7 +167,7 @@
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/admin/aboutusDataAdmin.js"></script>
+<script type="text/javascript" src="../js/pages/admin/aboutusDataAdmin.js?v=1.2.1"></script>
 </body>
 
 </html>

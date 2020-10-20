@@ -88,7 +88,7 @@
                   Forgot Password
                 </div>
                 <div class="" style="color:#CEA32B;font-size: 15px;margin-top: 20px;" >
-                  Silahkan massukan kode verifikasi yang terlah dikirim ke E-mail anda
+                  Silahkan masukan kode verifikasi yang telah dikirim ke E-mail anda
                 </div>
                 <div class="paddingTopBottom10" >
                   <input type="text" class="form-control" name="kode" id="kode" >

@@ -11,6 +11,7 @@ $(document).ready(function(){
  			var DataDetailRetur = jQuery.parseJSON(dataReturCallData);
  			var id_retur = DataDetailRetur[0].id_retur; 
  			var kode_retur = DataDetailRetur[0].kode_retur; 
+            var idPemesanan = DataDetailRetur[0].id_pemesanan; 
  			var waktu_retur = DataDetailRetur[0].waktu_retur; 
  			var nama_lengkap = DataDetailRetur[0].nama_lengkap; 
  			var pesan_retur = DataDetailRetur[0].pesan_retur; 
@@ -21,7 +22,7 @@ $(document).ready(function(){
             var bank_asal = DataDetailRetur[0].bank_asal; 
             var total_harga_yang_harus_dibayar = DataDetailRetur[0].total_harga_yang_harus_dibayar;
             var gambar_barang_retur = DataDetailRetur[0].gambar_barang_retur; 
-    
+            
             $('#kode_retur').val(kode_retur); 
             $('#waktu_retur').val(waktu_retur); 
             $('#nama_lengkap').val(nama_lengkap); 
@@ -33,6 +34,7 @@ $(document).ready(function(){
             $('#bank_asal').val(bank_asal);
             $('#total_harga_yang_harus_dibayar').val(total_harga_yang_harus_dibayar); 
             $('#gambar_barang_retur').val(gambar_barang_retur); 
+           /* $('#putID').val(idPemesanan); */
             
             var totalNumberString = total_harga_yang_harus_dibayar.toString(),
                 totalSisa    = totalNumberString.length % 3,

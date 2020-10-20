@@ -25,7 +25,7 @@
         display: block;
         margin: auto;
         width: 250px;
-        height: 250px;
+        height: auto;
     }
 </style>
 </head>
@@ -206,7 +206,7 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/admin/cartDataSalesDetailAdmin.js?v=1.2.1"></script>
+<script src="../js/pages/admin/cartDataSalesDetailAdmin.js?v=1.3.1"></script>
 </body>
 
 </html>

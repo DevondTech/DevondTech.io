@@ -177,7 +177,7 @@
     </div>
 
 <script src="../js/action.js"></script>
-<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShipped.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShipped.js?v=1.3.1"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

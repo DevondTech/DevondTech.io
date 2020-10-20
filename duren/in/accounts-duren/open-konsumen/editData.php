@@ -216,9 +216,9 @@
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
-<script type="text/javascript" src="../js/pages/updateDataFoto.js?v=1.2.2"></script>
-<script src="../js/pages/editDataTampil.js?v=1.1.6"></script>
-<script src="../js/pages/editData.js?v=1.1.6"></script>
+<script type="text/javascript" src="../js/pages/updateDataFoto.js?v=1.3.2"></script>
+<script src="../js/pages/editDataTampil.js?v=1.2.1"></script>
+<script src="../js/pages/editData.js?v=1.2.1"></script>
 
 <div id="open-updateFoto" class="modal fade" >
     <div class="modal-dialog modal-sm">

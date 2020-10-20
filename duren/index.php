@@ -81,6 +81,10 @@
       padding-top: 40px;
     }
 
+    #medsosTopPhone{
+      display: none;
+    }
+
     @media(max-width: 991px){
       .paddingBottomCardMinTablet{
         padding-bottom: 15px;
@@ -95,6 +99,10 @@
         border-radius: 8px;
         border: 1px solid #9f9f9f;
         margin-left: 15px;
+      }
+
+      #medsosTopPhone{
+        display: block;
       }
     }
   </style>
@@ -195,10 +203,8 @@
             <div>
             King Fruit  
             </div>
-            <div style="font-size: 14px;">
+            <div style="font-size: 14px;" id="topText">
               
-            Kini waktunya durian LOKAL jadi FENOMENAL!
-            King Fruit menghadirkan buah durian dengan jaminan kualitas rasa terbaik dari masa panen pilihan, dengan PREMIUM QUALITY tergambar dalam ketebalan daging, konsisten rasa yang LEGIT, MANIS dan pasti TIDAK TERLU
 
             </div>
           </div>      
@@ -213,18 +219,18 @@
     </div>
     
     <div>
-      <ul class="ul-medsos-icon-top">
+      <ul class="ul-medsos-icon-top" id="medsosTopPhone">
         <li class="li-medsos-hr-top">
           <div class="vl"></div>
         </li>
         <li class="li-medsos-icon-top">
-          <img src="images/icon/facebook.png"   class=" img-icon-top">
+          <a href="" id="facebook1"><img src="images/icon/facebook.png"   class=" img-icon-top"></a>
         </li>
         <li class="li-medsos-icon-top">
-          <img src="images/icon/instagram.png" class=" img-icon-top">
+          <a href="" id="instagram1" ><img src="images/icon/instagram.png" class=" img-icon-top"></a>
         </li>
         <li class="li-medsos-icon-top">
-          <img src="images/icon/whatsapp.png" class=" img-icon-top">
+          <a href="" id="whatsapp1"><img src="images/icon/whatsapp.png" class=" img-icon-top"></a>
         </li>
       </ul>
     </div>
@@ -326,10 +332,10 @@
                   <div class="textblack12-regular-detailProduct">
                     <div>
                       <div class="Star-detailProduct">5 Star</div>
-                      <div class="percentageStar-detailProduct">90 %</div>
+                      <div class="percentageStar-detailProduct">100 %</div>
                       <div class="">
                       <div class="height-progress-detailProduct progress">
-                        <div class="progress-bar-detailProduct progress-bar" role="progressbar" style="width: 90%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar-detailProduct progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       </div>
                     </div>
@@ -337,10 +343,10 @@
                   <div class="textblack12-regular-detailProduct">
                     <div>
                       <div class="Star-detailProduct" >4 Star</div>
-                      <div class="percentageStar-detailProduct">10 %</div>
+                      <div class="percentageStar-detailProduct">0 %</div>
                       <div class="">
                       <div class="height-progress-detailProduct progress">
-                        <div class="progress-bar-detailProduct progress-bar" role="progressbar" style="width: 10%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar-detailProduct progress-bar" role="progressbar" style="width: 0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       </div>
                     </div>
@@ -399,16 +405,16 @@
                 <div class="divCardImage-small-detailProduct">
                   <div class="divImage-smallCenter-detailProduct">
                     <div class="image-small-detailProduct">
-                      <img src="images/icon/facebook-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                      <a href="" id="facebook2"><img src="images/icon/facebook-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
                     <div class="image-small-detailProduct">
-                      <img src="images/icon/whatsapp-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                      <a href="" id="whatsapp2"><img src="images/icon/whatsapp-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
                     <div class="image-small-detailProduct">
-                      <img src="images/icon/twitter-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                      <a href="" id="twitter2"><img src="images/icon/twitter-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
                     <div class="image-small-detailProduct">
-                      <img src="images/icon/instagram-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                      <a href="" id="instagram2"><img src="images/icon/instagram-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
                   </div>
                 </div>
@@ -429,7 +435,7 @@
                     <img src="images/icon/duren-1.png"  class="lazy " width="130px">
                   </div>
                   <div class="advantages-text-bold">KUALITAS TERBAIK</div>
-                  <div class="advantages-text-regular">Premium Quality</div>
+                  <!-- <div class="advantages-text-regular">Premium Quality</div> -->
                 </div>
               </div>
             </div>
@@ -440,11 +446,11 @@
                     <img src="images/icon/duren-2.png"  class="lazy " width="130px">
                   </div>
                   <div class="advantages-text-bold">GARANSI UANG KEMBALI</div>
-                  <div class="advantages-text-regular">
+                  <!-- <div class="advantages-text-regular">
                     Ilam tristique. Integ
                     <br />
                     Ilam tristique. Integ
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -455,11 +461,11 @@
                     <img src="images/icon/duren-3.png"  class="lazy " width="130px">
                   </div>
                   <div class="advantages-text-bold">TERPERCAYA</div>
-                  <div class="advantages-text-regular">
+                  <!-- <div class="advantages-text-regular">
                     Ilam tristique. Integ
                     <br />
                     Ilam tristique. Integ
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -470,11 +476,11 @@
                     <img src="images/icon/duren-4.png" class="lazy " width="130px">
                   </div>
                   <div class="advantages-text-bold">BEBAS PENGAWET</div>
-                  <div class="advantages-text-regular">
+                  <!-- <div class="advantages-text-regular">
                     Ilam tristique. Integ
                     <br />
                     Ilam tristique. Integ
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -560,16 +566,16 @@
                 </div>
                 <div class="">
                     <div class="image-small-detailProduct">
-                      <img src="images/icon/facebook-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                      <a href="" id="facebook3"><img src="images/icon/facebook-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
                     <div class="image-small-detailProduct">
-                      <img src="images/icon/whatsapp-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                      <a href="" id="whatsapp3"><img src="images/icon/whatsapp-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
                     <div class="image-small-detailProduct">
-                      <img src="images/icon/twitter-2.png"  class="lazy imageMedsos-smallCenter-detailProduct">
+                      <a href="" id="twitter3"><img src="images/icon/twitter-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
                     <div class="image-small-detailProduct">
-                      <img src="images/icon/instagram-2.png" class="lazy imageMedsos-smallCenter-detailProduct">
+                      <a href="" id="instagram3"><img src="images/icon/instagram-2.png" class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
                   </div>
                 <div></div>
@@ -591,8 +597,8 @@
     <div id="">
       <div class="open-chat-modal" style="right: -5px">
         <div class="div-icon-chat" >
-          <a href="https://api.whatsapp.com/send?phone=6281311993939">
-            <div class="button-icon-chat" style="background: #00b551;padding-left: 8px;padding-right: 8px;border-radius: 10px;padding-top: 8px;padding-bottom: 8px;">
+          <a href="https://api.whatsapp.com/send?phone=6281311993939" id="whatsapp4">
+            <div class="button-icon-chat" style="background: #2d472c;padding-left: 8px;padding-right: 8px;border-radius: 10px;padding-top: 8px;padding-bottom: 8px;">
               <img class="icon-chat" src="images/wa.png"> 
             </div>
           </a>
@@ -645,7 +651,7 @@
 <script type="text/javascript" src="js/ajax/jquery.min.js" ></script>
 <script type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript" src="js/slideSmall.js"></script>
-<script type="text/javascript" src="js/durian.js?v=1.5.1"></script>
+<script type="text/javascript" src="js/durian.js?v=2.1.1"></script>
 <script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.6.1"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){

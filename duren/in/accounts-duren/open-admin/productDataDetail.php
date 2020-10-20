@@ -329,8 +329,8 @@
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/admin/productDetailDataAdmin.js"></script>
-<script type="text/javascript" src="../js/pages/admin/gambarUploadProdukAdmin.js"></script>
+<script type="text/javascript" src="../js/pages/admin/productDetailDataAdmin.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/pages/admin/gambarUploadProdukAdmin.js?v=1.2.1"></script>
 <div id="open-uploadGambar1Produk" class="modal fade" >
     <div class="modal-dialog modal-sm">
         <div class="modal-content w100">

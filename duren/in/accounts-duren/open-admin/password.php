@@ -96,7 +96,7 @@
     
 </div>
 
-<script src="../js/pages/password.js?v=1.1.3"></script>
+<script src="../js/pages/password.js?v=1.2.1"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

@@ -176,8 +176,9 @@ $(document).ready(function(){
           hargaDiskonRupiah += hargaDiskonSeparator + hargaDiskonRibuan.join('.');
       }
       $('#judulProduk').text(PrintDetail_nama_produk);
-      $('#detail1Produk').text(PrintDetail_detail1_produk);
-      $('#detail2Produk').text(PrintDetail_detail2_produk);
+      $('#detail1Produk').text(PrintDetail_detail1_produk+' '+PrintDetail_detail2_produk);
+      $('#topText').text(PrintDetail_detail1_produk+' '+PrintDetail_detail2_produk);
+      /*$('#detail2Produk').text(PrintDetail_detail2_produk);*/
       $('#hargaProduk').text('Rp '+hargaRupiah+',00');
       $('#hargaDiskon').text('Rp '+hargaDiskonRupiah+',00');
       
@@ -216,6 +217,62 @@ $(document).ready(function(){
       else{
         $('#imgDataSmall4').attr('src', '../in/accounts-duren/images/produk/'+gambar4_productView);
       }
+    }
+  }); 
+  
+  $.ajax({
+    type: 'POST',
+    url: '../conn/data2/companyProfile/medsos_data.php?selectFacebook',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    success: function(selectFacebook) { 
+      var DataFacebook = jQuery.parseJSON(selectFacebook);
+      var dataFacebook = DataFacebook[0].link_medsos;
+      $('#facebook1').attr('href', dataFacebook);
+      $('#facebook2').attr('href', dataFacebook);
+      $('#facebook3').attr('href', dataFacebook);
+    }
+  }); 
+
+  $.ajax({
+    type: 'POST',
+    url: '../conn/data2/companyProfile/medsos_data.php?selectInstagram',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    success: function(selectInstagram) { 
+      var DataInstagram = jQuery.parseJSON(selectInstagram);
+      var dataInstagram = DataInstagram[0].link_medsos;
+      $('#instagram1').attr('href', dataInstagram);
+      $('#instagram2').attr('href', dataInstagram);
+      $('#instagram3').attr('href', dataInstagram);
+    }
+  }); 
+
+  $.ajax({
+    type: 'POST',
+    url: '../conn/data2/companyProfile/medsos_data.php?selectTwitter',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    success: function(selectTwitter) { 
+      var DataTwitter = jQuery.parseJSON(selectTwitter);
+      var dataTwitter = DataTwitter[0].link_medsos;
+      $('#twitter2').attr('href', dataTwitter);
+      $('#twitter3').attr('href', dataTwitter);
+    }
+  }); 
+
+  $.ajax({
+    type: 'POST',
+    url: '../conn/data2/companyProfile/medsos_data.php?selectWhatsapp',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    success: function(selectWhatsapp) { 
+      var DataWhatsapp = jQuery.parseJSON(selectWhatsapp);
+      var dataWhatsapp = DataWhatsapp[0].link_medsos;
+      $('#whatsapp1').attr('href', dataWhatsapp);
+      $('#whatsapp2').attr('href', dataWhatsapp);
+      $('#whatsapp3').attr('href', dataWhatsapp);
+      $('#whatsapp4').attr('href', dataWhatsapp);
     }
   }); 
 

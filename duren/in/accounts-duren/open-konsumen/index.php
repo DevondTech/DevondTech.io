@@ -19,7 +19,7 @@
           document.location='../../../login'</script>");
       }
     $id_user = $_SESSION['id_user'];
-    $textData = $_POST['textData'];
+    $textData = $_GET['textData'];
     ?>
    
     <meta charset="UTF-8">
@@ -293,7 +293,7 @@
     <!-- Demo Js -->
     <script src="../js/demo.js"></script>
     <!-- Flash Js -->
-    <script src="../js/pages/konsumen/konsumenData.js?v=1.4.1"></script>
+    <script src="../js/pages/konsumen/konsumenData.js?v=1.6.1"></script>
     <!-- Scrol -->
     <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
