@@ -141,9 +141,6 @@
                                     Nomor
                                 </td>
                                 <td class="table-tdYellowHeader">
-                                    Username
-                                </td>
-                                <td class="table-tdYellowHeader">
                                     Nama Lengkap
                                 </td>
                                 <td class="table-tdYellowHeader">

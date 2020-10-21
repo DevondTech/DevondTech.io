@@ -2,15 +2,20 @@
 
     if(isset($_GET['callUserDatas'])){
         session_start();
-        require 'config.php'; 
-        $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        $query = "SELECT * FROM view_data_all_user where id_user = '$id_user' ";
-        $result = $db->query($query); 
+        if($id_user!=''){
+            require 'config.php'; 
+            $json = json_decode(file_get_contents('php://input'), true);
+            $query = "SELECT * FROM view_data_all_user where id_user = '$id_user' ";
+            $result = $db->query($query); 
 
-        $callUserData = mysqli_fetch_all($result,MYSQLI_ASSOC);
-        $callUserData=json_encode($callUserData);
-        echo json_encode($callUserData);
+            $callUserData = mysqli_fetch_all($result,MYSQLI_ASSOC);
+            $callUserData=json_encode($callUserData);
+            echo json_encode($callUserData);
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }
     }
 
     if(isset($_GET['callDetailUserDatas'])){

@@ -19,6 +19,7 @@
                 $_SESSION['nama_lengkap']=$baris['nama_lengkap'];
                 $_SESSION['foto']=$baris['foto'];
                 $_SESSION['email']=$baris['email'];
+                $_SESSION['id_status_user'] = $baris['id_status_user'];
                 $id_status_user =  $baris['id_status_user'];
                 if($id_status_user=='1'){
                     echo "KodeSign1";
@@ -57,6 +58,7 @@
             $_SESSION['nama_lengkap']=$baris['nama_lengkap'];
             $_SESSION['foto']=$baris['foto'];
             $_SESSION['email']=$baris['email'];
+            $_SESSION['id_status_user'] = $baris['id_status_user'];
             
             $id_status_user =  $baris['id_status_user'];
             
@@ -159,29 +161,34 @@
         require 'config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        $nama_lengkapUpdate = $_POST['nama_lengkapUpdate']; 
-        $nomor_hpUpdate = $_POST['nomor_hpUpdate']; 
-        $tanggal_lahirUpdate = $_POST['tanggal_lahirUpdate']; 
-        $id_jenis_kelaminUpdate = $_POST['id_jenis_kelaminUpdate']; 
-        $alamatUpdate = $_POST['alamatUpdate']; 
-        $negaraUpdate = $_POST['negaraUpdate']; 
-        $provinsiUpdate = $_POST['provinsiUpdate']; 
-        $kotaUpdate = $_POST['kotaUpdate']; 
-        $kecamatanUpdate = $_POST['kecamatanUpdate']; 
-        $kelurahanUpdate = $_POST['kelurahanUpdate']; 
-        $kode_posUpdate = $_POST['kode_posUpdate']; 
+        if($id_user!=''){
+            $nama_lengkapUpdate = $_POST['nama_lengkapUpdate']; 
+            $nomor_hpUpdate = $_POST['nomor_hpUpdate']; 
+            $tanggal_lahirUpdate = $_POST['tanggal_lahirUpdate']; 
+            $id_jenis_kelaminUpdate = $_POST['id_jenis_kelaminUpdate']; 
+            $alamatUpdate = $_POST['alamatUpdate']; 
+            $negaraUpdate = $_POST['negaraUpdate']; 
+            $provinsiUpdate = $_POST['provinsiUpdate']; 
+            $kotaUpdate = $_POST['kotaUpdate']; 
+            $kecamatanUpdate = $_POST['kecamatanUpdate']; 
+            $kelurahanUpdate = $_POST['kelurahanUpdate']; 
+            $kode_posUpdate = $_POST['kode_posUpdate']; 
 
-        if($nama_lengkapUpdate!=''){
-            $queryUpdateTBLoginUser = "UPDATE tb_login_user SET nama_lengkap='$nama_lengkapUpdate', nomor_hp='$nomor_hpUpdate' WHERE id_user = $id_user";
-            $db->query($queryUpdateTBLoginUser);
+            if($nama_lengkapUpdate!=''){
+                $queryUpdateTBLoginUser = "UPDATE tb_login_user SET nama_lengkap='$nama_lengkapUpdate', nomor_hp='$nomor_hpUpdate' WHERE id_user = $id_user";
+                $db->query($queryUpdateTBLoginUser);
 
-            $queryUpdateTBDataUser = "UPDATE tb_data_user SET id_jenis_kelamin='$id_jenis_kelaminUpdate', tanggal_lahir='$tanggal_lahirUpdate', alamat='$alamatUpdate', negara='$negaraUpdate', provinsi='$provinsiUpdate', id_kota='$kotaUpdate', kecamatan='$kecamatanUpdate', kelurahan='$kelurahanUpdate', kode_pos='$kode_posUpdate' WHERE id_user = $id_user";
-            $db->query($queryUpdateTBDataUser);
+                $queryUpdateTBDataUser = "UPDATE tb_data_user SET id_jenis_kelamin='$id_jenis_kelaminUpdate', tanggal_lahir='$tanggal_lahirUpdate', alamat='$alamatUpdate', negara='$negaraUpdate', provinsi='$provinsiUpdate', id_kota='$kotaUpdate', kecamatan='$kecamatanUpdate', kelurahan='$kelurahanUpdate', kode_pos='$kode_posUpdate' WHERE id_user = $id_user";
+                $db->query($queryUpdateTBDataUser);
 
-            echo "updataUserProfile";   
+                echo "updataUserProfile";   
+            }
+            else{
+                echo "erorDATA";
+            }
         }
         else{
-            echo "erorDATA";
+            header('Location: https://kingfruit.co.id/');
         }
     }
 

@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+$id_user = $_SESSION['id_user'];
+$id_status_user = $_SESSION['id_status_user'];
+if($id_user!='' && $id_status_user=='1'){    
     require( '../../ssp.class.php' );
     require( '../configTwo.php' );
     
@@ -16,7 +19,10 @@
     echo json_encode(
         SSP::simple( $_GET, $dbDetails, $table, $primaryKey, $columns )
     );
-    
+}
+else{
+    header('Location: https://kingfruit.co.id/');
+}    
 ?> 
 
 

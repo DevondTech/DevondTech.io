@@ -130,7 +130,7 @@ $alert = '';
 
     $mail->setFrom($email); 
     $mail->addAddress($emailTo); 
-    $mail->addBcc('infokingfruit@gmail.com');
+    /*$mail->addBcc('infokingfruit@gmail.com');*/
 
     $mail->isHTML(true);
     $mail->Subject = 'Pemesanan Produk kingfruit.co.id';

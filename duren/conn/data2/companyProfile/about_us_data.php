@@ -59,6 +59,4 @@
         echo json_encode($dataAboutUs);
     }
 
-
-
 ?>

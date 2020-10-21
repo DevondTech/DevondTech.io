@@ -153,7 +153,7 @@
 
 	.widthImgLarge{
 		width: 300px;
-		margin-left: 147px;
+		margin-left: 157px;
 	}
 
 	.positionButtonActionRetur{
@@ -194,15 +194,19 @@
 		    float: left;
 		}
 
-		.widthImgLarge{
-			width: auto;
-			padding-right: 15px;
-			padding-left: 15px;
+		.widthImgLarge {
+		    /* width: auto; */
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-left: 0px;
+		    width: 70%;
+		    margin: auto;
 		}
 
 		.positionButtonActionRetur{
 			margin-top: 0px;
 		}
+
 	}
 
 </style>
@@ -219,6 +223,17 @@
             <form method="POST" id="createDataReturForm">
             	<input type="hidden" name="d" id="d">
                 <div class="Card-inputDataUser-paddingTopBottom20px">
+                	<div class="card-inputDataComment" style="width: 100%;" >
+                        <div class="widthImgLarge">
+                        	<div class="positionImgBukti">
+                        		<img id="dataFotoRetur" data-toggle="modal" data-target="#open-updateFoto" src="../images/icon png/tambah-gambar.png" width="100%" style="cursor: pointer;">
+                        	</div>
+                        	<div>
+                        		<input type="hidden" name="foto_check" id="foto_check">
+                        		<div class="textbottomImgBukti">Klik Upload / Ganti Foto Produk</div>
+                        	</div>       
+                        </div>
+                    </div>
                     <div class="card-textDataComment">
                         <div class="textDataComment">
                             Alasan Pengembalian
@@ -232,7 +247,7 @@
                         <div class="textDataComment"></div>
                     </div>
                 </div>
-                <div class="Card-inputDataUser-paddingTopBottom20px">
+                <!-- <div class="Card-inputDataUser-paddingTopBottom20px">
                     <div class="card-textDataComment">
                         <div class="textDataComment"></div>
                     </div>
@@ -250,7 +265,7 @@
                     <div class="card-textDataComment" >
                         <div class="textDataComment"></div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class=" cardButton">
                     <div class="floatRightbutton padRight15px">

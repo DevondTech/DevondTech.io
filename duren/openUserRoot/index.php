@@ -52,21 +52,12 @@
       /* background-color: #ddf7df; */
       margin: 5px;
       border-radius: 8px;
-      border: 1px solid #9f9f9f;
+      border: 1px solid #fff;
     }
 
     .paddingBottomCardMinTablet{
       padding-bottom: 0px;
     }
-
-    .advantages-content {
-      background-color: #f5f5f5;
-      color: #333232;
-      padding-bottom: 50px;
-      padding-top: 25px;
-      padding-top: 40px;
-    }
-    
 
     .detail-product {
       /* height: 100vh; */
@@ -81,9 +72,31 @@
       background-size: cover;
       padding-top: 80px;
     }
-    
+
+    .advantages-content {
+      background-color: #f5f5f5;
+      color: #333232;
+      padding-bottom: 50px;
+      padding-top: 25px;
+      padding-top: 40px;
+    }
+
     #medsosTopPhone{
       display: none;
+    }
+
+    .div-footer-content {
+      background-color: #2d472c;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .advantages-content {
+      background-color: #2d472c;
+      color: #ffffff;
+      padding-bottom: 50px;
+      padding-top: 25px;
+      padding-top: 40px;
     }
 
     @media(max-width: 991px){
@@ -98,7 +111,7 @@
         /* background-color: #ddf7df; */
         margin: 5px;
         border-radius: 8px;
-        border: 1px solid #9f9f9f;
+        border: 1px solid #fff;
         margin-left: 15px;
       }
 
@@ -843,7 +856,7 @@
       <div class="open-chat-modal" style="right: -5px">
         <div class="div-icon-chat" >
           <a href="https://api.whatsapp.com/send?phone=6281311993939" id="whatsapp4">
-            <div class="button-icon-chat" style="background: #2d472c;padding-left: 8px;padding-right: 8px;border-radius: 10px;padding-top: 8px;padding-bottom: 8px;">
+            <div class="button-icon-chat" style="background: #253b24;padding-left: 8px;padding-right: 8px;border-radius: 10px;padding-top: 8px;padding-bottom: 8px;">
               <img class="icon-chat" src="../images/wa.png"> 
             </div>
           </a>

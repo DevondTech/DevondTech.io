@@ -1,7 +1,10 @@
 <?php    
-
+session_start();
+$id_user = $_SESSION['id_user'];
+$id_status_user = $_SESSION['id_status_user'];
+if($id_user!='' && $id_status_user=='1'){
+    
     if(isset($_GET['updateConfirmationPayment'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -19,7 +22,6 @@
     }
 
     if(isset($_GET['updateConfirmationShipped'])){
-        session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -35,5 +37,9 @@
             echo "erorDATA";
         }
     }
+}
+else{
+    header('Location: https://kingfruit.co.id/');
+}
 
 ?>

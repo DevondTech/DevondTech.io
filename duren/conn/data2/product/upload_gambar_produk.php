@@ -1,7 +1,10 @@
 <?php
+session_start();
+$id_user = $_SESSION['id_user'];
+$id_status_user = $_SESSION['id_status_user'];
+if($id_user!='' && $id_status_user=='1'){
 
     if(isset($_GET['uploadGambar1Produk'])){
-        session_start();
         require '../config.php';
         $json = json_decode(file_get_contents('php://input'), true);
         $id_barangGambar1 = $_POST['id_barangGambar1'];
@@ -24,7 +27,6 @@
     }
     
     if(isset($_GET['uploadGambar2Produk'])){
-        session_start();
         require '../config.php';
         $json = json_decode(file_get_contents('php://input'), true);
         $id_barangPOSTGambar2 = $_POST['id_barangPOSTGambar2'];
@@ -47,7 +49,6 @@
     }
 
     if(isset($_GET['uploadGambar3Produk'])){
-        session_start();
         require '../config.php';
         $json = json_decode(file_get_contents('php://input'), true);
         $id_barangPOSTGambar3 = $_POST['id_barangPOSTGambar3'];
@@ -70,7 +71,6 @@
     }
 
     if(isset($_GET['uploadGambar4Produk'])){
-        session_start();
         require '../config.php';
         $json = json_decode(file_get_contents('php://input'), true);
         $id_barangPOSTGambar4 = $_POST['id_barangPOSTGambar4'];
@@ -92,4 +92,8 @@
         else{ echo "dataCheck"; }
     }
 
+}
+else{
+    header('Location: https://kingfruit.co.id/');
+}
 ?>
