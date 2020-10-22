@@ -7,6 +7,7 @@ if($id_user!=''){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
+        $id_status_user = $_SESSION['id_status_user'];
         $admin_tanggal_transfer = $_POST['admin_tanggal_transfer'];
         $admin_nama_pemilik_rekening = $_POST['admin_nama_pemilik_rekening']; 
         $admin_nomor_rekening = $_POST['admin_nomor_rekening']; 
@@ -14,13 +15,27 @@ if($id_user!=''){
         $admin_total_pengembalian_dana = $_POST['admin_total_pengembalian_dana']; 
         $id_retur = $_POST['a']; 
         $id_status_retur = 3;
-        if($id_user!=''){
+        $callData = $db->query("select kode_retur FROM tb_retur_pembelian WHERE id_retur='$id_retur'");
+        $callDataToPrint = $callData->fetch_object();
+        $kode_pemesanan = $callDataToPrint->kode_retur;
+        $callDataUser = $db->query("select id_user_retur FROM tb_retur_pembelian WHERE id_retur='$id_retur'");
+        $callDataUserToPrint = $callDataUser->fetch_object();
+        $id_user_retur = $callDataUserToPrint->id_user_retur;
+        $pesan_notifikasi ='Pengajuan Retur Anda Dikonfirmasi, Dengan Kode Retur: '.$kode_pemesanan;
+        $id_status_notifikasi = 7;
+        $id_status_baca = 1;
+        $id_user_baca = 1;
+
+        if($id_user!='' && $id_status_user=='1'){
             $query = "UPDATE tb_retur_pembelian SET  admin_nama_pemilik_rekening='$admin_nama_pemilik_rekening', admin_tanggal_transfer='$admin_tanggal_transfer', admin_nomor_rekening='$admin_nomor_rekening', admin_bank_asal='$admin_bank_asal', admin_total_pengembalian_dana='$admin_total_pengembalian_dana', id_status_retur='$id_status_retur' WHERE id_retur = '$id_retur' ";
             $db->query($query);
+            $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, id_user)
+                            VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca', '$id_user_retur')";   
+            $db->query($queryNotif); 
             echo "updateConfirmationReturTransferSuccess";   
         }
         else{
-            echo "erorDATA";
+            header('Location: https://kingfruit.co.id/');
         }
     }
 
@@ -28,16 +43,30 @@ if($id_user!=''){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
+        $id_status_user = $_SESSION['id_status_user'];
         $id_retur = $_POST['b']; 
         $id_status_retur = 4;
         $admin_total_pengembalian_dana = 0;
-        if($id_user!=''){
+        $callData = $db->query("select kode_retur FROM tb_retur_pembelian WHERE id_retur='$id_retur'");
+        $callDataToPrint = $callData->fetch_object();
+        $kode_pemesanan = $callDataToPrint->kode_retur;
+        $callDataUser = $db->query("select id_user_retur FROM tb_retur_pembelian WHERE id_retur='$id_retur'");
+        $callDataUserToPrint = $callDataUser->fetch_object();
+        $id_user_retur = $callDataUserToPrint->id_user_retur;
+        $pesan_notifikasi ='Pengajuan Retur Anda Ditolak / Tidak Diterima, Dengan Kode Retur: '.$kode_pemesanan;
+        $id_status_notifikasi = 7;
+        $id_status_baca = 1;
+        $id_user_baca = 1;
+        if($id_user!='' && $id_status_user=='1'){
             $query = "UPDATE tb_retur_pembelian SET admin_total_pengembalian_dana='$admin_total_pengembalian_dana', id_status_retur='$id_status_retur' WHERE id_retur = '$id_retur' ";
             $db->query($query);
+            $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, id_user)
+                            VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca','$id_user_retur')";   
+            $db->query($queryNotif); 
             echo "confirmationFormDataRefuseSuccess";   
         }
         else{
-            echo "erorDATA";
+            header('Location: https://kingfruit.co.id/');
         }
     }
 
@@ -131,6 +160,7 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
+        $nama_lengkap = $_SESSION['nama_lengkap'];
         $jumlah_pemesanan = $_POST['jumlahPemesanan']; 
         $alamatInput = $_POST['alamatInput']; 
         $negaraInput = $_POST['negaraInput']; 
@@ -146,7 +176,10 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         $totalBayarKeseluruhan = $_POST['totalBayarKeseluruhan']; 
         $id_proses_pemesanan = 2;
         $id_proses_pemesanan_from_DB = 1;
-
+        $pesan_notifikasi ='Pemesanan Barang Atas Nama '.$nama_lengkap.' Dibuat. Dengan Jumlah Pemesanan '.$jumlah_pemesanan.' Pack';
+        $id_status_notifikasi = 1;
+        $id_status_baca = 1;
+        $id_user_baca = 2;
         $userData =''; $query = "select * from tb_login_user where id_user='$id_user'"; 
         $result = mysqli_query($db,$query);
         $baris= mysqli_fetch_array($result);
@@ -155,6 +188,10 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
             if($alamatInput!=''){
                 $query = "UPDATE tb_pemesanan SET  jumlah_pemesanan='$jumlah_pemesanan', alamat='$alamatInput', negara='$negaraInput', provinsi='$provinsiInput', kabupaten='$kabupatenInput', kota='$kotaInput', kecamatan='$kecamatanInput', kelurahan='$kelurahanInput', kode_pos='$dataKodePos', id_berat_produk='$id_berat_produk', id_proses_pemesanan='$id_proses_pemesanan', ongkos_kirim='$ongkir', total_harga_perproduk='$total_harga_pemesanan', total_harga_yang_harus_dibayar='$totalBayarKeseluruhan' WHERE id_user = $id_user and id_proses_pemesanan='1'";
                 $db->query($query);
+
+                $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                            VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+                $db->query($queryNotif); 
 
                 echo "updateCheckOutByUserSuccess";   
             }
@@ -269,6 +306,7 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
+        $nama_lengkap = $_SESSION['nama_lengkap'];
         $IdPemesanan = $_POST['IdPemesanan']; 
         $IdProduk = $_POST['IdProduk']; 
         date_default_timezone_set('Asia/Jakarta');
@@ -294,7 +332,10 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         $MetodePembayaran = $_POST['MetodePembayaran']; 
         $gambar_bukti_pembayaran = $_POST['Gambar']; 
         $total_harga_perproduk = $_POST['TotalPerProduk']; 
-
+        $pesan_notifikasi ='Pembayaran Barang Atas Nama '.$nama_lengkap.' Dibuat. Dengan Jumlah Pemesanan '.$JumlahPemesanan.' Pack';
+        $id_status_notifikasi = 2;
+        $id_status_baca = 1;
+        $id_user_baca = 2;
         $id_proses_pemesanan = 3;
         if($id_user!=''){
             $queryPenjualan = "INSERT INTO tb_penjualan(kode_penjualan, waktu_penjualan, id_produk, jumlah_penjualan, id_berat_produk, total_penjualan, id_user, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, ongkos_kirim, id_voucher, metode_pembayaran, nama_pemilik_rekening, tanggal_transfer, no_rekening, bank_asal, gambar_bukti_pembayaran, total_harga_perproduk )
@@ -302,6 +343,10 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
             $db->query($queryPenjualan);     
             $query = "UPDATE tb_pemesanan SET  nama_pemilik_rekening='$nama_pemilik_rekening', tanggal_transfer='$tanggal_transfer', no_rekening='$no_rekening', bank_asal='$bank_asal', id_proses_pemesanan='$id_proses_pemesanan' WHERE id_user = $id_user and id_proses_pemesanan='2'";
             $db->query($query);
+            $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                            VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+            $db->query($queryNotif); 
+
             echo "updateConfirmationPaymentTransferSuccess";   
         }
         else{
@@ -493,11 +538,22 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         $id_status_retur = 2;
         date_default_timezone_set('Asia/Jakarta');
         $waktu_retur = date('Y-m-d H:i:s'); 
+        $callData = $db->query("select kode_pemesanan FROM tb_pemesanan WHERE id_pemesanan='$id_pemesanan'");
+        $callDataToPrint = $callData->fetch_object();
+        $kode_pemesanan = $callDataToPrint->kode_pemesanan;
+        $pesan_notifikasi ='Penjualan Dengan Kode Transaksi: '.$kode_pemesanan.', Diajukan Retur Dengan Alasan: '.$pesan_retur;
+        $id_status_notifikasi = 6;
+        $id_status_baca = 1;
+        $id_user_baca = 2;
+
         if($id_user!=''){
             $query = "UPDATE tb_retur_pembelian SET  waktu_retur='$waktu_retur', pesan_retur='$pesan_retur', id_status_retur='$id_status_retur' WHERE id_pemesanan='$id_pemesanan'";
             $db->query($query);
             $queryPemesanan = "UPDATE tb_pemesanan SET  id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan='$id_pemesanan'";
             $db->query($queryPemesanan);
+            $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                            VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+            $db->query($queryNotif); 
 
             echo "createDataReturProductSuccess";   
         }
@@ -552,12 +608,24 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
             date_default_timezone_set('Asia/Jakarta');
             $tanggal_penilaian_produk = date('Y-m-d H:i:s'); 
             $id_proses_pemesanan = 7;
+
+            $callData = $db->query("select kode_pemesanan FROM tb_pemesanan WHERE id_pemesanan='$id_pemesanan'");
+            $callDataToPrint = $callData->fetch_object();
+            $kode_pemesanan = $callDataToPrint->kode_pemesanan;
+            /*$nama_lengkap = $callDataToPrint->nama_lengkap;*/
+            $pesan_notifikasi ='Penjualan Dengan Kode Transaksi: '.$kode_pemesanan.', Telah Dikomentari: '.$komentar;
+            $id_status_notifikasi = 5;
+            $id_status_baca = 1;
+            $id_user_baca = 2;
+
             $query = "INSERT INTO tb_penilaian_produk(tanggal_penilaian_produk, id_user, id_produk, id_bintang_penilaian_produk,komentar)
                             VALUES('$tanggal_penilaian_produk','$id_user','$id_produk','$id_bintang_penilaian_produk', '$komentar')";   
             $db->query($query);    
             $queryPemesanan = "UPDATE tb_pemesanan SET  id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan='$id_pemesanan'";
             $db->query($queryPemesanan);  
-
+            $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                            VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+            $db->query($queryNotif); 
             echo "Success"; 
         }
         else{

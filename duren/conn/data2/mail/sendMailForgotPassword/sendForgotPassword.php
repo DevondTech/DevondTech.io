@@ -11,7 +11,7 @@ $alert = '';
   $emailTo = $_GET['email'];
   $checkCode = $_GET['checkCode'];
 
-  $email = 'admin@kingfruit.co.id';
+  $email = 'kingfruit.co.id@gmail.com';
   $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -94,10 +94,10 @@ $alert = '';
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'kingfruit.co.id';
+    $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'admin@kingfruit.co.id'; 
-    $mail->Password = 'kingfruit'; 
+    $mail->Username = 'kingfruit.co.id@gmail.com'; // Gmail address which you want to use as SMTP server
+    $mail->Password = 'king@fruit456'; // Gmail address Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 

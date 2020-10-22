@@ -33,7 +33,7 @@
 <div class="divPositionContentTop">
     <div class="card-textTitleLarge-Black">
         <div class="textTitleLarge-Black" >
-            Detail Konfirmasi Pembayaran
+            Detail Konfirmasi Pengiriman
         </div>
     </div>
     <div class="col-divProfileUser">

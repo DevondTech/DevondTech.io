@@ -1,20 +1,75 @@
 $(window).on('load',function(e){
     $("#content-profile").load("profile.php");
 
+    $.ajax({
+     	type: "GET",
+     	url: "../../../conn/data2/notification/selectNotifAdmin.php/?notificationPaymentAdmin",
+     	contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+     	success: function(notificationPaymentAdmin) { 
+ 			var DataPayment = jQuery.parseJSON(notificationPaymentAdmin);
+ 			var notificationPaymentAdmin = DataPayment[0].call_data_notifikasi_panyment;
+ 			if(notificationPaymentAdmin!=0){
+ 				$('#sendPayment').text(notificationPaymentAdmin);
+				$('#sendPayment').attr('style','display:block;');
+ 			}
+ 			else{
+ 				$('#sendPayment').text('');
+				$('#sendPayment').attr('style','display:none;');
+ 			}
+ 		}
+ 	});
+
+ 	$.ajax({
+     	type: "GET",
+     	url: "../../../conn/data2/notification/selectNotifAdmin.php/?notificationReturAdmin",
+     	contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+     	success: function(notificationReturAdmin) { 
+ 			var DataRetur = jQuery.parseJSON(notificationReturAdmin);
+ 			var notificationReturAdmin = DataRetur[0].call_data_notifikasi_retur;
+ 			if(notificationReturAdmin!=0){
+				$('#requestRetur').text(notificationReturAdmin);
+				$('#requestRetur').attr('style','display:block;');
+ 			}
+ 			else{
+ 				$('#requestRetur').text('');
+				$('#requestRetur').attr('style','display:none;');
+ 			}
+ 		}
+ 	});
+
+ 	$.ajax({
+     	type: "GET",
+     	url: "../../../conn/data2/notification/selectNotifAdmin.php/?notificationCommentAdmin",
+     	contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+     	success: function(notificationCommentAdmin) { 
+ 			var DataComment = jQuery.parseJSON(notificationCommentAdmin);
+ 			var notificationCommentAdmin = DataComment[0].call_data_notifikasi_comment;
+ 			if(notificationCommentAdmin!=0){
+				$('#reviewProduct').text(notificationCommentAdmin);
+				$('#reviewProduct').attr('style','display:block;');
+			}
+ 			else{
+ 				$('#reviewProduct').text('');
+				$('#reviewProduct').attr('style','display:none;');
+ 			}
+ 		}
+ 	});
+
 	$.ajax({
      	type: "GET",
      	url: "../../../conn/data2/user_data.php/?callUserDatas",
      	contentType: 'application/json; charset=utf-8',
         dataType: 'json',
      	success: function(callUserData) { 
-
  			var DataUser = jQuery.parseJSON(callUserData);
  			var DataIdUser = DataUser[0].id_user;
  			var DataUserName = DataUser[0].username;
  			var DataNamaLengkap = DataUser[0].nama_lengkap;
  			var DataEmail = DataUser[0].email;
  			var DataFoto = DataUser[0].foto;
-
             $('#nama_lengkap_OnLoginPageHome_Small').text(DataNamaLengkap);
             $('#nama_lengkap_OnLoginPageHome_Large').text(DataNamaLengkap);
             $('#email_OnLoginPageHome_Small').text(DataEmail);
@@ -31,51 +86,55 @@ $(window).on('load',function(e){
             	$('#foto_OnLoginPageHome_Large').attr('src', DataFoto);	
             	$('#foto_OnLoginPageHome_Large_Down').attr('src', DataFoto);
             } 
-
-            /*if data-src*/
-
-            /*var DataFotoNull = '../images/user.png';
-            var DataFotoNull2 = '../images/user2.png';
-            if(DataFoto == '' || DataFoto == null){
-
-            	var imgs = document.getElementsByTagName('img');
-
-				for(var i = 0; i < imgs.length; i++) {
-				  	var currentSrc = imgs[i].getAttribute('src');
-				  	imgs[i].setAttribute('src',''); // remove old src data 
-				  	imgs[i].setAttribute('data-src','currentSrc');
-				  	$('#foto_OnLoginPageHome_Small').attr('data-src', DataFotoNull);
-	            	$('#foto_OnLoginPageHome_Large').attr('data-src', DataFotoNull2);
-	            	$('#foto_OnLoginPageHome_Large_Down').attr('data-src', DataFotoNull2);
-	            	
-				}
-            }
-            else{
-            	var imgs = document.getElementsByTagName('img');
-
-				for(var i = 0; i < imgs.length; i++) {
-				  	var currentSrc = imgs[i].getAttribute('src');
-				  	imgs[i].setAttribute('src',''); // remove old src data 
-				  	imgs[i].setAttribute('data-src','currentSrc');
-	            	$('#foto_OnLoginPageHome_Small').attr('data-src', DataFoto);
-	            	$('#foto_OnLoginPageHome_Large').attr('data-src', DataFoto);	
-	            	$('#foto_OnLoginPageHome_Large_Down').attr('data-src', DataFoto);
-	            }
-            } */         
         }
 	});
 });
 
-//refresh page on browser resize
-/*$(window).bind('resize', function(e)
-{
-  console.log('window resized..');
-  this.location.reload(false); 
-});*/
+$('#review-link').on('click',function(e){
+	$("#content-profile").load("reviewProduct.php");
+	$.ajax({
+	    type : 'POST',
+	    url  : '../../../conn/data2/notification/readNotifAdmin.php/?updateConfirmationReview',
+	    beforeSend: function()
+	    { 
+	     
+	    }, 
+	    success :  function(response)
+	    {
+	      if(response == "updateConfirmationReview"){
+	      	$('#reviewProduct').attr('style','display:none;');
+	      }
+	      else{
+	      	alert('error');
+	      }
+	    }    
+	});
+	return false;
+	
+	$("#finish-link").attr("class","menu-waves-block");
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#medsos-link").attr("class","displayLink-none");
+	$("#about-link").attr("class","displayLink-none");
+
+	$("#review-link").attr("class","active-menu-right");
+});
 
 $('#finish-link').on('click',function(e){
 	$("#content-profile").load("cartDataProcessTransactionFinishAdmin.php");
 	
+	$("#review-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
 	$("#retur-link").attr("class","menu-waves-block");
@@ -98,6 +157,7 @@ $('#finish-link').on('click',function(e){
 $('#sales-link').on('click',function(e){
 	$("#content-profile").load("historySalesAdmin.php");
 	
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
 	$("#retur-link").attr("class","menu-waves-block");
@@ -120,6 +180,7 @@ $('#sales-link').on('click',function(e){
 $('#retur-all-link').on('click',function(e){
 	$("#content-profile").load("cartDataReturALLAdmin.php");
 	
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-link").attr("class","menu-waves-block");
@@ -141,7 +202,24 @@ $('#retur-all-link').on('click',function(e){
 
 $('#retur-link').on('click',function(e){
 	$("#content-profile").load("cartDataReturAdmin.php");
-	
+	$.ajax({
+	    type : 'POST',
+	    url  : '../../../conn/data2/notification/readNotifAdmin.php/?updateConfirmationReturTransfer',
+	    beforeSend: function()
+	    { 
+	     
+	    }, 
+	    success :  function(response)
+	    {
+	      if(response == "updateConfirmationReturTransfer"){
+	      	$('#requestRetur').attr('style','display:none;');
+	      }
+	      else{
+	      	alert('error');
+	      }
+	    }    
+	});
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -164,6 +242,7 @@ $('#retur-link').on('click',function(e){
 $('#ontheway-link').on('click',function(e){
 	$("#content-profile").load("cartDataOnTheWayAndFinishShippedAdmin.php");
 	
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -186,6 +265,7 @@ $('#ontheway-link').on('click',function(e){
 $('#shipped-link').on('click',function(e){
 	$("#content-profile").load("cartDataProcessConfirmationShippedAdmin.php");
 	
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -207,7 +287,24 @@ $('#shipped-link').on('click',function(e){
 
 $('#payment-link').on('click',function(e){
 	$("#content-profile").load("cartDataPaymentAdmin.php");
-
+	$.ajax({
+	    type : 'POST',
+	    url  : '../../../conn/data2/notification/readNotifAdmin.php/?updateConfirmationPaymentTransfer',
+	    beforeSend: function()
+	    { 
+	     
+	    }, 
+	    success :  function(response)
+	    {
+	      if(response == "updateConfirmationPaymentTransfer"){
+	      	$('#sendPayment').attr('style','display:none;');
+	      }
+	      else{
+	      	alert('error');
+	      }
+	    }    
+	});
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -230,6 +327,7 @@ $('#payment-link').on('click',function(e){
 $('#account-edit').on('click',function(e){
 	$("#content-profile").load("editData.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -253,6 +351,7 @@ $('#account-edit').on('click',function(e){
 $('#product-link').on('click',function(e){
 	$("#content-profile").load("productData.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -279,6 +378,7 @@ $('#product-link').on('click',function(e){
 $('#create-user-link').on('click',function(e){
 	$("#content-profile").load("createDataUser.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -304,6 +404,7 @@ $('#create-user-link').on('click',function(e){
 $('#account-edit-link').on('click',function(e){
 	$("#content-profile").load("editData.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -329,6 +430,7 @@ $('#account-edit-link').on('click',function(e){
 $('#account-link').on('click',function(e){
 	$("#content-profile").load("profile.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -354,6 +456,7 @@ $('#account-link').on('click',function(e){
 $('#password-link').on('click',function(e){
 	$("#content-profile").load("password.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -379,6 +482,7 @@ $('#password-link').on('click',function(e){
 $('#notification-link').on('click',function(e){
 	$("#content-profile").load("notificationData.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -403,6 +507,7 @@ $('#notification-link').on('click',function(e){
 $('#company-profile').on('click',function(e){
 	$("#content-profile").load("aboutusData.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -425,6 +530,7 @@ $('#company-profile').on('click',function(e){
 $('#about-link').on('click',function(e){
 	$("#content-profile").load("aboutusData.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");
@@ -447,6 +553,7 @@ $('#about-link').on('click',function(e){
 $('#medsos-link').on('click',function(e){
 	$("#content-profile").load("medsosData.php");
 
+	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
 	$("#retur-all-link").attr("class","menu-waves-block");

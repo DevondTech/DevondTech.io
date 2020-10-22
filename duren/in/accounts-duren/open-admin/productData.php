@@ -18,6 +18,24 @@
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"/>
 <link href="../css/dataUserLogin.css?v=1.1.10" rel="stylesheet" />
+<style type="text/css">
+    .table-tdYellowHeader {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bolder;
+        background-color: rgb(176 255 181);
+    }
+
+    .pagination li.active a {
+        background-color: #2d472c;
+        cursor: pointer;
+    }
+
+    .pagination li a {
+        background-color: #2d472c;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body class="bd-w" >
 <div class="divPositionContentTop">

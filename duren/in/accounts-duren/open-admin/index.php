@@ -52,6 +52,29 @@
     <link href="../css/modif-style.css?v=1.2.1" rel="stylesheet" />
     <link href="../css/flexible.css?v=1.2.1" rel="stylesheet" />
     <!-- <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
+    <style type="text/css">
+        .sidebar .menu .list a span {
+            width: 180px;
+        }
+
+        .positionNotif{
+            font-size: 13px;
+            margin-right: 0px;
+            width: auto;
+            text-align: center;
+            margin-top: 7px;
+            max-width: 40px;
+        }
+
+        .colorNotif{
+            background-color: #2d472c;
+            color: white;
+            border-radius: 15px;
+            padding-left: 6px;
+            padding-right: 6px;
+            max-width: 35px;
+        }
+    </style>
 </head>
 <body class="bd-w">
      
@@ -163,7 +186,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/password.svg" width="20" height="20">
                             </div>
-                            <span ><font class="icon-menu-active">Ubah Password</font></span>
+                            <span><font class="icon-menu-active">Ubah Password</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="product-link">
@@ -180,6 +203,9 @@
                                 <img src="../images/durian/company-edit.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Konfirmasi Pembayaran</font></span>
+                            <div class="positionNotif">
+                                <div class="colorNotif" id="sendPayment" style="display: none;"></div>
+                            </div>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="shipped-link">
@@ -196,6 +222,9 @@
                                 <img src="../images/durian/data-product.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Dalam Pengiriman</font></span>
+                           <!--  <div class="positionNotif">
+                                <div class="colorNotif" style="display: none;"></div>
+                            </div> -->
                         </a>
                     </li>
                     <li class="menu-waves-block" id="finish-link">
@@ -212,6 +241,9 @@
                                 <img src="../images/durian/company-edit.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Pengajuan Retur</font></span>
+                            <div class="positionNotif">
+                                <div class="colorNotif" id="requestRetur" style="display: none;"></div>
+                            </div>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="retur-all-link">
@@ -228,6 +260,17 @@
                                 <img src="../images/durian/data-product.svg" width="20" height="20">
                             </div>
                             <span id=""><font class="icon-menu-active">Data Penjualan</font></span>
+                        </a>
+                    </li>
+                    <li class="menu-waves-block" id="review-link">
+                        <a  id="waves-effect-this" >
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/data-product.svg" width="20" height="20">
+                            </div>
+                            <span id=""><font class="icon-menu-active">Review Produk</font></span>
+                            <div class="positionNotif">
+                                <div class="colorNotif" id="reviewProduct" style="display: none;"></div>
+                            </div>
                         </a>
                     </li>
                   <!--   <li class="menu-waves-block" id="shipped-link">
@@ -314,7 +357,7 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.5.1"></script>
+<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.7.1"></script>
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

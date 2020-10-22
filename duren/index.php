@@ -1,3 +1,4 @@
+<?php include 'mail/sendemail.php'; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,6 +36,65 @@
   <link rel="stylesheet" type="text/css" href="css/chat.css?v=1.0.1">
   <link href="scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <style type="text/css">
+    @media(min-width: 992px){
+      .padF20px{
+        padding-right: 30px;
+      }
+    }
+    
+    .textMailSend{
+      font-size: 16px;
+      padding-bottom: 4px;
+      padding-top: 4px;
+    }
+
+    .positionButtonYellowSend{
+      padding-top: 20px;
+      padding-bottom: 30px;
+      float: right;
+    }
+
+    .buttonYellowSend{
+      background-color: #cda32b;
+      font-size: 25px;
+      padding: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+      min-width: 150px;
+      color: white;
+      border: 1px solid #cda32b;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttonYellowSend:hover{
+      background-color: #906c05;
+      font-size: 25px;
+      padding: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+      min-width: 150px;
+      color: white;
+      border: 1px solid #cda32b;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .fotterCol{
+      padding-right: 0px;
+      padding-left: 30px;
+    }
+
+    .col20-card-top {
+      min-height: 160px;
+    }
+
+    .advantages-text-bold {
+      font-weight: bolder;
+      font-size: 14px;
+      padding-bottom: 15px;
+    }
+
     .aLink{
       color: white;
     }
@@ -446,9 +506,9 @@
               <div class="cardAdvantagesColor">
                 <div class="content-text-advantages">
                   <div class="col20-card-top">
-                    <img src="images/icon/duren-1.png"  class="lazy " width="130px">
+                    <img src="images/icon/premium.png"  class="lazy " width="130px">
                   </div>
-                  <div class="advantages-text-bold">KUALITAS TERBAIK</div>
+                  <div class="advantages-text-bold">PREMIUM QUALITY</div>
                   <!-- <div class="advantages-text-regular">Premium Quality</div> -->
                 </div>
               </div>
@@ -457,9 +517,9 @@
               <div class="cardAdvantagesColor">
                 <div class="content-text-advantages">
                   <div class="col20-card-top">
-                    <img src="images/icon/duren-2.png"  class="lazy " width="130px">
+                    <img src="images/icon/higenis.png"  class="lazy " width="130px">
                   </div>
-                  <div class="advantages-text-bold">GARANSI UANG KEMBALI</div>
+                  <div class="advantages-text-bold">HYGINIECALLY PACKAGED</div>
                   <!-- <div class="advantages-text-regular">
                     Ilam tristique. Integ
                     <br />
@@ -472,9 +532,9 @@
               <div class="cardAdvantagesColor">
                 <div class="content-text-advantages">
                   <div class="col20-card-top">
-                    <img src="images/icon/duren-3.png"  class="lazy " width="130px">
+                    <img src="images/icon/onestop.png"  class="lazy " width="130px">
                   </div>
-                  <div class="advantages-text-bold">TERPERCAYA</div>
+                  <div class="advantages-text-bold">ONE STOP DESTINATION </div>
                   <!-- <div class="advantages-text-regular">
                     Ilam tristique. Integ
                     <br />
@@ -487,9 +547,9 @@
               <div class="cardAdvantagesColor">
                 <div class="content-text-advantages">
                   <div class="col20-card-top">
-                    <img src="images/icon/duren-4.png" class="lazy " width="130px">
+                    <img src="images/icon/taste.png" class="lazy " width="130px">
                   </div>
-                  <div class="advantages-text-bold">BEBAS PENGAWET</div>
+                  <div class="advantages-text-bold">UNFORGETTABLE TASTE</div>
                   <!-- <div class="advantages-text-regular">
                     Ilam tristique. Integ
                     <br />
@@ -508,7 +568,7 @@
       <div id="footer">
         <div class="div-footer-content">
           <div class="paddingTopBootom35 container">
-            <div class="row">
+            <div class="fotterCol row">
               <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="titleFooter paddingTopBottom10">
                   ABOUT US
@@ -535,64 +595,58 @@
               </div>
               <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="titleFooter paddingTopBottom10">
-                  INFORMATION
+                  LINK
                 </div>
                 <div>
                   <div class="padding-linkFooter">
-                  <a href="" class="a-colorWhite">About Us</a>
+                  <a href="#" class="a-colorWhite">Home</a>
                   </div>
                   <div class="padding-linkFooter">
-                  <a href="" class="a-colorWhite">More Search</a>
+                  <a href="#detail-product-content" class="a-colorWhite">Order</a>
                   </div>
                   <div class="padding-linkFooter">
-                  <a href="" class="a-colorWhite">Blog</a>
+                  <a href="#" class="a-colorWhite">About Us</a>
                   </div>
                   <div class="padding-linkFooter">
-                  <a href="" class="a-colorWhite">Testimonial</a>
+                  <a href="login" class="a-colorWhite">Login</a>
                   </div>
-                  <div class="padding-linkFooter">
+                  <!-- <div class="padding-linkFooter">
                   <a href="" class="a-colorWhite">Event</a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="padF20px col-lg-6 col-md-12 col-sm-12">
+                <?php echo $alert; ?>
                 <div class="titleFooter paddingTopBottom10">
-                  HELPFUL LINKS
+                  CONTACT US
                 </div>
                 <div>
-                  <div class="padding-linkFooter">
-                  <a href="" class="a-colorWhite">Services</a>
-                  </div>
-                  <div class="padding-linkFooter">
-                  <a href="" class="a-colorWhite">Support</a>
-                  </div>
-                  <div class="padding-linkFooter">
-                  <a href="" class="a-colorWhite">Terms and Condition</a>
-                  </div>
-                  <div class="padding-linkFooter">
-                  <a href="" class="a-colorWhite">Privacy Policy</a>
-                  </div>
+                  <form class="contact" action="" method="post">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="textMailSend">Full Name</div>
+                        <div><input type="" class="form-control" name="name" id="name"></div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="textMailSend">Phone Number</div>
+                        <div><input type="" class="form-control" name="phone" id="phone"></div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="textMailSend">E-mail</div>
+                        <div><input type="" class="form-control" name="email" id="email"></div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="textMailSend">Massage</div>
+                        <div><textarea  class="form-control" name="textMail" id="textMail"></textarea></div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="positionButtonYellowSend">
+                          <button type="submit" name="submit" class="buttonYellowSend" value="Send">Send</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="titleFooter paddingTopBottom10">     
-                  FOLLOW US
-                </div>
-                <div class="">
-                    <div class="image-small-detailProduct">
-                      <a href="" id="facebook3"><img src="images/icon/facebook-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
-                    </div>
-                    <div class="image-small-detailProduct">
-                      <a href="" id="whatsapp3"><img src="images/icon/whatsapp-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
-                    </div>
-                    <div class="image-small-detailProduct">
-                      <a href="" id="twitter3"><img src="images/icon/twitter-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
-                    </div>
-                    <div class="image-small-detailProduct">
-                      <a href="" id="instagram3"><img src="images/icon/instagram-2.png" class="lazy imageMedsos-smallCenter-detailProduct"></a>
-                    </div>
-                  </div>
-                <div></div>
               </div>
             </div>
           </div>
@@ -671,6 +725,11 @@
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
   });
+</script>
+<script type="text/javascript">
+  if(window.history.replaceState){
+    window.history.replaceState(null, null, window.location.href);
+  }
 </script>
 </body>
 </html>

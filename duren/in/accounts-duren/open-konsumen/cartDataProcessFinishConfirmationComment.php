@@ -154,11 +154,17 @@
 		}
 	}
 
+	@media(max-width: 504px){
+		.padTPhone{
+			padding-top: 40px;
+		}
+	}
+
 </style>
 </head>
 <body>
 <div id="ubahAlamat">
-    <div class="card-textTitleLarge-Black">
+    <div class="padTPhone card-textTitleLarge-Black">
         <div class="textTitleLarge-Black">
             Kirim Review Anda
         </div>

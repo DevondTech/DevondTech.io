@@ -50,6 +50,29 @@
     <link href="../css/modif-style.css?v=1.2.1" rel="stylesheet" />
     <link href="../css/flexible.css?v=1.2.1" rel="stylesheet" />
     <!--<link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
+    <style type="text/css">
+        .sidebar .menu .list a span {
+            width: 180px;
+        }
+        
+        .positionNotif{
+            font-size: 13px;
+            margin-right: 0px;
+            width: auto;
+            text-align: center;
+            margin-top: 7px;
+            max-width: 40px;
+        }
+
+        .colorNotif{
+            background-color: #2d472c;
+            color: white;
+            border-radius: 15px;
+            padding-left: 6px;
+            padding-right: 6px;
+            max-width: 35px;
+        }
+    </style>
 </head>
 
 <body class="bd-w">
@@ -139,7 +162,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/user.svg" width="20" height="20">
                             </div>
-                            <span>Akun Saya</span>
+                            <span><font class="icon-menu-active">Akun Saya</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="account-edit-link">
@@ -147,7 +170,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/edit-user.svg" width="20" height="20">
                             </div>
-                            <span id="">Edit Akun</span>
+                            <span id=""><font class="icon-menu-active">Edit Akun</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="password-link" >
@@ -155,7 +178,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/password.svg" width="20" height="20">
                             </div>
-                            <span>Ubah Password</span>
+                            <span><font class="icon-menu-active">Ubah Password</font></span>
                         </a>
                     </li>
                    <!--  <li class="menu-waves-block" id="order-link">
@@ -215,7 +238,12 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/link/buy.svg" width="20" height="20">
                             </div>
-                            <span>Pesanan Saya</span>
+                            <span><font class="icon-menu-active">Pesanan Saya</font></span>
+                            <div class="positionNotif">
+                                <div class="colorNotif" id="confirmationPayment" style="display: none;"></div>
+                                <div class="colorNotif" id="confirmationShipped" style="display: none;"></div>
+                                <div class="colorNotif" id="confirmationProcess" style="display: none;"></div>
+                            </div>
                         </a>
                     </li>
                     <!-- <li class="menu-waves-block" id="notification-link">
@@ -231,7 +259,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/data-product.svg" width="20" height="20">
                             </div>
-                            <span>Histori Transaksi</span>
+                            <span><font class="icon-menu-active">Histori Transaksi</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="retur-link">
@@ -239,7 +267,10 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/data-product.svg" width="20" height="20">
                             </div>
-                            <span>Data Retur</span>
+                            <span><font class="icon-menu-active">Data Retur</font></span>
+                            <div class="positionNotif">
+                                <div class="colorNotif" id="confirmationRetur" style="display: none;"></div>
+                            </div>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="home-link">
@@ -247,7 +278,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/company-edit.svg" width="20" height="20">
                             </div>
-                            <span>Halaman Order</span>
+                            <span><font class="icon-menu-active">Halaman Order</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="logout-link">
@@ -255,7 +286,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/logout.svg" width="20" height="20">
                             </div>
-                            <span>Logout</span>
+                            <span><font class="icon-menu-active">Logout</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="logout-link" style="padding-bottom: 50px;">
@@ -293,7 +324,7 @@
     <!-- Demo Js -->
     <script src="../js/demo.js"></script>
     <!-- Flash Js -->
-    <script src="../js/pages/konsumen/konsumenData.js?v=1.6.1"></script>
+    <script src="../js/pages/konsumen/konsumenData.js?v=1.7.1"></script>
     <!-- Scrol -->
     <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 

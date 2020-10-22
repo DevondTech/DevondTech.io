@@ -11,9 +11,8 @@ $alert = '';
 
 if(isset($_POST['submit'])){
   $emailTo = $_POST['email'];
-  $email = 'support@kingfruit.co.id';
-  $massages = '<!DOCTYPE html>
-<html>
+  $email = 'admin@kingfruit.co.id';
+  $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,7 +53,13 @@ if(isset($_POST['submit'])){
     }
   }
 </style>
-<body>
+<body style="border: 1px solid #2d472c;
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-top: -1px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+            padding-bottom: 22px;
+            border-radius: 5px;">
 <div style="padding: 0px;
     background-color: #2d472c;
     color: white;
@@ -76,7 +81,7 @@ if(isset($_POST['submit'])){
     font-family: sans-serif;
     line-height: 20px;">
   <div style="color: #3a3a3a">
-    Terimakasih atas pendaftaran anda, silahkan klik untuk lanjutkan
+    Selamat, pendaftaran akun kamu telah berhasil. Untuk melakukan Verifikasi Akun, silahkan "klik disini". 
   </div>
   <div style="margin-top: 20px;">
     <a href="https://kingfruit.co.id/a/verifikasiAkun/d361cf7ca4bd9da86292f8f78aed8e8ee2833bea-8db01937f19dba34689b76ee3b326df7395bd580.php?callM='.$emailTo.'&&callD=c47907abd2a80492ca9388b05c0e382518ff3960">
@@ -99,14 +104,14 @@ if(isset($_POST['submit'])){
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'srv103.niagahoster.com';
+    $mail->Host = 'kingfruit.co.id';
     $mail->SMTPAuth = true;
-    $mail->Username = 'support@kingfruit.co.id'; 
+    $mail->Username = 'admin@kingfruit.co.id'; 
     $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = '465';
+    $mail->Port = '587';
 
-    $mail->setFrom('support@kingfruit.co.id'); 
+    $mail->setFrom($email); 
     $mail->addAddress($emailTo); 
 
     $mail->isHTML(true);

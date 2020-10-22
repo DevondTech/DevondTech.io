@@ -66,6 +66,22 @@
             margin-top: 20px;
         }
     }
+    .table-tdYellowHeader {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bolder;
+        background-color: rgb(176 255 181);
+    }
+
+    .pagination li.active a {
+        background-color: #2d472c;
+        cursor: pointer;
+    }
+
+    .pagination li a {
+        background-color: #2d472c;
+        cursor: pointer;
+    }
 </style>
 </head>
 <body class="bd-w">

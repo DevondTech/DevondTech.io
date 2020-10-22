@@ -40,31 +40,31 @@
 </head>
 <body class="bd-w" >
 <div class="divPositionContentTop">
-    <div id="dataPageRetur" >
+    <div id="dataConfirmationPayment" >
         <div class="paddingtopData1">
             <div class="card-textTitleLarge-Black">
                 <div class="textTitleLarge-Black" >
-                   Data Retur
+                   Review Produk
                 </div>
             </div>
             <br />
             <div id="" class="parrentDivTable" >
                 <div class="scrollTableX">
                     <div class="marginLeft25">
-                        <table style="width: 100%;" border=1px; class="table table-bordered" id="dataReturAll">
+                        <table style="width: 100%;" border=1px; class="table table-bordered" id="reviewDataCust">
                             <thead>
                                 <tr>
                                     <td class="table-tdYellowHeader">
-                                        Kode Retur
+                                        Waktu Penilaian
                                     </td>
                                     <td class="table-tdYellowHeader">
                                         Nama Konsumen
                                     </td>
                                     <td class="table-tdYellowHeader">
-                                        Status Retur
+                                        Review Produk
                                     </td>
                                     <td class="table-tdYellowHeader">
-                                        Aksi
+                                        Aksi Lihat
                                     </td>
                                 </tr>
                             </thead>
@@ -81,7 +81,7 @@
 <!-- Datatables -->
 <script type="text/javascript" src="../datatable/newJS/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
-<script src="../js/pages/admin/cartDataReturAdminAll.js?v=1.2.1"></script>
+<script src="../js/pages/admin/reviewProduct.js?v=1.2.1"></script>
 </body>
 </html>
 

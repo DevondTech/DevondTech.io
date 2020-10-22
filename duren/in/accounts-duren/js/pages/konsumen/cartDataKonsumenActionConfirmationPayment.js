@@ -116,7 +116,7 @@ $(document).ready(function(){
               }
               else{
                 alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');
-                $("#btnUpdateConfirmationDetailPayment").html('SIMPAN');
+                $("#btnCancelConfirmationDetailPayment").html('BATAL');
               }
             }    
         });
