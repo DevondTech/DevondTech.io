@@ -18,9 +18,22 @@ if($id_user!='' && $id_status_user=='1'){
         $id_satuan_produk = $_POST['id_satuan_produk'];
         $detail1_produk = $_POST['detail1_produk'];
         $detail2_produk = $_POST['detail2_produk'];
+        
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $resultLastID = $db->query("select max(id_produk) as last_id_produk FROM tb_produk");
+        $productDataLastID = $resultLastID->fetch_object();
+        $productLast=$productDataLastID->last_id_produk;
+        $id_produk_plus = $productLast + 1;
+
         $sql = "INSERT INTO tb_produk(nama_produk, detail1_produk, detail2_produk, id_jenis_produk, id_satuan_produk, jumlah_stok)
                         VALUES('$nama_produk','$detail1_produk','$detail2_produk','$id_jenis_produk','$id_satuan_produk', '$jumlah_stok')";   
         $result = SSP::sql_exec_update($db,null,$sql);
+
+        $queryProduct = "INSERT INTO tb_inventory(tanggal_inventory, id_produk, nama_produk, penambahan_stok)
+                        VALUES('$datePic','$id_produk_plus','$nama_produk','$jumlah_stok')";   
+        $db->query($queryProduct); 
+
         header("Content-Type: application/json");
         if($result){
             echo json_encode(array("success"=>true));exit;

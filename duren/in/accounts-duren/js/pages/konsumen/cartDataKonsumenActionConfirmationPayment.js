@@ -25,8 +25,7 @@ $(document).ready(function(){
             var IdVoucher = DataPayment[0].id_voucher;
             var MetodePembayaran = DataPayment[0].id_metode_pembayaran ;
             var Gambar = DataPayment[0].gambar_bukti_pembayaran;
-            var TotalPerProduk = DataPayment[0].total_harga_perproduk ;
-            
+            var TotalPerProduk = DataPayment[0].total_harga_perproduk ;         
             $('#IdPemesanan').val(IdPemesanan);
             $('#IdPemesananDelete').val(IdPemesanan);
             $('#IdProduk').val(IdProduk);
@@ -48,13 +47,13 @@ $(document).ready(function(){
             $('#MetodePembayaran').val(MetodePembayaran);
             $('#Gambar').val(Gambar);
             $('#TotalPerProduk').val(TotalPerProduk);
-
+            
             var IdPemesanan = DataPayment[0].kode_pemesanan;
             var totalHargaPerproduk = DataPayment[0].total_harga_perproduk;
             var ongkosKirim = DataPayment[0].ongkos_kirim;
             var totalHarga = DataPayment[0].total_harga_yang_harus_dibayar;
             var DataFoto = DataPayment[0].gambar_bukti_pembayaran;
-            
+
             var totalHargaPerprodukNumberString = totalHargaPerproduk.toString(),
                 totalHargaPerprodukSisa    = totalHargaPerprodukNumberString.length % 3,
                 totalHargaPerprodukRupiah  = totalHargaPerprodukNumberString.substr(0, totalHargaPerprodukSisa),

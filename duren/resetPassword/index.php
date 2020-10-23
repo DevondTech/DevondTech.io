@@ -37,6 +37,9 @@
   <link rel="stylesheet" type="text/css" href="../css/durianLoginSignup.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <style type="text/css">
+    .top-page {
+      height: 100vh;
+    }
   </style>
 </head>
 <body>

@@ -44,9 +44,10 @@
     height: 100vh;
     padding-top: 60px;
   }
-
 }
-
+.top-page {
+  height: 100vh;
+}
   </style>
 <body>
   <?php echo $alert; ?>

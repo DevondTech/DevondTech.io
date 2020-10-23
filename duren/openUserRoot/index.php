@@ -36,6 +36,12 @@
   <link rel="stylesheet" type="text/css" href="../css/chat.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <style type="text/css">
+    .li-medsos-hr-top {
+      float: left;
+      padding-left: 5px;
+      padding-right: 10px;
+    }
+
     @media(min-width: 992px){
       .padF20px{
         padding-right: 30px;
@@ -50,7 +56,7 @@
 
     .positionButtonYellowSend{
       padding-top: 20px;
-      padding-bottom: 30px;
+      padding-bottom: 60px;
       float: right;
     }
 
@@ -78,6 +84,34 @@
       border: 1px solid #cda32b;
       border-radius: 5px;
       cursor: pointer;
+    }
+
+    @media(max-width: 767px){
+      .buttonYellowSend{ 
+        background-color: #cda32b;
+        font-size: 21px;
+        padding: 3px;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-width: 100px;
+        color: white;
+        border: 1px solid #cda32b;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .buttonYellowSend:hover{
+        background-color: #906c05;
+        font-size: 21px;
+        padding: 3px;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-width: 100px;
+        color: white;
+        border: 1px solid #cda32b;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     }
 
     .fotterCol{
@@ -228,7 +262,7 @@
             <a class="text-nav" href="#detail-product-content">Order </a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#">About US</a>
+            <a class="text-nav" href="../aboutUserRoot">About US</a>
           </li>
           <li class="nav-li-link nav-item">
             <a class="text-nav" href="../login">Login</a>
@@ -288,9 +322,9 @@
         <li class="li-medsos-hr-top">
           <div class="vl"></div>
         </li>
-        <li class="li-medsos-icon-top">
+        <!-- <li class="li-medsos-icon-top">
           <a href="" id="facebook1"><img src="../images/icon/facebook.png"   class=" img-icon-top"></a>
-        </li>
+        </li> -->
         <li class="li-medsos-icon-top">
           <a href="" id="instagram1"><img src="../images/icon/instagram.png" class=" img-icon-top"></a>
         </li>
@@ -720,15 +754,15 @@
                 </div>
                 <div class="divCardImage-small-detailProduct">
                   <div class="divImage-smallCenter-detailProduct">
-                    <div class="image-small-detailProduct">
+                    <!-- <div class="image-small-detailProduct">
                       <a href="" id="facebook2"><img src="../images/icon/facebook-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
-                    </div>
+                    </div> -->
                     <div class="image-small-detailProduct">
                       <a href="" id="whatsapp2"><img src="../images/icon/whatsapp-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
-                    <div class="image-small-detailProduct">
+                    <!-- <div class="image-small-detailProduct">
                       <a href="" id="twitter2"><img src="../images/icon/twitter-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
-                    </div>
+                    </div> -->
                     <div class="image-small-detailProduct">
                       <a href="" id="instagram2"><img src="../images/icon/instagram-2.png"  class="lazy imageMedsos-smallCenter-detailProduct"></a>
                     </div>
@@ -847,7 +881,7 @@
                   <a href="#detail-product-content" class="a-colorWhite">Order</a>
                   </div>
                   <div class="padding-linkFooter">
-                  <a href="#" class="a-colorWhite">About Us</a>
+                  <a href="../aboutUserRoot" class="a-colorWhite">About Us</a>
                   </div>
                   <div class="padding-linkFooter">
                   <a href="login" class="a-colorWhite">Login</a>

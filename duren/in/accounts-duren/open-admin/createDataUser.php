@@ -30,7 +30,7 @@
     }
 
     .pagination li a {
-        background-color: #2d472c;
+        background-color: white;
         cursor: pointer;
     }
 </style>

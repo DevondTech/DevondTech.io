@@ -10,13 +10,19 @@ $mail = new PHPMailer(true);
 $alert = '';
 
 if(isset($_POST['submit'])){
-
-  $email = 'kingfruit.co.id@gmail.com';
-  $emailUser = $_POST['email'];
-  $phone = $_POST['phone'];
-  $name = $_POST['name'];
-  $textMail = $_POST['textMail'];
-  $massages = '<head>
+require '../conn/data2/config.php'; 
+$json = json_decode(file_get_contents('php://input'), true); 
+$userData =''; $query = "select email from tb_about_us"; 
+$result = mysqli_query($db,$query);
+$baris= mysqli_fetch_array($result);
+$email = $baris['email'];
+/*
+$email = 'kingfruit.co.id@gmail.com';*/
+$emailUser = $_POST['email'];
+$phone = $_POST['phone'];
+$name = $_POST['name'];
+$textMail = $_POST['textMail'];
+$massages = '<head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title></title>

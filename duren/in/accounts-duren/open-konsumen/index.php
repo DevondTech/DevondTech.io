@@ -324,7 +324,7 @@
     <!-- Demo Js -->
     <script src="../js/demo.js"></script>
     <!-- Flash Js -->
-    <script src="../js/pages/konsumen/konsumenData.js?v=1.7.1"></script>
+    <script src="../js/pages/konsumen/konsumenData.js?v=1.8.1"></script>
     <!-- Scrol -->
     <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 

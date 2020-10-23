@@ -337,6 +337,11 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         $id_status_baca = 1;
         $id_user_baca = 2;
         $id_proses_pemesanan = 3;
+        $resultData = $db->query("select jumlah_stok FROM tb_produk where id_produk='$IdProduk'");
+        $productData = $resultData->fetch_object();
+        $jumlah_stok=$productData->jumlah_stok;
+        $put_stok_to_produk = $jumlah_stok - $JumlahPemesanan;
+
         if($id_user!=''){
             $queryPenjualan = "INSERT INTO tb_penjualan(kode_penjualan, waktu_penjualan, id_produk, jumlah_penjualan, id_berat_produk, total_penjualan, id_user, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, ongkos_kirim, id_voucher, metode_pembayaran, nama_pemilik_rekening, tanggal_transfer, no_rekening, bank_asal, gambar_bukti_pembayaran, total_harga_perproduk )
                             VALUES('$IdPemesanan','$WaktuPemesanan','$IdProduk','$JumlahPemesanan','$IdBeratProduk','$TotalPenjualan','$IdKonsumen','$AlamatKonsumen','$NegaraKonsumen','$ProvinsiKonsumen','$KabupatenKonsumen','$KotaKonsumen','$KecamatanKonsumen','$KelurahanKonsumen','$KodePosKonsumen','$Ongkir','$IdVoucher','$MetodePembayaran','$nama_pemilik_rekening','$tanggal_transfer','$no_rekening','$bank_asal','$gambar_bukti_pembayaran','$total_harga_perproduk')";   
@@ -346,7 +351,8 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
             $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
                             VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
             $db->query($queryNotif); 
-
+            $queryProduct = "UPDATE tb_produk SET jumlah_stok='$put_stok_to_produk' WHERE id_produk='$IdProduk'";   
+            $db->query($queryProduct); 
             echo "updateConfirmationPaymentTransferSuccess";   
         }
         else{

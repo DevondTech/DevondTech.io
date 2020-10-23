@@ -20,6 +20,35 @@
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"/>
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
+<style type="text/css">
+    .table-tdYellowHeader {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bolder;
+        background-color: rgb(176 255 181);
+    }
+
+    .pagination li.active a {
+        background-color: #2d472c;
+        cursor: pointer;
+    }
+
+    .pagination li a {
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .divParent-inputDetailProductAdmin {
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+
+    @media(max-width: 870px){
+        .typePhoneInv{
+            margin-top: 300px;
+        }
+    }
+</style>
 </head>
 <body>
 <div class="divPositionContentTop">
@@ -324,13 +353,107 @@
         </div>
     </div>
 </div>
-    
+<div class="divPositionContentTop">
+    <div id="dataProdukPage" >
+        <div class="paddingtopData1">
+            <div class="typePhoneInv">
+                <div class="card-textTitleLarge-Black" id="divHistoryStok">
+                    <div class="textTitleLarge-Black" >
+                       History Penambahan Produk
+                    </div>
+                </div>
+                <div id="updateStokSec" style="display: none;">
+                    <div class="card-textTitleLarge-Black">
+                        <div class="textTitleLarge-Black" >
+                            Tambah Stok Produk
+                        </div>
+                    </div>
+                    <div class="col-divProfileUser" style="margin-bottom: -100px;padding-top: 0px;">
+                        <div class="row">
+                            <div class="col-UserDataEdit-left col-lg-8 col-md-6 col-sm-6">
+                                <div>
+                                    <form method="POST" id="createInventoryData">
+                                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                                            <div class="card-textDataUser">
+                                                <div class="textDataUser">
+                                                    Penambahan Stok
+                                                </div>
+                                            </div>
+                                            <div class="card-inputDataUser">
+                                                <input type="number" name="penambahan_stok" id="penambahan_stok" class="input-textDataUser">
+                                                <input type="hidden" name="idProductToInventory" id="idProductToInventory" value="<?php echo $id_barang ;?>">
+                                            </div>
+                                        </div>
+                                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                                            <div class="card-textDataUser">
+                                                <div class="textDataUser">
+                                                  
+                                                </div>
+                                            </div>
+                                            <div class="card-inputDataUser">
+                                                <ul class="ul-buttonGreen" style="margin: auto;float: left;padding-left: 0px;    padding-bottom: 0px;">
+                                                    <li class="li-buttonGreen">  
+                                                        <button class="buttonCancelCreate" type="button" id="btnCancelCreateDataSlide" >BATAL</button>
+                                                    </li>
+                                                    <li class="li-buttonGreen">  
+                                                        <button class="buttonSaveCreate" type="button" id="btnCreateInventory"  >SIMPAN</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <br />
+                <div class="paddingtop50px">
+                    <ul class="ul-buttonGreen">
+                        <li class="li-buttonGreen">
+                            <a id="createNewDataProduct" >
+                            <button class="buttonMiddle-green" id="openCreateDataInv" >Tambah Stok</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="" class="parrentDivTable" >
+                    <div class="scrollTableX">
+                        <div class="marginLeft25">
+                            <table style="width: 100%;" border=1px; class="table table-bordered" id="tableInventory">
+                                <thead>
+                                    <tr>
+                                        <td class="table-tdYellowHeader">
+                                            Tanggal
+                                        </td>
+                                        <td class="table-tdYellowHeader">
+                                            ID Produk
+                                        </td>
+                                        <td class="table-tdYellowHeader">
+                                            Nama Produk
+                                        </td>
+                                        <td class="table-tdYellowHeader">
+                                            Penambahan Stok
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
      <!-- Jquery Js -->
-<script type="text/javascript"  src="../js/jquery.js" ></script>
+<script src="../datatable/newJS/jquery.min.js"></script>
+<script type="text/javascript" src="../datatable/newJS/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
 <!-- Jquery Ajax Js -->
-<script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/admin/productDetailDataAdmin.js?v=1.2.1"></script>
-<script type="text/javascript" src="../js/pages/admin/gambarUploadProdukAdmin.js?v=1.2.1"></script>
+<!-- <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script> -->
+<script type="text/javascript" src="../js/pages/admin/productDetailDataAdmin.js?v=1.8.1"></script>
+<script type="text/javascript" src="../js/pages/admin/gambarUploadProdukAdmin.js?v=1.8.1"></script>
 <div id="open-uploadGambar1Produk" class="modal fade" >
     <div class="modal-dialog modal-sm">
         <div class="modal-content w100">
@@ -388,7 +511,7 @@
                     <div class="modal-edit" >
                         <div class="button-edit">
                             <button class="button-text-grey" type="button" id="btn-batal-create"  data-dismiss="modal"> KELUAR </button> 
-                            <button class="button-text-green" type="submit" id="btnuploadGambar2Produk"  > SIMPAN </button>
+                            <button class="button-text-green" type="submit" id="btnuploadGambar2Produk"> SIMPAN </button>
                         </div>
                     </div>
                 </form>

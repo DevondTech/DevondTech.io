@@ -8,15 +8,28 @@ require_once 'phpmailer/SMTP.php';
 $mail = new PHPMailer(true);
 $alert = '';
 
+require '../../config.php'; 
+$json = json_decode(file_get_contents('php://input'), true); 
+$userData =''; $query = "select email from tb_about_us"; 
+$result = mysqli_query($db,$query);
+$baris= mysqli_fetch_array($result);
 
-  $emailTo = $_GET['email_send'];
-  $kode_pemesanan_send = $_GET['kode_pemesanan_send'];
-  $waktu_pemesanan_send = $_GET['waktu_pemesanan_send'];
-  $produk_send = $_GET['produk_send'];
-  $jumlah_send = $_GET['jumlah_send'];
-  $total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
+$emailTo = $_GET['email_send'];
+$kode_pemesanan_send = $_GET['kode_pemesanan_send'];
+$waktu_pemesanan_send = $_GET['waktu_pemesanan_send'];
+$produk_send = $_GET['produk_send'];
+$jumlah_send = $_GET['jumlah_send'];
+$total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
+$email = $baris['email'];
 
-  $email = 'kingfruit.co.id@gmail.com';
+/*$emailTo = $_GET['email_send'];
+$kode_pemesanan_send = $_GET['kode_pemesanan_send'];
+$waktu_pemesanan_send = $_GET['waktu_pemesanan_send'];
+$produk_send = $_GET['produk_send'];
+$jumlah_send = $_GET['jumlah_send'];
+$total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
+
+$email = 'kingfruit.co.id@gmail.com';*/
   $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />

@@ -178,7 +178,7 @@
                             <div class="icon-menu-img-left">
                                 <img src="../images/durian/create-user.svg" width="20" height="20">
                             </div>
-                            <span id=""><font class="icon-menu-active">Tambah User</font></span>
+                            <span id=""><font class="icon-menu-active">Data User</font></span>
                         </a>
                     </li>
                     <li class="menu-waves-block" id="password-link" >
