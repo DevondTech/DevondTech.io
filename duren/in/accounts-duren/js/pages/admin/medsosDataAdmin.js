@@ -99,7 +99,11 @@ $(document).ready(function(){
     $('#Facebook_ubahSave').on('click',function(e){
     var PrintDetail_link_medsos_facebook = $('#PrintDetail_link_medsos_facebook').val();
       if(PrintDetail_link_medsos_facebook == ''){
-        alert('Silahkan Isi Data Facebook')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data Facebook",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateFacebook").serialize();
@@ -115,7 +119,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "Success"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data Facebook Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_medsos_facebook").prop('enable', false);
                 $("#PrintDetail_link_medsos_facebook").prop('disabled', true);
                 $("#PrintDetail_link_medsos_facebook").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -123,7 +131,11 @@ $(document).ready(function(){
                 $("#Facebook_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Facebook",
+                  type: "error"
+                });
               }
             }    
           });
@@ -154,7 +166,11 @@ $(document).ready(function(){
     $('#Instagram_ubahSave').on('click',function(e){
     var PrintDetail_link_medsos_instagram = $('#PrintDetail_link_medsos_instagram').val();
       if(PrintDetail_link_medsos_instagram == ''){
-        alert('Silahkan Isi Data Instagram')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data Instagram",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateInstagram").serialize();
@@ -170,7 +186,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "Success"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data Instagram Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_medsos_instagram").prop('enable', false);
                 $("#PrintDetail_link_medsos_instagram").prop('disabled', true);
                 $("#PrintDetail_link_medsos_instagram").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -178,7 +198,11 @@ $(document).ready(function(){
                 $("#Instagram_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Instagram",
+                  type: "error"
+                });
               }
             }    
           });
@@ -209,7 +233,11 @@ $(document).ready(function(){
     $('#Whatsapp_ubahSave').on('click',function(e){
     var PrintDetail_link_medsos_whatsapp = $('#PrintDetail_link_medsos_whatsapp').val();
       if(PrintDetail_link_medsos_whatsapp == ''){
-        alert('Silahkan Isi Data Whatsapp')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data Whatsapp",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateWhatsapp").serialize();
@@ -225,7 +253,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "Success"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data Whatsapp Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_medsos_whatsapp").prop('enable', false);
                 $("#PrintDetail_link_medsos_whatsapp").prop('disabled', true);
                 $("#PrintDetail_link_medsos_whatsapp").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -233,7 +265,11 @@ $(document).ready(function(){
                 $("#Whatsapp_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Whatsapp",
+                  type: "error"
+                });
               }
             }    
           });
@@ -264,7 +300,11 @@ $(document).ready(function(){
     $('#Twitter_ubahSave').on('click',function(e){
     var PrintDetail_link_medsos_twitter = $('#PrintDetail_link_medsos_twitter').val();
       if(PrintDetail_link_medsos_twitter == ''){
-        alert('Silahkan Isi Data Twitter')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data Twitter",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateTwitter").serialize();
@@ -280,7 +320,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "Success"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data Twitter Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_medsos_twitter").prop('enable', false);
                 $("#PrintDetail_link_medsos_twitter").prop('disabled', true);
                 $("#PrintDetail_link_medsos_twitter").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -288,7 +332,11 @@ $(document).ready(function(){
                 $("#Twitter_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Twitter",
+                  type: "error"
+                });
               }
             }    
           });

@@ -352,7 +352,7 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/admin/cartDataReturDetailAdmin.js?v=1.3.1"></script>
+<script src="../js/pages/admin/cartDataReturDetailAdmin.js?v=1.3.2"></script>
 <!-- <script type="text/javascript" src="../js/pages/uploadDataFotoTransferAdmin.js"></script> -->
 <!-- <div id="openupdatefoto" class="modal fade" >
     <div class="modal-dialog modal-sm">

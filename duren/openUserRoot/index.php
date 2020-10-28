@@ -35,6 +35,7 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css?v=1.3.1">
   <link rel="stylesheet" type="text/css" href="../css/chat.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
+  <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
   <style type="text/css">
     .li-medsos-hr-top {
       float: left;
@@ -898,7 +899,7 @@
                   CONTACT US
                 </div>
                 <div>
-                  <form class="contact" action="" method="post">
+                  <form class="contact" onsubmit="return validateForm()" name="Form" method="post">
                     <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="textMailSend">Full Name</div>
@@ -913,7 +914,7 @@
                         <div><input type="" class="form-control" name="email" id="email"></div>
                       </div>
                       <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="textMailSend">Massage</div>
+                        <div class="textMailSend">Messages</div>
                         <div><textarea  class="form-control" name="textMail" id="textMail"></textarea></div>
                       </div>
                       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -997,6 +998,7 @@
 <script type="text/javascript" src="../js/bootstrap.js" ></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durianRoot.js?v=2.1.1"></script>
+<script type="text/javascript" src="../js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
@@ -1005,6 +1007,22 @@
 <script type="text/javascript">
   if(window.history.replaceState){
     window.history.replaceState(null, null, window.location.href);
+  }
+</script>
+<script type="text/javascript">
+  function validateForm() {
+    var a = document.forms["Form"]["name"].value;
+    var b = document.forms["Form"]["phone"].value;
+    var c = document.forms["Form"]["email"].value;
+    var d = document.forms["Form"]["textMail"].value;
+    if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Dengan Lengkap",
+        type: "error"
+      });
+      return false;
+    }
   }
 </script>
 </body>

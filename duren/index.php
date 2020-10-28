@@ -1,4 +1,4 @@
-<?php include 'mail/sendemail.php'; ?>
+<?php include 'mail/sendemailUser.php'; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,7 +36,13 @@
   <link rel="stylesheet" type="text/css" href="css/chat.css?v=1.0.1">
   <link href="scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <link rel="stylesheet" href="js/sweetAlert/sweetalert2.min.css">
+  <link rel="stylesheet" href="js/sweetAlert/sweetalert2.min.css">
   <style type="text/css">
+
+    .swal2-popup #swal2-content {
+      text-align: center;
+      font-size: 14px;
+    }
 
     .swal2-content{
       font-size: 15px;
@@ -662,7 +668,7 @@
                   CONTACT US
                 </div>
                 <div>
-                  <form class="contact" action="" method="post">
+                  <form class="contact" onsubmit="return validateForm()" name="Form" method="post">
                     <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="textMailSend">Full Name</div>
@@ -677,7 +683,7 @@
                         <div><input type="" class="form-control" name="email" id="email"></div>
                       </div>
                       <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="textMailSend">Massage</div>
+                        <div class="textMailSend">Messages</div>
                         <div><textarea  class="form-control" name="textMail" id="textMail"></textarea></div>
                       </div>
                       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -762,7 +768,8 @@
 <script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript" src="js/slideSmall.js"></script>
 <script type="text/javascript" src="js/durian.js?v=2.1.1"></script>
-<script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.6.1"></script>
+<script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.7.1"></script>
+<script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
@@ -774,6 +781,22 @@
   }
 
   $('confirm').attr('style','background-color:#2d472c;')
+</script>
+<script type="text/javascript">
+  function validateForm() {
+    var a = document.forms["Form"]["name"].value;
+    var b = document.forms["Form"]["phone"].value;
+    var c = document.forms["Form"]["email"].value;
+    var d = document.forms["Form"]["textMail"].value;
+    if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Dengan Lengkap",
+        type: "error"
+      });
+      return false;
+    }
+  }
 </script>
 </body>
 </html>

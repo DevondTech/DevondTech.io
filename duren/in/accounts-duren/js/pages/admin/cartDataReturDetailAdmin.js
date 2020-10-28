@@ -78,23 +78,43 @@ $('#btnSaveConfir').on('click',function(e){
     var admin_total_pengembalian_dana = $('#admin_total_pengembalian_dana').val();
  
     if(admin_nama_pemilik_rekening == '' ){
-        alert('Isi data nama pemilik rekening');
+        swal({
+          title: "Transaksi Gagal",
+          text: "Isi Data Nama Pemilik Rekening",
+          type: "error"
+        });
     }
     else{
         if(admin_tanggal_transfer == '' ){
-            alert('Isi data tanggal transfer');
+            swal({
+              title: "Transaksi Gagal",
+              text: "Isi Data Tanggal Transfer",
+              type: "error"
+            });
         }
         else{
             if(admin_nomor_rekening == '' ){
-                alert('Isi data nomor rekening');
+                swal({
+                  title: "Transaksi Gagal",
+                  text: "Isi Data Nomor Rekening",
+                  type: "error"
+                });
             }
             else{
                 if(admin_bank_asal == '' ){
-                    alert('Isi data bank untuk mentransfer');
+                    swal({
+                      title: "Transaksi Gagal",
+                      text: "Isi Data Bank Untuk Mentransfer",
+                      type: "error"
+                    });
                 }
                 else{ 
                     if(admin_total_pengembalian_dana == '' ){
-                       alert('Isi data total pengembalian dana');
+                        swal({
+                          title: "Transaksi Gagal",
+                          text: "Isi Data Total Pengembalian Dana",
+                          type: "error"
+                        });
                     }
                     else{
                         var data = $("#confirmationFormDataTransfer").serialize();
@@ -112,11 +132,19 @@ $('#btnSaveConfir').on('click',function(e){
                             {
                               if(response == "updateConfirmationReturTransferSuccess"){
                                 $("#btnSaveConfir").html('SIMPAN');
-                                alert('Transaksi Berhasil');
+                                swal({
+                                  title: "Transaksi Sukses",
+                                  text: "Data Berhasil Disimpan",
+                                  type: "success"
+                                });
                                 $("#content-profile").load("cartDataReturAdmin.php");
                               }
                               else{
-                                alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');
+                                swal({
+                                  title: "Transaksi Gagal",
+                                  text: "Silahkan Lengkapi Data",
+                                  type: "error"
+                                });
                                 $("#btnSaveConfir").html('SIMPAN');
                               }
                             }    
@@ -154,11 +182,20 @@ $('#btnRefuseRetur').on('click',function(e){
             {
               if(response == "confirmationFormDataRefuseSuccess"){
                 $("#btnRefuseRetur").html('Tolak Pengajuan');
-                alert('Tolak Pengajuan Berhasil');
-                $("#content-profile").load("cartDataReturAdmin.php");
+                swal({
+                  title:"Sukses",
+                  text: "Tolak Pengajuan Berhasil",
+                  type: "success"
+                }).then(function() {
+                  $("#content-profile").load("cartDataReturAdmin.php");
+                });
               }
               else{
-                alert('Error');
+                swal({
+                  title: "System Error",
+                  text: "Data Not Found",
+                  type: "error"
+                });
                 $("#btnRefuseRetur").html('Tolak Pengajuan');
               }
             }    

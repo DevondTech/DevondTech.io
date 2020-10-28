@@ -54,7 +54,7 @@ $('document').ready(function()
           if(response == "updatePassword"){
             $("#SavePassword").html('SIMPAN');
             swal({
-              title:"Lengkapi Data",
+              title:"Sukses",
               text: "Ubah password berhasil",
               type: "success"
             });

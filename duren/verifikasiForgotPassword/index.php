@@ -40,6 +40,11 @@
   <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
 </head>
 <style type="text/css">
+.swal2-popup #swal2-content {
+  text-align: center;
+  font-size: 14px;
+}
+
 .rightLoginDiv{
   height: 100vh;
   padding-top: 120px;

@@ -112,7 +112,7 @@
     
 </div>
 
-<script src="../js/pages/password.js?v=1.1.5"></script>
+<script src="../js/pages/password.js?v=1.1.6"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

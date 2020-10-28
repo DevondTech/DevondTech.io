@@ -279,7 +279,7 @@
                                 <div style="margin-left: 4px;">
                                     <div class="positionTextDetailOrder">
                                         <div class="textTotalHarga floatLeftCartData"  style="font-weight: bold;padding-bottom: 13px;">
-                                            Berkut pembayaran yang harus anda transfer 
+                                            Berikut pembayaran yang harus anda transfer 
                                         </div>
                                     </div>
                                 </div>

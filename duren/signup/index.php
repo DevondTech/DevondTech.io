@@ -20,6 +20,32 @@
   <link rel="stylesheet" type="text/css" href="../css/durianLoginSignup.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
+  <style type="text/css">
+    .swal2-popup #swal2-content {
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    .rightSignupDiv {
+      display: block;
+      padding-left: 0px;
+      padding-right: 0px;
+      height: auto;
+      font-size: 20px;
+      width: 100%;
+      background: -webkit-gradient(linear,left top,left bottom,from(rgb(0 0 0 / 70%)),to(rgba(19, 68, 20, 0.7))),url(../images/Webduren.jpg);
+      background-position-x: 0%;
+      background-position-y: 0;
+      background-repeat: repeat;
+      background-position: unset;
+      background-attachment: scroll;
+      background-size: auto;
+      padding-bottom: 20px;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: initial;
+    }
+  </style>
 </head>
 <body>
   

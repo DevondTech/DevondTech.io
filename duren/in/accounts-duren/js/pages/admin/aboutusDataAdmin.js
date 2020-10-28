@@ -115,7 +115,11 @@ $(document).ready(function(){
     $('#alamat_ubahSave').on('click',function(e){
     var PrintDetail_link_alamat = $('#PrintDetail_link_alamat').val();
       if(PrintDetail_link_alamat == ''){
-        alert('Silahkan Isi Data Alamat')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data Alamat",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateAlamat").serialize();
@@ -131,7 +135,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "Success"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data Alamat Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_alamat").prop('enable', false);
                 $("#PrintDetail_link_alamat").prop('disabled', true);
                 $("#PrintDetail_link_alamat").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -139,7 +147,11 @@ $(document).ready(function(){
                 $("#alamat_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Alamat",
+                  type: "error"
+                });
               }
             }    
           });
@@ -170,7 +182,11 @@ $(document).ready(function(){
     $('#nomor_hp1_ubahSave').on('click',function(e){
     var PrintDetail_link_nomor_hp1 = $('#PrintDetail_link_nomor_hp1').val();
       if(PrintDetail_link_nomor_hp1 == ''){
-        alert('Silahkan Isi Data Nomor HP 1')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data No HP 1",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateNomorHP1").serialize();
@@ -186,7 +202,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "Success"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data No HP 1 Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_nomor_hp1").prop('enable', false);
                 $("#PrintDetail_link_nomor_hp1").prop('disabled', true);
                 $("#PrintDetail_link_nomor_hp1").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -194,7 +214,11 @@ $(document).ready(function(){
                 $("#nomor_hp1_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data No HP 1",
+                  type: "error"
+                });
               }
             }    
           });
@@ -225,7 +249,11 @@ $(document).ready(function(){
     $('#nomor_hp2_ubahSave').on('click',function(e){
     var PrintDetail_link_nomor_hp2 = $('#PrintDetail_link_nomor_hp2').val();
       if(PrintDetail_link_nomor_hp2 == ''){
-        alert('Silahkan Isi Data Nomor HP 2')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data No HP 2",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateNomorHP2").serialize();
@@ -241,7 +269,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "Success"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data No HP 2 Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_nomor_hp2").prop('enable', false);
                 $("#PrintDetail_link_nomor_hp2").prop('disabled', true);
                 $("#PrintDetail_link_nomor_hp2").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -249,7 +281,11 @@ $(document).ready(function(){
                 $("#nomor_hp2_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data No HP 2",
+                  type: "error"
+                });
               }
             }    
           });
@@ -280,7 +316,11 @@ $(document).ready(function(){
     $('#email_ubahSave').on('click',function(e){
     var PrintDetail_link_email = $('#PrintDetail_link_email').val();
       if(PrintDetail_link_email == ''){
-        alert('Silahkan Isi Data Email')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data Email",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateEmail").serialize();
@@ -296,7 +336,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "Success"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data Email Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_email").prop('enable', false);
                 $("#PrintDetail_link_email").prop('disabled', true);
                 $("#PrintDetail_link_email").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -304,7 +348,11 @@ $(document).ready(function(){
                 $("#email_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Email",
+                  type: "error"
+                });
               }
             }    
           });
@@ -336,7 +384,11 @@ $(document).ready(function(){
     $('#NumberRekening_ubahSave').on('click',function(e){
     var PrintDetail_link_number_rekening = $('#PrintDetail_link_number_rekening').val();
       if(PrintDetail_link_number_rekening == ''){
-        alert('Silahkan Isi Data Nomor Rekening')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data Nomor Rekening",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updateNumberRekening").serialize();
@@ -352,7 +404,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "updateInformationNumberRek"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data Nomor Rekening Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_number_rekening").prop('enable', false);
                 $("#PrintDetail_link_number_rekening").prop('disabled', true);
                 $("#PrintDetail_link_number_rekening").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -360,7 +416,11 @@ $(document).ready(function(){
                 $("#NumberRekening_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Nomor Rekening",
+                  type: "error"
+                });
               }
             }    
           });
@@ -392,7 +452,11 @@ $(document).ready(function(){
     $('#PemilikRekening_ubahSave').on('click',function(e){
     var PrintDetail_link_pemilik_rekening = $('#PrintDetail_link_pemilik_rekening').val();
       if(PrintDetail_link_pemilik_rekening == ''){
-        alert('Silahkan Isi Data Pemilik Rekening')
+        swal({
+          title: "Gagal Menyimpan",
+          text: "Silahkan Isi Data Pemilik Rekening",
+          type: "error"
+        });
       }  
       else{
         var data = $("#updatePemilikRekening").serialize();
@@ -408,7 +472,11 @@ $(document).ready(function(){
             success :  function(response)
             {
               if(response == "updateInformationPemilikRek"){
-                alert('Ubah data berhasil');
+                swal({
+                  title: "Sukses",
+                  text: "Ubah Data Pemilik Rekening Berhasil",
+                  type: "success"
+                });
                 $("#PrintDetail_link_pemilik_rekening").prop('enable', false);
                 $("#PrintDetail_link_pemilik_rekening").prop('disabled', true);
                 $("#PrintDetail_link_pemilik_rekening").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -416,7 +484,11 @@ $(document).ready(function(){
                 $("#PemilikRekening_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
-                alert('Ubah data gagal');
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Pemilik Rekening",
+                  type: "error"
+                });
               }
             }    
           });

@@ -51,6 +51,11 @@
       background-size: cover;
     }*/
 
+    .swal2-popup #swal2-content {
+      text-align: center;
+      font-size: 14px;
+    }
+    
     .login {
       background-color: #f9fbf0;
       height: 120vh;
