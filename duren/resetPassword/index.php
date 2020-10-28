@@ -36,9 +36,32 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css?v=1.0.1">
   <link rel="stylesheet" type="text/css" href="../css/durianLoginSignup.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
+  <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
   <style type="text/css">
-    .top-page {
-      height: 100vh;
+    .login {
+      background-color: #f9fbf0;
+      height: 120vh;
+      font-size: 20px;
+      -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      background: url(../images/ex-bg.jpg);
+          background-position-x: 0%;
+          background-position-y: 0%;
+          background-repeat: repeat;
+          background-attachment: scroll;
+          background-size: auto;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-repeat: repeat;
+      background-attachment: scroll;
+      background-size: auto;
+      padding-bottom: 0px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+     /* margin-top: -54px;*/
     }
   </style>
 </head>
@@ -111,7 +134,8 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
-<script type="text/javascript" src="../js/resetPassword.js?v=1.4.1"></script>
+<script type="text/javascript" src="../js/resetPassword.js?v=1.4.2"></script>
+<script type="text/javascript" src="../js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

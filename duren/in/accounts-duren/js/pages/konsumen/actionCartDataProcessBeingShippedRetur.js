@@ -39,7 +39,11 @@ $('#cancelButtonRetur').on('click', function(){
 	        location.reload();
 	      }
 	      else{
-	        alert('Error');
+	        swal({
+		        title:"Gagal",
+		        text: "Data Error",
+		        type: "error"
+		    });
 	        $("#buttonRetur").html('Retur Produk');
 	      }
 	    }    
@@ -51,11 +55,19 @@ $('#buttonReturSave').on('click', function(){
     var check_foto_data = $('#foto_check').val();
 
     if(check_foto_data == '0' || check_foto_data == ''){
-        alert('Lengkapi atau upload foto produk');
+    	swal({
+	        title:"Gagal Mengirim",
+	        text: "Lengkapi atau upload foto produk",
+	        type: "error"
+	    });
     }
     else{
         if(dataPesanRetur == '' ){
-            alert('Isi data alasan diretur');
+        	swal({
+		        title:"Gagal Mengirim",
+		        text: "Isi data alasan diretur",
+		        type: "error"
+		    });
         }
         else{
             
@@ -73,17 +85,25 @@ $('#buttonReturSave').on('click', function(){
                 success :  function(response)
                 {
                   if(response == "createDataReturProductSuccess"){
-                    location.reload();
+					$("#content-profile").load("cartDataAfterRetur.php");
                   }
                   else{
-                    alert('Pemesanan Gagal, Silahkan Lengkapi Data Retur');
+                  	swal({
+				        title:"Gagal Mengirim",
+				        text: "Isi data alasan diretur",
+				        type: "error"
+				    });
                     $("#buttonReturSave").html('KIRIM');
                   }
                 }    
             });
         return false;
-			
-		alert('success');                 
+		
+			swal({
+		        title:"Sukses",
+		        text: "Data terkirim",
+		        type: "success"
+		    });              
         }
     }  
 });

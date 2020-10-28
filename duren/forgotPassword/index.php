@@ -37,6 +37,7 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css?v=1.0.1">
   <link rel="stylesheet" type="text/css" href="../css/durianLoginSignup.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
+  <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
 </head>
 <style type="text/css">
 @media(max-width: 992px){
@@ -45,8 +46,30 @@
     padding-top: 60px;
   }
 }
-.top-page {
-  height: 100vh;
+.login {
+  background-color: #f9fbf0;
+  height: 120vh;
+  font-size: 20px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  background: url(../images/ex-bg.jpg);
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-repeat: repeat;
+      background-attachment: scroll;
+      background-size: auto;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-size: auto;
+  padding-bottom: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  /*margin-top: -54px;*/
 }
   </style>
 <body>
@@ -84,7 +107,7 @@
                   Forgot Password
                 </div>
                 <div class="paddingTopBottom10">
-                  E-mail Anda
+                  Your E-mail
                   <input type="email" class="form-control" name="email" id="email" value="<?php echo $callMail; ?>" >
                   <input type="hidden" class="form-control" name="checkCode" id="checkCode"  >
                 </div>
@@ -116,8 +139,9 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durianJSLoad.js?v=1.1.1"></script>
-<script type="text/javascript" src="../js/forgotPassword.js?v=1.1.1"></script>
+<script type="text/javascript" src="../js/forgotPassword.js?v=1.1.2"></script>
 <!-- <script type="text/javascript" src="../js/login-signup.js?v=1.2.1"></script> -->
+<script type="text/javascript" src="../js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

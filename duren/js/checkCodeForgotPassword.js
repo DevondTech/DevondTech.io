@@ -5,7 +5,6 @@ $(window).on('load',function(e){
 	    var email = $('#email').val();
 	    if(kode != ''){
 	      	var data = $("#actionCheckCodeForm").serialize();
-	      	/*console.log(data);*/
 	      	$.ajax({
 
 		        type : 'POST',
@@ -17,13 +16,16 @@ $(window).on('load',function(e){
 		          $("#actionCheckCodeButton").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
 		       	}, 
 		        success :  function(response)
-		         {      
-		            
+		         {               
 	                if(response == "foundData"){
 	                   window.location.href = '../resetPassword/?email='+email+'&&kode='+kode;
 	                }
 	                else{
-	                    alert('Kode Yag Anda Masukkan Salah');
+	                	swal({
+					        title:"Fatal",
+					        text: "Kode Yang Anda Masukkan Salah",
+					        type: "error"
+					    });
 	                    $("#actionCheckCodeButton").html('Send To E-mail');
 	            	}       
 	          	}
@@ -31,7 +33,11 @@ $(window).on('load',function(e){
 	      return false;
 	    }
 	    else{
-	    	alert('Silahkan Isi Kode Verifikasi');
+	    	swal({
+		        title:"Lengkapi Data",
+		        text: "Silahkan Isi Kode Verifikasi",
+		        type: "error"
+		    });
 	    }      
 	});
 });

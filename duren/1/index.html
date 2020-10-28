@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+</body>
+<script type="text/javascript">
+	let getRandomPaymentUnix = function(start, range){
+      let getRandom = Math.floor((Math.random() * range) + start);
+      while (getRandom > range){
+        getRandom = Math.floor((Math.random()*range) + start);
+      } 
+      return getRandom
+    }
+    var dataCreate = getRandomPaymentUnix(1,80); 
+    var x = 890000;
+    var dataCreate = +dataCreate + x;
+    console.log(dataCreate);
+
+</script>
+</html>

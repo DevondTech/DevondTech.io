@@ -33,6 +33,17 @@
         background-color: white;
         cursor: pointer;
     }
+
+    .input-textDataUser {
+        width: 100%;
+        height: 30px;
+        color: #000;
+        border: transparent;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 1px solid #969191;
+        border-radius: 0px;
+    }
 </style>
 </head>
 <body class="bd-w">
@@ -189,7 +200,7 @@
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
-<script src="../js/pages/admin/createDataUserAdmin.js?v=1.2.1"></script>
+<script src="../js/pages/admin/createDataUserAdmin.js?v=1.2.5"></script>
 </body>
 </html>
 

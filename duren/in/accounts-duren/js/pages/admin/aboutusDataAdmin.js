@@ -58,6 +58,38 @@ $(document).ready(function(){
             $('#PrintDetail_link_email').val(PrintDetail_link_email);
          
         }
+    });    
+
+    $.ajax({
+        type: 'POST',
+        url: '../../../conn/data2/cartProcess/cartProcess.php/?informationNumberRek',
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function(informationNumberRek) { 
+
+            var NumberRekening = jQuery.parseJSON(informationNumberRek);
+
+            var number_rekening = NumberRekening[0].number_rekening;
+            
+            $('#PrintDetail_link_number_rekening').val(number_rekening);
+         
+        }
+    });       
+
+    $.ajax({
+        type: 'POST',
+        url: '../../../conn/data2/cartProcess/cartProcess.php/?InformationPemilikRek',
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function(InformationPemilikRek) { 
+
+            var PemilikRekening = jQuery.parseJSON(InformationPemilikRek);
+
+            var pemilik_rekening = PemilikRekening[0].pemilik_rekening;
+            
+            $('#PrintDetail_link_pemilik_rekening').val(pemilik_rekening);
+         
+        }
     });             
 
     /*Alamat edit*/
@@ -270,6 +302,118 @@ $(document).ready(function(){
                 $("#PrintDetail_link_email").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
                 $("#email_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
                 $("#email_EditDataDetailProductAdmin").attr('style','display:block;');
+              }
+              else{
+                alert('Ubah data gagal');
+              }
+            }    
+          });
+          return false;
+        } 
+    });
+
+
+    /*Number Rekening edit*/
+    $("#NumberRekening_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+    $("#PrintDetail_link_number_rekening").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
+
+    $('#NumberRekening_EditDataDetailProductAdmin').on('click', function(){
+        $("#PrintDetail_link_number_rekening").prop('enable', true);
+        $("#PrintDetail_link_number_rekening").prop('disabled', false);
+        $("#PrintDetail_link_number_rekening").attr('style','background-color:white;color: black;padding-top: 4px;');
+        $("#NumberRekening_SaveCancelDataDetailProductAdmin").attr('style','display:block;');
+        $("#NumberRekening_EditDataDetailProductAdmin").attr('style','display:none;');
+    });
+
+    $('#NumberRekening_ubahCancel').on('click', function(){
+        $("#PrintDetail_link_number_rekening").prop('enable', false);
+        $("#PrintDetail_link_number_rekening").prop('disabled', true);
+        $("#PrintDetail_link_number_rekening").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
+        $("#NumberRekening_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+        $("#NumberRekening_EditDataDetailProductAdmin").attr('style','display:block;');
+    });
+
+    $('#NumberRekening_ubahSave').on('click',function(e){
+    var PrintDetail_link_number_rekening = $('#PrintDetail_link_number_rekening').val();
+      if(PrintDetail_link_number_rekening == ''){
+        alert('Silahkan Isi Data Nomor Rekening')
+      }  
+      else{
+        var data = $("#updateNumberRekening").serialize();
+        console.log(data);
+        $.ajax({
+            type : 'POST',
+            url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateInformationNumberRek',
+            data : data,
+            beforeSend: function()
+            { 
+              $("#error").fadeOut();
+            }, 
+            success :  function(response)
+            {
+              if(response == "updateInformationNumberRek"){
+                alert('Ubah data berhasil');
+                $("#PrintDetail_link_number_rekening").prop('enable', false);
+                $("#PrintDetail_link_number_rekening").prop('disabled', true);
+                $("#PrintDetail_link_number_rekening").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
+                $("#NumberRekening_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+                $("#NumberRekening_EditDataDetailProductAdmin").attr('style','display:block;');
+              }
+              else{
+                alert('Ubah data gagal');
+              }
+            }    
+          });
+          return false;
+        } 
+    });
+
+
+    /*Pemilik Rekening edit*/
+    $("#PemilikRekening_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+    $("#PrintDetail_link_pemilik_rekening").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
+
+    $('#PemilikRekening_EditDataDetailProductAdmin').on('click', function(){
+        $("#PrintDetail_link_pemilik_rekening").prop('enable', true);
+        $("#PrintDetail_link_pemilik_rekening").prop('disabled', false);
+        $("#PrintDetail_link_pemilik_rekening").attr('style','background-color:white;color: black;padding-top: 4px;');
+        $("#PemilikRekening_SaveCancelDataDetailProductAdmin").attr('style','display:block;');
+        $("#PemilikRekening_EditDataDetailProductAdmin").attr('style','display:none;');
+    });
+
+    $('#PemilikRekening_ubahCancel').on('click', function(){
+        $("#PrintDetail_link_pemilik_rekening").prop('enable', false);
+        $("#PrintDetail_link_pemilik_rekening").prop('disabled', true);
+        $("#PrintDetail_link_pemilik_rekening").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
+        $("#PemilikRekening_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+        $("#PemilikRekening_EditDataDetailProductAdmin").attr('style','display:block;');
+    });
+
+    $('#PemilikRekening_ubahSave').on('click',function(e){
+    var PrintDetail_link_pemilik_rekening = $('#PrintDetail_link_pemilik_rekening').val();
+      if(PrintDetail_link_pemilik_rekening == ''){
+        alert('Silahkan Isi Data Pemilik Rekening')
+      }  
+      else{
+        var data = $("#updatePemilikRekening").serialize();
+        console.log(data);
+        $.ajax({
+            type : 'POST',
+            url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateInformationPemilikRek',
+            data : data,
+            beforeSend: function()
+            { 
+              $("#error").fadeOut();
+            }, 
+            success :  function(response)
+            {
+              if(response == "updateInformationPemilikRek"){
+                alert('Ubah data berhasil');
+                $("#PrintDetail_link_pemilik_rekening").prop('enable', false);
+                $("#PrintDetail_link_pemilik_rekening").prop('disabled', true);
+                $("#PrintDetail_link_pemilik_rekening").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
+                $("#PemilikRekening_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
+                $("#PemilikRekening_EditDataDetailProductAdmin").attr('style','display:block;');
               }
               else{
                 alert('Ubah data gagal');

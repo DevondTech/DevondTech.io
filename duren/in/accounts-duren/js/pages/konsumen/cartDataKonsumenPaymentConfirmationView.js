@@ -29,6 +29,8 @@ $(document).ready(function(){
             var TotalPerProduk = DataPayment[0].total_harga_perproduk ;
             var NamaProduk = DataPayment[0].nama_produk;
             var hargaProduk = DataPayment[0].harga;
+            var codeUnix = DataPayment[0].kode_unik;
+
             $('#IdPemesanan').val(IdPemesanan);
             $('#IdPemesananDelete').val(IdPemesanan);
             $('#IdProduk').val(IdProduk);
@@ -77,6 +79,7 @@ $(document).ready(function(){
             }
             $('#ongkir').val(ongkosKirim);
             $('#ongkir_tampil').val('Rp '+ongkosKirimRupiah+',00');
+
             var totalHargaNumberString = totalHarga.toString(),
             totalHargaSisa    = totalHargaNumberString.length % 3,
             totalHargaRupiah  = totalHargaNumberString.substr(0, totalHargaSisa),
@@ -109,6 +112,40 @@ $(document).ready(function(){
             $('#total_harga_pemesanan_tampil').val('Rp '+totalHargaPerprodukRupiah+',00');
             $('#detailPembayaranInfo').text(JumlahPemesanan+' x Rp '+hargaPerprodukRupiah+',00');
             /*$('#detailPembayaranInfoTotal').text('Rp '+totalHargaPerprodukRupiah+',00' );*/
+
+            var codeUnixNumberString = codeUnix.toString(),
+                codeUnixSisa    = codeUnixNumberString.length % 3,
+                codeUnixRupiah  = codeUnixNumberString.substr(0, codeUnixSisa),
+                codeUnixRibuan  = codeUnixNumberString.substr(codeUnixSisa).match(/\d{3}/g);         
+            if (codeUnixRibuan) {
+                codeUnixSeparator = codeUnixSisa ? '.' : '';
+                codeUnixRupiah += codeUnixSeparator + codeUnixRibuan.join('.');
+            }
+            $('#kodeUnik_tampil').val('Rp '+codeUnixRupiah+',00');
+        }
+    });
+    
+    $.ajax({
+        type: "GET",
+        url: "../../../conn/data2/cartProcess/cartProcess.php/?InformationPemilikRek",
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function(InformationPemilikRek) { 
+            var PemilikRek = jQuery.parseJSON(InformationPemilikRek);
+            var PemilikRekening = PemilikRek[0].pemilik_rekening;
+            $('#PemilikRekening').text(PemilikRekening);
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: "../../../conn/data2/cartProcess/cartProcess.php/?informationNumberRek",
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function(informationNumberRek) { 
+            var NumberRek = jQuery.parseJSON(informationNumberRek);
+            var NumberRekening = NumberRek[0].number_rekening;
+            $('#NumberRekening').text(NumberRekening);
         }
     });
     

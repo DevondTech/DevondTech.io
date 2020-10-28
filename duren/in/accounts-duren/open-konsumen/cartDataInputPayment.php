@@ -365,7 +365,7 @@
                     <div class="padding-card-textData">
                         <div class="card-textData">
                             <div class="textData" style="width: 100%">
-                                Gambar Pembayaran
+                                Gambar Bukti Transfer
                             </div>
                         </div>
                         <div class="card-inputData">
@@ -387,8 +387,8 @@
 <script src="../js/action.js"></script>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionConfirmationPayment.js?v=1.4.2"></script>
-<script type="text/javascript" src="../js/pages/updateDataFotoPayment.js?v=1.4.2"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionConfirmationPayment.js?v=1.4.3"></script>
+<script type="text/javascript" src="../js/pages/updateDataFotoPayment.js?v=1.4.3"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

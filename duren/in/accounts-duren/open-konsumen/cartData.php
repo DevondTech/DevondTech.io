@@ -15,8 +15,20 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
 <title>Account</title>
 <link href="../css/dataUserLogin.css?v=1.1.2" rel="stylesheet" />
+
 </head>
 <style type="text/css">
+
+    .input-textDataUser {
+        width: 100%;
+        height: 30px;
+        color: #000;
+        border: transparent;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 1px solid #969191;
+        border-radius: 0px;
+    }
 
     .widthBorder{
         width: 80%;
@@ -35,11 +47,11 @@
         float: left;
     }
 
-    .textDataUser {
+    /*.textDataUser {
         text-align: left;
         padding-right: 20px;
         padding-top: 5px;
-    }
+    }*/
 
     .cardBorderBottomGrey{
         border-bottom: 1px solid #887777;
@@ -765,6 +777,22 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div style="margin-left: 4px;"> 
+                                        <div class="positionTextDetailOrder">
+                                            <div class="w150 textTotalHarga floatLeftCartData" >
+                                                Kode Unik
+                                            </div>
+                                            <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">
+                                                :  
+                                            </div>
+                                            <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
+                                                <div class="marginLeft10 floatLeftCartData">
+                                                    <input type="hidden" name="kodeUnikPlus"  style="color: #737373;" id="kodeUnikPlus" class="input-textDataUser-false" >
+                                                    <input type="text" name="kodeUnik_tampil"  style="color: #737373;background-color: transparent;" id="kodeUnik_tampil" class="input-textDataUser-false" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="positionTextDetailOrder">
                                          <div class="widthBorder2 cardBorderBottomGrey" style="margin-bottom: 5px;margin-left: 4px;"></div>
                                     </div>
@@ -800,8 +828,9 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCartV1.js?v=1.1.1"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV1.js?v=1.1.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenCartV2.js?v=1.1.3"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV2.js?v=1.2.1"></script>
+
 </body>
 </html>
 

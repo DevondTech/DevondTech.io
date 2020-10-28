@@ -75,7 +75,7 @@
 <div>
     <div class="positionDataNull">
         <a  style="color:#2d472c;">
-            <img src="../images/icon png/pembayaran-diperiksa.png" class="imgDataNull">
+            <img src="../images/icon png/pembayarandiperiksa.png" class="imgDataNull">
             <div class="textClickToProduct">Pesanan Sedang di Proses</div>
         </a>
     </div>

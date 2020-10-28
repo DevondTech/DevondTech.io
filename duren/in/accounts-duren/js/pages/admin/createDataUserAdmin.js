@@ -77,25 +77,42 @@ $(document).ready(function(){
     var id_status_user = $('#id_status_user').val();
     
     if(nama_lengkap == ''){
-      alert('Silahkan Isi Data Nama Lengkap')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Nama Lengkap",
+        type: "error"
+      });
     }  
     else if(nomor_hp == ''){
-      alert('Silahkan Isi Data Nomor Hp')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Nomor Hp",
+        type: "error"
+      });
     }  
     else if(username == ''){
-      alert('Silahkan Isi Data Username')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Username",
+        type: "error"
+      });
     }  
     else if(email == ''){
-      alert('Silahkan Isi Data E-mail')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data E-mail",
+        type: "error"
+      });
     }  
     else if(password == ''){
-      alert('Silahkan Isi Data Password')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Password",
+        type: "error"
+      });
     }  
-
     else if(username != '' && password != ''){
-
       var data = $("#createDataUser").serialize();
-      /*console.log(data);*/
       $.ajax({
          type : 'POST',
          url  : '../../../conn/data2/user_data.php/?createDataUser',
@@ -108,21 +125,33 @@ $(document).ready(function(){
           success :  function(response)
           {      
             if(response == "Kode3"){
-              alert('Email / Username sudah dipakai');
+              swal({
+                title:"Fatal",
+                text: "Email / Username sudah dipakai",
+                type: "error"
+              });
               $("#btn-signup").html('SIMPAN');
               $('#username').val('');
               $('#email').val('');
             }
             else{
               if(response == "emailCheck"){
-                alert('Ulangi kembali email bukan tipe email');
+                swal({
+                  title:"Fatal",
+                  text: "Ulangi kembali email bukan tipe email",
+                  type: "error"
+                });
                 $("#btn-create-user").html('SIMPAN');
                 $('#username').val('');
                 $('#email').val('');
               }
               else{
                 if(response == 'userCheck'){
-                  alert('Username sudah dipakai');
+                  swal({
+                    title:"Fatal",
+                    text: "Username sudah dipakai",
+                    type: "error"
+                  });
                   $("#btn-create-user").html('SIMPAN');
                   $('#username').val('');
                   $('#email').val('');
@@ -130,13 +159,18 @@ $(document).ready(function(){
                 else{
                   if(response == "Success"){
                     $("#btn-create-user").html('SIMPAN');
-                    alert('Data Berhasil Disimpan');
-                    $('#nama_lengkap').val('');
-                    $('#nomor_hp').val('');
-                    $('#username').val('');
-                    $('#email').val('');
-                    $('#password').val('');
-                    table.ajax.reload();
+                    swal({
+                      title:"Sukses",
+                      text: "Data Berhasil Disimpan",
+                      type: "success"
+                    }).then(function() {
+                      $('#nama_lengkap').val('');
+                      $('#nomor_hp').val('');
+                      $('#username').val('');
+                      $('#email').val('');
+                      $('#password').val('');
+                      table.ajax.reload();                    
+                    });
                   }
                   else{
                     $("#error").fadeIn(1000, function(){   

@@ -14,9 +14,7 @@ $(window).on('load',function(e){
 	   	var checkCode = $('#checkCode').val();
 	    if(email != ''){
 	      	var data = $("#actionForgotPasswordForm").serialize();
-	      	/*console.log(data);*/
 	      	$.ajax({
-
 		        type : 'POST',
 		        url  : '../conn/data2/user_login.php/?forgotPassword',
 		        data : data,
@@ -27,12 +25,15 @@ $(window).on('load',function(e){
 		       	}, 
 		        success :  function(response)
 		         {      
-		            
 	                if(response == "foundData"){
 	                   window.location.href = '../conn/data2/mail/sendMailForgotPassword/index.php?email='+email+'&&checkCode='+checkCode;
 	                }
 	                else{
-	                    alert('Data Tidak Ditemukan');
+	                	swal({
+		                  title:"Fatal",
+		                  text: "Data Tidak Ditemukan",
+		                  type: "error"
+		                });
 	                    $("#actionForgotPasswordButton").html('Send To E-mail');
 	            	}       
 	          	}
@@ -40,7 +41,11 @@ $(window).on('load',function(e){
 	      return false;
 	    }
 	    else{
-	    	alert('Silahkan Isi Email Anda');
+	    	swal({
+	          title:"Cek Data",
+	          text: "Silahkan Isi Email Anda",
+	          type: "error"
+	        });
 	    }      
 	});
 });

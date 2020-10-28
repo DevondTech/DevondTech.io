@@ -17,11 +17,19 @@ $('#buttonCommentSave').on('click',function(e){
       {
         if(response == "Success"){
           $("#buttonCommentSave").html('KIRIM');
-          alert('Terimakasih Atas Review Anda');
-          $("#content-profile").load("cartDataNull.php");
+          swal({
+            title:"Sukses",
+            text: "Terimakasih Atas Review Anda",
+            type: "success"
+          });
+          $("#content-profile").load("cartDataAfterReview.php");
         }
         else{
-          alert('Gagal Mengirim Review');
+          swal({
+            title:"Gagal",
+            text: "Gagal Mengirim Review",
+            type: "error"
+          });
           $("#buttonCommentSave").html('KIRIM');
         }
       }    
@@ -29,6 +37,10 @@ $('#buttonCommentSave').on('click',function(e){
     return false;
   }
   else{
-    alert('Silahkan Isi Review Anda')
+    swal({
+      title:"Gagal",
+      text: "Silahkan Isi Review Anda",
+      type: "error"
+    });
   }
 });

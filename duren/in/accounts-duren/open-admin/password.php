@@ -15,6 +15,22 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
 <title>Account</title>
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
+<style type="text/css">
+    .input-textDataUser {
+        width: 100%;
+        height: 30px;
+        color: #000;
+        border: transparent;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 1px solid #969191;
+        border-radius: 0px;
+    }
+
+    .M20tp{
+        margin-top: 20px;
+    }
+</style>
 </head>
 <body class="bd-w">
 <div class="divPositionContentTop">
@@ -78,7 +94,7 @@
                                 <input type="password" name="passwordUpdate_re" id="passwordUpdate_re" class="input-textDataUser" >
                             </div>
                         </div>
-                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="M20tp Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
                                   
@@ -96,7 +112,7 @@
     
 </div>
 
-<script src="../js/pages/password.js?v=1.2.1"></script>
+<script src="../js/pages/password.js?v=1.2.2"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

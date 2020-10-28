@@ -114,7 +114,11 @@ $(document).ready(function(){
                 location.reload();
               }
               else{
-                alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');
+                swal({
+                    title:"Gagal",
+                    text: "Pemesanan Gagal, Silahkan Lengkapi Data Anda",
+                    type: "error"
+                });
                 $("#btnCancelConfirmationDetailPayment").html('BATAL');
               }
             }    
@@ -131,23 +135,43 @@ $(document).ready(function(){
         var check_foto_data = $('#foto_check').val();
 
         if(check_foto_data == '0' ){
-            alert('Lengkapi atau upload foto transfer');
+            swal({
+                title:"Pemesanan Gagal",
+                text: "Lengkapi atau upload foto transfer",
+                type: "error"
+            });
         }
         else{
             if(nama_pemilik_rekening == '' ){
-                alert('Isi data nama pemilik rekening');
+                swal({
+                    title:"Pemesanan Gagal",
+                    text: "Silahkan Lengkapi Data Pemilik Rekening",
+                    type: "error"
+                });
             }
             else{
                 if(tanggal_transfer == '' ){
-                    alert('Isi data tanggal transfer');
+                    swal({
+                        title:"Pemesanan Gagal",
+                        text: "Pemesanan Gagal, Silahkan Lengkapi Data Tanggal Transfer",
+                        type: "error"
+                    });
                 }
                 else{
                     if(no_rekening == '' ){
-                        alert('Isi data nomor rekening');
+                        swal({
+                            title:"Pemesanan Gagal",
+                            text: "Pemesanan Gagal, Silahkan Lengkapi Nomor Rekening",
+                            type: "error"
+                        });
                     }
                     else{
                         if(bank_asal == '' ){
-                            alert('Isi data bank untuk mentransfer');
+                            swal({
+                                title:"Pemesanan Gagal",
+                                text: "Silahkan Lengkapi Data Bank Asal",
+                                type: "error"
+                            });
                         }
                         else{
                             var data = $("#confirmationFormDataTransfer").serialize();
@@ -165,11 +189,20 @@ $(document).ready(function(){
                                 {
                                   if(response == "updateConfirmationPaymentTransferSuccess"){
                                     $("#btnUpdateConfirmationDetailPayment").html('SIMPAN');
-                                    alert('Transaksi Berhasil');
-                                    location.reload();
+                                    swal({
+                                        title:"Sukses",
+                                        text: "Transaksi Berhasil",
+                                        type: "success"
+                                    }).then(function() {
+                                        location.reload();
+                                    });                                    
                                   }
                                   else{
-                                    alert('Pemesanan Gagal, Silahkan Lengkapi Data Anda');
+                                    swal({
+                                        title:"Gagal",
+                                        text: "Pemesanan Gagal, Silahkan Lengkapi Data Anda",
+                                        type: "error"
+                                    });
                                     $("#btnUpdateConfirmationDetailPayment").html('SIMPAN');
                                   }
                                 }    

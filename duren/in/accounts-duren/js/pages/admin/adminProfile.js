@@ -1,5 +1,50 @@
 $(window).on('load',function(e){
-    $("#content-profile").load("profile.php");
+
+	var checkOpen = $('#textData').val();
+	if(checkOpen=='7b7b34345d77bf183a1f960594c40d87daa7c583'){
+		$("#content-profile").load("productData.php");
+
+		$("#review-link").attr("class","menu-waves-block");
+		$("#finish-link").attr("class","menu-waves-block");
+		$("#sales-link").attr("class","menu-waves-block");
+		$("#retur-all-link").attr("class","menu-waves-block");
+		$("#retur-link").attr("class","menu-waves-block");
+		$("#ontheway-link").attr("class","menu-waves-block");
+		$("#account-link").attr("class","menu-waves-block");
+		$("#password-link").attr("class","menu-waves-block");
+		$("#shipped-link").attr("class","menu-waves-block");
+		$("#notification-link").attr("class","menu-waves-block");
+		$("#create-user-link").attr("class","menu-waves-block");
+		$("#logout-link").attr("class","menu-waves-block");
+		$("#account-edit-link").attr("class","menu-waves-block");
+		$("#payment-link").attr("class","menu-waves-block");
+
+		$("#product-link").attr("class","active-menu-right");
+		$("#medsos-link").attr("class","displayLink-none");
+		$("#about-link").attr("class","displayLink-none");
+	}
+	else{
+		$("#content-profile").load("profile.php");
+
+		$("#review-link").attr("class","menu-waves-block");
+		$("#finish-link").attr("class","menu-waves-block");
+		$("#sales-link").attr("class","menu-waves-block");
+		$("#retur-all-link").attr("class","menu-waves-block");
+		$("#retur-link").attr("class","menu-waves-block");
+		$("#ontheway-link").attr("class","menu-waves-block");
+		$("#shipped-link").attr("class","menu-waves-block");
+		$("#account-edit-link").attr("class","menu-waves-block");
+		$("#password-link").attr("class","menu-waves-block");
+		$("#product-link").attr("class","menu-waves-block");
+		$("#create-user-link").attr("class","menu-waves-block");
+		$("#notification-link").attr("class","menu-waves-block");
+		$("#logout-link").attr("class","menu-waves-block");
+		$("#payment-link").attr("class","menu-waves-block");
+
+		$("#account-link").attr("class","active-menu-right");
+		$("#medsos-link").attr("class","displayLink-none");
+		$("#about-link").attr("class","displayLink-none");
+	}
 
     $.ajax({
      	type: "GET",
@@ -92,6 +137,26 @@ $(window).on('load',function(e){
 
 $('#review-link').on('click',function(e){
 	$("#content-profile").load("reviewProduct.php");
+	
+	$("#review-link").attr("class","active-menu-right");
+
+	$("#finish-link").attr("class","menu-waves-block");
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#medsos-link").attr("class","displayLink-none");
+	$("#about-link").attr("class","displayLink-none");	
+
 	$.ajax({
 	    type : 'POST',
 	    url  : '../../../conn/data2/notification/readNotifAdmin.php/?updateConfirmationReview',
@@ -111,24 +176,7 @@ $('#review-link').on('click',function(e){
 	});
 	return false;
 	
-	$("#finish-link").attr("class","menu-waves-block");
-	$("#sales-link").attr("class","menu-waves-block");
-	$("#retur-all-link").attr("class","menu-waves-block");
-	$("#retur-link").attr("class","menu-waves-block");
-	$("#ontheway-link").attr("class","menu-waves-block");
-	$("#shipped-link").attr("class","menu-waves-block");
-	$("#account-edit-link").attr("class","menu-waves-block");
-	$("#payment-link").attr("class","menu-waves-block");
-	$("#password-link").attr("class","menu-waves-block");
-	$("#product-link").attr("class","menu-waves-block");
-	$("#create-user-link").attr("class","menu-waves-block");
-	$("#notification-link").attr("class","menu-waves-block");
-	$("#logout-link").attr("class","menu-waves-block");
-	$("#account-link").attr("class","menu-waves-block");
-	$("#medsos-link").attr("class","displayLink-none");
-	$("#about-link").attr("class","displayLink-none");
-
-	$("#review-link").attr("class","active-menu-right");
+	
 });
 
 $('#finish-link').on('click',function(e){
@@ -202,23 +250,7 @@ $('#retur-all-link').on('click',function(e){
 
 $('#retur-link').on('click',function(e){
 	$("#content-profile").load("cartDataReturAdmin.php");
-	$.ajax({
-	    type : 'POST',
-	    url  : '../../../conn/data2/notification/readNotifAdmin.php/?updateConfirmationReturTransfer',
-	    beforeSend: function()
-	    { 
-	     
-	    }, 
-	    success :  function(response)
-	    {
-	      if(response == "updateConfirmationReturTransfer"){
-	      	$('#requestRetur').attr('style','display:none;');
-	      }
-	      else{
-	      	alert('error');
-	      }
-	    }    
-	});
+
 	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
@@ -237,6 +269,23 @@ $('#retur-link').on('click',function(e){
 	$("#about-link").attr("class","displayLink-none");
 
 	$("#retur-link").attr("class","active-menu-right");
+	$.ajax({
+	    type : 'POST',
+	    url  : '../../../conn/data2/notification/readNotifAdmin.php/?updateConfirmationReturTransfer',
+	    beforeSend: function()
+	    { 
+	     
+	    }, 
+	    success :  function(response)
+	    {
+	      if(response == "updateConfirmationReturTransfer"){
+	      	$('#requestRetur').attr('style','display:none;');
+	      }
+	      else{
+	      	alert('error');
+	      }
+	    }    
+	});
 });
 
 $('#ontheway-link').on('click',function(e){
@@ -287,23 +336,7 @@ $('#shipped-link').on('click',function(e){
 
 $('#payment-link').on('click',function(e){
 	$("#content-profile").load("cartDataPaymentAdmin.php");
-	$.ajax({
-	    type : 'POST',
-	    url  : '../../../conn/data2/notification/readNotifAdmin.php/?updateConfirmationPaymentTransfer',
-	    beforeSend: function()
-	    { 
-	     
-	    }, 
-	    success :  function(response)
-	    {
-	      if(response == "updateConfirmationPaymentTransfer"){
-	      	$('#sendPayment').attr('style','display:none;');
-	      }
-	      else{
-	      	alert('error');
-	      }
-	    }    
-	});
+
 	$("#review-link").attr("class","menu-waves-block");
 	$("#finish-link").attr("class","menu-waves-block");
 	$("#sales-link").attr("class","menu-waves-block");
@@ -322,6 +355,24 @@ $('#payment-link').on('click',function(e){
 	$("#about-link").attr("class","displayLink-none");
 
 	$("#payment-link").attr("class","active-menu-right");
+
+	$.ajax({
+	    type : 'POST',
+	    url  : '../../../conn/data2/notification/readNotifAdmin.php/?updateConfirmationPaymentTransfer',
+	    beforeSend: function()
+	    { 
+	     
+	    }, 
+	    success :  function(response)
+	    {
+	      if(response == "updateConfirmationPaymentTransfer"){
+	      	$('#sendPayment').attr('style','display:none;');
+	      }
+	      else{
+	      	alert('error');
+	      }
+	    }    
+	});
 });
 
 $('#account-edit').on('click',function(e){

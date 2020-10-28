@@ -21,6 +21,8 @@ $produk_send = $_GET['produk_send'];
 $jumlah_send = $_GET['jumlah_send'];
 $total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
 $email = $baris['email'];
+$kode_unix = $_GET['kode_unix'];
+
 
 /*$emailTo = $_GET['email_send'];
 $kode_pemesanan_send = $_GET['kode_pemesanan_send'];
@@ -122,8 +124,18 @@ $email = 'kingfruit.co.id@gmail.com';*/
   </div>
   <br />
   <div style="color: #3a3a3a;margin-top: 5px;">
+    <div style="width: 100px;float: left">Kode Unik</div>
+    <div style="float: left;">: '.$kode_unix.'</div>
+  </div>
+  <br />
+  <div style="color: #3a3a3a;margin-top: 5px;">
     <div style="width: 100px;float: left">Total</div>
     <div style="float: left;">: '.$total_harga_yang_harus_dibayar_send.'</div>
+  </div>
+  <br />
+  <div style="color: #3a3a3a;margin-top: 5px;">
+    <div style="width: 100px;float: left">Status</div>
+    <div style="float: left;">: Belum Lunas</div>
   </div>
   <br />
 </div>

@@ -9,29 +9,56 @@ $('document').ready(function()
     var password_re = $('#password_re').val();
     var checkSignup = document.getElementById('checkSignup');
     if(nama_lengkap == ''){
-      alert('Silahkan Isi Data Nama Lengkap')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Nama Lengkap",
+        type: "error"
+      });
     }  
     else if(nomor_hp == ''){
-      alert('Silahkan Isi Data Nomor Hp')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Nomor Hp",
+        type: "error"
+      });
     }  
     else if(email == ''){
-      alert('Silahkan Isi Data E-mail')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data E-mail",
+        type: "error"
+      });
     }  
     else if(password == ''){
-      alert('Silahkan Isi Data Password')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Password",
+        type: "error"
+      });
     }  
     else if(password_re == ''){
-      alert('Silahkan Isi Data Ulangi Password')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Ulangi Password",
+        type: "error"
+      });
     }  
     else if(password_re != password){
-      alert('Password Tidak Sama')
+      swal({
+        title:"Cek Password",
+        text: "Password Tidak Sama",
+        type: "error"
+      });
     }  
     else if(checkSignup.checked == false){
-      alert('Silahkan centang checkbox')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan centang checkbox",
+        type: "error"
+      });
     }
     else if(password != ''){
       var data = $("#signup-form").serialize();
-      /*console.log(data);*/
       $.ajax({
 
          type : 'POST',
@@ -45,7 +72,11 @@ $('document').ready(function()
           success :  function(response)
           {      
             if(response == "userCheck"){
-            alert('Email / Nomor HP sudah dipakai');
+            swal({
+              title:"Gagal Menyimpan",
+              text: "Email / Nomor HP sudah dipakai",
+              type: "error"
+            });
             $("#btn-signup").html('Signup');
             $("#btn-signup").attr('class','buttonYellow');
             $('#nomor_hp').val('');
@@ -53,7 +84,11 @@ $('document').ready(function()
             }
             else{
               if(response == "Kode3"){
-                alert('Email / nomor_hp sudah dipakai');
+                swal({
+                  title:"Gagal Menyimpan",
+                  text: "Email / nomor_hp sudah dipakai",
+                  type: "error"
+                });
                 $("#btn-signup").html('Signup');
                 $("#btn-signup").attr('class','buttonYellow');
                 $('#nomor_hp').val('');
@@ -61,7 +96,11 @@ $('document').ready(function()
               }
               else{
                 if(response == "emailCheck"){
-                  alert('Ulangi kembali email bukan tipe email');
+                  swal({
+                    title:"Gagal Menyimpan",
+                    text: "Ulangi kembali email bukan tipe email",
+                    type: "error"
+                  });
                   $("#btn-signup").html('Signup');
                   $("#btn-signup").attr('class','buttonYellow');
                   $('#nomor_hp').val('');
@@ -70,13 +109,18 @@ $('document').ready(function()
                 else{
                   if(response == "Success"){
                     $("#btn-signup").html('Signup');
-                    alert('Pendaftaran Anda Berhasil');
                     $('#nama_lengkap').val('');
                     $('#nomor_hp').val('');
                     $('#email').val('');
                     $('#password').val('');
                     $('#password_re').val('');
-                    window.location.href = "../verifikasiAkun/?mail="+email;
+                    swal({
+                      title:"Sukses",
+                      text: "Pendaftaran Anda Berhasil",
+                      type: "success"
+                    }).then(function() {
+                      window.location = '../conn/data2/loginFromSignUp.php/?email='+email+'&&password='+password;
+                    });
                   }
                   else{
                     $("#error").fadeIn(1000, function(){   

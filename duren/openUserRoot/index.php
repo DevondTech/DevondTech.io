@@ -262,7 +262,7 @@
             <a class="text-nav" href="#detail-product-content">Order </a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../aboutUserRoot">About US</a>
+            <a class="text-nav" href="../aboutUserRoot">About Us</a>
           </li>
           <li class="nav-li-link nav-item">
             <a class="text-nav" href="../login">Login</a>
@@ -300,11 +300,12 @@
       <div class="col-sm-6">
         <div style="background-color: #cda32b">
           <div class="card-textTop">
-            <div>
-            King Fruit  
+            <div style="font-weight: bold;">
+            KING FRUIT  
             </div>
-            <div style="font-size: 14px;" id="topText">
-           
+            <!-- <div style="font-size: 14px;" id="topText"></div> -->
+            <div style="font-size: 14px;" >
+              Durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan <b>Super Montong</b> sebagai produk pertama yang dihadirkan untuk para durian lovers. <b>Premium Quality Super Montong</b> tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.
             </div>
           </div>      
         </div>

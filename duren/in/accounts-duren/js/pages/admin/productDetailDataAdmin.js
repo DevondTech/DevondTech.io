@@ -88,7 +88,11 @@ $(document).ready(function(){
             var PrintDetail_nama_produk = $('#PrintDetail_nama_produk').val();
             var id_barang_nama_produk = $('#id_barang_nama_produk').val();
               if(PrintDetail_nama_produk == ''){
-                alert('Silahkan Isi Data Nama Produk')
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Nama Produk",
+                  type: "error"
+                });
               }  
               else{
                 var data = $("#updateNamaProdukForm").serialize();
@@ -104,7 +108,11 @@ $(document).ready(function(){
                     success :  function(response)
                     {
                       if(response == "Success"){
-                        alert('Ubah data berhasil');
+                        swal({
+                          title: "Sukses",
+                          text: "Data Berhasil Tesimpan",
+                          type: "success"
+                        });
                         $("#PrintDetail_nama_produk").prop('enable', false);
                         $("#PrintDetail_nama_produk").prop('disabled', true);
                         $("#PrintDetail_nama_produk").attr('style','background-color:#f1e8e8;color: #505050;');
@@ -112,7 +120,11 @@ $(document).ready(function(){
                         $("#nama_product_EditDataDetailProductAdmin").attr('style','display:block;');
                       }
                       else{
-                        alert('Ubah data gagal');
+                        swal({
+                          title: "Gagal Menyimpan",
+                          text: "Data Tidak Tesimpan",
+                          type: "error"
+                        });
                       }
                     }    
                   });
@@ -142,7 +154,11 @@ $(document).ready(function(){
             var PrintDetail_detail1_produk = $('#PrintDetail_detail1_produk').val();
             var id_barang_nama_produk = $('#id_barang_nama_produk').val();
               if(PrintDetail_detail1_produk == ''){
-                alert('Silahkan Isi Data Nama Produk')
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Detail Produk",
+                  type: "error"
+                });
               }  
               else{
                 var data = $("#updateDetail1Form").serialize();
@@ -157,7 +173,11 @@ $(document).ready(function(){
                     success :  function(response)
                     {
                       if(response == "Success"){
-                        alert('Ubah data berhasil');
+                        swal({
+                          title: "Sukses",
+                          text: "Data Berhasil Tesimpan",
+                          type: "success"
+                        });
                         $("#PrintDetail_detail1_produk").prop('enable', false);
                         $("#PrintDetail_detail1_produk").prop('disabled', true);
                         $("#PrintDetail_detail1_produk").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -165,7 +185,11 @@ $(document).ready(function(){
                         $("#detail1_produk_EditDataDetailProductAdmin").attr('style','display:block;');
                       }
                       else{
-                        alert('Ubah data gagal');
+                        swal({
+                          title: "Gagal Menyimpan",
+                          text: "Data Tidak Tesimpan",
+                          type: "error"
+                        });
                       }
                     }    
                   });
@@ -195,7 +219,11 @@ $(document).ready(function(){
             var PrintDetail_detail2_produk = $('#PrintDetail_detail2_produk').val();
             var id_barang_nama_produk = $('#id_barang_nama_produk').val();
               if(PrintDetail_detail2_produk == ''){
-                alert('Silahkan Isi Data Nama Produk')
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Detail Produk",
+                  type: "error"
+                });
               }  
               else{
                 var data = $("#updateDetail2Form").serialize();
@@ -210,7 +238,11 @@ $(document).ready(function(){
                     success :  function(response)
                     {
                       if(response == "Success"){
-                        alert('Ubah data berhasil');
+                        swal({
+                          title: "Sukses",
+                          text: "Data Berhasil Tesimpan",
+                          type: "success"
+                        });
                         $("#PrintDetail_detail2_produk").prop('enable', false);
                         $("#PrintDetail_detail2_produk").prop('disabled', true);
                         $("#PrintDetail_detail2_produk").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
@@ -218,7 +250,11 @@ $(document).ready(function(){
                         $("#detail2_produk_EditDataDetailProductAdmin").attr('style','display:block;');
                       }
                       else{
-                        alert('Ubah data gagal');
+                        swal({
+                          title: "Gagal Menyimpan",
+                          text: "Data Tidak Tesimpan",
+                          type: "error"
+                        });
                       }
                     }    
                   });
@@ -266,7 +302,11 @@ $(document).ready(function(){
             var PrintDetail_jumlah_stok = $('#PrintDetail_jumlah_stok').val();
             var id_barang_nama_produk = $('#id_barang_nama_produk').val();
               if(PrintDetail_jumlah_stok == ''){
-                alert('Silahkan Isi Data Nama Produk')
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Jumlah Stok",
+                  type: "error"
+                });
               }  
               else{
                 var data = $("#updateStokForm").serialize();
@@ -281,7 +321,11 @@ $(document).ready(function(){
                     success :  function(response)
                     {
                       if(response == "Success"){
-                        alert('Ubah data berhasil');
+                        swal({
+                          title: "Sukses",
+                          text: "Data Berhasil Tesimpan",
+                          type: "success"
+                        });
                         $("#PrintDetail_jumlah_stok").prop('enable', false);
                         $("#PrintDetail_jumlah_stok").prop('disabled', true);
                         $("#PrintDetail_jumlah_stok").attr('style','background-color:#f1e8e8;color: #505050;');
@@ -289,7 +333,11 @@ $(document).ready(function(){
                         $("#jumlah_stok_EditDataDetailProductAdmin").attr('style','display:block;');
                       }
                       else{
-                        alert('Ubah data gagal');
+                        swal({
+                          title: "Gagal Menyimpan",
+                          text: "Data Tidak Tesimpan",
+                          type: "error"
+                        });
                       }
                     }    
                   });
@@ -337,7 +385,11 @@ $(document).ready(function(){
             var PrintDetail_harga = $('#PrintDetail_harga').val();
             var id_barang_nama_produk = $('#id_barang_nama_produk').val();
               if(PrintDetail_harga == ''){
-                alert('Silahkan Isi Data Nama Produk')
+                swal({
+                  title: "Gagal Menyimpan",
+                  text: "Silahkan Isi Data Harga",
+                  type: "error"
+                });
               }  
               else{
                 var data = $("#updateHargaForm").serialize();
@@ -352,7 +404,11 @@ $(document).ready(function(){
                     success :  function(response)
                     {
                       if(response == "Success"){
-                        alert('Ubah data berhasil');
+                        swal({
+                          title: "Sukses",
+                          text: "Data Berhasil Tesimpan",
+                          type: "success"
+                        });
                         $("#PrintDetail_harga").prop('enable', false);
                         $("#PrintDetail_harga").prop('disabled', true);
                         $("#PrintDetail_harga").attr('style','background-color:#f1e8e8;color: #505050;');
@@ -360,7 +416,11 @@ $(document).ready(function(){
                         $("#harga_EditDataDetailProductAdmin").attr('style','display:block;');
                       }
                       else{
-                        alert('Ubah data gagal');
+                        swal({
+                          title: "Gagal Menyimpan",
+                          text: "Data Tidak Tesimpan",
+                          type: "error"
+                        });
                       }
                     }    
                   });
@@ -425,7 +485,11 @@ $(document).ready(function(){
     $('#btnCreateInventory').on('click', function(e){
         var penambahan_stok = $('#penambahan_stok').val();
         if(penambahan_stok == '' ){
-            alert('Silahkan Isi Stok Penambahan Produk');
+            swal({
+              title: "Gagal Menyimpan",
+              text: "Silahkan Isi Stok Penambahan Produk",
+              type: "error"
+            });
             $("#penambahan_stok").val('');
         }  
         else{
@@ -439,8 +503,12 @@ $(document).ready(function(){
                   $("#error").fadeOut();
                 }, 
                 success :  function(response)
-                {
-                    alert('Penambahan data berhasil');
+                {   
+                    swal({
+                      title: "Sukses",
+                      text: "Penambahan data berhasil",
+                      type: "success"
+                    });
                     $("#penambahan_stok").val('');
                     table.ajax.reload();
                     var callBackStok = $('#PrintDetail_jumlah_stok').val();

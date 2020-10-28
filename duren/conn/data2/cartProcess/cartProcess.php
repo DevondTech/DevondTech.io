@@ -39,6 +39,83 @@ if($id_user!=''){
         }
     }
 
+
+    if(isset($_GET['informationNumberRek'])){
+        $userDataID = $_SESSION['id_user'];
+        if($id_user!=''){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT number_rekening FROM tb_about_us where id_about_us ='1' ";
+        $result = $db->query($query); 
+            if($result){
+                $informationNumberRek = mysqli_fetch_all($result,MYSQLI_ASSOC);
+                $informationNumberRek=json_encode($informationNumberRek);
+                echo json_encode($informationNumberRek);
+            }else{
+                $informationNumberRek ='';
+                echo json_encode($informationNumberRek);
+            }
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }
+    }
+    
+    if(isset($_GET['updateInformationNumberRek'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $id_status_user = $_SESSION['id_status_user'];
+        $number_rekening = $_POST['PrintDetail_link_number_rekening']; 
+        if($id_user!='' && $id_status_user=='1'){
+            $id_about_us = 1;
+            $query = "UPDATE tb_about_us SET number_rekening='$number_rekening' WHERE id_about_us = '$id_about_us' ";
+            $db->query($query);
+            echo "updateInformationNumberRek";   
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }
+    }
+
+    if(isset($_GET['InformationPemilikRek'])){
+        $userDataID = $_SESSION['id_user'];
+        if($id_user!=''){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT pemilik_rekening FROM tb_about_us where id_about_us ='1' ";
+        $result = $db->query($query); 
+            if($result){
+                $InformationPemilikRek = mysqli_fetch_all($result,MYSQLI_ASSOC);
+                $InformationPemilikRek=json_encode($InformationPemilikRek);
+                echo json_encode($InformationPemilikRek);
+            }else{
+                $InformationPemilikRek ='';
+                echo json_encode($InformationPemilikRek);
+            }
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }
+    }
+    
+    if(isset($_GET['updateInformationPemilikRek'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $id_status_user = $_SESSION['id_status_user'];
+        $pemilik_rekening = $_POST['PrintDetail_link_pemilik_rekening']; 
+        if($id_user!='' && $id_status_user=='1'){
+            $id_about_us = 1;
+            $query = "UPDATE tb_about_us SET pemilik_rekening='$pemilik_rekening' WHERE id_about_us = '$id_about_us' ";
+            $db->query($query);
+            echo "updateInformationPemilikRek";   
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }
+    }
+
     if(isset($_GET['confirmationFormDataRefuse'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -107,7 +184,7 @@ if($id_user!=''){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $query = "SELECT kode_pemesanan, waktu_pemesanan, id_user, username, nama_lengkap, email, nomor_hp, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, pesan_pemesanan, id_proses_pemesanan, proses_pemesanan, id_produk, nama_produk, detail1_produk, jenis_produk, jumlah_pemesanan, harga, diskon, harga_setelah_diskon, total_harga_perproduk, ongkos_kirim, total_harga_yang_harus_dibayar, gambar1_produk, id_satuan_produk, satuan_produk, id_berat_produk, teks_berat_produk, konfersi_berat_produk_perkilogram, id_voucher, kode_voucher, jenis_voucher, total_voucher, waktu_berlaku,  status_voucher, metode_pembayaran, kode_link_pembayaran, pesan_bukti_pembayaran, gambar_bukti_pembayaran, nama_pemilik_rekening,
-tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan = '2'";
+tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan = '2'";
         $result = $db->query($query); 
         if($result){
             $selectCartDataByUserToPayment = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -156,7 +233,7 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         echo json_encode($selectDataWeightProduct);
     }
 
-    if(isset($_GET['updateCheckOutByUser'])){
+    if(isset($_GET['updateCheckOutByUserOLD'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
@@ -201,6 +278,50 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         }
         else{
             echo "checkVerificationUser";
+        }
+    }
+
+    if(isset($_GET['updateCheckOutByUser'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $nama_lengkap = $_SESSION['nama_lengkap'];
+        $jumlah_pemesanan = $_POST['jumlahPemesanan']; 
+        $alamatInput = $_POST['alamatInput']; 
+        $negaraInput = $_POST['negaraInput']; 
+        $provinsiInput = $_POST['provinsiInput']; 
+        $kabupatenInput = $_POST['kabupatenInput']; 
+        $kecamatanInput = $_POST['kecamatanInput']; 
+        $kelurahanInput = $_POST['kelurahanInput']; 
+        $kotaInput = $_POST['kotaInput']; 
+        $dataKodePos = $_POST['dataKodePos']; 
+        $ongkir = $_POST['ongkir']; 
+        $kodeUnikPlus = $_POST['kodeUnikPlus'];
+        $id_berat_produk = $_POST['id_berat_produk']; 
+        $total_harga_pemesanan = $_POST['total_harga_pemesanan']; 
+        $totalBayarKeseluruhan = $_POST['totalBayarKeseluruhan']; 
+        $id_proses_pemesanan = 2;
+        $id_proses_pemesanan_from_DB = 1;
+        $pesan_notifikasi ='Pemesanan Barang Atas Nama '.$nama_lengkap.' Dibuat. Dengan Jumlah Pemesanan '.$jumlah_pemesanan.' Pack';
+        $id_status_notifikasi = 1;
+        $id_status_baca = 1;
+        $id_user_baca = 2;
+        $userData =''; $query = "select * from tb_login_user where id_user='$id_user'"; 
+        $result = mysqli_query($db,$query);
+        $baris= mysqli_fetch_array($result);
+        $cekKOde= $baris['kode'];
+        if($alamatInput!=''){
+            $query = "UPDATE tb_pemesanan SET  jumlah_pemesanan='$jumlah_pemesanan', alamat='$alamatInput', negara='$negaraInput', provinsi='$provinsiInput', kabupaten='$kabupatenInput', kota='$kotaInput', kecamatan='$kecamatanInput', kelurahan='$kelurahanInput', kode_pos='$dataKodePos', id_berat_produk='$id_berat_produk', id_proses_pemesanan='$id_proses_pemesanan', ongkos_kirim='$ongkir', total_harga_perproduk='$total_harga_pemesanan', total_harga_yang_harus_dibayar='$totalBayarKeseluruhan', kode_unik = '$kodeUnikPlus' WHERE id_user = $id_user and id_proses_pemesanan='1'";
+            $db->query($query);
+
+            $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                        VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+            $db->query($queryNotif); 
+
+            echo "updateCheckOutByUserSuccess";   
+        }
+        else{
+            echo "erorDATA";
         }
     }
 
@@ -383,6 +504,7 @@ tanggal_transfer, no_rekening, bank_asal FROM view_data_semua_pesanan where id_u
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
+        /*$kodeUnikPlus = $_POST['kodeUnikPlus'];*/
         $gambar_bukti_pembayaran = ''; 
         $id_proses_pemesanan = 2;
         if($id_user!=''){

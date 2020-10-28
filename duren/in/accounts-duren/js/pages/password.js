@@ -9,16 +9,32 @@ $('document').ready(function()
   var passwordOld = $('#passwordOld').val();
  
   if(passwordUpdate == ''){
-    alert('Silahkan Isi Data Password')
+    swal({
+      title:"Lengkapi Data",
+      text: "Silahkan Isi Data Password",
+      type: "error"
+    });
   }  
   else if(passwordUpdate_re == ''){
-    alert('Silahkan Isi Data Ulangi Password')
+    swal({
+      title:"Lengkapi Data",
+      text: "Silahkan Isi Data Ulangi Password",
+      type: "error"
+    });
   }  
   else if(passwordUpdate_re != passwordUpdate){
-    alert('Password Tidak Sama')
+    swal({
+      title:"Lengkapi Data",
+      text: "Password Tidak Sama",
+      type: "error"
+    });
   }  
   else if(passwordOld == ''){
-    alert('Silahkan Isi Password Lama')
+    swal({
+      title:"Lengkapi Data",
+      text: "Silahkan Isi Password Lama",
+      type: "error"
+    });
   }  
   else if(passwordUpdate != ''){
      var data = $("#updatePassword").serialize();
@@ -37,20 +53,32 @@ $('document').ready(function()
         {
           if(response == "updatePassword"){
             $("#SavePassword").html('SIMPAN');
-            alert('Ubah password berhasil');
+            swal({
+              title:"Lengkapi Data",
+              text: "Ubah password berhasil",
+              type: "success"
+            });
             $('#passwordUpdate').val('');
             $('#passwordUpdate_re').val('');
             $('#passwordOld').val('');
           }
           else if(response == "checkOldPassword")
           {
-            alert('Password Lama Anda Tidak Sesuai, Silahkan Ulangi');
+            swal({
+              title:"Cek Password",
+              text: "Password Lama Anda Tidak Sesuai, Silahkan Ulangi",
+              type: "error"
+            });
             $("#SavePassword").html('SIMPAN');
             $('#passwordOld').val('');
           }
           else
           {
-            alert('Ubah password gagal, silahkan coba lagi');
+            swal({
+              title:"Gagal",
+              text: "Ubah password gagal, silahkan coba lagi",
+              type: "error"
+            });
             $("#SavePassword").html('SIMPAN');
             $('#passwordUpdate').val('');
             $('#passwordUpdate_re').val('');

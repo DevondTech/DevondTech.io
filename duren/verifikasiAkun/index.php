@@ -45,8 +45,30 @@
     padding-top: 60px;
   }
 }
-.top-page {
-  height: 100vh;
+.login {
+  background-color: #f9fbf0;
+  height: 120vh;
+  font-size: 20px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  background: url(../images/ex-bg.jpg);
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-repeat: repeat;
+      background-attachment: scroll;
+      background-size: auto;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-size: auto;
+  padding-bottom: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  /*margin-top: -54px;*/
 }
   </style>
 <body>

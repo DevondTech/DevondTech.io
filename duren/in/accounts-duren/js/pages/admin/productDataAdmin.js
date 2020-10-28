@@ -74,18 +74,28 @@ $(document).ready(function(){
     var jumlah_stok = $('#jumlah_stok').val();
     
     if(nama_produk == ''){
-      alert('Silahkan Isi Data Nama Produk')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Data Nama Produk",
+        type: "error"
+      });
     }  
     else if(detail1_produk == ''){
-      alert('Silahkan Isi Detail produk')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Detail produk",
+        type: "error"
+      });
     }  
     else if(jumlah_stok == ''){
-      alert('Silahkan Isi Stok Produk')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan Isi Stok Produk",
+        type: "error"
+      });
     }  
     else if(nama_produk != ''){
-
       var data = $("#createDataProduct").serialize();
-      /*console.log(data);*/
       $.ajax({
          type : 'POST',
          url  : '../../../conn/data2/product/product_data.php/?createDataProduct',

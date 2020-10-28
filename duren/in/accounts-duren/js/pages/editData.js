@@ -8,49 +8,78 @@ $('document').ready(function(){
   var alamatUpdate = $('#alamatUpdate').val();
   var negaraUpdate = $('#negaraUpdate').val();  
   var provinsiUpdate = $('#provinsiUpdate').val();
-/*  var kabupatenUpdate = $('#kabupatenUpdate').val();*/
   var kotaUpdate = $('#kotaUpdate').val();
   var kecamatanUpdate = $('#kecamatanUpdate').val();
   var kelurahanUpdate = $('#kelurahanUpdate').val();
   var kode_posUpdate = $('#kode_posUpdate').val();
 
-
   if(nama_lengkapUpdate == ''){
-    alert('Silahkan Isi Data Nama Lengkap')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Nama Lengkap",
+      type: "error"
+    });
   }  
   else if(nomor_hpUpdate == ''){
-    alert('Silahkan Isi Data Nomor HP')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Nomor HP",
+      type: "error"
+    });
   }  
 
   else if(tanggal_lahirUpdate == ''){
-    alert('Silahkan Isi Data Tanggal Lahir')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Tanggal Lahir",
+      type: "error"
+    });
   }  
   else if(alamatUpdate == ''){
-    alert('Silahkan Isi Data Alamat')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Alamat",
+      type: "error"
+    });
   }  
   else if(negaraUpdate == ''){
-    alert('Silahkan Isi Data Negara')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Negara",
+      type: "error"
+    });
   }  
-/*  else if(kabupatenUpdate == ''){
-    alert('Silahkan Isi Data Kabupaten')
-  }  */
   else if(kecamatanUpdate == ''){
-    alert('Silahkan Isi Data Kecamatan')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Kecamatan",
+      type: "error"
+    });
   }  
   else if(kelurahanUpdate == ''){
-    alert('Silahkan Isi Data Kelurahan')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Kelurahan",
+      type: "error"
+    });
   }  
   else if(kode_posUpdate == ''){
-    alert('Silahkan Isi Data Kode Pos')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Kode POS",
+      type: "error"
+    });
   }  
   else if(provinsiUpdate == ''){
-    alert('Silahkan Isi Data Provinsi')
+    swal({
+      title:"Gagal Menyimpan",
+      text: "Silahkan Isi Data Provinsi",
+      type: "error"
+    });
   }  
-
   else if(nama_lengkapUpdate != ''){
      var data = $("#updateDataUser").serialize();
     $.ajax({
-
         type : 'POST',
         url  : '../../../conn/data2/user_login.php/?updataUserProfile',
         data : data,
@@ -63,11 +92,18 @@ $('document').ready(function(){
         {
           if(response == "updataUserProfile"){
             $("#btnUpdateDataUser").html('SIMPAN');
-            alert('Ubah data berhasil');
-            //location.reload();
+            swal({
+              title:"Sukses",
+              text: "Ubah data berhasil",
+              type: "success"
+            });
           }
           else{
-            alert('Silahkan lengkapi data');
+            swal({
+              title:"Gagal Menyimpan",
+              text: "Silahkan lengkapi data",
+              type: "error"
+            });
             $("#btnUpdateDataUser").html('SIMPAN');
             $('#usernameUpdate').val('');
             $('#emailUpdate').val('');

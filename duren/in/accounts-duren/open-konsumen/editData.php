@@ -15,6 +15,18 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
 <title>Account</title>
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
+<style type="text/css">
+    .input-textDataUser {
+        width: 100%;
+        height: 30px;
+        color: #000;
+        border: transparent;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 1px solid #969191;
+        border-radius: 0px;
+    }
+</style>
 </head>
 <body class="bd-w">
 <div class="divPositionContentTop">
@@ -216,9 +228,9 @@
 
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
-<script type="text/javascript" src="../js/pages/updateDataFoto.js?v=1.3.2"></script>
+<script type="text/javascript" src="../js/pages/updateDataFoto.js?v=1.3.3"></script>
 <script src="../js/pages/editDataTampil.js?v=1.2.1"></script>
-<script src="../js/pages/editData.js?v=1.2.1"></script>
+<script src="../js/pages/editData.js?v=1.2.2"></script>
 
 <div id="open-updateFoto" class="modal fade" >
     <div class="modal-dialog modal-sm">

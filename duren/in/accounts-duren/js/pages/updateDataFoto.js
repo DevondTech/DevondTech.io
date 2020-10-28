@@ -2,7 +2,11 @@ $('#btnUpdateFoto').on('click', function(e){
     var foto = $('#foto').val();
     
     if(foto == ''){
-      alert('Silahkan pilih file foto')
+      swal({
+        title:"Gagal Menyimpan",
+        text: "Silahkan pilih file foto",
+        type: "error"
+      });
     }  
     else{
      /* var data = $("#updateDataFoto").serialize();*/
@@ -28,13 +32,16 @@ $('#btnUpdateFoto').on('click', function(e){
               $("#btnUpdateFoto").html('SIMPAN');
                location.reload(); 
               $('#foto').val('');
-             
             }     
             else if(response == "dataCheck"){
-              alert('Gagal Mengganti Foto');
-              location.reload();
+              swal({
+                title:"Gagal Menyimpan",
+                text: "Silahkan pilih file foto",
+                type: "error"
+              }).then(function() {
+                location.reload();
+              });
             }     
-
             else{
               $("#error").fadeIn(1000, function(){   
               $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>  Error Upload Data.</div>');

@@ -48,6 +48,18 @@
             margin-top: 300px;
         }
     }
+
+    .input-textDataUser {
+        width: 100%;
+        height: 30px;
+        color: #000;
+        border: transparent;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 1px solid #969191;
+        border-radius: 0px;
+    }
+
 </style>
 </head>
 <body>
@@ -452,8 +464,8 @@
 <script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
 <!-- Jquery Ajax Js -->
 <!-- <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script> -->
-<script type="text/javascript" src="../js/pages/admin/productDetailDataAdmin.js?v=1.8.1"></script>
-<script type="text/javascript" src="../js/pages/admin/gambarUploadProdukAdmin.js?v=1.8.1"></script>
+<script type="text/javascript" src="../js/pages/admin/productDetailDataAdmin.js?v=1.8.2"></script>
+<script type="text/javascript" src="../js/pages/admin/gambarUploadProdukAdminUpload.js?v=1.1.4"></script>
 <div id="open-uploadGambar1Produk" class="modal fade" >
     <div class="modal-dialog modal-sm">
         <div class="modal-content w100">
@@ -462,8 +474,8 @@
                 <h4 class="modal-t20">Upload Foto Produk</h4>
             </div>
             <div class="modal-body" id="modal-body-pad"  >
-                <form  name="gambar1" onsubmit="return validateForm1()" method="post" enctype="multipart/form-data" id="uploadGambar1Produk" action="updatePicDataDetail.php?uploadGambar1Produk">
-                    <input type="hidden" name="id_barangGambar" id="id_barangGambar" value="<?= $id_barang; ?>">
+                <form   method="post" action="" enctype="multipart/form-data"  id="uploadGambar1Produk" >
+                    <input type="hidden" name="id_barangGambar1" id="id_barangGambar1" value="<?= $id_barang; ?>">
                     <div class="padding-card-textData">
                         <div class="card-textData">
                             <div class="textData">
@@ -471,14 +483,14 @@
                             </div>
                         </div>
                         <div class="card-inputData">
-                            <input  type="file" id="foto" name="foto" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept="image/x-png,image/jpeg" >
+                            <input  type="file" id="foto1" name="foto1" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept="image/x-png,image/jpeg" >
                         </div>  
                     </div>
              
                     <div class="modal-edit" >
                         <div class="button-edit">
                             <button class="button-text-grey" type="button" id="btn-batal-create"  data-dismiss="modal"> KELUAR </button> 
-                            <button class="button-text-green" type="submit" id="btnuploadGambar1Produk"  > SIMPAN </button>
+                            <button class="button-text-green" type="button" id="btnuploadGambar1Produk"  > SIMPAN </button>
                         </div>
                     </div>
                 </form>
@@ -495,8 +507,8 @@
                 <h4 class="modal-t20">Upload Foto Produk</h4>
             </div>
             <div class="modal-body" id="modal-body-pad"  >
-                <form  method="post" name="gambar2" onsubmit="return validateForm2()" enctype="multipart/form-data" id="uploadGambar2Produk" action="updatePicDataDetail.php?uploadGambar2Produk">
-                    <input type="hidden" name="id_barangGambar" id="id_barangGambar" value="<?= $id_barang; ?>">
+                <form   method="post" action="" enctype="multipart/form-data"  id="uploadGambar2Produk" >
+                    <input type="hidden" name="id_barangGambar2" id="id_barangGambar2" value="<?= $id_barang; ?>">
                     <div class="padding-card-textData">
                         <div class="card-textData">
                             <div class="textData">
@@ -504,14 +516,14 @@
                             </div>
                         </div>
                         <div class="card-inputData">
-                            <input  type="file" id="foto" name="foto" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept="image/x-png,image/jpeg" >
+                            <input  type="file" id="foto2" name="foto2" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept="image/x-png,image/jpeg" >
                         </div>  
                     </div>
              
                     <div class="modal-edit" >
                         <div class="button-edit">
                             <button class="button-text-grey" type="button" id="btn-batal-create"  data-dismiss="modal"> KELUAR </button> 
-                            <button class="button-text-green" type="submit" id="btnuploadGambar2Produk"> SIMPAN </button>
+                            <button class="button-text-green" type="button" id="btnuploadGambar2Produk"> SIMPAN </button>
                         </div>
                     </div>
                 </form>
@@ -528,8 +540,8 @@
                 <h4 class="modal-t20">Upload Foto Produk</h4>
             </div>
             <div class="modal-body" id="modal-body-pad"  >
-                <form  method="post" name="gambar3" onsubmit="return validateForm3()" enctype="multipart/form-data" id="uploadGambar3Produk" action="updatePicDataDetail.php?uploadGambar3Produk">
-                    <input type="hidden" name="id_barangGambar" id="id_barangGambar" value="<?= $id_barang; ?>">
+                <form   method="post" action="" enctype="multipart/form-data"  id="uploadGambar3Produk" >
+                    <input type="hidden" name="id_barangGambar3" id="id_barangGambar3" value="<?= $id_barang; ?>">
                     <div class="padding-card-textData">
                         <div class="card-textData">
                             <div class="textData">
@@ -537,14 +549,14 @@
                             </div>
                         </div>
                         <div class="card-inputData">
-                            <input  type="file" id="foto" name="foto" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept="image/x-png,image/jpeg" >
+                            <input  type="file" id="foto3" name="foto3" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept="image/x-png,image/jpeg" >
                         </div>  
                     </div>
              
                     <div class="modal-edit" >
                         <div class="button-edit">
                             <button class="button-text-grey" type="button" id="btn-batal-create"  data-dismiss="modal"> KELUAR </button> 
-                            <button class="button-text-green" type="submit" id="btnuploadGambar3Produk"  > SIMPAN </button>
+                            <button class="button-text-green" type="button" id="btnuploadGambar3Produk"  > SIMPAN </button>
                         </div>
                     </div>
                 </form>
@@ -561,8 +573,8 @@
                 <h4 class="modal-t20">Upload Foto Produk</h4>
             </div>
             <div class="modal-body" id="modal-body-pad"  >
-                <form  method="post" name="gambar4" onsubmit="return validateForm4()" enctype="multipart/form-data" id="uploadGambar4Produk" action="updatePicDataDetail.php?uploadGambar4Produk">
-                    <input type="hidden" name="id_barangGambar" id="id_barangGambar" value="<?= $id_barang; ?>">
+                <form   method="post" action="" enctype="multipart/form-data"  id="uploadGambar4Produk" >
+                    <input type="hidden" name="id_barangGambar4" id="id_barangGambar4" value="<?= $id_barang; ?>">
                     <div class="padding-card-textData">
                         <div class="card-textData">
                             <div class="textData">
@@ -570,14 +582,14 @@
                             </div>
                         </div>
                         <div class="card-inputData">
-                            <input  type="file" id="foto" name="foto" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept="image/x-png,image/jpeg">
+                            <input  type="file" id="foto4" name="foto4" class="img-inputData" style="height:45px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" accept="image/x-png,image/jpeg" >
                         </div>  
                     </div>
              
                     <div class="modal-edit" >
                         <div class="button-edit">
                             <button class="button-text-grey" type="button" id="btn-batal-create"  data-dismiss="modal"> KELUAR </button> 
-                            <button class="button-text-green" type="submit" id="btnuploadGambar4Produk"  > SIMPAN </button>
+                            <button class="button-text-green" type="button" id="btnuploadGambar4Produk"  > SIMPAN </button>
                         </div>
                     </div>
                 </form>
@@ -585,7 +597,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 

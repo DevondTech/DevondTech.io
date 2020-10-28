@@ -122,7 +122,7 @@
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 <!-- Scrol -->
 <!-- <script type="text/javascript" src="../css/scroll/js/scroll.js"></script> -->
-<script type="text/javascript" src="../js/pages/updateDataFoto.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/pages/updateDataFoto.js?v=1.2.3"></script>
 <script type="text/javascript" src="../js/pages/Profile.js?v=1.3.1"></script>
 
 <div id="open-updateFoto" class="modal fade" >

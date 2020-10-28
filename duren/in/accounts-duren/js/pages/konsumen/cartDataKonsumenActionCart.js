@@ -14,12 +14,24 @@ $('#updateCheckOutByUserButton').on('click', function(e){
     success :  function(response)
     {      
       if(response == "dataFound"){
-        alert('Harap Menunggu Sampai Transaksi Anda Selesai');
-        window.location.href = "in/accounts-duren/open-konsumen/";
+        /*alert('Harap Menunggu Sampai Transaksi Anda Selesai');*/     
+        swal({
+          title: "Selesaikan Pesanan",
+          text: "Harap Menunggu Sampai Transaksi Anda Selesai",
+          type: "error"
+        }).then(function() {
+          window.location = "in/accounts-duren/open-konsumen/";
+        });
       }
       else{
-        alert('Pesanan Anda Berhasil, Silahkan Klik OK Untuk Melanjutkan');
-        window.location.href = "in/accounts-duren/open-konsumen/";
+        /*alert('Pesanan Anda Berhasil, Silahkan Klik OK Untuk Melanjutkan');*/
+        swal({
+          title: "Berhasil",
+          text: "Pesanan Anda Berhasil, Silahkan Klik OK Untuk Melanjutkan",
+          type: "success"
+        }).then(function() {
+          window.location = "in/accounts-duren/open-konsumen/";
+        });
       }
     }
   });

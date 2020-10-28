@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <?php
+       error_reporting(0);
+    ?>
      <link rel="icon" href="../../../images/1.jpg" type="image/x-icon" />
      <?php
-   
+    
     session_start();
     if(!isset($_SESSION['id_user'])){
     die("
@@ -16,16 +19,13 @@
           document.location='../../../login'</script>");
       }
     $id_user = $_SESSION['id_user'];
-
-    /*echo 'ID User : ';
-    echo $id_user;*/
+    $textData = $_GET['textData'];
     ?>
    
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <title>King Fruit | User Account</title>
     <!-- Favicon-->
-   
 
     <!-- description -->
     <meta name="description" content="" />
@@ -51,6 +51,7 @@
     <link href="../css/themes/all-themes.css?v=1.2.1" rel="stylesheet" />
     <link href="../css/modif-style.css?v=1.2.1" rel="stylesheet" />
     <link href="../css/flexible.css?v=1.2.1" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../js/sweetAlert/sweetalert2.min.css">
     <!-- <link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
     <style type="text/css">
         .sidebar .menu .list a span {
@@ -73,6 +74,28 @@
             padding-left: 6px;
             padding-right: 6px;
             max-width: 35px;
+        }
+
+        #swal2-content{
+            font-size: 14px;
+        }
+
+        .swal2-confirm{
+            font-size: 14px;
+        }
+
+        .swal2-styled{
+            font-size: 14px;
+        }
+
+        .swal2-popup .swal2-styled.swal2-confirm {
+            border: 0;
+                border-right-color: currentcolor;
+                border-left-color: currentcolor;
+            border-radius: 0.25em;
+            background-color: #3085d6;
+            color: #fff;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -165,6 +188,7 @@
                             <span><font class="icon-menu-active">Akun Saya</font></span>
                         </a>
                     </li>
+                    <input type="hidden" name="textData" id="textData" value="<?php echo $textData; ?>">
                     <li class="menu-waves-block" id="account-edit-link">
                         <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
@@ -357,8 +381,9 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.7.1"></script>
+<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.7.2"></script>
 
+<script type="text/javascript" src="../../../js/sweetAlert/sweetalert2.all.min.js"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 

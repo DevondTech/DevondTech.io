@@ -31,3 +31,17 @@ $pesan_notifikasi ='Pemesanan Barang Atas Nama '.$nama_lengkap.' Dibuat. Dengan 
 $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
                             VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
                 $db->query($queryNotif); 
+
+
+
+
+            let getRandomPaymentUnix = function(start, range){
+              let getRandom = Math.floor((Math.random() * range) + start);
+              while (getRandom > range){
+                getRandom = Math.floor((Math.random()*range) + start);
+              } 
+              return getRandom
+            }
+            let dataCreate = getRandomPaymentUnix(99,1); 
+            console.log(dataCreate);
+            

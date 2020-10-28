@@ -158,6 +158,71 @@
                         </div>
                     </form>
                 </div>
+
+                <div class="Card-inputDataProduct PaddingProduct20TopBotom">
+                    <form method="POST" id="updateNumberRekening">
+                        <div class="card-textDataProduct ">
+                            <div class="textDataProduct">
+                                No. Rekening
+                            </div>
+                        </div>
+                        <div class="card-inputDataProduct">
+                            <input type="number" name="PrintDetail_link_number_rekening" id="PrintDetail_link_number_rekening" class="input-textDataProduct" disabled>
+                        </div>
+                        <div class="card-buttonDataProduct">
+                            <div>
+                                <div class="div-button-EditDataDetailProductAdmin" id="NumberRekening_EditDataDetailProductAdmin">
+                                    <button class="button-OpenModalDetailProductAdmin" type="button">Ubah</button>  
+                                </div>
+                                <div class="div-button-EditDataDetailProductAdmin" id="NumberRekening_SaveCancelDataDetailProductAdmin">
+                                    <div class="div-imageSaveCancel30">
+                                        <div class="buttonTypeDiv-Save" id="NumberRekening_ubahSave">
+                                            <img class="img-buttonTypeDiv" src="../images/button/save.png">
+                                        </div>
+                                    </div>
+                                    <div class="div-imageSaveCancel30">
+                                        <div class="buttonTypeDiv-Cancel" id="NumberRekening_ubahCancel">
+                                            <img class="img-buttonTypeDiv" src="../images/button/cancel.png">
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="Card-inputDataProduct PaddingProduct20TopBotom">
+                    <form method="POST" id="updatePemilikRekening">
+                        <div class="card-textDataProduct ">
+                            <div class="textDataProduct">
+                                Pemilik Rek.
+                            </div>
+                        </div>
+                        <div class="card-inputDataProduct">
+                            <input type="text" name="PrintDetail_link_pemilik_rekening" id="PrintDetail_link_pemilik_rekening" class="input-textDataProduct" disabled>
+                        </div>
+                        <div class="card-buttonDataProduct">
+                            <div>
+                                <div class="div-button-EditDataDetailProductAdmin" id="PemilikRekening_EditDataDetailProductAdmin">
+                                    <button class="button-OpenModalDetailProductAdmin" type="button">Ubah</button>  
+                                </div>
+                                <div class="div-button-EditDataDetailProductAdmin" id="PemilikRekening_SaveCancelDataDetailProductAdmin">
+                                    <div class="div-imageSaveCancel30">
+                                        <div class="buttonTypeDiv-Save" id="PemilikRekening_ubahSave">
+                                            <img class="img-buttonTypeDiv" src="../images/button/save.png">
+                                        </div>
+                                    </div>
+                                    <div class="div-imageSaveCancel30">
+                                        <div class="buttonTypeDiv-Cancel" id="PemilikRekening_ubahCancel">
+                                            <img class="img-buttonTypeDiv" src="../images/button/cancel.png">
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
@@ -167,7 +232,7 @@
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/admin/aboutusDataAdmin.js?v=1.2.1"></script>
+<script type="text/javascript" src="../js/pages/admin/aboutusDataAdmin.js?v=1.2.3"></script>
 </body>
 
 </html>

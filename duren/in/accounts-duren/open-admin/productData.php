@@ -35,6 +35,28 @@
         background-color: white;
         cursor: pointer;
     }
+
+    .input-textDataUser {
+        width: 100%;
+        height: 30px;
+        color: #000;
+        border: transparent;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 1px solid #969191;
+        border-radius: 0px;
+    }
+
+    .input-textData {
+        width: 100%;
+        height: 30px;
+        color: #000;
+        border: transparent;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 1px solid #969191;
+        border-radius: 0px;
+    }
 </style>
 </head>
 <body class="bd-w" >
@@ -99,7 +121,7 @@
 <!-- Datatables -->
 <script type="text/javascript" src="../datatable/newJS/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
-<script src="../js/pages/admin/productDataAdmin.js?v=1.2.1"></script>
+<script src="../js/pages/admin/productDataAdmin.js?v=1.2.2"></script>
 <script src="../js/jquery.redirect.js"></script>
 
 <!-- <div id="open-updateStokProduct" class="modal fade" >

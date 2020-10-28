@@ -113,6 +113,11 @@ $alert = '';
     <div style="float: left;">: '.$total_harga_yang_harus_dibayar_send.'</div>
   </div>
   <br />
+  <div style="color: #3a3a3a;margin-top: 5px;">
+    <div style="width: 100px;float: left">Status</div>
+    <div style="float: left;">: Lunas</div>
+  </div>
+  <br />
 </div>
 <br />
 

@@ -23,6 +23,30 @@
         padding-top: 5px;
         float: left;
     }*/
+    .divPositionTextRekAdmin{
+        float: left;
+        padding-right: 4px;
+        width: 136px;
+    }
+
+    .divTextRekAdminTitleRead{
+        float: left;
+        text-align: right;
+        width: 10%;
+    }
+
+    .divTextRekAdminTitle{
+        float: left;
+        width: 90%;
+    }
+
+    .fontS14{
+        font-size: 14px;
+    }
+
+    .marginPRek{
+        margin-left:2px; 
+    }
 
     .card-textDataUser {
         width: 20%;
@@ -132,6 +156,16 @@
 
     @media(max-width: 767px){
 
+        .divPositionTextRekAdmin{
+            float: left;
+            padding-right: 4px;
+            width: 85px;
+        }
+
+        .m30 {
+            margin: 25px;
+        }
+
         .imgBukti{
             margin-top: 40px;
         }
@@ -201,6 +235,10 @@
 
         .widthBorder2{
             width: 70%;
+        }
+
+        .marginPRek{
+            margin-left:0px; 
         }
 
     }
@@ -278,6 +316,21 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div style="margin-left: 4px;"> 
+                                    <div class="positionTextDetailOrder">
+                                        <div class="w150 textTotalHarga floatLeftCartData" >
+                                            Kode Unik
+                                        </div>
+                                        <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">
+                                            :  
+                                        </div>
+                                        <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
+                                            <div class="marginLeft10 floatLeftCartData">
+                                                <input type="text" name="kodeUnik_tampil"  style="color: #3c3838;    background-color: transparent;" id="kodeUnik_tampil" class="input-textDataUser-false" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="positionTextDetailOrder">
                                      <div class="widthBorder2 cardBorderBottomGrey" style="margin-bottom: 5px;margin-left: 4px;"></div>
                                 </div>
@@ -297,7 +350,57 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div style="margin-left: 4px;">
+                                <div style="margin-left: 4px;" >
+                                    <div class="positionTextDetailOrder">
+                                        <div class="inputTotalHarga floatLeftCartData" >
+                                            <div class=" marginPRek textRekning floatLeftCartData fontS14" style="font-size: 14px;width: 343px;padding-bottom: 5px;" >
+                                                <div class="">
+                                                    <div class="divTextRekAdminTitle" >Pembayaran Dapat Ditransfer Melalui: </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-left: 4px;" >
+                                    <div class="positionTextDetailOrder">
+                                        <div class="inputTotalHarga floatLeftCartData" >
+                                            <div class=" marginPRek textRekning floatLeftCartData fontS14" style="margin-top:5px;font-size: 12px;" >
+                                                <div class="divPositionTextRekAdmin">
+                                                    <div class="divTextRekAdminTitle" >Bank </div>
+                                                    <div class="divTextRekAdminTitleRead">:</div>
+                                                </div>
+                                                <div id='' style="float: left;font-weight: normal;">Bank Central Asia (BCA) </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-left: 4px;" >
+                                    <div class="positionTextDetailOrder">
+                                        <div class="inputTotalHarga floatLeftCartData" >
+                                            <div class=" marginPRek textRekning floatLeftCartData fontS14" style="margin-top:5px;font-size: 12px;" >
+                                                <div class="divPositionTextRekAdmin">
+                                                    <div class="divTextRekAdminTitle" >Pemilik Rek. </div>
+                                                    <div class="divTextRekAdminTitleRead">:</div>
+                                                </div>
+                                                <div id='PemilikRekening' style="float: left;font-weight: normal;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-left: 4px;" >
+                                    <div class="positionTextDetailOrder">
+                                        <div class="inputTotalHarga floatLeftCartData" >
+                                            <div class=" marginPRek textRekning floatLeftCartData fontS14" style="margin-top:5px;font-size: 12px;" >
+                                                <div class="divPositionTextRekAdmin">
+                                                    <div class="divTextRekAdminTitle" >No Rek. </div>
+                                                    <div class="divTextRekAdminTitleRead">:</div>
+                                                </div>
+                                                <div id='NumberRekening' style="float: left;font-weight: normal;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div style="margin-left: 4px;" style="margin-top: 1px;">
                                     <div class="positionTextDetailOrder">
                                         <div class=" textTotalHarga floatLeftCartData" >
                                            <img src="../images/bca.png" class="imgBCA" style="">
@@ -306,18 +409,20 @@
                                               
                                         </div>
                                         <div class="inputTotalHarga floatLeftCartData" >
-                                            <div class="textRekning marginLeft10 floatLeftCartData">
-                                                No Rek. 1234567890123
+                                            <div class="textRekning marginLeft10 floatLeftCartData" >
+                                                <div style="float: left;">No Rek. </div>
+                                                <div id='NumberRekening' style="float: left;margin-left: 2px;"></div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <div class="buttonCheckoutPosition">
                                 <form method="post" id="confirmationFormPicHalu">
                                     <input type="hidden" name="IdPemesanan" id="IdPemesanan">
+                                    <!-- <input type="hidden" name="kodeUnikPlus" id="kodeUnikPlus"> -->
                                     <button type="button" class="inputTypeTransparent buttonOrderAlamatCartData" id="confirmationButton">Konfirmasi</button>
                                 </form>
                             </div>
@@ -331,7 +436,7 @@
 <script src="../js/action.js"></script>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmationView.js?v=1.4.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmationView.js?v=1.5.5"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

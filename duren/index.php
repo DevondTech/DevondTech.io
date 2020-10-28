@@ -35,7 +35,13 @@
   <link rel="stylesheet" type="text/css" href="css/style.css?v=1.3.1">
   <link rel="stylesheet" type="text/css" href="css/chat.css?v=1.0.1">
   <link href="scroll/css/style.css?v=1.0.1" rel="stylesheet" />
+  <link rel="stylesheet" href="js/sweetAlert/sweetalert2.min.css">
   <style type="text/css">
+
+    .swal2-content{
+      font-size: 15px;
+    }
+
     .li-medsos-hr-top {
       float: left;
       padding-left: 5px;
@@ -263,7 +269,7 @@
             <a class="text-nav" href="#detail-product-content">Order </a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="about">About US</a>
+            <a class="text-nav" href="about">About Us</a>
           </li>
           <li class="nav-li-link nav-item">
             <a class="text-nav" href="conn/logout.php">Logout</a>
@@ -307,12 +313,14 @@
       <div class="col-sm-6">
         <div style="background-color: #cda32b">
           <div class="card-textTop">
-            <div>
-            King Fruit  
+            <div style="font-weight: bold;">
+            KING FRUIT  
             </div>
-            <div style="font-size: 14px;" id="topText">
-              
-
+            <!-- <div style="font-size: 14px;" id="topText"> -->
+            <div style="font-size: 14px;" >
+              Durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan <b>Super Montong</b> sebagai produk pertama yang dihadirkan untuk para durian lovers. <b>Premium Quality Super Montong</b> tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.
+              <!-- 
+              Kini waktunya durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan Super Montong sebagai produk pertama yang dihadirkan untuk para durian lovers. Premium Quality Super Montong tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan. -->
             </div>
           </div>      
         </div>
@@ -751,6 +759,7 @@
 <script type="text/javascript"  src="js/jquery.js" ></script>
 <script type="text/javascript" src="js/ajax/jquery.min.js" ></script>
 <script type="text/javascript" src="js/bootstrap.js" ></script>
+<script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript" src="js/slideSmall.js"></script>
 <script type="text/javascript" src="js/durian.js?v=2.1.1"></script>
 <script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.6.1"></script>
@@ -763,6 +772,8 @@
   if(window.history.replaceState){
     window.history.replaceState(null, null, window.location.href);
   }
+
+  $('confirm').attr('style','background-color:#2d472c;')
 </script>
 </body>
 </html>

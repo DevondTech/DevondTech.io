@@ -21,8 +21,15 @@
   <link rel="stylesheet" type="text/css" href="../css/chat.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <style type="text/css">
-    .top-page {
-      height: 100vh;
+    .cardTextAbout{
+      background-color: #cda32b;
+      margin-right: 60px;
+    }
+    @media(max-width: 920px){
+      .cardTextAbout{
+        background-color: #cda32b;
+        margin-right: 20px;
+      }
     }
   </style>
 </head>
@@ -32,7 +39,7 @@
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
   </div>
-  <div class="top-page" id="top-page">
+  <div class="phoneTop top-page" id="top-page" style="">
     <nav id="navbar-page" class="nav-outscroll2 nav-fixed navbar navbar-expand-lg navbar-light " style="z-index: 1;"> 
       <div class="div-Logo-NavIconlink">
         <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
@@ -74,10 +81,10 @@
             <a class="text-nav" href="../#detail-product-content">Order </a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../about">About US</a>
+            <a class="text-nav" href="../about">About Us</a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../login">Login</a>
+            <a class="text-nav" href="../conn/logout.php">Logout</a>
           </li>
           <!-- <li class="nav-li-link nav-item">
             <a class="text-nav" href="#">Testimoni</a>
@@ -110,7 +117,7 @@
     </nav>
     <div class="row-top-displayBlock row" style="">
       <div class="col-sm-6">
-        <div style="background-color: #cda32b; margin-right: 60px;">
+        <div class="cardTextAbout">
           <div class="card-textTop">
             <div style="padding-bottom: 20px;">
               About US 
@@ -131,15 +138,14 @@
         <img src="../images/icon/text-top.png"   class=" text-durian-top">
       </div>
     </div>
-    
     <div>
       <ul class="ul-medsos-icon-top" id="medsosTopPhone">
         <li class="li-medsos-hr-top">
           <div class="vl"></div>
         </li>
-        <li class="li-medsos-icon-top">
+        <!-- <li class="li-medsos-icon-top">
           <a href="" id="facebook1"><img src="../images/icon/facebook.png"   class=" img-icon-top"></a>
-        </li>
+        </li> -->
         <li class="li-medsos-icon-top">
           <a href="" id="instagram1"><img src="../images/icon/instagram.png" class=" img-icon-top"></a>
         </li>
@@ -149,6 +155,11 @@
       </ul>
     </div>
   </div>
+
+
+  <!-- <div class="top-page" id="">
+    
+  </div> -->
 
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>

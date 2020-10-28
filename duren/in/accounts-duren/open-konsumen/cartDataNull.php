@@ -28,7 +28,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 30%;
+        width: 40%;
     }
 
     .textClickToProduct{
@@ -66,7 +66,7 @@
 <div>
     <div class="positionDataNull">
         <a href="../../../" style="color:#2d472c;">
-            <img src="../images/durian/cart.svg" class="imgDataNull">
+            <img src="../images/durian/cart.png" class="imgDataNull">
             <div class="textClickToProduct">Klik Untuk Pilih Produk</div>
         </a>
     </div>

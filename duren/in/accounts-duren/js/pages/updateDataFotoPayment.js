@@ -1,7 +1,11 @@
 $('#btnUpdateFoto').on('click', function(e){
     var foto = $('#foto').val();
     if(foto == ''){
-      alert('Silahkan pilih file foto')
+      swal({
+        title:"Gagal",
+        text: "Silahkan pilih file foto",
+        type: "error"
+      });
     }  
     else{
         var fd = new FormData();
@@ -47,17 +51,28 @@ $('#btnUpdateFoto').on('click', function(e){
               });
             }     
             else if(response == "dataCheck"){
-              alert('Gagal Mengupload Foto, Silahkan Pastikan Foto Anda Tipe Foto');
+              swal({
+                title:"Gagal",
+                text: "Gagal Mengupload Foto, Silahkan Pastikan Foto Anda Tipe Foto",
+                type: "error"
+              }).then(function() {
+                window.location = "../../../in/accounts-duren/open-konsumen";
+              });
               $("#content-profile").load("cartData.php");
               $('#confirmationDataCard').attr('style','display:block');
               $('#confirmationDetailPayment').attr('style','display:none');
-              window.location = "../../../in/accounts-duren/open-konsumen";  
             }     
 
             else{
+              swal({
+                title:"Gagal",
+                text: "Gagal Mengupload Foto, Silahkan Pastikan Foto Anda Tipe Foto",
+                type: "error"
+              }).then(function() {
+                window.location = "../../../in/accounts-duren/open-konsumen";
+              });
               $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>  Error Upload Data.</div>');
               $("#btnUpdateFoto").html('SIMPAN');
-              window.location = "../../../in/accounts-duren/open-konsumen";  
             }          
           } 
         });

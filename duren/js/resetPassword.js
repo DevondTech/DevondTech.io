@@ -8,9 +8,7 @@ $(window).on('load',function(e){
 	    if(password == resetPassword){
 	    	if(kode != ''){
 		      	var data = $("#sendDataReset").serialize();
-		      	/*console.log(data);*/
 		      	$.ajax({
-
 			        type : 'POST',
 			        url  : '../conn/data2/user_login.php/?resetPassword',
 			        data : data,
@@ -21,13 +19,17 @@ $(window).on('load',function(e){
 			       	}, 
 			        success :  function(response)
 			         {      
-			            
 		                if(response == "foundData"){
 		                   window.location.href = '../login';
 		                }
 		                else{
-		                    alert('Kode Yag Anda Masukkan Salah');
-		                    window.location.href = '../forgotPassword';
+		                	swal({
+				                title:"Fatal",
+				                text: "Silahkan Ulangin Kirim Kode Verifikasi",
+				                type: "error"
+				            }).then(function() {
+				                window.location = "../forgotPassword";
+				            });
 		            	}       
 		          	}
 		        });
@@ -35,11 +37,22 @@ $(window).on('load',function(e){
 		    }
 
 		    else{
-		    	alert('Silahkan Isi Kode Verifikasi');
+		    	swal({
+	                title:"Fatal",
+	                text: "Silahkan Ulangin Kirim Kode Verifikasi",
+	                type: "error"
+	            }).then(function() {
+	                window.location = "../forgotPassword";
+	            });
 		    }  
 	    }   
 	    else{
-	    	alert('Password Yang Anda Massukan Tidak Sama');
+	    	swal({
+		        title:"Cek Password",
+		        text: "Password Yang Anda Massukan Tidak Sama",
+		        type: "error"
+		    });
 	    }      
 	});
 });
+

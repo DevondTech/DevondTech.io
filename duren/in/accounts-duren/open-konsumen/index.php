@@ -49,8 +49,30 @@
     <link href="../css/themes/all-themes.css" rel="stylesheet" />
     <link href="../css/modif-style.css?v=1.2.1" rel="stylesheet" />
     <link href="../css/flexible.css?v=1.2.1" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../js/sweetAlert/sweetalert2.min.css">
     <!--<link href="../css/scroll/css/style.css?v=1.1.1" rel="stylesheet" /> -->
     <style type="text/css">
+        #swal2-content{
+            font-size: 14px;
+        }
+
+        .swal2-confirm{
+            font-size: 14px;
+        }
+
+        .swal2-styled{
+            font-size: 14px;
+        }
+
+        .swal2-popup .swal2-styled.swal2-confirm {
+            border: 0;
+                border-right-color: currentcolor;
+                border-left-color: currentcolor;
+            border-radius: 0.25em;
+            background-color: #3085d6;
+            color: #fff;
+            font-size: 14px;
+        }
         .sidebar .menu .list a span {
             width: 180px;
         }
@@ -327,6 +349,7 @@
     <script src="../js/pages/konsumen/konsumenData.js?v=1.8.1"></script>
     <!-- Scrol -->
     <!-- <script src="../css/scroll/js/scroll.js"></script> -->
+    <script type="text/javascript" src="../../../js/sweetAlert/sweetalert2.all.min.js"></script>
 
 </body>
 </html>

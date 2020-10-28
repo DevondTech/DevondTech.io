@@ -19,6 +19,7 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css?v=1.0.1">
   <link rel="stylesheet" type="text/css" href="../css/durianLoginSignup.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
+  <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
 </head>
 <body>
   
@@ -65,7 +66,7 @@
                   </label>
                   </div>
                   <div class="paddingTopBottom10 paddingLeftRight10">
-                    <button type="button" id="btn-signup" class="buttonYellow">Signup</button>
+                    <button type="button" id="btn-signup" class="buttonYellow">Sign Up</button>
                   </div>
                 </div>
               </form>
@@ -88,7 +89,8 @@
 <script type="text/javascript" src="../scroll/js/scroll.js"></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durian.js?v=1.1.4"></script>
-<script type="text/javascript" src="../js/loginSignup.js?v=1.1.1"></script>
+<script type="text/javascript" src="../js/loginSignup.js?v=1.1.6"></script>
+<script type="text/javascript" src="../js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

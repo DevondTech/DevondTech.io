@@ -102,10 +102,18 @@ $('document').ready(function()
     var emailNomorHP = $('#emailNomorHP').val();
     var password = $('#password').val();
     if(emailNomorHP == ''){
-      alert('Silahkan isi dulu usernamenya')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan isi dulu usernamenya",
+        type: "error"
+      });
     }
     else if(password == ''){
-      alert('Silahkan isi dulu passwordnya')
+      swal({
+        title:"Cek Data",
+        text: "Silahkan isi dulu passwordnya",
+        type: "error"
+      });
     }  
     else if(emailNomorHP != '' && password != ''){
        var data = $("#login-form").serialize();
@@ -122,7 +130,11 @@ $('document').ready(function()
       success :  function(response)
       {      
         if(response == "checkPassword"){
-          alert('E-mail Yang Anda Masukan Salah Atau Anda Belum Terdaftar') ; 
+          swal({
+            title:"Fatal",
+            text: "E-mail yang anda masukan salah atau anda belum terdaftar",
+            type: "error"
+          });
           $("#btn-login").html('Login');
         }
         else if(response == "KodeSign1"){
@@ -134,7 +146,11 @@ $('document').ready(function()
             window.location.href = "../";
         }
         else{
-          alert('Anda Belum Terdaftar') ; 
+          swal({
+            title:"Fatal",
+            text: "Anda Belum Terdaftar",
+            type: "error"
+          });
           $("#btn-login").html('Login');
         }
       }
@@ -149,10 +165,18 @@ $('document').ready(function()
       var emailNomorHP = $('#emailNomorHP').val();
       var password = $('#password').val();
       if(emailNomorHP == ''){
-        alert('Silahkan isi dulu usernamenya')
+        swal({
+          title:"Cek Data",
+          text: "Silahkan isi dulu usernamenya",
+          type: "error"
+        });
       }
       else if(password == ''){
-        alert('Silahkan isi dulu passwordnya')
+        swal({
+          title:"Cek Data",
+          text: "Silahkan isi dulu passwordnya",
+          type: "error"
+        });
       }  
       else if(emailNomorHP != '' && password != ''){
          var data = $("#login-form").serialize();
@@ -169,7 +193,11 @@ $('document').ready(function()
         success :  function(response)
         {      
           if(response == "checkPassword"){
-            alert('E-mail Yang Anda Masukan Salah Anda Belum Terdaftar') ; 
+            swal({
+              title:"Fatal",
+              text: "E-mail yang anda masukan salah atau anda belum terdaftar",
+              type: "error"
+            });
             $("#btn-login").html('Login');
           }
           else if(response == "KodeSign1"){
@@ -181,13 +209,17 @@ $('document').ready(function()
               window.location.href = "../";
           }
           else{
-            alert('Anda Belum Terdaftar') ; 
+            swal({
+              title:"Fatal",
+              text: "Anda Belum Terdaftar",
+              type: "error"
+            });
             $("#btn-login").html('Login');
           }
         }
       });
       return false;
-      } 
+      }
     }     
   });
 });
