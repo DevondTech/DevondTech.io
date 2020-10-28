@@ -38,7 +38,7 @@ if($id_user!='' && $id_status_user=='1'){
         array( 'db' => 'nama_lengkap',      'dt' => 1 ),
         array( 'db' => 'email',  'dt' => 2 ),
         array( 'db' => 'status_user' ,        'dt' => 3 ),
-        array( 'db' => 'id_user',   'dt' => 4 ),
+        /*array( 'db' => 'id_user',   'dt' => 4 ),*/
     );
 
     echo json_encode(

@@ -5,14 +5,14 @@ $(document).ready(function(){
       "orderable": false,
       "targets": 0,
       "ajax": "../../../conn/data2/user/user_data.php",
-      "columnDefs": [ {
+      "columnDefs": [/* {
       "searchable": false,
       "orderable": false,
       "targets": -1,
       "data": null,
-/*       "defaultContent": "<center><button class='btn btn-success btn-xs tblDetail' style='margin-bottom: 10px;' type='submit' >Detail Data</button><form method='POST'>  <button id='HapusData' class='btn btn-danger btn-xs hapus-data'>Hapus Data</button></form></center>"*/
+       "defaultContent": "<center><button class='btn btn-success btn-xs tblDetail' style='margin-bottom: 10px;' type='submit' >Detail Data</button><form method='POST'>  <button id='HapusData' class='btn btn-danger btn-xs hapus-data'>Hapus Data</button></form></center>"
       "defaultContent": "<form method='POST'>  <button id='HapusData' class='buttonDelete-Table hapus-data'>Hapus Data</button></form></center>"
-    },
+    },*/
     {
       "order": [[ 2, "asc" ]],
       "processing": true,

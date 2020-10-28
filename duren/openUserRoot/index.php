@@ -37,6 +37,12 @@
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
   <style type="text/css">
+
+    .swal2-popup #swal2-content {
+      text-align: center;
+      font-size: 14px;
+    }
+    
     .li-medsos-hr-top {
       float: left;
       padding-left: 5px;

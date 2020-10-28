@@ -178,9 +178,9 @@
                                 <td class="table-tdYellowHeader">
                                     Status User
                                 </td>
-                                <td class="table-tdYellowHeader">
+                               <!--  <td class="table-tdYellowHeader">
                                     Aksi
-                                </td>
+                                </td> -->
                             </tr>
                         </thead>
                         <tbody></tbody>
@@ -200,7 +200,7 @@
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 
-<script src="../js/pages/admin/createDataUserAdmin.js?v=1.2.5"></script>
+<script src="../js/pages/admin/createDataUserAdmin.js?v=1.2.6"></script>
 </body>
 </html>
 

@@ -1,3 +1,7 @@
+body{
+  font-family: system-ui;
+}
+
 .halamanUtama{
   font-family: "Arial",  sans-serif;
 }
@@ -283,7 +287,8 @@ a:hover{
 
 .text-nav{
   color: white;
-  font-family: "Aller",  sans-serif;
+  /*font-family: "Aller",  sans-serif;*/
+  font-family: system-ui;
   font-size: 18px;
 }
 

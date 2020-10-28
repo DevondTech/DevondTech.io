@@ -42,7 +42,7 @@
 <style type="text/css">
 .swal2-popup #swal2-content {
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 @media(max-width: 992px){
