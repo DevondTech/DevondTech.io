@@ -37,7 +37,7 @@ $('#checkOutActionButton').on('click',function(e){
       if(response == "updateCheckOutByUserSuccess"){
         swal({
           title:"Pemesanan Sukses",
-          text: "Klik Lanjutkan OK",
+          text: "Klik ok untuk lanjutkan",
           type: "success"
         }).then(function() {
           window.location = '../../../conn/data2/mail/sendCheckOut/index.php?email_send='+email_send+'&&kode_pemesanan_send='+kode_pemesanan_send+'&&produk_send='+produk_send+'&&jumlah_send='+jumlah_send+'&&waktu_pemesanan_send='+waktu_pemesanan_send+'&&total_harga_yang_harus_dibayar_send='+total_harga_yang_harus_dibayar_send+'&&kode_unix='+kode_unix;
@@ -46,7 +46,7 @@ $('#checkOutActionButton').on('click',function(e){
       else if(response == "checkVerificationUser"){
         swal({
           title:"Pemesanan Gagal",
-          text: "Silahkan Konfirmasi Email Anda",
+          text: "Silahkan konfirmasi E-mail anda",
           type: "error"
         }).then(function() {
           window.location = "../../../verifikasiByUser";
@@ -55,7 +55,7 @@ $('#checkOutActionButton').on('click',function(e){
       else{
         swal({
           title:"Pemesanan Gagal",
-          text: "Silahkan Lengkapi Data Anda",
+          text: "Silahkan lengkapi data anda",
           type: "error"
         });
         $("#checkOutActionButton").html('Check Out');

@@ -2,6 +2,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script type="text/javascript" src="../js/pageLoadISP.js"></script>
+  <?php
+   error_reporting(0);
+  ?>
+  <?php
+    session_start();
+    $userHalu = $_SESSION['nama_lengkap'];
+  ?>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,10 +33,21 @@
       background-color: #cda32b;
       margin-right: 60px;
     }
+
+    #medsosTopPhone{
+      display: none;
+    }
+
     @media(max-width: 920px){
       .cardTextAbout{
         background-color: #cda32b;
         margin-right: 20px;
+      }
+    }
+
+    @media(max-width: 720px ){
+      #medsosTopPhone{
+        display: block;
       }
     }
   </style>
@@ -41,67 +60,14 @@
   </div>
   <div class="phoneTop top-page" id="top-page" style="">
     <nav id="navbar-page" class="nav-outscroll2 nav-fixed navbar navbar-expand-lg navbar-light " style="z-index: 1;"> 
-      <div class="div-Logo-NavIconlink">
-        <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
-      </div>
-      <div  id="nav-icon-link"  class="nav-icon-link" >
-        <ul class="ul-icon-link">
-          <li id="search-input-small" class="li-icon-link-search-hidden" >
-            <input id="input-search-small" type="" name="" class="input-search-small" placeholder="Search...">
-            <img src="../images/icon/close.png" id="close-search-small" class="img-close-icon-search" >
-          </li>
-         <!--  <li id="search-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
-              <img src="images/icon/search.png" class="img-icon-top">
-            </a>
-          </li> -->
-          <li id="login-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="../login">
-              <img src="../images/icon/user.png" class="img-icon-top">
-            </a>
-          </li>
-          <li id="buy-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" href="../login">
-              <img src="../images/icon/buy.png" class="img-icon-top">
-            </a>
-          </li>
-          <li id="nav-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" data-toggle="collapse" data-target="#navbarSupportedContent">
-              <img src="../images/icon/nav.png" class="img-icon-top" >
-            </a>
-          </li>
-        </ul>
-      </div>      
-      <div class="nav-div-link navbar-collapse collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../#">Home </a>
-          </li>
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../#detail-product-content">Order </a>
-          </li>
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../about">About Us</a>
-          </li>
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../conn/logout.php">Logout</a>
-          </li>
-          <!-- <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#">Testimoni</a>
-          </li> -->
-        </ul>
-      </div>
+      <?php include '../headerFooter/smallMenu.php'; ?>    
+      <?php include '../headerFooter/header.php'; ?>
       <div class="nav-icon-link-large">
         <ul class="ul-icon-link">
           <li id="search-input-large" class="li-icon-link-search-hidden" >
             <input type="" name="" class="input-search" placeholder="Search...">
             <img src="../images/icon/close.png" id="close-search-large" class="img-close-icon-search" >
           </li>
-          <!-- <li id="search-icon-large" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
-              <img src="images/icon/search.png" class="img-icon-top">
-            </a>
-          </li> -->
           <li id="login-icon-large" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" href="../login">
               <img src="../images/icon/user.png" class="img-icon-top">
@@ -119,7 +85,7 @@
       <div class="col-sm-6">
         <div class="cardTextAbout">
           <div class="card-textTop">
-            <div style="padding-bottom: 20px;">
+            <div style="padding-bottom: 20px;font-weight: bold;">
               About US 
             </div>
             <div style="font-size: 14px;" >
@@ -166,10 +132,12 @@
 <script type="text/javascript" src="../js/bootstrap.js" ></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durianRoot.js?v=2.1.1"></script>
+<script type="text/javascript" src="../js/headerFooter.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
   });
 </script>
+
 </body>
 </html>

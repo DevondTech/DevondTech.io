@@ -828,8 +828,8 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCartV2.js?v=1.1.3"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV2.js?v=1.2.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenCartV2.js?v=3.1.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV2.js?v=3.1.1"></script>
 
 </body>
 </html>

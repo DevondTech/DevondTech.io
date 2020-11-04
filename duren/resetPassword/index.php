@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script type="text/javascript" src="../js/pageLoadISP.js"></script>
   <?php
    error_reporting(0);
   ?>
@@ -78,7 +79,9 @@
         <div class=" row-login row">
           <div id="leftLoginImage" class="col-lg-7 col-md-12 col-sm-12">
             <div>
-              <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
+              <a href="../">
+                <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
+              </a>
             </div>
             <div class="image-leftDuren-login" >
               <div>
@@ -91,7 +94,9 @@
           </div>
           <div class="rightLoginDiv col-lg-5 col-md-12 col-sm-12" >
             <div class="tabletPhone-logoLogin">
-              <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
+              <a href="../">
+                <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
+              </a>
             </div>
             <form method="POST" id="sendDataReset">
           <!--   <form method="POST" action="../conn/login.php?op=in"> -->
@@ -141,5 +146,6 @@
     $('#next').css('display','block');
   });
 </script>
+
 </body>
 </html>

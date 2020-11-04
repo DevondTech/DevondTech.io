@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script type="text/javascript" src="../js/pageLoadISP.js"></script>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +34,8 @@
       height: auto;
       font-size: 20px;
       width: 100%;
-      background: -webkit-gradient(linear,left top,left bottom,from(rgb(0 0 0 / 70%)),to(rgba(19, 68, 20, 0.7))),url(../images/Webduren.jpg);
+      /*background: -webkit-gradient(linear,left top,left bottom,from(rgb(0 0 0 / 70%)),to(rgba(19, 68, 20, 0.7))),url(../images/Webduren.jpg);*/
+      background: url(../images/Webduren.jpg);
       background-position-x: 0%;
       background-position-y: 0;
       background-repeat: repeat;
@@ -61,7 +63,9 @@
           <div id="" class="leftSignupDiv col-lg-6 col-md-12 col-sm-12" >
             <div class="card-LeftSignupDiv">
               <div>
-                <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
+                <a href="../">
+                  <img src="../images/logo-king-fruit.png" class="logo-NavIconLink">
+                </a>
               </div>
               <form method="POST" id="signup-form">
                 <div>
@@ -122,5 +126,6 @@
     $('#next').css('display','block');
   });
 </script>
+
 </body>
 </html>

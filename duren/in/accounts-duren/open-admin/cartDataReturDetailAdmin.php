@@ -110,8 +110,9 @@
         <form method="post" id="confirmationFormDataTransfer">
             <div class="card-textTitleLarge-Black">
                 <div class="textTitleLarge-Black">
-                    Konfirmasi Pembayaran
+                    Pengembalian Produk
                     <input type="hidden" name="a" id="a" value="<?= $kodeCallBack; ?>">
+                    <input type="hidden" name="kode_pemesanan_call_back" id="kode_pemesanan_call_back">
                 </div>
             </div>
             <div class="padLeft20CartData">
@@ -234,6 +235,7 @@
                             <div class="card-buttonSelectPic" style="padding-top: 0px;">
                                 <div class="margin-auto">
                                     <input type="hidden" name="b" id="b" value="<?= $kodeCallBack; ?>">
+                                    <input type="hidden" name="kode_pemesanan_call_back_refuse" id="kode_pemesanan_call_back_refuse">
                                     <button class="buttonLargeRed" type="button" id="btnRefuseRetur" type="button" >Tolak Pengajuan</button>
                                 </div>
                             </div>  
@@ -352,7 +354,7 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/admin/cartDataReturDetailAdmin.js?v=1.3.2"></script>
+<script src="../js/pages/admin/cartDataReturDetailAdmin.js?v=1.4.1"></script>
 <!-- <script type="text/javascript" src="../js/pages/uploadDataFotoTransferAdmin.js"></script> -->
 <!-- <div id="openupdatefoto" class="modal fade" >
     <div class="modal-dialog modal-sm">

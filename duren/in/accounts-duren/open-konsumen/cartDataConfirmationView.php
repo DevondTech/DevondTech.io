@@ -279,7 +279,7 @@
                                 <div style="margin-left: 4px;">
                                     <div class="positionTextDetailOrder">
                                         <div class="textTotalHarga floatLeftCartData"  style="font-weight: bold;padding-bottom: 13px;">
-                                            Berikut pembayaran yang harus anda transfer 
+                                            Berikut Pembayaran Yang Harus Anda Transfer:
                                         </div>
                                     </div>
                                 </div>
@@ -436,7 +436,7 @@
 <script src="../js/action.js"></script>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmationView.js?v=1.5.5"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmationView.js?v=2.1.1"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>

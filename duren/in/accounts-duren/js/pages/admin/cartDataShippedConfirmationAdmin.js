@@ -15,22 +15,31 @@ $('#cartDataPaymentDetailAdminButton').on('click',function(e){
     {
       if(response == "updateConfirmationPaymentSuccess"){
         $("#cartDataPaymentDetailAdminButton").html('Kirim Barang');
-        alert('Konfirmasi Pengiriman Berhasil');
-        $("#content-profile").load("cartDataProcessConfirmationShippedAdmin.php");
-        $("#account-edit-link").attr("class","menu-waves-block");
-        $("#password-link").attr("class","menu-waves-block");
-        $("#product-link").attr("class","menu-waves-block");
-        $("#create-user-link").attr("class","menu-waves-block");
-        $("#notification-link").attr("class","menu-waves-block");
-        $("#logout-link").attr("class","menu-waves-block");
-        $("#account-link").attr("class","menu-waves-block");
-        $("#medsos-link").attr("class","displayLink-none");
-        $("#about-link").attr("class","displayLink-none");
+        swal({
+          title:"Sukses",
+          text: "Konfirmasi Pengiriman Berhasil",
+          type: "success"
+        }).then(function() {
+          $("#content-profile").load("cartDataProcessConfirmationShippedAdmin.php");
+          $("#account-edit-link").attr("class","menu-waves-block");
+          $("#password-link").attr("class","menu-waves-block");
+          $("#product-link").attr("class","menu-waves-block");
+          $("#create-user-link").attr("class","menu-waves-block");
+          $("#notification-link").attr("class","menu-waves-block");
+          $("#logout-link").attr("class","menu-waves-block");
+          $("#account-link").attr("class","menu-waves-block");
+          $("#medsos-link").attr("class","displayLink-none");
+          $("#about-link").attr("class","displayLink-none");
 
-        $("#shipped-link").attr("class","active-menu-right");
+          $("#shipped-link").attr("class","active-menu-right");
+        });        
       }
       else{
-        alert('Konfirmasi Pengiriman Gagal');
+        swal({
+          title:"Error",
+          text: "Data Error",
+          type: "error"
+        });
         $("#cartDataPaymentDetailAdminButton").html('Kirim Barang');
       }
     }    

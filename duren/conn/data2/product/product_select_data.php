@@ -42,7 +42,7 @@
         session_start();
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT id_produk, harga, harga_setelah_diskon, diskon, nama_produk, gambar1_produk, gambar2_produk, gambar3_produk, gambar4_produk, detail1_produk, detail2_produk FROM view_data_tampil_produk_spesial_halaman_utama where id_produk ='1'";
+        $query = "SELECT id_produk, harga, harga_setelah_diskon, diskon, nama_produk, gambar1_produk, gambar2_produk, gambar3_produk, gambar4_produk, detail1_produk, detail2_produk,teks_berat_produk FROM view_data_tampil_produk_spesial_halaman_utama where id_produk ='1'";
         $result = $db->query($query); 
 
         $selectToHomePage = mysqli_fetch_all($result,MYSQLI_ASSOC);

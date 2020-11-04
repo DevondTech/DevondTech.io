@@ -36,7 +36,7 @@
 					if($_SESSION['id_status_user'] =='1'){
 						echo $_SESSION['id_status_user']; 
 						echo "this";
-						header("Location: ../in/accounts-duren/open-admin/");
+						header("Location: ../in/accounts-duren/open-admin/data.php");
 						die();
 					}
 					elseif($_SESSION['id_status_user']=='5'){

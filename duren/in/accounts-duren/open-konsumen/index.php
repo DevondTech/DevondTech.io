@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript" src="../../../js/pageLoadISP.js"></script>
     <?php
        error_reporting(0);
     ?>
@@ -350,6 +351,7 @@
     <!-- Scrol -->
     <!-- <script src="../css/scroll/js/scroll.js"></script> -->
     <script type="text/javascript" src="../../../js/sweetAlert/sweetalert2.all.min.js"></script>
+
 
 </body>
 </html>

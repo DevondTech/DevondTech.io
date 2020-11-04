@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script type="text/javascript" src="../js/pageLoadISP.js"></script>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -119,7 +120,7 @@
       <div class="col-sm-6">
         <div class="cardTextAbout">
           <div class="card-textTop">
-            <div style="padding-bottom: 20px;">
+            <div style="padding-bottom: 20px;font-weight: bold;">
               About US 
             </div>
             <div style="font-size: 14px;" >
@@ -171,5 +172,6 @@
     $('#next').css('display','block');
   });
 </script>
+
 </body>
 </html>

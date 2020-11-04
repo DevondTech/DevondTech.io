@@ -36,8 +36,11 @@ $('#cartDataPaymentDetailAdminButton').on('click',function(e){
         $("#payment-link").attr("class","active-menu-right");*/
       }
       else{
-        alert('Konfirmasi Gagal, Silahkan Lengkapi Data Anda');
-        $("#cartDataPaymentDetailAdminButton").html('Konfirmasi');
+        swal({
+          title:"System Error",
+          text: "Konfirmasi Gagal",
+          type: "error"
+        });
       }
     }    
   });

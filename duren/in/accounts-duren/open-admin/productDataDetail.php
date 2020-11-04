@@ -170,7 +170,7 @@
             <form method="POST" id="updateDetail1Form">
                 <div class="card-textDataProduct ">
                     <div class="textDataProduct">
-                        Detail 1
+                        Detail Produk
                     </div>
                 </div>
                 <div class="card-inputDataProduct">
@@ -199,7 +199,7 @@
             </form>
         </div>
 
-        <div class="Card-inputDataProduct textArea-modeInputDataProduct PaddingProduct20TopBotom">
+        <!-- <div class="Card-inputDataProduct textArea-modeInputDataProduct PaddingProduct20TopBotom">
             <form method="POST" id="updateDetail2Form">
                 <div class="card-textDataProduct ">
                     <div class="textDataProduct">
@@ -230,7 +230,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div> -->
 
         <div class="Card-inputDataProduct PaddingProduct20TopBotom">
             <form method="POST" id="updateHargaForm">

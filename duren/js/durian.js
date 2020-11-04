@@ -151,6 +151,7 @@ $(document).ready(function(){
       var PrintDetail_detail1_produk = DataDetailProduk[0].detail1_produk;
       var PrintDetail_detail2_produk = DataDetailProduk[0].detail2_produk;
       var PrintDetail_harga = DataDetailProduk[0].harga;
+      var beratProduk = DataDetailProduk[0].teks_berat_produk;
 
       var gambar1_productView = DataDetailProduk[0].gambar1_produk;
       var gambar2_productView = DataDetailProduk[0].gambar2_produk;
@@ -179,6 +180,7 @@ $(document).ready(function(){
           hargaDiskonRupiah += hargaDiskonSeparator + hargaDiskonRibuan.join('.');
       }
       $('#judulProduk').text(PrintDetail_nama_produk);
+      $('#beratProduk').text(beratProduk);
       $('#detail1Produk').text(PrintDetail_detail1_produk+' '+PrintDetail_detail2_produk);
       $('#topText').text(PrintDetail_detail1_produk+' '+PrintDetail_detail2_produk);
       /*$('#detail2Produk').text(PrintDetail_detail2_produk);*/

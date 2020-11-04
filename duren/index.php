@@ -2,13 +2,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script type="text/javascript" src="js/pageLoadISP.js"></script>
   <?php
    error_reporting(0);
   ?>
   <?php
     session_start();
     if($_SESSION['id_status_user']!="5" ){
-        die("<script language='javascript'> document.location='openUserRoot'</script>");
+        die("<script language='javascript'> document.location='home/index.php?#top-page'</script>");
     }
     else if($_SESSION['id_status_user']=="1"){
         die("<script language='javascript'> document.location='../in/accounts-duren/open-admin/'</script>");
@@ -23,8 +24,8 @@
   <title>King Fruit | KING OF THE KING</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
-  <meta name="description" content="durian">
-  <meta name="keywords" content="durian" />
+  <meta name="description" content="KING FRUIT | KING OF THE KING. Durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan Super Montong sebagai produk pertama yang dihadirkan untuk para durian lovers. Premium Quality Super Montong tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.">
+  <meta name="keywords" content="kingfruit.co.id , king fruit , durian king fruit, durian montong , buah durian , durian jakarta , durian jabodetabek , durian manis" />
   <link rel="icon"  href="images/1.jpg" type="image/x-icon">
   <meta name="rating" content="general">
   <meta name="robots" content="index, follow">
@@ -38,6 +39,14 @@
   <link rel="stylesheet" href="js/sweetAlert/sweetalert2.min.css">
   <link rel="stylesheet" href="js/sweetAlert/sweetalert2.min.css">
   <style type="text/css">
+
+    .fontData{
+      font-family: 'Open Sans', sans-serif
+    }
+
+    .div-buttonTextBuy-detailProduct{
+      margin-top: -3px;
+    }
 
     .swal2-popup #swal2-content {
       text-align: center;
@@ -269,20 +278,20 @@
       <div class="nav-div-link navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#">Home </a>
+            <a class="fontData text-nav" href="#">Home </a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#detail-product-content">Order </a>
+            <a class="fontData text-nav" href="about">About Us</a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="about">About Us</a>
+            <a class="fontData text-nav" href="#detail-product-content">Order </a>
           </li>
           <li class="nav-li-link nav-item">
-            <a class="text-nav" href="conn/logout.php">Logout</a>
+            <a class="fontData text-nav" href="testimoni">Testimoni</a>
           </li>
-          <!-- <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#">Testimoni</a>
-          </li> -->
+          <li class="nav-li-link nav-item">
+            <a class="fontData text-nav" href="conn/logout.php">Logout</a>
+          </li>
         </ul>
       </div>
       <div class="nav-icon-link-large">
@@ -319,11 +328,11 @@
       <div class="col-sm-6">
         <div style="background-color: #cda32b">
           <div class="card-textTop">
-            <div style="font-weight: bold;">
+            <div class="fontData" style="font-weight: bold;">
             KING FRUIT  
             </div>
             <!-- <div style="font-size: 14px;" id="topText"> -->
-            <div style="font-size: 14px;" >
+            <div class="fontData" style="font-size: 14px;" >
               Durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan <b>Super Montong</b> sebagai produk pertama yang dihadirkan untuk para durian lovers. <b>Premium Quality Super Montong</b> tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.
               <!-- 
               Kini waktunya durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan Super Montong sebagai produk pertama yang dihadirkan untuk para durian lovers. Premium Quality Super Montong tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan. -->
@@ -357,11 +366,11 @@
     </div>
   </div>
  
-    <section id="detail-product-content">
+    <section id="detail-product-content" style="margin-top: -60px;">
       <form method="POST" id="updateCheckOutByUserForm">
         <input type="hidden" value="cart" id="textData">
         <div id="detail-product" class="detail-product">
-          <div class="container">
+          <div class="container" style="margin-top: 60px">
             <div  class="row">
               <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="divCardImage-large-detailProduct">
@@ -440,6 +449,11 @@
                   <div class="textGrey16-regular-detailProduct" id="detail1Produk">
                   </div>
                   <div class="textGrey16-regular-detailProduct" id="detail2Produk">
+                  </div>
+                  <div class="textGrey16-regular-detailProduct" style="margin-top: 20px;">
+                    Berat:
+                  </div>
+                  <div class="textGrey16-regular-detailProduct" id="beratProduk" >
                   </div>
                 </div>
               </div>
@@ -655,7 +669,7 @@
                   <a href="about" class="a-colorWhite">About Us</a>
                   </div>
                   <div class="padding-linkFooter">
-                  <a href="login" class="a-colorWhite">Login</a>
+                  <a href="testimoni" class="a-colorWhite">Testimoni</a>
                   </div>
                   <!-- <div class="padding-linkFooter">
                   <a href="" class="a-colorWhite">Event</a>
@@ -767,10 +781,11 @@
 <script type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript" src="js/slideSmall.js"></script>
-<script type="text/javascript" src="js/durian.js?v=2.1.1"></script>
+<script type="text/javascript" src="js/durian.js?v=2.1.2"></script>
 <script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.7.1"></script>
 <script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
+  
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
   });
@@ -798,5 +813,6 @@
     }
   }
 </script>
+
 </body>
 </html>

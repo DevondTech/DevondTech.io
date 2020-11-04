@@ -173,8 +173,8 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/admin/cartDataShippedDetailConfirmationAdmin.js?v=1.3.1"></script>
-<script type="text/javascript" src="../js/pages/admin/cartDataShippedConfirmationAdmin.js?v=1.3.1"></script>
+<script type="text/javascript" src="../js/pages/admin/cartDataShippedDetailConfirmationAdmin.js?v=1.3.2"></script>
+<script type="text/javascript" src="../js/pages/admin/cartDataShippedConfirmationAdmin.js?v=1.3.2"></script>
 
 </body>
 

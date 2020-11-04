@@ -16,6 +16,7 @@
     else{
 
     }
+    $userHalu = $_SESSION['nama_lengkap'];
   ?>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -23,8 +24,8 @@
   <title>King Fruit | KING OF THE KING</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <link href="../font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
-  <meta name="description" content="durian">
-  <meta name="keywords" content="durian" />
+  <meta name="description" content="KING FRUIT | KING OF THE KING. Durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan Super Montong sebagai produk pertama yang dihadirkan untuk para durian lovers. Premium Quality Super Montong tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.">
+  <meta name="keywords" content="kingfruit.co.id , king fruit , durian king fruit, durian montong , buah durian , durian jakarta , durian jabodetabek , durian manis" />
   <link rel="icon"  href="../images/1.jpg" type="image/x-icon">
   <meta name="rating" content="general">
   <meta name="robots" content="index, follow">
@@ -238,11 +239,6 @@
             <input id="input-search-small" type="" name="" class="input-search-small" placeholder="Search...">
             <img src="../images/icon/close.png" id="close-search-small" class="img-close-icon-search" >
           </li>
-         <!--  <li id="search-icon-small" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
-              <img src="images/icon/search.png" class="img-icon-top">
-            </a>
-          </li> -->
           <li id="login-icon-small" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" href="../login">
               <img src="../images/icon/user.png" class="img-icon-top">
@@ -260,36 +256,13 @@
           </li>
         </ul>
       </div>      
-      <div class="nav-div-link navbar-collapse collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#">Home </a>
-          </li>
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#detail-product-content">Order </a>
-          </li>
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../aboutUserRoot">About Us</a>
-          </li>
-          <li class="nav-li-link nav-item">
-            <a class="text-nav" href="../login">Login</a>
-          </li>
-          <!-- <li class="nav-li-link nav-item">
-            <a class="text-nav" href="#">Testimoni</a>
-          </li> -->
-        </ul>
-      </div>
+      <?php include '../headerFooter/header.php'; ?>
       <div class="nav-icon-link-large">
         <ul class="ul-icon-link">
           <li id="search-input-large" class="li-icon-link-search-hidden" >
             <input type="" name="" class="input-search" placeholder="Search...">
             <img src="../images/icon/close.png" id="close-search-large" class="img-close-icon-search" >
           </li>
-          <!-- <li id="search-icon-large" class="li-icon-link">
-            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
-              <img src="images/icon/search.png" class="img-icon-top">
-            </a>
-          </li> -->
           <li id="login-icon-large" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" href="../login">
               <img src="../images/icon/user.png" class="img-icon-top">
@@ -678,6 +651,11 @@
                   </div>
                   <div class="textGrey16-regular-detailProduct" id="detail2Produk">
                   </div>
+                  <div class="textGrey16-regular-detailProduct" style="margin-top: 20px;">
+                    Ukuran:
+                  </div>
+                  <div class="textGrey16-regular-detailProduct" id="beratProduk" >
+                  </div>
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6">
@@ -892,7 +870,7 @@
                   <a href="../aboutUserRoot" class="a-colorWhite">About Us</a>
                   </div>
                   <div class="padding-linkFooter">
-                  <a href="login" class="a-colorWhite">Login</a>
+                  <a href="../login" class="a-colorWhite">Login</a>
                   </div>
                   <!-- <div class="padding-linkFooter">
                   <a href="" class="a-colorWhite">Event</a>
@@ -1003,8 +981,9 @@
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 <script type="text/javascript" src="../js/bootstrap.js" ></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
-<script type="text/javascript" src="../js/durianRoot.js?v=2.1.1"></script>
+<script type="text/javascript" src="../js/durianRoot.js?v=2.2.1"></script>
 <script type="text/javascript" src="../js/sweetAlert/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="../js/headerFooter.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');
