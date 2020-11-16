@@ -94,15 +94,16 @@ $alert = '';
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'srv103.niagahoster.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'kingfruit.co.id@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = 'king@fruit456'; // Gmail address Password
+    $mail->Username = 'admin@kingfruit.co.id'; 
+    $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 
-    $mail->setFrom($email); 
+    $mail->setFrom('admin@kingfruit.co.id'); 
     $mail->addAddress($emailTo); 
+    $mail->addBcc('infokingfruit@gmail.com');
 
     $mail->isHTML(true);
     $mail->Subject = 'Forgot Password kingfruit.co.id';

@@ -17,7 +17,7 @@ if($id_user!='' && $id_status_user=='1'){
         $jumlah_stok = $_POST['jumlah_stok'];
         $id_satuan_produk = $_POST['id_satuan_produk'];
         $detail1_produk = $_POST['detail1_produk'];
-        $detail2_produk = $_POST['detail2_produk'];
+        $id_berat_produk = $_POST['id_berat_produk'];
         
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -26,8 +26,8 @@ if($id_user!='' && $id_status_user=='1'){
         $productLast=$productDataLastID->last_id_produk;
         $id_produk_plus = $productLast + 1;
 
-        $sql = "INSERT INTO tb_produk(nama_produk, detail1_produk, detail2_produk, id_jenis_produk, id_satuan_produk, jumlah_stok)
-                        VALUES('$nama_produk','$detail1_produk','$detail2_produk','$id_jenis_produk','$id_satuan_produk', '$jumlah_stok')";   
+        $sql = "INSERT INTO tb_produk(nama_produk, detail1_produk, id_jenis_produk, id_satuan_produk, jumlah_stok, id_berat_produk)
+                        VALUES('$nama_produk','$detail1_produk','$id_jenis_produk','$id_satuan_produk', '$jumlah_stok', '$id_berat_produk')";   
         $result = SSP::sql_exec_update($db,null,$sql);
 
         $queryProduct = "INSERT INTO tb_inventory(tanggal_inventory, id_produk, nama_produk, penambahan_stok)

@@ -19,6 +19,13 @@ if($id_user!='' && $id_status_user=='1'){
         $id_status_baca = 1;
         $id_user_baca = 1;
         $id_status_baca_admin = 2;
+
+        $id_status_notifikasi_send = 5;
+        $id_status_baca_send = 1;
+        $id_user_baca_send = 1;
+        $id_status_baca_admin_send = 1;
+        $pesan_notifikasi_send ='Pembayaran Barang Dengan Kode Pemesanan '.$kode_pemesanan.' Dikonfirmasi. Silahkan Lanjutkan Konfirmasi Pengiriman Barang';
+
         if($id_user!=''){
             $query = "UPDATE tb_pemesanan SET id_proses_pemesanan='4' WHERE kode_pemesanan = '$kode_pemesanan' ";
             $db->query($query);
@@ -28,6 +35,10 @@ if($id_user!='' && $id_status_user=='1'){
 
             $queryReadNotif = "UPDATE tb_notifikasi SET  id_status_baca='$id_status_baca_admin' WHERE kode_pemesanan = '$kode_pemesanan' and id_status_notifikasi='2'";
             $db->query($queryReadNotif);
+            $querySendNotif = "UPDATE tb_notifikasi SET  id_status_baca='$id_status_baca_admin' WHERE kode_pemesanan = '$kode_pemesanan'";
+            $querySendNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, kode_pemesanan)
+                            VALUES('$pesan_notifikasi_send','$id_status_notifikasi_send','$id_status_baca_send','$id_user_baca_send', '$kode_pemesanan')";   
+            $db->query($querySendNotif);
             echo "updateConfirmationPaymentSuccess";   
         }
         else{
@@ -48,12 +59,20 @@ if($id_user!='' && $id_status_user=='1'){
         $id_status_notifikasi = 3;
         $id_status_baca = 1;
         $id_user_baca = 1;
+
+        $id_status_notifikasi_read = 5;
+        $id_status_baca_read = 1;
+        $id_user_baca_read = 1;
+        $id_status_baca_admin_read = 2;
+
         if($id_user!=''){
             $query = "UPDATE tb_pemesanan SET id_proses_pemesanan='5' WHERE kode_pemesanan = '$kode_pemesanan' ";
             $db->query($query);
             $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, id_user)
                 VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca','$id_user')";
             $db->query($queryNotif); 
+            $queryReadNotif = "UPDATE tb_notifikasi SET  id_status_baca='$id_status_baca_admin_read' WHERE id_status_notifikasi = '$id_status_notifikasi_read' and kode_pemesanan='$kode_pemesanan'";
+            $db->query($queryReadNotif);
             echo "updateConfirmationPaymentSuccess";   
         }
         else{

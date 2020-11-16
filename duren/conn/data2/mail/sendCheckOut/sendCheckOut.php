@@ -22,7 +22,9 @@ $jumlah_send = $_GET['jumlah_send'];
 $total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
 $email = $baris['email'];
 $kode_unix = $_GET['kode_unix'];
-
+$mailAdmin = 'admin@kingfruit.co.id';
+date_default_timezone_set('Asia/Jakarta');
+$waktu_checkout = date('d-m-Y H:i:s'); 
 
 /*$emailTo = $_GET['email_send'];
 $kode_pemesanan_send = $_GET['kode_pemesanan_send'];
@@ -32,6 +34,9 @@ $jumlah_send = $_GET['jumlah_send'];
 $total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
 
 $email = 'kingfruit.co.id@gmail.com';*/
+
+$subjectCreate = 'Pemesanan Produk kingfruit.co.id #';
+$subjectMail = $subjectCreate.$kode_pemesanan_send; 
   $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -146,19 +151,19 @@ $email = 'kingfruit.co.id@gmail.com';*/
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'srv103.niagahoster.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'kingfruit.co.id@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = 'king@fruit456'; // Gmail address Password
+    $mail->Username = $mailAdmin; 
+    $mail->Password = 'kingfruit' ; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 
-    $mail->setFrom($email); 
+    $mail->setFrom($mailAdmin); 
     $mail->addAddress($emailTo); 
-    $mail->addBcc('infokingfruit@gmail.com');
+    $mail->addBcc($mailAdmin);
 
     $mail->isHTML(true);
-    $mail->Subject = 'Pemesanan Produk kingfruit.co.id';
+    $mail->Subject = $subjectMail;
     $mail->Body = $massages; 
                  
 

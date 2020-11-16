@@ -318,7 +318,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="../js/pages/updateDataFotoRetur.js?v=1.4.1"></script>
-<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShippedRetur.js?v=1.4.1"></script>
+<script type="text/javascript" src="../js/pages/updateDataFotoRetur.js?v=1.3.6"></script>
+<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShippedRetur.js?v=1.2.3"></script>
 </body>
 </html>

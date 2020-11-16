@@ -25,8 +25,18 @@ $(document).ready(function(){
           cell.innerHTML = i+1;
       } );
   }).draw();
-
+  $('#buttonCancelCreate').on('click',function(){
+    $('#createDataUserSlide').attr('style','display:none;');
+    $('#nama_produk').val('');
+    $('#detail1_produk').val('');
+    $('#detail2_produk').val('');
+    $('#jumlah_stok').val('');
+  });
   $('#createNewDataProduct').on('click',function(e){
+    $('#createDataUserSlide').attr('style','display:block;');
+    $('#createNewDataProduct').attr('style','display:none;');
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     $.ajax({
       type: "GET",
       url: "../../../conn/data2/product/jenis_product_data.php/?callIDJenisProduk",
@@ -57,9 +67,26 @@ $(document).ready(function(){
         $('#id_satuan_produk').html(html);
       }
     });
+    $.ajax({
+      type: "GET",
+      url: "../../../conn/data2/product/berat_produk.php/?callIDBeratProduk",
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      success: function(callIDJenisProduk) { 
+        var DataJenisProduk = jQuery.parseJSON(callIDJenisProduk);
+        var html = '';
+          for(var count = 0; count < DataJenisProduk.length; count++)
+          {
+            html += '<option value="'+DataJenisProduk[count].id_berat_produk+'">'+DataJenisProduk[count].teks_berat_produk+'</option>';
+          }
+        $('#id_berat_produk').html(html);
+      }
+    });
   });
 
   $('#btnCancelCreatedDataProduct').on('click', function(e){
+    $('#createNewDataProduct').attr('style','display:block;');
+    $('#createDataUserSlide').attr('style','display:none;');
     $('#nama_produk').val('');
     $('#detail1_produk').val('');
     $('#detail2_produk').val('');
@@ -100,27 +127,7 @@ $(document).ready(function(){
          type : 'POST',
          url  : '../../../conn/data2/product/product_data.php/?createDataProduct',
          data : data,
-         beforeSend: function(d)
-         { 
-          $("#error").fadeOut();
-          $("#btnCreatedDataProduct").html('<span class="glyphicon glyphicon-transfer"></span>   sending ...');
-         }, 
-          success :  function(d)
-   /*       { 
-            if(d.success){
-            $("#btnCreatedDataProduct").html('SIMPAN');
-            alert('Data Berhasil Disimpan');
-            $('#nama_produk').val('');
-            $('#detail1_produk').val('');
-            $('#detail2_produk').val('');
-            table.ajax.reload();
-            }
-            else{
-              $("#error").fadeIn(1000, function(){   
-              $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span>  Error Upload Data.</div>');
-                   $("#btnCreatedDataProduct").html('SIMPAN');
-              });
-            }*/  
+          success :  function(data)
           { 
             $("#btnCreatedDataProduct").html('SIMPAN');
             alert('Data Berhasil Disimpan');
@@ -130,7 +137,7 @@ $(document).ready(function(){
             $('#jumlah_stok').val('');
             table.ajax.reload();      
           } 
-        });
+      });
       return false;
     }      
   });
@@ -187,7 +194,10 @@ $(document).ready(function(){
       alert("Data tidak dihapus!");
     } 
   });
+ 
 });
+
+
 
 
 

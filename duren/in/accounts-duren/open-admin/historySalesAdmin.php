@@ -19,6 +19,7 @@
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"/>
 <link href="../css/dataUserLogin.css?v=1.1.10" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
 <style type="text/css">
     .table-tdYellowHeader {
         text-align: center;
@@ -36,6 +37,126 @@
         background-color: white;
         cursor: pointer;
     }
+
+    .searchDatePositionTopBottom{
+        margin-top: 31px;
+        padding-bottom: 20px;
+    }
+
+    .floatLeft{
+        float: left;
+        padding-right: 10px;
+    }
+
+    #dataSales_filter{
+        float: right;
+    }
+
+    .floatLeftButton{
+        float: left;
+        padding-right: 10px;
+    }
+
+    .parrentDivTable {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .m3{
+        margin-top: 3px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .txtCenter{
+        text-align: center;
+    }
+
+    .buttonDateSearch{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-right: 18px;
+        padding-left: 18px;
+        background-color: #2d472c;
+        color: white;
+        border: 1px solid #2d472c;
+        border-radius: 5px;
+    }
+
+    .buttonDateSearch:hover{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-right: 18px;
+        padding-left: 18px;
+        background-color: white;
+        color: #2d472c;
+        border: 1px solid #2d472c;
+        border-radius: 5px;
+    }
+
+    .buttonDateClearSearch{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-right: 18px;
+        padding-left: 18px;
+        background-color: #fb483a;
+        color: white;
+        border: 1px solid #fb483a;
+        border-radius: 5px;
+    }
+
+    .buttonDateClearSearch:hover{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-right: 18px;
+        padding-left: 18px;
+        background-color: white;
+        color: #fb483a;
+        border: 1px solid #fb483a;
+        border-radius: 5px;
+    }
+
+    #dataSales_info{
+        float: right;
+        display: none;
+    }
+
+    .dataTables_paginate{
+        float: right;
+    }
+
+    @media(max-width: 720px){
+        .parrentDivTable {
+            margin-left: 0px;
+            margin-right: 0px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .m3{
+            margin-top: 0px;
+        }
+
+
+        .floatLeft {
+            float: unset;
+            padding-right: 20px;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    @media(max-width: 483px){
+        .floatLeft {
+            float: unset;
+            padding-right: 20px;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+   
 </style>
 </head>
 <body class="bd-w" >
@@ -48,9 +169,37 @@
                 </div>
             </div>
             <br />
-            <div id="" class="parrentDivTable" >
+            <div class="searchDatePositionTopBottom marginLeft25">
+                <form id="selectDateForm" method="POST">
+                    <div>
+                        <div class="floatLeft">
+                            <input type="date" name="tanggalAwal" id="tanggalAwal" class="input-textDataUser">
+                        </div>
+                        <div class="txtCenter m3 floatLeft">
+                            s/d
+                        </div>
+                        <div class="floatLeft">
+                            <input type="date" name="tanggalAkhir" id="tanggalAkhir" class="input-textDataUser" >
+                        </div>
+                        <div class="floatLeft">
+                            <div class="floatLeftButton">
+                                <button type="button" id="selectDate" class="buttonDateSearch">Cari</button>
+                            </div>
+                            <div class="floatLeftButton">
+                                <button type="button" id="selectClearDate" class="buttonDateClearSearch">Bersihkan</button>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </form>
+            </div>
+            <div  class="parrentDivTable" >
+
                 <div class="scrollTableX">
+
                     <div class="marginLeft25">
+                        
+                        <br/>
                         <table style="width: 100%;" border=1px; class="table table-bordered" id="dataSales">
                             <thead>
                                 <tr>
@@ -81,7 +230,22 @@
 <!-- Datatables -->
 <script type="text/javascript" src="../datatable/newJS/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../datatable/newJS/dataTables.bootstrap.min.js"></script>
-<script src="../js/pages/admin/cartDataSalesAdmin.js?v=1.2.1"></script>
+<script src="../js/pages/admin/cartDataSalesAdminNew.js?v=1.1.1"></script>
+<script type="text/javascript" src="../js/datatables/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="../js/datatables/buttons.flash.min.js"></script>
+<script type="text/javascript" src="../js/datatables/jszip.min.js"></script>
+<!-- <script type="text/javascript" src="../js/datatables/pdfmake.min.js"></script> -->
+<script type="text/javascript" src="../js/datatables/vfs_fonts.js"></script>
+<script type="text/javascript" src="../js/datatables/buttons.html5.min.js"></script>
+<script type="text/javascript" src="../js/datatables/buttons.print.min.js"></script>
+
+
+
+
+
+
+
+
 </body>
 </html>
 

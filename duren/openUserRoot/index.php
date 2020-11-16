@@ -16,7 +16,6 @@
     else{
 
     }
-    $userHalu = $_SESSION['nama_lengkap'];
   ?>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -239,6 +238,11 @@
             <input id="input-search-small" type="" name="" class="input-search-small" placeholder="Search...">
             <img src="../images/icon/close.png" id="close-search-small" class="img-close-icon-search" >
           </li>
+         <!--  <li id="search-icon-small" class="li-icon-link">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
+              <img src="images/icon/search.png" class="img-icon-top">
+            </a>
+          </li> -->
           <li id="login-icon-small" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" href="../login">
               <img src="../images/icon/user.png" class="img-icon-top">
@@ -256,13 +260,36 @@
           </li>
         </ul>
       </div>      
-      <?php include '../headerFooter/header.php'; ?>
+      <div class="nav-div-link navbar-collapse collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-li-link nav-item">
+            <a class="text-nav" href="#">Home </a>
+          </li>
+          <li class="nav-li-link nav-item">
+            <a class="text-nav" href="#detail-product-content">Order </a>
+          </li>
+          <li class="nav-li-link nav-item">
+            <a class="text-nav" href="../aboutUserRoot">About Us</a>
+          </li>
+          <li class="nav-li-link nav-item">
+            <a class="text-nav" href="../login">Login</a>
+          </li>
+          <!-- <li class="nav-li-link nav-item">
+            <a class="text-nav" href="#">Testimoni</a>
+          </li> -->
+        </ul>
+      </div>
       <div class="nav-icon-link-large">
         <ul class="ul-icon-link">
           <li id="search-input-large" class="li-icon-link-search-hidden" >
             <input type="" name="" class="input-search" placeholder="Search...">
             <img src="../images/icon/close.png" id="close-search-large" class="img-close-icon-search" >
           </li>
+          <!-- <li id="search-icon-large" class="li-icon-link">
+            <a class="link-img-icon-top form-inline my-2 my-lg-0" >
+              <img src="images/icon/search.png" class="img-icon-top">
+            </a>
+          </li> -->
           <li id="login-icon-large" class="li-icon-link">
             <a class="link-img-icon-top form-inline my-2 my-lg-0" href="../login">
               <img src="../images/icon/user.png" class="img-icon-top">
@@ -983,7 +1010,6 @@
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durianRoot.js?v=2.2.1"></script>
 <script type="text/javascript" src="../js/sweetAlert/sweetalert2.all.min.js"></script>
-<script type="text/javascript" src="../js/headerFooter.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

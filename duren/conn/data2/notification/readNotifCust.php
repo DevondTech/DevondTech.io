@@ -15,7 +15,7 @@ if($id_user!='' && $id_status_user=='5'){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_status_baca = 2;       
-        $query = "UPDATE tb_notifikasi SET id_status_baca='$id_status_baca' WHERE id_status_notifikasi = '7' and id_user='$id_user'";
+        $query = "UPDATE tb_notifikasi SET id_status_baca='$id_status_baca' WHERE id_status_notifikasi = '8' and id_user='$id_user'";
         $db->query($query);
         echo "updateConfirmationRetur";   
     }

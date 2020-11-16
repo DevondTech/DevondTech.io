@@ -155,10 +155,13 @@ $(document).ready(function(){
                     $('#total_harga_pemesanan').val(harga);
                     $('#total_harga_pemesanan_tampil2').val('Rp '+hargaRupiah+',00');
                     $('#total_harga_pemesanan2').val(harga);
-                    $('#totalBayarKeseluruhan').val(+harga + +ongkir);
+                    $('#totalBayarKeseluruhan').val(+harga + +ongkir + +dataCreate);
+
+                    var checkBayar = $('#totalBayarKeseluruhan').val();
+                    console.log(checkBayar);
 
                     var totalBayarKeseluruhanCall = $('#totalBayarKeseluruhan').val();
-                    var totalBayarKeseluruhanCall = +dataCreate + +totalBayarKeseluruhanCall;
+                    var totalBayarKeseluruhanCall = totalBayarKeseluruhanCall;
                     var totalBayarKeseluruhanCallNumberString = totalBayarKeseluruhanCall.toString(),
                         totalBayarKeseluruhanCallSisa    = totalBayarKeseluruhanCallNumberString.length % 3,
                         totalBayarKeseluruhanCallRupiah  = totalBayarKeseluruhanCallNumberString.substr(0, totalBayarKeseluruhanCallSisa),

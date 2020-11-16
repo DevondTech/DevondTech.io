@@ -7,7 +7,7 @@ if($id_user!='' && $id_status_user=='1'){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_status_baca = 2;       
-        $query = "UPDATE tb_notifikasi SET  id_status_baca='$id_status_baca' WHERE id_status_notifikasi = '5'";
+        $query = "UPDATE tb_notifikasi SET  id_status_baca='$id_status_baca' WHERE id_status_notifikasi = '6'";
         $db->query($query);
         echo "updateConfirmationReview";   
     }
@@ -15,7 +15,7 @@ if($id_user!='' && $id_status_user=='1'){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_status_baca = 2;       
-        $query = "UPDATE tb_notifikasi SET  id_status_baca='$id_status_baca' WHERE id_status_notifikasi = '6'";
+        $query = "UPDATE tb_notifikasi SET  id_status_baca='$id_status_baca' WHERE id_status_notifikasi = '7'";
         $db->query($query);
         echo "updateConfirmationReturTransfer";   
     }

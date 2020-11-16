@@ -14,10 +14,20 @@ if($id_user!='' && $id_status_user=='1'){
         echo json_encode($notificationPaymentAdmin);
     }
 
+    if(isset($_GET['notificationShippedAdmin'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT COUNT(id_status_notifikasi) AS call_data_notifikasi_shipped FROM tb_notifikasi where id_status_baca='1' and id_status_notifikasi='5'";
+        $result = $db->query($query); 
+        $notificationShippedAdmin = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $notificationShippedAdmin=json_encode($notificationShippedAdmin);
+        echo json_encode($notificationShippedAdmin);
+    }
+
     if(isset($_GET['notificationCommentAdmin'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT COUNT(id_status_notifikasi) AS call_data_notifikasi_comment FROM tb_notifikasi where id_status_baca='1' and id_status_notifikasi='5'";
+        $query = "SELECT COUNT(id_status_notifikasi) AS call_data_notifikasi_comment FROM tb_notifikasi where id_status_baca='1' and id_status_notifikasi='6'";
         $result = $db->query($query); 
         $notificationCommentAdmin = mysqli_fetch_all($result,MYSQLI_ASSOC);
         $notificationCommentAdmin=json_encode($notificationCommentAdmin);
@@ -27,7 +37,7 @@ if($id_user!='' && $id_status_user=='1'){
     if(isset($_GET['notificationReturAdmin'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT COUNT(id_status_notifikasi) AS call_data_notifikasi_retur FROM tb_notifikasi where id_status_baca='1' and id_status_notifikasi='6'";
+        $query = "SELECT COUNT(id_status_notifikasi) AS call_data_notifikasi_retur FROM tb_notifikasi where id_status_baca='1' and id_status_notifikasi='7'";
         $result = $db->query($query); 
         $notificationReturAdmin = mysqli_fetch_all($result,MYSQLI_ASSOC);
         $notificationReturAdmin=json_encode($notificationReturAdmin);

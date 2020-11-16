@@ -29,6 +29,15 @@
   <link rel="stylesheet" type="text/css" href="../css/chat.css?v=1.0.1">
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <style type="text/css">
+
+    .fontData{
+      font-family: 'Open Sans', sans-serif
+    }
+    
+    .fontData2{
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
     .cardTextAbout{
       background-color: #cda32b;
       margin-right: 60px;
@@ -90,10 +99,10 @@
       <div class="col-sm-6">
         <div class="cardTextAbout">
           <div class="card-textTop">
-            <div style="padding-bottom: 20px;font-weight: bold;">
+            <div class="fontData2" style="padding-bottom: 20px;font-weight: bold;">
               About US 
             </div>
-            <div style="font-size: 14px;" >
+            <div class="fontData2" style="font-size: 14px;" >
               King Fruit hadir sejak 18 September 2020 melalui e-commerce, dengan produk pertama adalah SUPER MONTONG. Kami berkomitmen untuk menghadirkan berbagai jenis durian lokal dari pelosok Nusantara. Dengan konsep cara baru makan duren, menjadi kampanye hidup bersih di kala pandemi ini.
               <br />
               <br />
@@ -137,7 +146,7 @@
 <script type="text/javascript" src="../js/bootstrap.js" ></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durianRoot.js?v=2.1.1"></script>
-<script type="text/javascript" src="../js/headerFooter.js"></script>
+<script type="text/javascript" src="../js/headerFooter.js?v=1.1.2"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

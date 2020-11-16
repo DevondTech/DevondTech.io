@@ -31,6 +31,10 @@
   <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
   <style type="text/css">
 
+    .fontData{
+      font-family: 'Open Sans', sans-serif
+    }
+    
     .wVideo{
       width:257px;
     }
@@ -303,187 +307,8 @@
   <section id="testimoni">
     <div class="advantages-content">
       <div class="container">
-        <div class="row">
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/aming.jpg" controls controlsList="nodownload">
-                       <source src="../video/aming.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI AMING</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/arioadimas.jpeg" controls controlsList="nodownload">
-                       <source src="../video/arioadimas.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI ARIOADIMAS</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/debbypermata - debby permata.jpg" controls controlsList="nodownload">
-                       <source src="../video/debbypermata - debby permata.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI DEBBY PERMATA</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/deswitamaharani - deswita maharani.jpg" controls controlsList="nodownload">
-                       <source src="../video/deswitamaharani - deswita maharani.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI DESWITA MAHARANI</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/dinacarol - dina carol.jpg" controls controlsList="nodownload">
-                       <source src="../video/dinacarol - dina carol.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI DINA CAROL</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/dr_ronaldyulianto - dr_ronald yulianto.jpg" controls controlsList="nodownload">
-                       <source src="../video/dr_ronaldyulianto - dr_ronald yulianto.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI Dr.RONALD YULIANTO</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/augiefantinus - augie fantinus.jpg" controls controlsList="nodownload">
-                       <source src="../video/augiefantinus - augie fantinus.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI AUGIE FANTINUS</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/eriskarein - eriska rein.jpg" controls controlsList="nodownload">
-                       <source src="../video/eriskarein - eriska rein.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI ERISKA REIN</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/enonetral - eno netral.jpeg" controls controlsList="nodownload">
-                       <source src="../video/enonetral - eno netral.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI ENO NETRAL</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/dj tius.jpg" controls controlsList="nodownload">
-                       <source src="../video/dj tius.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI DJ TIUS</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/beery saint loco.jpg" controls controlsList="nodownload">
-                       <source src="../video/beery saint loco.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI BEERY SAINT LOCO</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="paddingBottomCardMinTablet col-lg-4 col-md-6 col-sm-12">
-            <a href="#" style="color: white">
-              <div class="cardAdvantagesColor">
-                <div class="content-text-advantages">
-                  <div class="col20-card-top">
-                    <video class="wVideo" height="240" poster="../images/testimoni/astrid.jpg" controls controlsList="nodownload">
-                       <source src="../video/astrid.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="advantages-text-bold">TESTIMONI ASTRID</div>
-                </div>
-              </div>
-            </a>
-          </div>
+        <div class="row" id="printDataYoutube">
+          
         </div>
       </div> 
     </div>
@@ -548,8 +373,9 @@
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
 <script type="text/javascript" src="../js/bootstrap.js" ></script>
 <script type="text/javascript" src="../js/slideSmall.js"></script>
-<script type="text/javascript" src="../js/testimoni.js"></script>
-<script type="text/javascript" src="../js/headerFooter.js"></script>
+<script type="text/javascript" src="../js/testimoni.js?v=1.1.2"></script>
+<script type="text/javascript" src="../js/testimoniData.js?v=1.1.2"></script>
+<script type="text/javascript" src="../js/headerFooter.js?v=1.1.2"></script>
 <script type="text/javascript" src="../js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
@@ -569,7 +395,6 @@
     }         
     window.scrollTo(0, 0); 
   }); 
-  
 </script>
 
 </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="../../../js/pageLoadISP.js"></script>
+    <!-- <script type="text/javascript" src="../../../js/pageLoadISP.js"></script> -->
     <?php
        error_reporting(0);
     ?>

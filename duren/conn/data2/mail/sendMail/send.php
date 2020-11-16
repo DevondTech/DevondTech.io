@@ -15,8 +15,11 @@ $alert = '';
   $produk_send = $_GET['produk_send'];
   $jumlah_send = $_GET['jumlah_send'];
   $total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
+  $mailAdmin = 'admin@kingfruit.co.id';
 
   $email = 'kingfruit.co.id@gmail.com';
+  $subjectCreate = 'Konfirmasi Pembayaran kingfruit.co.id #';
+  $subjectMail = $subjectCreate.$kode_pemesanan_send; 
   $massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -126,18 +129,20 @@ $alert = '';
 
   try{
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'srv103.niagahoster.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'kingfruit.co.id@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = 'king@fruit456'; // Gmail address Password
+    $mail->Username = $mailAdmin ; 
+    $mail->Password = 'kingfruit'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 
-    $mail->setFrom($email); 
+    $mail->setFrom($mailAdmin); 
     $mail->addAddress($emailTo); 
+    /*$mail->addBcc($mailAdmin);*/
+    
 
     $mail->isHTML(true);
-    $mail->Subject = 'Konfirmasi Pembayaran kingfruit.co.id';
+    $mail->Subject = $subjectMail;
     $mail->Body = $massages; 
                  
 

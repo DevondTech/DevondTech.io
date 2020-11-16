@@ -11,8 +11,11 @@
           <li class="nav-li-link nav-item" id="aboutUserUmum">
             <a class="fontData text-nav" href="../aboutUserUmum">About Us</a>
           </li>
-          <li class="nav-li-link nav-item" >
-            <a id="order" class="fontData text-nav" href="../home/index.php?#detail-product-content">Order </a>
+          <li class="nav-li-link nav-item" id="order" >
+            <a id="order" class="fontData text-nav" href="../index.php?#detail-product-content">Order </a>
+          </li>
+          <li class="nav-li-link nav-item" id="orderUserUmum" >
+            <a class="fontData text-nav" href="../home/index.php?#detail-product-content">Order </a>
           </li>
           <li class="nav-li-link nav-item">
             <a class="fontData text-nav" href="../testimoni">Testimoni</a>

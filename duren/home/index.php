@@ -44,6 +44,10 @@
       font-family: 'Open Sans', sans-serif
     }
 
+    .fontData2{
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
     .div-buttonTextBuy-detailProduct{
       margin-top: -3px;
     }
@@ -264,11 +268,11 @@
       <div class="col-sm-6">
         <div style="background-color: #cda32b">
           <div class="card-textTop">
-            <div class="fontData" style="font-weight: bold;">
+            <div class="fontData2" style="font-weight: bold;">
             KING FRUIT  
             </div>
             <!-- <div style="font-size: 14px;" id="topText"></div> -->
-            <div class="fontData" style="font-size: 14px;" >
+            <div class="fontData2" style="font-size: 14px;" >
               Durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan <b>Super Montong</b> sebagai produk pertama yang dihadirkan untuk para durian lovers. <b>Premium Quality Super Montong</b> tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.
             </div>
           </div>      
@@ -602,7 +606,7 @@
 <script type="text/javascript" src="../js/slideSmall.js"></script>
 <script type="text/javascript" src="../js/durianRoot.js?v=2.2.1"></script>
 <script type="text/javascript" src="../js/sweetAlert/sweetalert2.all.min.js"></script>
-<script type="text/javascript" src="../js/headerFooter.js"></script>
+<script type="text/javascript" src="../js/headerFooter.js?v=1.1.2"></script>
 <script type="text/javascript">
   $('#div-content-page').on('scroll',function(e){
     $('#next').css('display','block');

@@ -40,6 +40,12 @@ $(document).ready(function(){
             $('#jumlah_pemesanan').val(jumlah_pemesanan+' '+satuan_produk); //Data3@dataPemesanan
             $('#teks_berat_produk').val(teks_berat_produk); //Data3@dataPemesanan
 
+            $('#nama_lengkap_send').val(nama_lengkap); 
+            $('#nama_produk_send').val(nama_produk); 
+            $('#jumlah_pemesanan_send').val(jumlah_pemesanan+' '+satuan_produk); 
+            $('#teks_berat_produk_send').val(teks_berat_produk); 
+            $('#email_send').val(email); 
+
             var PrintDetail_DataFotoNull = '../images/seimpleProduk.png';
             if(gambar_bukti_pembayaran == '' || gambar_bukti_pembayaran == null){
                 $('#gambar_bukti_pembayaran').attr('src', PrintDetail_DataFotoNull);
