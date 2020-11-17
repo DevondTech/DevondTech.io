@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 	var IDProdukCallBack = $('#a').val();
     var id = IDProdukCallBack;
@@ -21,6 +22,10 @@ $(document).ready(function(){
             var admin_tanggal_transfer = DataDetailRetur[0].admin_tanggal_transfer; 
             var admin_total_pengembalian_dana = DataDetailRetur[0].admin_total_pengembalian_dana;
             var gambar_barang_retur = DataDetailRetur[0].gambar_barang_retur; 
+            var nama_produk = DataDetailRetur[0].nama_produk;
+            var jumlah_pemesanan = DataDetailRetur[0].jumlah_pemesanan;
+            var satuan_produk = DataDetailRetur[0].satuan_produk; 
+            var teks_berat_produk = DataDetailRetur[0].teks_berat_produk; 
     
             $('#kode_retur').val(kode_retur); 
             $('#waktu_retur').val(waktu_retur); 
@@ -32,7 +37,11 @@ $(document).ready(function(){
             $('#admin_tanggal_transfer').val(admin_tanggal_transfer);
             $('#admin_total_pengembalian_dana').val(admin_total_pengembalian_dana); 
             $('#gambar_barang_retur').val(gambar_barang_retur); 
+            $('#nama_produk').val(nama_produk); 
+            $('#jumlah_pemesanan').val(jumlah_pemesanan+' '+satuan_produk); 
+            $('#teks_berat_produk').val(teks_berat_produk);
             
+          
             if(admin_total_pengembalian_dana == ''){
                 var admin_total_pengembalian_dana_new = 0;
             }

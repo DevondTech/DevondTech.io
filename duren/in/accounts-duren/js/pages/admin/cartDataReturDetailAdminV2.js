@@ -22,6 +22,11 @@ $(document).ready(function(){
         var bank_asal = DataDetailRetur[0].bank_asal; 
         var total_harga_yang_harus_dibayar = DataDetailRetur[0].total_harga_yang_harus_dibayar;
         var gambar_barang_retur = DataDetailRetur[0].gambar_barang_retur; 
+        var nama_produk = DataDetailRetur[0].nama_produk;
+        var id_produk = DataDetailRetur[0].id_produk;
+        var jumlah_pemesanan = DataDetailRetur[0].jumlah_pemesanan;
+        var satuan_produk = DataDetailRetur[0].satuan_produk; 
+        var teks_berat_produk = DataDetailRetur[0].teks_berat_produk; 
 
         $('#kode_pemesanan_call_back').val(idPemesanan);
         $('#kode_pemesanan_call_back_refuse').val(idPemesanan);
@@ -36,8 +41,25 @@ $(document).ready(function(){
         $('#bank_asal').val(bank_asal);
         $('#total_harga_yang_harus_dibayar').val(total_harga_yang_harus_dibayar); 
         $('#gambar_barang_retur').val(gambar_barang_retur); 
-            
-       /* $('#putID').val(idPemesanan); */
+        $('#id_pemesanan').val(idPemesanan); 
+
+        $('#id_produk').val(id_produk);
+        $('#nama_produk').val(nama_produk); 
+        $('#jumlah_pemesanan').val(jumlah_pemesanan+' '+satuan_produk); 
+        $('#teks_berat_produk').val(teks_berat_produk);
+        $('#id_pemesanan_confir').val(idPemesanan); 
+
+        $('#kode_retur_send_mail').val(kode_retur); 
+        $('#kode_retur_send_mail').val(kode_retur); 
+        $('#email_send_mail').val(email); 
+        $('#nama_lengkap_send_mail').val(nama_lengkap); 
+        $('#nama_produk_send_mail').val(nama_produk); 
+        $('#jumlah_pemesanan_send_mail').val(jumlah_pemesanan+' '+satuan_produk); 
+        $('#teks_berat_produk_send_mail').val(teks_berat_produk);
+
+        $('#kode_retur_send_mail_show').val(kode_retur); 
+        $('#email_send_mail_show').val(email); 
+
         
         var totalNumberString = total_harga_yang_harus_dibayar.toString(),
             totalSisa    = totalNumberString.length % 3,
@@ -73,101 +95,57 @@ $('#btnCancelConfir').on('click', function(){
 
 $('#btnSaveConfir').on('click',function(e){
 
-  var admin_nama_pemilik_rekening = $('#admin_nama_pemilik_rekening').val();
-  var admin_tanggal_transfer = $('#admin_tanggal_transfer').val();
-  var admin_nomor_rekening = $('#admin_nomor_rekening').val();
-  var admin_bank_asal = $('#admin_bank_asal').val();
-  var admin_total_pengembalian_dana = $('#admin_total_pengembalian_dana').val();
-
-  if(admin_nama_pemilik_rekening == '' ){
+  var mail_content = $('#mail_content').val();
+ 
+  if(mail_content == '' ){
       swal({
         title: "Transaksi Gagal",
-        text: "Isi Data Nama Pemilik Rekening",
+        text: "Isi Pesan Pengembalian",
         type: "error"
       });
   }
   else{
-      if(admin_tanggal_transfer == '' ){
-          swal({
-            title: "Transaksi Gagal",
-            text: "Isi Data Tanggal Transfer",
-            type: "error"
-          });
-      }
-      else{
-          if(admin_nomor_rekening == '' ){
-              swal({
-                title: "Transaksi Gagal",
-                text: "Isi Data Nomor Rekening",
-                type: "error"
-              });
-          }
-          else{
-              if(admin_bank_asal == '' ){
-                  swal({
-                    title: "Transaksi Gagal",
-                    text: "Isi Data Bank Untuk Mentransfer",
-                    type: "error"
-                  });
-              }
-              else{ 
-                  if(admin_total_pengembalian_dana == '' ){
-                      swal({
-                        title: "Transaksi Gagal",
-                        text: "Isi Data Total Pengembalian Dana",
-                        type: "error"
-                      });
-                  }
-                  else{
-                      var data = $("#confirmationFormDataTransfer").serialize();
-                      $.ajax({
-
-                          type : 'POST',
-                          url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateConfirmationReturTransfer',
-                          data : data,
-                          beforeSend: function()
-                          { 
-                            $("#error").fadeOut();
-                            $("#btnSaveConfir").html('<span class="glyphicon glyphicon-transfer"></span>   Process ');
-                          }, 
-                          success :  function(response)
-                          {
-                            if(response == "updateConfirmationReturTransferSuccess"){
-                              $("#btnSaveConfir").html('SIMPAN');
-                              swal({
-                                title: "Transaksi Sukses",
-                                text: "Data Berhasil Disimpan",
-                                type: "success"
-                              }).then(function() {
-                                window.location = '../open-admin/?textData=c654df45910f95fda1f13b5475faf323643621bc';
-                              });
-                              /*location.reload();*/
-                              /*$("#content-profile").load("cartDataReturAdmin.php");*/
-                            }
-                            else{
-                              swal({
-                                title: "Transaksi Gagal",
-                                text: "Silahkan Lengkapi Data",
-                                type: "error"
-                              });
-                              $("#btnSaveConfir").html('SIMPAN');
-                            }
-                          }    
-                      });
-                      return false;
-                  }
-                  
-              }
-          }
-      }
+      var email_send_mail = $('#email_send_mail').val()
+      var nama_lengkap_send_mail = $('#nama_lengkap_send_mail').val()
+      var nama_produk_send_mail = $('#nama_produk_send_mail').val()
+      var jumlah_pemesanan_send_mail = $('#jumlah_pemesanan_send_mail').val()
+      var teks_berat_produk_send_mail = $('#teks_berat_produk_send_mail').val()
+      var kode_retur_send_mail = $('#kode_retur_send_mail').val();
+      var data = $("#confirmationFormDataTransfer").serialize();
+      $.ajax({
+          type : 'POST',
+          url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateConfirmationReturTransfer',
+          data : data,
+          beforeSend: function()
+          { 
+            $("#error").fadeOut();
+            $("#btnSaveConfir").html('<span class="glyphicon glyphicon-transfer"></span>   Process ');
+          }, 
+          success :  function(response)
+          {
+            $("#btnSaveConfir").html('SIMPAN');
+            swal({
+              title: "Transaksi Sukses",
+              text: "Data Berhasil Disimpan",
+              type: "success"
+            }).then(function() {
+              window.location = '../../../conn/data2/mail/adminSendConfirmApproved/index.php?email_send_mail='+email_send_mail+'&&nama_lengkap_send_mail='+nama_lengkap_send_mail+'&&nama_produk_send_mail='+nama_produk_send_mail+'&&jumlah_pemesanan_send_mail='+jumlah_pemesanan_send_mail+'&&teks_berat_produk_send_mail='+teks_berat_produk_send_mail+'&&kode_retur_send_mail='+kode_retur_send_mail+'&&mail_content='+mail_content;
+            });
+          }    
+      });
+      return false;
   }
+                  
+              
+
     
 });
 
 $('#btnRefuseRetur').on('click',function(e){
   var b = $('#b').val();
-  var emailToMailSendRefund = $('#email').val();
+  /*var emailToMailSendRefund = $('#email').val();*/
   var kodeReturToMailSendRefund = $('#kode_retur').val(); 
+  var idPemesananSendRefund = $('#id_pemesanan').val(); 
   if(b == '' ){
       alert('Error');
   }
@@ -192,7 +170,7 @@ $('#btnRefuseRetur').on('click',function(e){
             text: "Tolak Pengajuan Berhasil",
             type: "success"
           }).then(function() {
-            $('#contentRetur').load('cartDataReturDetailAdmin.php?emailToMailSendRefund='+emailToMailSendRefund+'&&kodeReturToMailSendRefund='+kodeReturToMailSendRefund);
+            $('#contentRetur').load('cartDataReturDetailAdminRefuseRetur.php?idPemesananSendRefund='+idPemesananSendRefund+'&&kodeReturToMailSendRefund='+kodeReturToMailSendRefund);
             /*window.location = '../open-admin/?textData=c654df45910f95fda1f13b5475faf323643621bc';*/
           });
         }

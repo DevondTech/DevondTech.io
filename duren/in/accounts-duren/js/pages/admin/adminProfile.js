@@ -94,6 +94,30 @@ $(window).on('load',function(e){
 		$("#retur-link").attr("class","active-menu-right");
 	}
 
+	else if(checkOpen=='c654df45910f95fda1f13b5475faf323643621bc'){
+		$("#content-profile").load("cartDataReturAdmin.php");
+
+		$("#review-link").attr("class","menu-waves-block");
+		$("#finish-link").attr("class","menu-waves-block");
+		$("#sales-link").attr("class","menu-waves-block");
+		$("#retur-all-link").attr("class","menu-waves-block");
+		$("#ontheway-link").attr("class","menu-waves-block");
+		$("#shipped-link").attr("class","menu-waves-block");
+		$("#account-edit-link").attr("class","menu-waves-block");
+		$("#payment-link").attr("class","menu-waves-block");
+		$("#password-link").attr("class","menu-waves-block");
+		$("#product-link").attr("class","menu-waves-block");
+		$("#create-user-link").attr("class","menu-waves-block");
+		$("#notification-link").attr("class","menu-waves-block");
+		$("#logout-link").attr("class","menu-waves-block");
+		$("#account-link").attr("class","menu-waves-block");
+		$("#medsos-link").attr("class","displayLink-none");
+		$("#about-link").attr("class","displayLink-none");
+		$("#testimoni-link").attr("class","displayLink-none");
+
+		$("#retur-link").attr("class","active-menu-right");
+	}
+
 	/*if else(checkOpen=='c6d9567dfc1a8df8b838c43bb06646d399ca2b99'){
 		$("#content-profile").load("productData.php");
 

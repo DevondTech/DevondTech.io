@@ -8,11 +8,11 @@ if($id_user!=''){
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
         $id_status_user = $_SESSION['id_status_user'];
-        $admin_tanggal_transfer = $_POST['admin_tanggal_transfer'];
+       /* $admin_tanggal_transfer = $_POST['admin_tanggal_transfer'];
         $admin_nama_pemilik_rekening = $_POST['admin_nama_pemilik_rekening']; 
         $admin_nomor_rekening = $_POST['admin_nomor_rekening']; 
         $admin_bank_asal = $_POST['admin_bank_asal']; 
-        $admin_total_pengembalian_dana = $_POST['admin_total_pengembalian_dana']; 
+        $admin_total_pengembalian_dana = $_POST['admin_total_pengembalian_dana']; */
         $id_retur = $_POST['a'];
         $kode_pemesanan_call_back = $_POST['kode_pemesanan_call_back']; 
         $id_status_retur = 3;
@@ -30,15 +30,27 @@ if($id_user!=''){
         $id_status_baca = 1;
         $id_status_baca_admin = 2;
         $id_user_baca = 1;
+      
+        date_default_timezone_set('Asia/Jakarta');
+        $tanggal_pengiriman_kembali = date('Y-m-d H:i:s'); 
+        $IdProduk = $_POST['id_produk'];
+        $jumlah_pengiriman_kembali = $_POST['jumlah_pemesanan_send_mail'];
+        $resultData = $db->query("select jumlah_stok FROM tb_produk where id_produk='$IdProduk'");
+        $productData = $resultData->fetch_object();
+        $jumlah_stok=$productData->jumlah_stok;
+
+        $put_stok_to_produk = $jumlah_stok - $jumlah_pengiriman_kembali;
 
         if($id_user!='' && $id_status_user=='1'){
-            $query = "UPDATE tb_retur_pembelian SET  admin_nama_pemilik_rekening='$admin_nama_pemilik_rekening', admin_tanggal_transfer='$admin_tanggal_transfer', admin_nomor_rekening='$admin_nomor_rekening', admin_bank_asal='$admin_bank_asal', admin_total_pengembalian_dana='$admin_total_pengembalian_dana', id_status_retur='$id_status_retur' WHERE id_retur = '$id_retur' ";
+            $query = "UPDATE tb_retur_pembelian SET  tanggal_pengiriman_kembali='$tanggal_pengiriman_kembali', id_status_retur='$id_status_retur'   WHERE id_retur = '$id_retur' ";
             $db->query($query);
             $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, id_user)
                             VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca', '$id_user_retur')";   
             $db->query($queryNotif); 
             $queryReadNotif = "UPDATE tb_notifikasi SET  id_status_baca='$id_status_baca_admin' WHERE id_status_notifikasi = '7' and kode_pemesanan='$kode_pemesanan_call_back'";
             $db->query($queryReadNotif);
+            $queryProduct = "UPDATE tb_produk SET jumlah_stok='$put_stok_to_produk' WHERE id_produk='$IdProduk'";   
+            $db->query($queryProduct); 
             echo "updateConfirmationReturTransferSuccess";   
         }
         else{
@@ -174,6 +186,24 @@ if($id_user!=''){
         }else{
             $selectToDataFotoRetur ='';
             echo json_encode($selectToDataFotoRetur);
+        }
+    }
+
+    /*----------------THIS-------------------*/
+    if(isset($_GET['selectToDataRefuseRetur'])){
+        $userDataID = $_SESSION['id_user'];
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $selectToDataRefuseRetur = $_GET['selectToDataRefuseRetur'];
+        $query = "SELECT id_pemesanan, nama_lengkap, email, nama_produk, jumlah_pemesanan, satuan_produk, teks_berat_produk FROM view_data_semua_pesanan where id_pemesanan ='$selectToDataRefuseRetur'";
+        $result = $db->query($query);      
+        if($result){
+            $selectToDataRefuseRetur = mysqli_fetch_all($result,MYSQLI_ASSOC);
+            $selectToDataRefuseRetur=json_encode($selectToDataRefuseRetur);
+            echo json_encode($selectToDataRefuseRetur);
+        }else{
+            $selectToDataRefuseRetur ='';
+            echo json_encode($selectToDataRefuseRetur);
         }
     }
 
@@ -386,11 +416,12 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
             $kode_duren = 'DR0';
             date_default_timezone_set('Asia/Jakarta');
             $waktu_pemesanan = date('Y-m-d H:i:s'); 
+            $waktu_pengiriman = date('Y-m-d H:i:s'); 
             $id_produk  = 1; 
             $id_proses_pemesanan = 1;
             $id_metode_pembayaran = 2;
-            $query = "INSERT INTO tb_pemesanan(kode_pemesanan, waktu_pemesanan, id_user, id_proses_pemesanan, id_produk, id_metode_pembayaran)
-                            VALUES('$kode_duren$kode_pemesanan','$waktu_pemesanan','$id_user','$id_proses_pemesanan','$id_produk', '$id_metode_pembayaran')";   
+            $query = "INSERT INTO tb_pemesanan(kode_pemesanan, waktu_pemesanan, waktu_pengiriman, id_user, id_proses_pemesanan, id_produk, id_metode_pembayaran)
+                            VALUES('$kode_duren$kode_pemesanan','$waktu_pemesanan', '$waktu_pengiriman', '$id_user','$id_proses_pemesanan','$id_produk', '$id_metode_pembayaran')";   
             $db->query($query);       
             echo "Success"; 
         }

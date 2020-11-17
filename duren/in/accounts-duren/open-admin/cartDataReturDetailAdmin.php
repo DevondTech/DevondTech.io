@@ -120,54 +120,53 @@
                     <div class="Card-inputDataUser-paddingTopBottom20px">
                         <div class="card-textDataUser">
                             <div class="w20 textDataUser">
-                                Nama Pemilik Rekening
+                                Kode Retur
                             </div>
                         </div>
                         <div class="w80 card-inputDataUser">
-                            <input type="text" name="admin_nama_pemilik_rekening" id="admin_nama_pemilik_rekening" class="input-textDataUser" >
-                           <!--  <input type="hidden" name="foto_check" id="foto_check" class="input-textDataUser" > -->
+                            <input type="text" name="kode_retur_send_mail_show" id="kode_retur_send_mail_show" class="input-textDataUser" disabled>
+                            <input type="hidden" name="kode_retur_send_mail" id="kode_retur_send_mail" class="input-textDataUser">
+
+                            <input type="hidden" name="nama_lengkap_send_mail" id="nama_lengkap_send_mail" class="input-textDataUser">
+                            <input type="hidden" name="id_pemesanan_confir" id="id_pemesanan_confir" class="input-textDataUser">
+                             <input type="hidden" name="id_produk" id="id_produk" class="input-textDataUser">
+                            <input type="hidden" name="nama_produk_send_mail" id="nama_produk_send_mail" class="input-textDataUser">
+                            <input type="hidden" name="jumlah_pemesanan_send_mail" id="jumlah_pemesanan_send_mail" class="input-textDataUser">
+                            <input type="hidden" name="teks_berat_produk_send_mail" id="teks_berat_produk_send_mail" class="input-textDataUser">
                         </div>
                     </div>
                     <div class="Card-inputDataUser-paddingTopBottom20px">
                         <div class="card-textDataUser">
                             <div class="w20 textDataUser">
-                                Tanggal Transfer
+                                Email Pembeli
+                            </div>
+                        </div>
+                        <div class="w80 card-inputDataUser">
+                             <input type="text" name="email_send_mail_show" id="email_send_mail_show" class="input-textDataUser"  disabled>
+                            <input type="hidden" name="email_send_mail" id="email_send_mail" class="input-textDataUser" >
+                        </div>
+                    </div>
+                   <!--  <div class="Card-inputDataUser-paddingTopBottom20px">
+                        <div class="card-textDataUser">
+                            <div class="w20 textDataUser">
+                                Tanggal Kirim
                             </div>
                         </div>
                         <div class="w80 card-inputDataUser">
                             <input type="date" name="admin_tanggal_transfer" id="admin_tanggal_transfer" class="input-textDataUser">
                         </div>
-                    </div>
+                    </div> -->
                     <div class="Card-inputDataUser-paddingTopBottom20px">
                         <div class="card-textDataUser">
                             <div class="w20 textDataUser">
-                                No. Rekening
-                            </div>
-                        </div>
-                        <div class="card-inputDataUser">
-                            <input type="number" name="admin_nomor_rekening" id="admin_nomor_rekening" class="input-textDataUser" >
-                        </div>
-                    </div>
-                    <div class="Card-inputDataUser-paddingTopBottom20px">
-                        <div class="card-textDataUser">
-                            <div class="w20 textDataUser">
-                                Asal Bank Transfer
+                                Pesan Pengembalian
                             </div>
                         </div>
                         <div class="w80 card-inputDataUser">
-                            <input type="text" name="admin_bank_asal"  id="admin_bank_asal" class="input-textDataUser" >
+                            <textarea  type="text" name="mail_content"  id="mail_content" class="input-textDataUser" ></textarea>
                         </div>
                     </div>
-                    <div class="Card-inputDataUser-paddingTopBottom20px">
-                        <div class="card-textDataUser">
-                            <div class="w20 textDataUser">
-                                Total Pengembalian
-                            </div>
-                        </div>
-                        <div class="w80 card-inputDataUser">
-                            <input type="number" name="admin_total_pengembalian_dana"  id="admin_total_pengembalian_dana" class="input-textDataUser" >
-                        </div>
-                    </div>
+
                     <!-- <div class="Card-inputDataUser-paddingTopBottom20px">
                         <div class="card-textDataUser">
                             <div class="textDataUser textBukti">
@@ -236,6 +235,7 @@
                                 <div class="margin-auto">
                                     <input type="hidden" name="b" id="b" value="<?= $kodeCallBack; ?>">
                                     <input type="hidden" name="kode_pemesanan_call_back_refuse" id="kode_pemesanan_call_back_refuse">
+                                    <input type="hidden" name="id_pemesanan" id="id_pemesanan" >
                                     <button class="buttonLargeRed" type="button" id="btnRefuseRetur" type="button" >Tolak Pengajuan</button>
                                 </div>
                             </div>  
@@ -308,34 +308,34 @@
                             <div class="Card-inputDataUser-paddingTopBottom20px">
                                 <div class="card-textDataUser">
                                     <div class="textDataUser">
-                                        Nama Pemilik Rekening
+                                        Nama Produk
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser-false">
-                                     <input type="text" name="nama_pemilik_rekening"  style="color: #737373" id="nama_pemilik_rekening" class="input-textDataUser-false"  disabled>
+                                     <input type="text" name="nama_produk"  style="color: #737373" id="nama_produk" class="input-textDataUser-false"  disabled>
                                 </div>
                             </div>
                             <div class="Card-inputDataUser-paddingTopBottom20px">
                                 <div class="card-textDataUser">
                                     <div class="textDataUser">
-                                        No. Rekening
+                                        Jumlah
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser-false">
-                                    <input type="text" name="no_rekening" style="color: #737373" id="no_rekening" class="input-textDataUser-false"  disabled>
+                                    <input type="text" name="jumlah_pemesanan" style="color: #737373" id="jumlah_pemesanan" class="input-textDataUser-false"  disabled>
                                 </div>
                             </div>
                             <div class="Card-inputDataUser-paddingTopBottom20px">
                                 <div class="card-textDataUser">
                                     <div class="textDataUser">
-                                        Bank Asal
+                                        Ukuran 
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser-false">
-                                    <input type="text" name="bank_asal" style="color: #737373" id="bank_asal" class="input-textDataUser-false"  disabled>
+                                    <input type="text" name="teks_berat_produk" style="color: #737373" id="teks_berat_produk" class="input-textDataUser-false"  disabled>
                                 </div>
                             </div>
-                            <div class="Card-inputDataUser-paddingTopBottom20px">
+                            <!-- <div class="Card-inputDataUser-paddingTopBottom20px">
                                 <div class="card-textDataUser">
                                     <div class="textDataUser">
                                         Total Pembayaran
@@ -344,7 +344,7 @@
                                 <div class="card-inputDataUser-false">
                                     <input type="text" name="total_harga_yang_harus_dibayar" style="color: #737373" id="total_harga_yang_harus_dibayar" class="input-textDataUser-false"  disabled>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                 </div>
@@ -354,7 +354,7 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/admin/cartDataReturDetailAdmin.js?v=1.4.1"></script>
+<script src="../js/pages/admin/cartDataReturDetailAdminV2.js?v=1.2.3"></script>
 <!-- <script type="text/javascript" src="../js/pages/uploadDataFotoTransferAdmin.js"></script> -->
 <!-- <div id="openupdatefoto" class="modal fade" >
     <div class="modal-dialog modal-sm">

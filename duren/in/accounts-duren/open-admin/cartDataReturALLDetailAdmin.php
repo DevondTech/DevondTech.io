@@ -164,11 +164,31 @@
                             <div class="Card-inputDataUser-paddingTopBottom20px">
                                 <div class="card-textDataUser">
                                     <div class="textDataUser">
-                                        Total Pengembalian
+                                        Nama Produk
                                     </div>
                                 </div>
                                 <div class="card-inputDataUser-false">
-                                    <input type="text" name="admin_total_pengembalian_dana" style="color: #737373" id="admin_total_pengembalian_dana" class="input-textDataUser-false"  disabled>
+                                     <input type="text" name="nama_produk"  style="color: #737373" id="nama_produk" class="input-textDataUser-false"  disabled>
+                                </div>
+                            </div>
+                            <div class="Card-inputDataUser-paddingTopBottom20px">
+                                <div class="card-textDataUser">
+                                    <div class="textDataUser">
+                                        Jumlah
+                                    </div>
+                                </div>
+                                <div class="card-inputDataUser-false">
+                                    <input type="text" name="jumlah_pemesanan" style="color: #737373" id="jumlah_pemesanan" class="input-textDataUser-false"  disabled>
+                                </div>
+                            </div>
+                            <div class="Card-inputDataUser-paddingTopBottom20px">
+                                <div class="card-textDataUser">
+                                    <div class="textDataUser">
+                                        Ukuran 
+                                    </div>
+                                </div>
+                                <div class="card-inputDataUser-false">
+                                    <input type="text" name="teks_berat_produk" style="color: #737373" id="teks_berat_produk" class="input-textDataUser-false"  disabled>
                                 </div>
                             </div>
                         </form>
@@ -180,7 +200,7 @@
 </div>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/admin/cartDataReturDetailAdminAll.js?v=1.4.1"></script>
+<script src="../js/pages/admin/cartDataReturDetailAdminAll.js?v=1.4.2"></script>
 <!-- <script type="text/javascript" src="../js/pages/uploadDataFotoTransferAdmin.js"></script> -->
 <!-- <div id="openupdatefoto" class="modal fade" >
     <div class="modal-dialog modal-sm">

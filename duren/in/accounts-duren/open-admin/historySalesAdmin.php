@@ -16,10 +16,9 @@
 <title>Account</title>
 <!-- css datatables -->
 <!-- css datatables -->
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../datatable/dataTables.bootstrap.min.css"/>
 <link href="../css/dataUserLogin.css?v=1.1.10" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="../datatable/buttons.dataTables.min.css">
 <style type="text/css">
     .table-tdYellowHeader {
         text-align: center;

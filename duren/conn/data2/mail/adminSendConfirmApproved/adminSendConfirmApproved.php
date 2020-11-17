@@ -11,34 +11,18 @@ $alert = '';
 require '../../config.php'; 
 $json = json_decode(file_get_contents('php://input'), true); 
 
-
-$emailTo = $_GET['email_send'];
-$kode_pemesanan_send = $_GET['a275eeab9229cc9132954f131049342ca43ba161'];
-$nama_lengkap_send = $_GET['nama_lengkap_send'];
-$nama_produk_send = $_GET['nama_produk_send'];
-$teks_berat_produk_send = $_GET['teks_berat_produk_send'];
-$jumlah_pemesanan_send = $_GET['jumlah_pemesanan_send'];
-date_default_timezone_set('Asia/Jakarta');
-$waktu_pengiriman = date('d-m-Y H:i:s'); 
-
-$start = "09";
-$end = "17";
-/*$end = "13";*/
-$now = date('H');
-$notes = '';
-if ($now > $start && $now < $end)
-{
-  $notes = '';
-}
-else
-{
-  $notes = 'Notes : Pengiriman Akan Dilakukan Pada Jam Operasional (Pkl. 09.00 - 17.00 WIB).';
-}
+$emailSend = $_GET['email_send_mail'];
+$kodeReturSend = $_GET['kode_retur_send_mail'];
+$mailContent = $_GET['mail_content'];
+$namaLengkap = $_GET['nama_lengkap_send_mail'];
+$namaProduk = $_GET['nama_produk_send_mail'];
+$jumlahPemesanan = $_GET['jumlah_pemesanan_send_mail'];
+$beratProduk = $_GET['teks_berat_produk_send_mail'];
 
 $mailAdmin = 'admin@kingfruit.co.id';
 $email = 'kingfruit.co.id@gmail.com';
-$subjectCreate = 'Pengiriman Produk '.$nama_produk_send.' kingfruit.co.id #';
-$subjectMail = $subjectCreate.$kode_pemesanan_send; 
+$subjectCreate = 'Pengajuan Retur Disetujui, kingfruit.co.id #';
+$subjectMail = $subjectCreate.$kodeReturSend; 
 
 /*$emailTo = $_GET['email_send'];
 $kode_pemesanan_send = $_GET['kode_pemesanan_send'];
@@ -117,47 +101,42 @@ $email = 'kingfruit.co.id@gmail.com';*/
     font-family: sans-serif;
     line-height: 20px;">
   <div style="color: #3a3a3a">
-    Terimakasih atas pemesanan & kepercayaan anda kepada kami. Berikut detail barang yang sedang dalam pengiriman:
+    Terimakasih atas pemesanan & kepercayaan anda kepada kami. Mohon maaf atas ketidaknyamanan anda, berikut pengajuan retur anda <b> yang telah dikirim kembali </b>:
   </div>
-  <div style="color: #3a3a3a;margin-top: 10px;">
-    <div style="width: 100px;float: left">No. Order</div>
-    <div style="float: left;">: '.$kode_pemesanan_send.'</div>
-  </div>
-  <br />
-  <div style="color: #3a3a3a;margin-top: 5px;">
-    <div style="width: 100px;float: left">Pengiriman</div>
-    <div style="float: left;">: '.$waktu_pengiriman.'</div>
+  <br/>
+  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+    <div style="width: 100px;float: left;">Kode Retur  </div>
+    <div style="float: left;">: '.$kodeReturSend.'</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 5px;">
-    <div style="width: 100px;float: left">Atas Nama</div>
-    <div style="float: left;">: '.$nama_lengkap_send.'</div>
+  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+    <div style="width: 100px;float: left;">Status  </div>
+    <div style="float: left;">: Disetujui</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 5px;">
-    <div style="width: 100px;float: left">Produk</div>
-    <div style="float: left;">: '.$nama_produk_send.'</div>
+  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+    <div style="width: 100px;float: left;">Pemesan  </div>
+    <div style="float: left;">: '.$namaLengkap.'</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 5px;">
-    <div style="width: 100px;float: left">Berat Produk</div>
-    <div style="float: left;">: '.$teks_berat_produk_send.'</div>
+  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+    <div style="width: 100px;float: left;">Produk  </div>
+    <div style="float: left;">: '.$namaProduk.'</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 5px;">
-    <div style="width: 100px;float: left">Jumlah</div>
-    <div style="float: left;">: '.$jumlah_pemesanan_send.'</div>
+  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+    <div style="width: 100px;float: left;">Jumlah  </div>
+    <div style="float: left;">: '.$jumlahPemesanan.'</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 5px;">
-    <div style="width: 100px;float: left">Status</div>
-    <div style="float: left;">: Lunas</div>
+  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+    <div>Alasan  Penolakan :</div>
+  </div>
+  <div style="color: #3a3a3a;margin-top: 5px;font-size:14px;">
+    <div> '.$mailContent.'</div>
   </div>
   <br />
   <br />
-  <div style="color: #3a3a3a;font-style: italic;">
-    '.$notes.'
-  </div>
 </div>
 <br />  
 </body>
@@ -173,7 +152,7 @@ $email = 'kingfruit.co.id@gmail.com';*/
     $mail->Port = '587';
 
     $mail->setFrom($mailAdmin); 
-    $mail->addAddress($emailTo); 
+    $mail->addAddress($emailSend); 
     $mail->addBcc($mailAdmin);
 
     $mail->isHTML(true);

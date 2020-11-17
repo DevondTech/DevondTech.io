@@ -27,7 +27,7 @@ if($id_user!='' && $id_status_user=='1'){
     if(isset($_GET['dataReturCallData'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT id_retur, kode_retur, waktu_retur, nama_lengkap, pesan_retur, nomor_hp, email, nama_pemilik_rekening, no_rekening, bank_asal, total_harga_yang_harus_dibayar, gambar_barang_retur, id_pemesanan FROM view_detail_pengajuan_retur_produk where id_retur ='".$_GET['dataReturCallData']."'";
+        $query = "SELECT id_retur, kode_retur, waktu_retur, nama_lengkap, pesan_retur, nomor_hp, email, nama_pemilik_rekening, no_rekening, bank_asal, total_harga_yang_harus_dibayar, gambar_barang_retur, id_pemesanan,id_produk,  nama_produk, jenis_produk, jumlah_pemesanan, satuan_produk, teks_berat_produk FROM view_detail_pengajuan_retur_produk where id_retur ='".$_GET['dataReturCallData']."'";
         $result = $db->query($query); 
         $dataReturCallData = mysqli_fetch_all($result,MYSQLI_ASSOC);
         $dataReturCallData=json_encode($dataReturCallData);
@@ -37,7 +37,7 @@ if($id_user!='' && $id_status_user=='1'){
     if(isset($_GET['dataReturCallDataAll'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT id_retur, kode_retur, waktu_retur, nama_lengkap, email, nomor_hp, gambar_barang_retur, status_retur, pesan_retur, admin_tanggal_transfer, admin_total_pengembalian_dana FROM view_data_retur_all where id_retur ='".$_GET['dataReturCallDataAll']."'";
+        $query = "SELECT id_retur, kode_retur, waktu_retur, nama_lengkap, email, nomor_hp, gambar_barang_retur, status_retur, pesan_retur, admin_tanggal_transfer, admin_total_pengembalian_dana, id_produk,  nama_produk, jenis_produk, jumlah_pemesanan, satuan_produk, teks_berat_produk FROM view_data_retur_all where id_retur ='".$_GET['dataReturCallDataAll']."'";
         $result = $db->query($query); 
         $dataReturCallDataAll = mysqli_fetch_all($result,MYSQLI_ASSOC);
         $dataReturCallDataAll=json_encode($dataReturCallDataAll);

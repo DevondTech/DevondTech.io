@@ -59,14 +59,15 @@ if($id_user!='' && $id_status_user=='1'){
         $id_status_notifikasi = 3;
         $id_status_baca = 1;
         $id_user_baca = 1;
-
+        date_default_timezone_set('Asia/Jakarta');
+        $waktu_pengiriman = date('Y-m-d H:i:s');
         $id_status_notifikasi_read = 5;
         $id_status_baca_read = 1;
         $id_user_baca_read = 1;
         $id_status_baca_admin_read = 2;
 
         if($id_user!=''){
-            $query = "UPDATE tb_pemesanan SET id_proses_pemesanan='5' WHERE kode_pemesanan = '$kode_pemesanan' ";
+            $query = "UPDATE tb_pemesanan SET id_proses_pemesanan='5', waktu_pengiriman = '$waktu_pengiriman' WHERE kode_pemesanan = '$kode_pemesanan' ";
             $db->query($query);
             $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, id_user)
                 VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca','$id_user')";
