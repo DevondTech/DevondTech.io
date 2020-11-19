@@ -10,8 +10,6 @@ $alert = '';
 
 require '../../config.php'; 
 $json = json_decode(file_get_contents('php://input'), true); 
-
-
 $emailTo = $_GET['email_send'];
 $kode_pemesanan_send = $_GET['a275eeab9229cc9132954f131049342ca43ba161'];
 $nama_lengkap_send = $_GET['nama_lengkap_send'];
@@ -20,10 +18,8 @@ $teks_berat_produk_send = $_GET['teks_berat_produk_send'];
 $jumlah_pemesanan_send = $_GET['jumlah_pemesanan_send'];
 date_default_timezone_set('Asia/Jakarta');
 $waktu_pengiriman = date('d-m-Y H:i:s'); 
-
 $start = "09";
 $end = "17";
-/*$end = "13";*/
 $now = date('H');
 $notes = '';
 if ($now > $start && $now < $end)
@@ -34,21 +30,11 @@ else
 {
   $notes = 'Notes : Pengiriman Akan Dilakukan Pada Jam Operasional (Pkl. 09.00 - 17.00 WIB).';
 }
-
 $mailAdmin = 'admin@kingfruit.co.id';
 $email = 'kingfruit.co.id@gmail.com';
 $subjectCreate = 'Pengiriman Produk '.$nama_produk_send.' kingfruit.co.id #';
 $subjectMail = $subjectCreate.$kode_pemesanan_send; 
-
-/*$emailTo = $_GET['email_send'];
-$kode_pemesanan_send = $_GET['kode_pemesanan_send'];
-$waktu_pemesanan_send = $_GET['waktu_pemesanan_send'];
-$produk_send = $_GET['produk_send'];
-$jumlah_send = $_GET['jumlah_send'];
-$total_harga_yang_harus_dibayar_send = $_GET['total_harga_yang_harus_dibayar_send'];
-
-$email = 'kingfruit.co.id@gmail.com';*/
-  $massages = '<html>
+$massages = '<html>
 <head>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

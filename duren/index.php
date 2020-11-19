@@ -786,7 +786,7 @@
 <script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript" src="js/slideSmall.js"></script>
 <script type="text/javascript" src="js/durian.js?v=2.1.2"></script>
-<script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.7.1"></script>
+<script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.7.4"></script>
 <script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
   

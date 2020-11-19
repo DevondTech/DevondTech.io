@@ -255,7 +255,8 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT * FROM view_data_semua_pesanan where id_user ='$userDataID' order by id_proses_pemesanan ASC";
+      /*  $query = "SELECT * FROM view_data_semua_pesanan where id_user ='$userDataID' order by id_proses_pemesanan ASC";*/
+        $query = "SELECT * FROM view_data_semua_pesanan where id_user ='$userDataID' order by id_pemesanan DESC LIMIT 1";
         $result = $db->query($query); 
         if($result){
             $selectCartDataByUser = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -413,7 +414,8 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
             $pemesananDataLastID = $resultLastID->fetch_object();
             $pemesananLast=$pemesananDataLastID->last_data_pemesanan;
             $kode_pemesanan = $pemesananLast + 1;
-            $kode_duren = 'DR0';
+            $kode_duren = 'TEST-DATA-1-DR0';
+            /*$kode_duren = 'DRN00';*/
             date_default_timezone_set('Asia/Jakarta');
             $waktu_pemesanan = date('Y-m-d H:i:s'); 
             $waktu_pengiriman = date('Y-m-d H:i:s'); 
@@ -594,8 +596,10 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        $query = "SELECT kode_pemesanan, id_user, id_pemesanan, id_proses_pemesanan from tb_pemesanan where id_user='$id_user' and id_proses_pemesanan='5'";
+        $query = "SELECT kode_pemesanan, id_user, id_pemesanan, id_proses_pemesanan, waktu_pemesanan, waktu_batas_retur, waktu_batas_review, waktu_penerimaan from view_data_semua_pesanan where id_user='$id_user' and id_proses_pemesanan='5'";
         $result = $db->query($query); 
+
+
         if($result){
             $selectDataForConfirmationFinishShipped = mysqli_fetch_all($result,MYSQLI_ASSOC);
             $selectDataForConfirmationFinishShipped=json_encode($selectDataForConfirmationFinishShipped);
@@ -620,7 +624,8 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
             $returDataLastID = $resultLastID->fetch_object();
             $returLast=$returDataLastID->last_data_retur;
             $kode_retur = $returLast + 1;
-            $kode_text = 'RTDR0';
+            $kode_text = 'TEST-DATA-1-RTDRN00';
+            /*$kode_text = 'RTDRN00';*/
             date_default_timezone_set('Asia/Jakarta');
             $waktu_retur = date('Y-m-d H:i:s'); 
             $id_produk  = 1;
@@ -744,6 +749,40 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
+        if($id_user!=''){
+            $id_proses_pemesanan_update = 5;
+            $id_proses_pemesanan_call_back = 9;
+            date_default_timezone_set('Asia/Jakarta');
+            $time = '18/11/2020 10:26';
+            $currentTime = time(); 
+            /*last Review Create Time*/
+            $hoursToAddReturReviewLost = 24;
+            $secondsToAddReturReviewLost = $hoursToAddReturReviewLost * (60 * 60);
+            $createReturReviewLost = $currentTime + $secondsToAddReturReviewLost;
+            $reviewReturReviewLost = date("Y-m-d H:i:s", $createReturReviewLost);
+            /*last Retur Create Time*/
+            $hoursToAddReturLost = 3;
+            $secondsToAddReturLost = $hoursToAddReturLost * (60 * 60);
+            $createReturLost = $currentTime + $secondsToAddReturLost;
+            $reviewReturLost = date("Y-m-d H:i:s", $createReturLost);
+
+            date_default_timezone_set('Asia/Jakarta');
+            $waktu_penerimaan = date('Y-m-d H:i:s'); 
+
+            $queryPemesanan = "UPDATE tb_pemesanan SET  id_proses_pemesanan='$id_proses_pemesanan_update', waktu_batas_retur='$reviewReturLost', waktu_batas_review='$reviewReturReviewLost', waktu_penerimaan = '$waktu_penerimaan' WHERE id_proses_pemesanan='$id_proses_pemesanan_call_back' and id_user ='$id_user'";
+            $db->query($queryPemesanan);
+
+            echo "createConfirFinishDataSuccess";   
+        }
+        else{
+            echo "erorDATA";
+        }
+    }
+
+    if(isset($_GET['createConfirReviewCustData'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
         $id_pemesanan = $_POST['b']; 
         $id_proses_pemesanan = 6;
         if($id_user!=''){
@@ -778,7 +817,10 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        if($id_user!=0){  
+        if($id_user==0){  
+            echo 'dataFound';
+        }
+        else{
             $id_produk = $_POST['id_produk']; 
             $id_pemesanan = $_POST['id_pemesanan']; 
             $komentar = $_POST['DataInputComment']; 
@@ -796,6 +838,188 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
             $id_status_baca = 1;
             $id_user_baca = 2;
 
+            $query = "INSERT INTO tb_penilaian_produk(tanggal_penilaian_produk, id_user, id_produk, id_bintang_penilaian_produk,komentar)
+                            VALUES('$tanggal_penilaian_produk','$id_user','$id_produk','$id_bintang_penilaian_produk', '$komentar')";   
+            $db->query($query);    
+            $queryPemesanan = "UPDATE tb_pemesanan SET  id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan='$id_pemesanan'";
+            $db->query($queryPemesanan);  
+            $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                            VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+            $db->query($queryNotif); 
+            echo "Success"; 
+        }  
+    }
+
+    if(isset($_GET['autoReviewFromHomeAdmin'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $id_status_user = $_SESSION['id_status_user'];
+        if($id_user!=0 && $id_status_user==1){  
+            $callData = $db->query("select kode_pemesanan, id_pemesanan, id_produk, waktu_penerimaan, waktu_batas_review, waktu_batas_retur, id_user FROM tb_pemesanan WHERE id_proses_pemesanan='5'");
+            $rowCount = $callData->num_rows;
+            if($rowCount>0){
+                while($callDataToActionAuto=mysqli_fetch_array($callData)){
+                    $kode_pemesanan = $callDataToActionAuto['kode_pemesanan'];
+                    $id_produk = $callDataToActionAuto['id_produk'];
+                    $waktu_penerimaan = $callDataToActionAuto['waktu_penerimaan'];
+                    $waktu_batas_retur = $callDataToActionAuto['waktu_batas_retur'];
+                    $waktu_batas_review = $callDataToActionAuto['waktu_batas_review'];
+                    $id_pemesanan = $callDataToActionAuto['id_pemesanan'];
+                    date_default_timezone_set('Asia/Jakarta');
+                    $now = date('Y-m-d H:i:s'); 
+                    $komentar = ''; 
+                    if($now >= $waktu_penerimaan && $now > $waktu_batas_review){
+                        $id_bintang_penilaian_produk = '5'; 
+                        date_default_timezone_set('Asia/Jakarta');
+                        $tanggal_penilaian_produk = date('Y-m-d H:i:s'); 
+                        $id_proses_pemesanan = 7;
+                        $pesan_notifikasi ='Penjualan Dengan Kode Transaksi: '.$kode_pemesanan.', Telah Dikomentari: '.$komentar;
+                        $id_status_notifikasi = 6;
+                        $id_status_baca = 1;
+                        $id_user_baca = 2;
+                        $query = "INSERT INTO tb_penilaian_produk(tanggal_penilaian_produk, id_user, id_produk, id_bintang_penilaian_produk,komentar)
+                                        VALUES('$tanggal_penilaian_produk','$id_user','$id_produk','$id_bintang_penilaian_produk', '$komentar')";   
+                        $db->query($query);    
+                        $queryPemesanan = "UPDATE tb_pemesanan SET  id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan='$id_pemesanan'";
+                        $db->query($queryPemesanan);  
+                        $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                                        VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+                        $db->query($queryNotif); 
+                        echo "successActionAutoReview"; 
+                    }
+                    else{
+                        echo 'notActionAutoReview';
+                    }
+                }
+            }
+            else{
+                echo 'dataNotFound';
+            } 
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }  
+    }
+
+    if(isset($_GET['autoReviewFromHome'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        if($id_user!=0){  
+            $callData = $db->query("select kode_pemesanan, id_pemesanan, id_produk, waktu_penerimaan, waktu_batas_review, waktu_batas_retur, id_user FROM tb_pemesanan WHERE id_proses_pemesanan='5' and id_user='$id_user'");
+            $rowCount = $callData->num_rows;
+            if($rowCount>0){
+                while($callDataToActionAuto=mysqli_fetch_array($callData)){
+                    $kode_pemesanan = $callDataToActionAuto['kode_pemesanan'];
+                    $id_produk = $callDataToActionAuto['id_produk'];
+                    $waktu_penerimaan = $callDataToActionAuto['waktu_penerimaan'];
+                    $waktu_batas_retur = $callDataToActionAuto['waktu_batas_retur'];
+                    $waktu_batas_review = $callDataToActionAuto['waktu_batas_review'];
+                    $id_pemesanan = $callDataToActionAuto['id_pemesanan'];
+                    date_default_timezone_set('Asia/Jakarta');
+                    $now = date('Y-m-d H:i:s'); 
+                    $komentar = ''; 
+                    if($now >= $waktu_penerimaan && $now > $waktu_batas_review){
+                        $id_bintang_penilaian_produk = '5'; 
+                        date_default_timezone_set('Asia/Jakarta');
+                        $tanggal_penilaian_produk = date('Y-m-d H:i:s'); 
+                        $id_proses_pemesanan = 7;
+                        $pesan_notifikasi ='Penjualan Dengan Kode Transaksi: '.$kode_pemesanan.', Telah Dikomentari: '.$komentar;
+                        $id_status_notifikasi = 6;
+                        $id_status_baca = 1;
+                        $id_user_baca = 2;
+                        $query = "INSERT INTO tb_penilaian_produk(tanggal_penilaian_produk, id_user, id_produk, id_bintang_penilaian_produk,komentar)
+                                        VALUES('$tanggal_penilaian_produk','$id_user','$id_produk','$id_bintang_penilaian_produk', '$komentar')";   
+                        $db->query($query);    
+                        $queryPemesanan = "UPDATE tb_pemesanan SET  id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan='$id_pemesanan'";
+                        $db->query($queryPemesanan);  
+                        $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                                        VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+                        $db->query($queryNotif); 
+                        echo "successActionAutoReview"; 
+                    }
+                    else{
+                        echo 'notActionAutoReview';
+                    }
+                }
+            }
+            else{
+                echo 'dataNotFound';
+            } 
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }  
+    }
+
+    /*if(isset($_GET['autoReviewFromHome'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        if($id_user!=0){  
+            $callData = $db->query("select kode_pemesanan, id_produk, waktu_penerimaan, waktu_batas_review, waktu_batas_retur FROM tb_pemesanan WHERE id_proses_pemesanan='5' and id_user = '$id_user'");
+            $callDataToActionAuto = $callData->fetch_object();
+            $kode_pemesanan = $callDataToActionAuto->kode_pemesanan;
+            $id_produk = $callDataToActionAuto->id_produk;
+            $waktu_penerimaan = $callDataToActionAuto->waktu_penerimaan;
+            $waktu_batas_retur = $callDataToActionAuto->waktu_batas_retur;
+            $waktu_batas_review = $callDataToActionAuto->waktu_batas_review;
+            date_default_timezone_set('Asia/Jakarta');
+            $now = date('Y-m-d H:i:s'); 
+            $komentar = ''; 
+            if($kode_pemesanan!=''){
+                if($now >= $waktu_penerimaan && $now > $waktu_batas_review){
+                    $id_bintang_penilaian_produk = '5'; 
+                    date_default_timezone_set('Asia/Jakarta');
+                    $tanggal_penilaian_produk = date('Y-m-d H:i:s'); 
+                    $id_proses_pemesanan = 7;
+                    $pesan_notifikasi ='Penjualan Dengan Kode Transaksi: '.$kode_pemesanan.', Telah Dikomentari: '.$komentar;
+                    $id_status_notifikasi = 6;
+                    $id_status_baca = 1;
+                    $id_user_baca = 2;
+                    $query = "INSERT INTO tb_penilaian_produk(tanggal_penilaian_produk, id_user, id_produk, id_bintang_penilaian_produk,komentar)
+                                    VALUES('$tanggal_penilaian_produk','$id_user','$id_produk','$id_bintang_penilaian_produk', '$komentar')";   
+                    $db->query($query);    
+                    $queryPemesanan = "UPDATE tb_pemesanan SET  id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan='$id_pemesanan'";
+                    $db->query($queryPemesanan);  
+                    $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
+                                    VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
+                    $db->query($queryNotif); 
+                    echo "successActionAutoReview"; 
+                }
+                else{
+                    echo 'notActionAutoReview';
+                }
+            }
+            else{
+                echo 'dataNotFound';
+            }  
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }  
+    }*/
+
+    if(isset($_GET['autoReviewFromCart'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        if($id_user!=0){  
+            $id_pemesanan = $_POST['b']; 
+            $callData = $db->query("select kode_pemesanan, id_produk FROM tb_pemesanan WHERE id_pemesanan='$id_pemesanan'");
+            $callDataToPrint = $callData->fetch_object();
+            $kode_pemesanan = $callDataToPrint->kode_pemesanan;
+            $id_produk = $callDataToPrint->id_produk;
+            $komentar = ''; 
+            $id_bintang_penilaian_produk = '5'; 
+            date_default_timezone_set('Asia/Jakarta');
+            $tanggal_penilaian_produk = date('Y-m-d H:i:s'); 
+            $id_proses_pemesanan = 7;
+            $pesan_notifikasi ='Penjualan Dengan Kode Transaksi: '.$kode_pemesanan.', Telah Dikomentari: '.$komentar;
+            $id_status_notifikasi = 6;
+            $id_status_baca = 1;
+            $id_user_baca = 2;
             $query = "INSERT INTO tb_penilaian_produk(tanggal_penilaian_produk, id_user, id_produk, id_bintang_penilaian_produk,komentar)
                             VALUES('$tanggal_penilaian_produk','$id_user','$id_produk','$id_bintang_penilaian_produk', '$komentar')";   
             $db->query($query);    

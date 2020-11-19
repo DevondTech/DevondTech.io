@@ -1,3 +1,12 @@
+$(document).ready(function(){
+  $.ajax({
+    type : 'POST',
+    url  : 'conn/data2/cartProcess/cartProcess.php/?autoReviewFromHome',
+    success :  function(response){      
+    }
+  });
+});
+
 $('#updateCheckOutByUserButton').on('click', function(e){
   var data = $("#updateCheckOutByUserForm").serialize();
   /*console.log(data);*/

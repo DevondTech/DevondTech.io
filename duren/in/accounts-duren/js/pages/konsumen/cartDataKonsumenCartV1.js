@@ -52,13 +52,13 @@ $(document).ready(function(){
                     var email_send = DataUser[0].email;
                     var kode_pemesanan_send = DataUser[0].kode_pemesanan;
                     var produk_send = DataNamaProduk;
-                    
+                    var jumlah_send = DataUser[0].jumlah_pemesanan;
                     var waktu_pemesanan_send = DataUser[0].waktu_pemesanan;
                    
                     $('#email_send').val(email_send);
                     $('#kode_pemesanan_send').val(kode_pemesanan_send);
                     $('#produk_send').val(produk_send);
-                    $('#jumlah_send_data').val('1');
+                    $('#jumlah_send').val(jumlah_send);
                     $('#waktu_pemesanan_send').val(waktu_pemesanan_send);
             
                     $('#namaLengkapPrint').text(DataNamaLengkap);
@@ -155,7 +155,6 @@ $(document).ready(function(){
                             var jumlahPemesanan = +$('#jumlah_pemesanan').val() + 1;
                             $('#jumlah_pemesanan').val(jumlahPemesanan);
                             $('#jumlahPemesanan').val(jumlahPemesanan);
-                            $('#jumlah_send_data').val(jumlahPemesanan);
                             var harga = $('#harga').val();
                             var totalHarga = jumlahPemesanan * harga;
                         }
@@ -169,7 +168,6 @@ $(document).ready(function(){
                                 var jumlahPemesanan = +$('#jumlah_pemesanan').val() - 1;
                                 $('#jumlah_pemesanan').val(jumlahPemesanan);
                                 $('#jumlahPemesanan').val(jumlahPemesanan);
-                                $('#jumlah_send_data').val(jumlahPemesanan);
                                 var harga = $('#harga').val();
                                 var totalHarga = jumlahPemesanan * harga;
                             }
@@ -178,7 +176,7 @@ $(document).ready(function(){
                         jumlahPemesanan = $('#jumlah_pemesanan').val();
                         var ongkirCallBack =  '0';
                         var dataBeratPemesanan = jumlahPemesanan * ongkirCallBack;
-                        $('#jumlah_send_data').val(jumlahPemesanan);
+                        $('#jumlah_send').val(jumlahPemesanan);
                         
                         //$('#ongkir').val();
                         //$('#ongkir_tampil').val();
@@ -247,7 +245,6 @@ $(document).ready(function(){
                         /*var total_harga_yang_harus_dibayar_send = +harga + +ongkir;*/
                         $('#total_harga_yang_harus_dibayar_send').val(total_harga_yang_harus_dibayar_send);
                         
-
                     });
                 }
                 else{
@@ -273,7 +270,7 @@ $(document).ready(function(){
                         $("#content-profile").load("cartDataNull.php");
                     }    
                     if(DataProsesPemesanan == '9'){
-                        $("#content-profile").load("cartDataProcessReturSeeing.php");
+                        $("#content-profile").load("cartDataFinish.php");
                     }                    
                 }
             }
@@ -329,23 +326,15 @@ $(document).ready(function(){
               text: "Silahkan Isi Data Alamat",
               type: "error"
             });
-           /* alert('Silahkan Isi Data Alamat')*/
-        }  
-        else if(provinsiUpdate == ''){
-            swal({
-              title:"Cek Provinsi",
-              text: "Silahkan Isi Data Provinsi",
-              type: "error"
-            });
-            /*alert('Silahkan Isi Data Provinsi')*/
-        }  
+            /*alert('Silahkan Isi Data Alamat');
+*/        }  
         else if(negaraUpdate == ''){
             swal({
               title:"Cek Negara",
               text: "Silahkan Isi Data Negara",
               type: "error"
             });
-            /*alert('Silahkan Isi Data Negara')*/
+            /*alert('Silahkan Isi Data Negara');*/
         }  
         else if(kotaUpdate == ''){
             swal({
@@ -377,9 +366,17 @@ $(document).ready(function(){
               text: "Silahkan Isi Data POS",
               type: "error"
             });
-            /*alert('Silahkan Isi Data Kode POS')*/
+            /*alert('Silahkan Isi Data Kode Pos')*/
         }  
-        
+        else if(provinsiUpdate == ''){
+            swal({
+              title:"Cek Provinsi",
+              text: "Silahkan Isi Data Provinsi",
+              type: "error"
+            });
+            /*alert('Silahkan Isi Data Provinsi')*/
+        }  
+
         else if(alamatUpdate != ''){
             var data = $("#updateDataAlamatUser").serialize();
             $.ajax({
@@ -425,19 +422,17 @@ $(document).ready(function(){
                             $('#namaLengkapPrint').text(DataNamaLengkap);
                             $('#nomorHpPrint').text(DataNomorHP);
                             if(DataAlamat == '' ){
-                                $('#alamatPrint').text('( Silahkan Lengkapi Data Alamat Anda )');
-                                $('#alamatPrint').attr('style','color:red')
+                                swal({
+                                  title:"Cek Alamat",
+                                  text: "Silahkan Lengkapi Data Alamat Anda",
+                                  type: "error"
+                                });
+                                $('#alamatPrint').attr('style','color:red');
                             }
                             else{
                                 $('#alamatPrint').text(DataAlamat+' , Kelurahan '+DataKelurahan+' , Kecamatan '+DataKecamatan+' , Kota '+DataKota+' , '+DataProvinsi+' , '+DataNegara+' (Kode POS :'+DataKodePos+') ');
                                 $('#alamatPrint').attr('style','color:#333');
-                                /*alert("Alamat berhasil ditambahkan");*/
-                                swal({
-                                  title:"Sukses",
-                                  text: "Alamat berhasil ditambahkan",
-                                  type: "success"
-                                });
-
+                                alert("Alamat berhasil ditambahkan");
                             }
                             $('#dataNegara').val(DataNegara);
                             $('#dataProvinsi').val(DataProvinsi);
@@ -456,12 +451,7 @@ $(document).ready(function(){
                     });
                   }
                   else{
-                    swal({
-                      title:"Gagal",
-                      text: "Cek lengkapi data",
-                      type: "error"
-                    });
-                    /*alert('Silahkan lengkapi data');*/
+                    alert('Silahkan lengkapi data');
                     $("#btnUpdateDataAlamatUser").html('SIMPAN');
                   }
                 }    

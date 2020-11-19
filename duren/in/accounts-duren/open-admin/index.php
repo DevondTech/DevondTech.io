@@ -394,7 +394,9 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.7.9"></script>
+<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.8.1"></script>
+
+<script type="text/javascript" src="../js/pages/admin/adminCheckData.js?v=1.1.1"></script>
 
 <script type="text/javascript" src="../../../js/sweetAlert/sweetalert2.all.min.js"></script>
 <!-- Scrol -->

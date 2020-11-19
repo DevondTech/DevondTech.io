@@ -67,7 +67,7 @@ if($id_user!='' && $id_status_user=='1'){
         $id_status_baca_admin_read = 2;
 
         if($id_user!=''){
-            $query = "UPDATE tb_pemesanan SET id_proses_pemesanan='5', waktu_pengiriman = '$waktu_pengiriman' WHERE kode_pemesanan = '$kode_pemesanan' ";
+            $query = "UPDATE tb_pemesanan SET id_proses_pemesanan='9', waktu_pengiriman = '$waktu_pengiriman' WHERE kode_pemesanan = '$kode_pemesanan' ";
             $db->query($query);
             $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, id_user)
                 VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca','$id_user')";

@@ -10,8 +10,6 @@
         die("<script language='javascript'>alert('Silahkan Login Dahulu'); document.location='../../../login'</script>");
     }
     $id_user = $_SESSION['id_user'];
-    date_default_timezone_set('Asia/Jakarta');
-    $now = date('Y-m-d H:i:s'); 
 ?>
 <meta charset="UTF-8">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -103,17 +101,15 @@
         }
     }
     @media(max-width: 767px){
-
-        .mTop60px{
-            margin-top: 0px;
-            padding-bottom: 100px;
-        }
-
         .imgDataNull{
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;
+        }
+
+        .mTop60px{
+            margin-top: 0px;
         }
 
         .textClickToProduct{
@@ -141,10 +137,13 @@
             padding-top: 50px;
         }
     }
+
+    
 </style>
 </head>
 <body class="bd-w">
-    <div id="contentDataFinishingProcess">
+<div id="FinishingProcess">
+   <div id="contentDataFinishingProcess">
         <div class="divPositionContentTop">
             <div class="card-textTitleLarge-Black">
                 <div class="textTitleLarge-Black" >
@@ -154,34 +153,19 @@
         </div>
         <div>
             <div class="positionDataNull">
-                <input type="hidden" name="waktu_batas_retur" id="waktu_batas_retur">
-                <input type="hidden" name="waktu_batas_review" id="waktu_batas_review">
-                <input type="hidden" name="waktu_penerimaan" id="waktu_penerimaan">
-                <input type="hidden" name="nowDate" id="nowDate" value="<?php echo $now; ?>">
                 <div class="row">
                     <div class="borderImgLeft col-lg-6 col-md-6 col-sm-6">
                         <a  style="color:#2d472c;">
                             <img src="../images/icon png/barang-dikirim.png" class="imgDataNull">
-                            <div class="textClickToProduct">Barang Sudah Diterima</div>
+                            <div class="textClickToProduct">Barang Anda Sedang Dikirim</div>
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="card-buttonSelectPic" id="cardSendReviewAction">
+                        <div class="mTop60px card-buttonSelectPic">
                             <div class="margin-auto">
                                 <form method="POST" id="createConfirFinishDataForm">
                                     <input type="hidden" name="b" id="b">
-                                    <button id="buttonComment" class="buttonGreen">Kirim Komentar Anda</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div id="textOr">
-                            <div class="textOr">Or</div>
-                        </div>
-                        <div class="card-buttonSelectPic" id="cardReturAction">
-                            <div class="margin-auto">
-                                <form method="POST" id="createReturDataForm">
-                                    <input type="hidden" name="f" id="f">
-                                    <button id="buttonRetur" class="buttonGreen">Pengembalian Barang</button>
+                                    <button id="buttonConfirm" class="buttonGreen">Konfirmasi Barang Diterima</button>
                                 </form>
                             </div>
                         </div>
@@ -190,9 +174,12 @@
             </div>
         </div>
     </div>
-
+</div>
 <script src="../js/action.js"></script>
-<script type="text/javascript" src="../js/pages/konsumen/actionCartDataProcessBeingShippedParrent.js?v=1.2.6"></script>
+<script type="text/javascript" src="../js/pages/konsumen/cartDataProcessBeingShippedConfirm.js?v=1.1.2"></script>
+
+<!-- Scrol -->
+<!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>
 </html>
 

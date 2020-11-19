@@ -54,28 +54,7 @@ $(document).ready(function(){
                     var produk_send = DataNamaProduk;
                     
                     var waktu_pemesanan_send = DataUser[0].waktu_pemesanan;
-
-                    let getRandomPaymentUnix = function(start, range){
-                      let getRandom = Math.floor((Math.random() * range) + start);
-                      while (getRandom > range){
-                        getRandom = Math.floor((Math.random()*range) + start);
-                      } 
-                      return getRandom
-                    }
-                    var dataCreate = getRandomPaymentUnix(1,80); 
-                    console.log(dataCreate);
-                    var dataCreateOpen = dataCreate;
-                    var dataCreateOpenNumberString = dataCreateOpen.toString(),
-                    dataCreateOpenSisa  = dataCreateOpenNumberString.length % 3,
-                    dataCreateOpenRupiah  = dataCreateOpenNumberString.substr(0, dataCreateOpenSisa),
-                    dataCreateOpenRibuan  = dataCreateOpenNumberString.substr(dataCreateOpenSisa).match(/\d{3}/g);         
-                    if (dataCreateOpenRibuan) {
-                        dataCreateOpenSeparator = dataCreateOpenSisa ? '.' : '';
-                        dataCreateOpenRupiah += dataCreateOpenSeparator + dataCreateOpenRibuan.join('.');
-                    }
-                    $('#kodeUnik_tampil').val('Rp '+dataCreateOpenRupiah+',00');
-                    $('#kodeUnikPlus').val(dataCreate);
-
+                   
                     $('#email_send').val(email_send);
                     $('#kode_pemesanan_send').val(kode_pemesanan_send);
                     $('#produk_send').val(produk_send);
@@ -155,13 +134,9 @@ $(document).ready(function(){
                     $('#total_harga_pemesanan').val(harga);
                     $('#total_harga_pemesanan_tampil2').val('Rp '+hargaRupiah+',00');
                     $('#total_harga_pemesanan2').val(harga);
-                    $('#totalBayarKeseluruhan').val(+harga + +ongkir + +dataCreate);
-
-                    var checkBayar = $('#totalBayarKeseluruhan').val();
-                    console.log(checkBayar);
+                    $('#totalBayarKeseluruhan').val(+harga + +ongkir);
 
                     var totalBayarKeseluruhanCall = $('#totalBayarKeseluruhan').val();
-                    var totalBayarKeseluruhanCall = totalBayarKeseluruhanCall;
                     var totalBayarKeseluruhanCallNumberString = totalBayarKeseluruhanCall.toString(),
                         totalBayarKeseluruhanCallSisa    = totalBayarKeseluruhanCallNumberString.length % 3,
                         totalBayarKeseluruhanCallRupiah  = totalBayarKeseluruhanCallNumberString.substr(0, totalBayarKeseluruhanCallSisa),
@@ -170,7 +145,6 @@ $(document).ready(function(){
                             totalBayarKeseluruhanCallSeparator = totalBayarKeseluruhanCallSisa ? '.' : '';
                             totalBayarKeseluruhanCallRupiah += totalBayarKeseluruhanCallSeparator + totalBayarKeseluruhanCallRibuan.join('.');
                         }
-                        
                         $('#totalBayarKeseluruhan_tampil').val('Rp '+totalBayarKeseluruhanCallRupiah+',00');
                         var total_harga_yang_harus_dibayar_send = 'Rp '+totalBayarKeseluruhanCallRupiah+',00';
                         $('#total_harga_yang_harus_dibayar_send').val(total_harga_yang_harus_dibayar_send);
@@ -256,7 +230,7 @@ $(document).ready(function(){
                         var total_harga_pemesanan2 = $('#total_harga_pemesanan2').val();
                         var ongkirCallback = $('#ongkir').val();
                         var totalYangHarusDibayar = +total_harga_pemesanan2 + +ongkir;
-                        var totalYangHarusDibayar = dataCreate + +totalYangHarusDibayar;
+                        
                         var totalBayarKeseluruhanNumberString = totalYangHarusDibayar.toString(),
                         totalBayarKeseluruhanSisa    = totalBayarKeseluruhanNumberString.length % 3,
                         totalBayarKeseluruhanRupiah  = totalBayarKeseluruhanNumberString.substr(0, totalBayarKeseluruhanSisa),
@@ -272,6 +246,7 @@ $(document).ready(function(){
 
                         /*var total_harga_yang_harus_dibayar_send = +harga + +ongkir;*/
                         $('#total_harga_yang_harus_dibayar_send').val(total_harga_yang_harus_dibayar_send);
+                        
 
                     });
                 }
