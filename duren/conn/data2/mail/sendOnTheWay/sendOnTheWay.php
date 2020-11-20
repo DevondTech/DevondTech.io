@@ -137,7 +137,7 @@ $massages = '<html>
   <br />
   <div style="color: #3a3a3a;margin-top: 5px;">
     <div style="width: 100px;float: left">Status</div>
-    <div style="float: left;">: Lunas</div>
+    <div style="float: left;">: Pesanan Sedang Dikirim</div>
   </div>
   <br />
   <br />

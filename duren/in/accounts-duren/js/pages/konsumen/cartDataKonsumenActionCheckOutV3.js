@@ -20,7 +20,7 @@ $('#checkOutActionButton').on('click',function(e){
   var kode_unix = $('#kodeUnik_tampil').val();
   var total_harga_pemesanan2 = $('#total_harga_pemesanan2').val();
   var total_harga_yang_harus_dibayar_send = $('#total_harga_yang_harus_dibayar_send').val();
- 
+  var id_produk_send = $('#id_produk_send').val();
   var data = $("#checkOutActionForm").serialize();
   $.ajax({
 

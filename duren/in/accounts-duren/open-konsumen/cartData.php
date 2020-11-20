@@ -728,7 +728,7 @@
                             Aksi
                             </div> -->
                             <div class="row">
-                                <div class="col-lg-10 col-md-10 col-sm-12">
+                                <div class="col-lg-9 col-md-9 col-sm-12">
                                     <div style="margin-left: 4px;">
                                         <div class="positionTextDetailOrder">
                                             <div class="w150 textTotalHarga floatLeftCartData" >
@@ -741,6 +741,7 @@
                                                 <div class="marginLeft10 floatLeftCartData">
                                                     <input type="hidden" name="total_harga_pemesanan2"  style="color: #737373;" id="total_harga_pemesanan2" class="input-textDataUser-false" disabled>
                                                     <input type="text" name="total_harga_pemesanan_tampil2"  style="color: #737373;" id="total_harga_pemesanan_tampil2" class="input-textDataUser-false" disabled>
+                                                    <input type="hidden" name="id_produk_send" id="id_produk_send" >
                                                     <input type="hidden" name="alamatInput" id="alamatInput" >
                                                     <input type="hidden" name="negaraInput" id="negaraInput" >
                                                     <input type="hidden" name="provinsiInput" id="provinsiInput" >
@@ -748,6 +749,7 @@
                                                     <input type="hidden" name="kecamatanInput" id="kecamatanInput" >
                                                     <input type="hidden" name="kelurahanInput" id="kelurahanInput" >
                                                     <input type="hidden" name="kotaInput" id="kotaInput" >  
+                                                    <input type="hidden" name="id_pemesanan" id="id_pemesanan" >  
                                                     <input type="hidden" name="dataKodePos" id="dataKodePos" >
                                                     <input type="hidden" name="jumlahPemesanan" value="1" id="jumlahPemesanan">
 
@@ -813,7 +815,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                <div class="col-lg-3 col-md-3 col-sm-12">
                                     <div class="buttonCheckoutPosition">
                                         <button type="button" class="inputTypeTransparent buttonOrderAlamatCartData" id="checkOutActionButton">Check Out</button>
                                     </div>
@@ -828,8 +830,8 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCartV3.js?v=1.1.2"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.2"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenCartV3.js?v=1.1.5"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.5"></script>
 
 </body>
 </html>

@@ -173,6 +173,35 @@ if($id_user!=''){
         }
     }
 
+    if(isset($_GET['updateCancelOrder'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $id_pemesanan = $_GET['updateCancelOrder']; 
+        $callDataUserCancelOrder = $db->query("select id_pemesanan, jumlah_pemesanan, id_produk FROM tb_pemesanan WHERE id_pemesanan='$id_pemesanan'");
+        $callDataUserCancelOrderToPrint = $callDataUserCancelOrder->fetch_object();
+        $jumlah_pemesanan = $callDataUserCancelOrderToPrint->jumlah_pemesanan;
+        $id_produk = $callDataUserCancelOrderToPrint->id_produk;
+        $callDataStokByOrder = $db->query("select id_produk, jumlah_stok FROM tb_produk WHERE id_produk='$id_produk'");
+        $callDataStokByOrderToPrint = $callDataStokByOrder->fetch_object();
+        $jumlah_stok = $callDataStokByOrderToPrint->jumlah_stok;
+        $jumlah_stok_update =  $jumlah_stok + $jumlah_pemesanan;
+        $id_status_produk_dalam_proses = 2;
+        $id_proses_pemesanan = 10;
+        if($id_user!=''){
+            $queryPemesanan = "UPDATE tb_pemesanan SET id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan = '$id_pemesanan' ";
+            $db->query($queryPemesanan);
+            $queryProduk = "UPDATE tb_produk SET jumlah_stok='$jumlah_stok_update' WHERE id_produk = '$id_produk' ";
+            $db->query($queryProduk);
+            $queryProdukOnProgress = "UPDATE tb_produk_dalam_proses SET id_status_produk_dalam_proses='$id_status_produk_dalam_proses' WHERE id_pemesanan = '$id_pemesanan' ";
+            $db->query($queryProdukOnProgress);
+            echo "updateCancelOrder";   
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }
+    }
+
     if(isset($_GET['selectToDataFotoRetur'])){
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
@@ -189,7 +218,6 @@ if($id_user!=''){
         }
     }
 
-    /*----------------THIS-------------------*/
     if(isset($_GET['selectToDataRefuseRetur'])){
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
@@ -227,8 +255,8 @@ if($id_user!=''){
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT kode_pemesanan, waktu_pemesanan, id_user, username, nama_lengkap, email, nomor_hp, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, pesan_pemesanan, id_proses_pemesanan, proses_pemesanan, id_produk, nama_produk, detail1_produk, jenis_produk, jumlah_pemesanan, harga, diskon, harga_setelah_diskon, total_harga_perproduk, ongkos_kirim, total_harga_yang_harus_dibayar, gambar1_produk, id_satuan_produk, satuan_produk, id_berat_produk, teks_berat_produk, konfersi_berat_produk_perkilogram, id_voucher, kode_voucher, jenis_voucher, total_voucher, waktu_berlaku,  status_voucher, metode_pembayaran, kode_link_pembayaran, pesan_bukti_pembayaran, gambar_bukti_pembayaran, nama_pemilik_rekening,
-tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan = '2'";
+        $query = "SELECT id_pemesanan, kode_pemesanan, waktu_pemesanan, id_user, username, nama_lengkap, email, nomor_hp, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, pesan_pemesanan, id_proses_pemesanan, proses_pemesanan, id_produk, nama_produk, detail1_produk, jenis_produk, jumlah_pemesanan, harga, diskon, harga_setelah_diskon, total_harga_perproduk, ongkos_kirim, total_harga_yang_harus_dibayar, gambar1_produk, id_satuan_produk, satuan_produk, id_berat_produk, teks_berat_produk, konfersi_berat_produk_perkilogram, id_voucher, kode_voucher, jenis_voucher, total_voucher, waktu_berlaku,  status_voucher, metode_pembayaran, kode_link_pembayaran, pesan_bukti_pembayaran, gambar_bukti_pembayaran, nama_pemilik_rekening,
+tanggal_transfer, no_rekening, bank_asal, kode_unik, waktu_batas_checkout FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan = '2'";
         $result = $db->query($query); 
         if($result){
             $selectCartDataByUserToPayment = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -332,6 +360,8 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         $id_user = $_SESSION['id_user'];
         $nama_lengkap = $_SESSION['nama_lengkap'];
         $jumlah_pemesanan = $_POST['jumlahPemesanan']; 
+        $id_pemesanan = $_POST['id_pemesanan']; 
+        $id_produk_send = $_POST['id_produk_send']; 
         $alamatInput = $_POST['alamatInput']; 
         $negaraInput = $_POST['negaraInput']; 
         $provinsiInput = $_POST['provinsiInput']; 
@@ -347,6 +377,10 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         $totalBayarKeseluruhan = $_POST['totalBayarKeseluruhan']; 
         $id_proses_pemesanan = 2;
         $id_proses_pemesanan_from_DB = 1;
+        $resultData = $db->query("select jumlah_stok FROM tb_produk where id_produk='$id_produk_send'");
+        $productData = $resultData->fetch_object();
+        $jumlah_stok=$productData->jumlah_stok;
+        $put_stok_to_produk = $jumlah_stok - $jumlah_pemesanan;
         $pesan_notifikasi ='Pemesanan Barang Atas Nama '.$nama_lengkap.' Dibuat. Dengan Jumlah Pemesanan '.$jumlah_pemesanan.' Pack';
         $id_status_notifikasi = 1;
         $id_status_baca = 1;
@@ -357,13 +391,23 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         $result = mysqli_query($db,$query);
         $baris= mysqli_fetch_array($result);
         $cekKOde= $baris['kode'];
+        $currentTime = time(); 
+        $hoursToAddCheckoutLost = 3;
+        $secondsToAddCheckoutLost = $hoursToAddCheckoutLost * (60 * 60);
+        $createCheckoutLost = $currentTime + $secondsToAddCheckoutLost;
+        $checkoutLost = date("Y-m-d H:i:s", $createCheckoutLost);
+        $id_status_produk_dalam_proses = 1;
         if($alamatInput!=''){
-            $query = "UPDATE tb_pemesanan SET waktu_pemesanan='$waktu_checkout', jumlah_pemesanan='$jumlah_pemesanan', alamat='$alamatInput', negara='$negaraInput', provinsi='$provinsiInput', kabupaten='$kabupatenInput', kota='$kotaInput', kecamatan='$kecamatanInput', kelurahan='$kelurahanInput', kode_pos='$dataKodePos', id_berat_produk='$id_berat_produk', id_proses_pemesanan='$id_proses_pemesanan', ongkos_kirim='$ongkir', total_harga_perproduk='$total_harga_pemesanan', total_harga_yang_harus_dibayar='$totalBayarKeseluruhan', kode_unik = '$kodeUnikPlus' WHERE id_user = $id_user and id_proses_pemesanan='1'";
+            $query = "UPDATE tb_pemesanan SET waktu_pemesanan='$waktu_checkout', jumlah_pemesanan='$jumlah_pemesanan', alamat='$alamatInput', negara='$negaraInput', provinsi='$provinsiInput', kabupaten='$kabupatenInput', kota='$kotaInput', kecamatan='$kecamatanInput', kelurahan='$kelurahanInput', kode_pos='$dataKodePos', id_berat_produk='$id_berat_produk', id_proses_pemesanan='$id_proses_pemesanan', ongkos_kirim='$ongkir', total_harga_perproduk='$total_harga_pemesanan', total_harga_yang_harus_dibayar='$totalBayarKeseluruhan', kode_unik = '$kodeUnikPlus', waktu_batas_checkout='$checkoutLost' WHERE id_user = $id_user and id_proses_pemesanan='1'";
             $db->query($query);
-
+            $queryProduct = "UPDATE tb_produk SET jumlah_stok='$put_stok_to_produk' WHERE id_produk = $id_produk_send";
+            $db->query($queryProduct);
             $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca)
                         VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca')";   
             $db->query($queryNotif); 
+            $queryProductOnProgress = "INSERT INTO tb_produk_dalam_proses(id_produk , tanggal_checkout , id_status_produk_dalam_proses , jumlah_pemesanan, id_berat_produk, id_pemesanan)
+                        VALUES('$id_produk_send', '$waktu_checkout', '$id_status_produk_dalam_proses', '$jumlah_pemesanan', '$id_berat_produk', '$id_pemesanan')";   
+            $db->query($queryProductOnProgress); 
 
             echo "updateCheckOutByUserSuccess";   
         }
@@ -407,14 +451,14 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
         $id_user = $_SESSION['id_user'];
-        $resultSearchDataByUser = $db->query("select * from tb_pemesanan where id_user='$id_user' and (id_proses_pemesanan!='7' and id_proses_pemesanan!='8')");
+        $resultSearchDataByUser = $db->query("select * from view_data_semua_pesanan where id_user='$id_user' and (id_proses_pemesanan!='7' and id_proses_pemesanan!='8')");
         $rowCountByUser=$resultSearchDataByUser->num_rows;
         if($rowCountByUser==0){  
             $resultLastID = $db->query("select max(id_pemesanan) as last_data_pemesanan FROM tb_pemesanan");
             $pemesananDataLastID = $resultLastID->fetch_object();
             $pemesananLast=$pemesananDataLastID->last_data_pemesanan;
             $kode_pemesanan = $pemesananLast + 1;
-            $kode_duren = 'TEST-DATA-1-DR0';
+            $kode_duren = 'TEST-DATA-1-DR0T';
             /*$kode_duren = 'DRN00';*/
             date_default_timezone_set('Asia/Jakarta');
             $waktu_pemesanan = date('Y-m-d H:i:s'); 
@@ -479,9 +523,11 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         $id_user = $_SESSION['id_user'];
         $nama_lengkap = $_SESSION['nama_lengkap'];
         $IdPemesanan = $_POST['IdPemesanan']; 
-        $IdProduk = $_POST['IdProduk']; 
+        $id_pemesanan = $_POST['id_pemesanan']; 
+        $IdProduk  = $_POST['IdProduk']; 
         date_default_timezone_set('Asia/Jakarta');
         $WaktuPemesanan = date('Y-m-d H:i:s');
+        $tanggal_dibeli = date('Y-m-d H:i:s');
         $JumlahPemesanan = $_POST['JumlahPemesanan']; 
         $IdBeratProduk = $_POST['IdBeratProduk']; 
         $TotalPenjualan = $_POST['TotalPenjualan']; 
@@ -504,28 +550,28 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
         $gambar_bukti_pembayaran = $_POST['Gambar']; 
         $total_harga_perproduk = $_POST['TotalPerProduk']; 
         $pesan_notifikasi ='Pembayaran Barang Atas Nama '.$nama_lengkap.' Dibuat. Dengan Jumlah Pemesanan '.$JumlahPemesanan.' Pack';
-
         $id_status_notifikasi = 2;
         $id_status_baca = 1;
         $id_user_baca = 2;
-
+        $id_status_produk_dalam_proses = 3;
         $id_proses_pemesanan = 3;
-        $resultData = $db->query("select jumlah_stok FROM tb_produk where id_produk='$IdProduk'");
+        /*$resultData = $db->query("select jumlah_stok FROM tb_produk where id_produk='$IdProduk'");
         $productData = $resultData->fetch_object();
         $jumlah_stok=$productData->jumlah_stok;
-        $put_stok_to_produk = $jumlah_stok - $JumlahPemesanan;
-
+        $put_stok_to_produk = $jumlah_stok - $JumlahPemesanan;*/
         if($id_user!=''){
             $queryPenjualan = "INSERT INTO tb_penjualan(kode_penjualan, waktu_penjualan, id_produk, jumlah_penjualan, id_berat_produk, total_penjualan, id_user, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, ongkos_kirim, id_voucher, metode_pembayaran, nama_pemilik_rekening, tanggal_transfer, no_rekening, bank_asal, gambar_bukti_pembayaran, total_harga_perproduk )
                             VALUES('$IdPemesanan','$WaktuPemesanan','$IdProduk','$JumlahPemesanan','$IdBeratProduk','$TotalPenjualan','$IdKonsumen','$AlamatKonsumen','$NegaraKonsumen','$ProvinsiKonsumen','$KabupatenKonsumen','$KotaKonsumen','$KecamatanKonsumen','$KelurahanKonsumen','$KodePosKonsumen','$Ongkir','$IdVoucher','$MetodePembayaran','$nama_pemilik_rekening','$tanggal_transfer','$no_rekening','$bank_asal','$gambar_bukti_pembayaran','$total_harga_perproduk')";   
             $db->query($queryPenjualan);     
             $query = "UPDATE tb_pemesanan SET  nama_pemilik_rekening='$nama_pemilik_rekening', tanggal_transfer='$tanggal_transfer', no_rekening='$no_rekening', bank_asal='$bank_asal', id_proses_pemesanan='$id_proses_pemesanan' WHERE id_user = $id_user and id_proses_pemesanan='2'";
             $db->query($query);
+            $queryBarangOnProgress = "UPDATE tb_produk_dalam_proses SET id_status_produk_dalam_proses = '$id_status_produk_dalam_proses', tanggal_dibeli = '$tanggal_dibeli' WHERE id_pemesanan = $id_pemesanan";
+            $db->query($queryBarangOnProgress);
             $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, kode_pemesanan)
                             VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca', '$IdPemesanan')";   
             $db->query($queryNotif); 
-            $queryProduct = "UPDATE tb_produk SET jumlah_stok='$put_stok_to_produk' WHERE id_produk='$IdProduk'";   
-            $db->query($queryProduct); 
+            /*$queryProduct = "UPDATE tb_produk SET jumlah_stok='$put_stok_to_produk' WHERE id_produk='$IdProduk'";   
+            $db->query($queryProduct); */
             echo "updateConfirmationPaymentTransferSuccess";   
         }
         else{
@@ -624,7 +670,7 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik FROM view_data_semua_pesanan
             $returDataLastID = $resultLastID->fetch_object();
             $returLast=$returDataLastID->last_data_retur;
             $kode_retur = $returLast + 1;
-            $kode_text = 'TEST-DATA-1-RTDRN00';
+            $kode_text = 'TEST-DATA-1-RTDRN00T';
             /*$kode_text = 'RTDRN00';*/
             date_default_timezone_set('Asia/Jakarta');
             $waktu_retur = date('Y-m-d H:i:s'); 

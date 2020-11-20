@@ -228,6 +228,7 @@
                 <div class="textTitleLarge-Black">
                     Konfirmasi Pembayaran
                     <input type="hidden" name="IdPemesanan" id="IdPemesanan">
+                    <input type="hidden" name="id_pemesanan" id="id_pemesanan">
                     <input type="hidden" name="IdProduk" id="IdProduk">
                     <input type="hidden" name="WaktuPemesanan" id="WaktuPemesanan">
                     <input type="hidden" name="JumlahPemesanan" id="JumlahPemesanan">
@@ -387,7 +388,7 @@
 <script src="../js/action.js"></script>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionConfirmationPayment.js?v=1.4.3"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionConfirmationPayment.js?v=1.4.6"></script>
 <script type="text/javascript" src="../js/pages/updateDataFotoPayment.js?v=1.4.3"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->

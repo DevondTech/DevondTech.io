@@ -105,27 +105,27 @@ $email = 'kingfruit.co.id@gmail.com';*/
     Terimakasih atas pemesanan & kepercayaan anda kepada kami. Mohon maaf atas ketidaknyamanan anda, berikut pengajuan retur anda yang ditolak:
   </div>
   <br/>
-  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+  <div style="color: #3a3a3a;margin-top: 10px;font-size:14px;">
     <div style="width: 100px;float: left;">Kode Retur  </div>
     <div style="float: left;">: '.$kodeReturSend.'</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+  <div style="color: #3a3a3a;margin-top: 10px;font-size:14px;">
     <div style="width: 100px;float: left;">Pemesan  </div>
     <div style="float: left;">: '.$namaLengkap.'</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+  <div style="color: #3a3a3a;margin-top: 10px;font-size:14px;">
     <div style="width: 100px;float: left;">Produk  </div>
     <div style="float: left;">: '.$namaProduk.'</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+  <div style="color: #3a3a3a;margin-top: 10px;font-size:14px;">
     <div style="width: 100px;float: left;">Jumlah  </div>
     <div style="float: left;">: '.$jumlahPemesanan.' '.$satuanProduk.'</div>
   </div>
   <br />
-  <div style="color: #3a3a3a;margin-top: 10px;font-weight: bold;font-size:14px;">
+  <div style="color: #3a3a3a;margin-top: 10px;font-size:14px;">
     <div>Alasan  Penolakan :</div>
   </div>
   <div style="color: #3a3a3a;margin-top: 5px;font-size:14px;">

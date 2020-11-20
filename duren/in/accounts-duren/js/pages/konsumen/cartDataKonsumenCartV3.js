@@ -52,7 +52,8 @@ $(document).ready(function(){
                     var email_send = DataUser[0].email;
                     var kode_pemesanan_send = DataUser[0].kode_pemesanan;
                     var produk_send = DataNamaProduk;
-                    
+                    var id_produk_send = DataUser[0].id_produk;
+                    var id_pemesanan = DataUser[0].id_pemesanan;
                     var waktu_pemesanan_send = DataUser[0].waktu_pemesanan;
 
                     let getRandomPaymentUnix = function(start, range){
@@ -81,9 +82,10 @@ $(document).ready(function(){
                     $('#produk_send').val(produk_send);
                     $('#jumlah_send_data').val('1');
                     $('#waktu_pemesanan_send').val(waktu_pemesanan_send);
-            
+                    $('#id_produk_send').val(id_produk_send);
                     $('#namaLengkapPrint').text(DataNamaLengkap);
                     $('#nomorHpPrint').text(DataNomorHP);
+                    $('#id_pemesanan').val(id_pemesanan);
 
                     if(DataAlamat == '' || DataAlamat == null){
                         $('#alamatPrint').text('( Silahkan Lengkapi Data Alamat Anda )');

@@ -8,6 +8,7 @@ $(document).ready(function(){
             var DataPayment = jQuery.parseJSON(selectCartDataByUserToPayment);
             var gambar_bukti_pembayaran = DataPayment[0].gambar_bukti_pembayaran;
             var IdPemesanan = DataPayment[0].kode_pemesanan;
+            var id_pemesanan = DataPayment[0].id_pemesanan;
             var WaktuPemesanan = DataPayment[0].waktu_pemesanan;
             var JumlahPemesanan = DataPayment[0].jumlah_pemesanan;
             var IdProduk = DataPayment[0].id_produk;
@@ -30,6 +31,7 @@ $(document).ready(function(){
             var NamaProduk = DataPayment[0].nama_produk;
             var hargaProduk = DataPayment[0].harga;
             var codeUnix = DataPayment[0].kode_unik;
+            var batasWaktuPembayaran = DataPayment[0].waktu_batas_checkout;
 
             $('#IdPemesanan').val(IdPemesanan);
             $('#IdPemesananDelete').val(IdPemesanan);
@@ -52,6 +54,50 @@ $(document).ready(function(){
             $('#MetodePembayaran').val(MetodePembayaran);
             $('#Gambar').val(Gambar);
             $('#TotalPerProduk').val(TotalPerProduk);
+
+            var countDownDate = new Date(batasWaktuPembayaran).getTime();
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (0 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
+                if(hours < 10){
+                    var hours = '0'+hours;
+                }
+                else{
+                    var hours = hours;
+                }
+                if(minutes < 10){
+                    var minutes = '0'+minutes;
+                }
+                else{
+                    var minutes = minutes;
+                }
+                if(seconds < 10){
+                    var seconds = '0'+seconds;
+                }
+                else{
+                    var seconds = seconds;
+                }
+                document.getElementById("timeOutPayment").innerHTML =  hours + ":"
+                  + minutes + ":" + seconds + "";
+                if (distance < 1) {
+                    clearInterval(x);
+                    $('#timeOutPayment').attr('style','display:none;')
+                    $.ajax({
+                        type: "GET",
+                        url: "../../../conn/data2/cartProcess/cartProcess.php/?updateCancelOrder="+id_pemesanan,
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function() { 
+                            
+                        }
+                    });
+                    location.reload();
+                }
+            }, 1000);
 
             var IdPemesanan = DataPayment[0].kode_pemesanan;
             var totalHargaPerproduk = DataPayment[0].total_harga_perproduk;

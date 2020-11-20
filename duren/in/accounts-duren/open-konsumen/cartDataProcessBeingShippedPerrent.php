@@ -161,7 +161,7 @@
                 <div class="row">
                     <div class="borderImgLeft col-lg-6 col-md-6 col-sm-6">
                         <a  style="color:#2d472c;">
-                            <img src="../images/icon png/barang-dikirim.png" class="imgDataNull">
+                            <img src="../images/icon png/barang-diterima.png" class="imgDataNull">
                             <div class="textClickToProduct">Barang Sudah Diterima</div>
                         </a>
                     </div>

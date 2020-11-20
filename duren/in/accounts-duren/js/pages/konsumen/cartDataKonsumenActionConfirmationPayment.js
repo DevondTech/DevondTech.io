@@ -7,6 +7,7 @@ $(document).ready(function(){
         success: function(selectCartDataByUserToPayment) { 
             var DataPayment = jQuery.parseJSON(selectCartDataByUserToPayment);
             var IdPemesanan = DataPayment[0].kode_pemesanan;
+            var id_pemesanan = DataPayment[0].id_pemesanan;
             var WaktuPemesanan = DataPayment[0].waktu_pemesanan;
             var JumlahPemesanan = DataPayment[0].jumlah_pemesanan;
             var IdProduk = DataPayment[0].id_produk;
@@ -48,6 +49,7 @@ $(document).ready(function(){
             $('#MetodePembayaran').val(MetodePembayaran);
             $('#Gambar').val(Gambar);
             $('#TotalPerProduk').val(TotalPerProduk);
+            $('#id_pemesanan').val(id_pemesanan);
             
             var IdPemesanan = DataPayment[0].kode_pemesanan;
             var totalHargaPerproduk = DataPayment[0].total_harga_perproduk;

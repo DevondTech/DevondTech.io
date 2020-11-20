@@ -400,6 +400,20 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="positionTextDetailOrder">
+                                     <div class="widthBorder2 cardBorderBottomGrey" style="margin-bottom: 5px;margin-left: 4px;"></div>
+                                </div>
+                                <div style="margin-left: 4px;" >
+                                    <div class="positionTextDetailOrder">
+                                        <div class="inputTotalHarga floatLeftCartData" >
+                                            <div class=" marginPRek textRekning floatLeftCartData fontS14" style="margin-top:10px;font-size: 18px;padding-bottom: 10px;" >
+                                                <div style="float: left;" >Batas Waktu </div>
+                                                <div style="float: left;margin-left: 10px;padding-right: 10px;">:</div>
+                                                <div id='timeOutPayment' style="float: left;font-weight: normal;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- <div style="margin-left: 4px;" style="margin-top: 1px;">
                                     <div class="positionTextDetailOrder">
                                         <div class=" textTotalHarga floatLeftCartData" >
@@ -436,7 +450,7 @@
 <script src="../js/action.js"></script>
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmationView.js?v=2.1.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenPaymentConfirmationView.js?v=2.1.7"></script>
 <!-- Scrol -->
 <!-- <script src="../css/scroll/js/scroll.js"></script> -->
 </body>
