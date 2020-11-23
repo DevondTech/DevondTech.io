@@ -24,6 +24,7 @@ $(window).on('load',function(e){
 		$("#product-link").attr("class","active-menu-right");
 		$("#medsos-link").attr("class","displayLink-none");
 		$("#about-link").attr("class","displayLink-none");
+		$("#faq-link").attr("class","displayLink-none");
 	}
 	else if(checkOpen=='6253d45afe1a6a339716fa75b06e374069ea59aa'){
 		$("#content-profile").load("cartDataPaymentAdmin.php");
@@ -46,6 +47,7 @@ $(window).on('load',function(e){
 		$("#medsos-link").attr("class","displayLink-none");
 		$("#about-link").attr("class","displayLink-none");
 		$("#testimoni-link").attr("class","displayLink-none");
+		$("#faq-link").attr("class","displayLink-none");
 
 		$("#payment-link").attr("class","active-menu-right");
 	}
@@ -70,6 +72,7 @@ $(window).on('load',function(e){
 		$("#medsos-link").attr("class","displayLink-none");
 		$("#about-link").attr("class","displayLink-none");
 		$("#testimoni-link").attr("class","displayLink-none");
+		$("#faq-link").attr("class","displayLink-none");
 
 		$("#shipped-link").attr("class","active-menu-right");
 	}
@@ -94,6 +97,7 @@ $(window).on('load',function(e){
 		$("#medsos-link").attr("class","displayLink-none");
 		$("#about-link").attr("class","displayLink-none");
 		$("#testimoni-link").attr("class","displayLink-none");
+		$("#faq-link").attr("class","displayLink-none");
 
 		$("#retur-link").attr("class","active-menu-right");
 	}
@@ -119,6 +123,7 @@ $(window).on('load',function(e){
 		$("#medsos-link").attr("class","displayLink-none");
 		$("#about-link").attr("class","displayLink-none");
 		$("#testimoni-link").attr("class","displayLink-none");
+		$("#faq-link").attr("class","displayLink-none");
 
 		$("#retur-link").attr("class","active-menu-right");
 	}
@@ -170,6 +175,7 @@ $(window).on('load',function(e){
 		$("#medsos-link").attr("class","displayLink-none");
 		$("#about-link").attr("class","displayLink-none");
 		$("#testimoni-link").attr("class","displayLink-none");
+		$("#faq-link").attr("class","displayLink-none");
 	}
 
     $.ajax({
@@ -303,6 +309,7 @@ $('#review-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");	
 	$("#testimoni-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 
 	$.ajax({
 	    type : 'POST',
@@ -347,6 +354,7 @@ $('#finish-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
 	$("#testimoni-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 
 	$("#finish-link").attr("class","active-menu-right");
 });
@@ -372,6 +380,7 @@ $('#sales-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
 	$("#testimoni-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 
 	$("#sales-link").attr("class","active-menu-right");
 });
@@ -397,6 +406,7 @@ $('#retur-all-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
 	$("#testimoni-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 
 	$("#retur-all-link").attr("class","active-menu-right");
 });
@@ -422,6 +432,7 @@ $('#retur-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
 	$("#testimoni-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 
 	$("#retur-link").attr("class","active-menu-right");
 	/*$.ajax({
@@ -464,6 +475,7 @@ $('#ontheway-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
 	$("#testimoni-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 
 	$("#ontheway-link").attr("class","active-menu-right");
 });
@@ -488,6 +500,7 @@ $('#shipped-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
 	$("#testimoni-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 
 	$("#shipped-link").attr("class","active-menu-right");
 });
@@ -513,6 +526,7 @@ $('#payment-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
 	$("#testimoni-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 
 	$("#payment-link").attr("class","active-menu-right");
 
@@ -558,6 +572,7 @@ $('#account-edit').on('click',function(e){
 	$("#account-edit-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 });
 
 
@@ -584,6 +599,7 @@ $('#product-link').on('click',function(e){
 	$("#product-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 });
 
 $('#product-link-on-progress').on('click',function(e){
@@ -609,6 +625,7 @@ $('#product-link-on-progress').on('click',function(e){
 	$("#product-link-on-progress").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 });
 
 
@@ -637,6 +654,7 @@ $('#create-user-link').on('click',function(e){
 	$("#create-user-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 });
 
 
@@ -665,6 +683,7 @@ $('#account-edit-link').on('click',function(e){
 	$("#account-edit-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 });
 
 
@@ -693,6 +712,7 @@ $('#account-link').on('click',function(e){
 	$("#account-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 });
 
 
@@ -721,6 +741,7 @@ $('#password-link').on('click',function(e){
 	$("#password-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 });
 
 
@@ -749,6 +770,7 @@ $('#notification-link').on('click',function(e){
 	$("#notification-link").attr("class","active-menu-right");
 	$("#medsos-link").attr("class","displayLink-none");
 	$("#about-link").attr("class","displayLink-none");
+	$("#faq-link").attr("class","displayLink-none");
 });
 
 /*if click link*/
@@ -776,6 +798,7 @@ $('#company-profile').on('click',function(e){
 	$("#testimoni-link").attr("class","displayLink-block menu-waves-block");
 	$("#about-link").attr("class","displayLink-block active-menu-right");
 	$("#medsos-link").attr("class","displayLink-block menu-waves-block");
+	$("#faq-link").attr("class","displayLink-block menu-waves-block");
 });
 
 $('#about-link').on('click',function(e){
@@ -801,6 +824,7 @@ $('#about-link').on('click',function(e){
 	$("#testimoni-link").attr("class","displayLink-block menu-waves-block");
 	$("#about-link").attr("class","displayLink-block active-menu-right");
 	$("#medsos-link").attr("class","displayLink-block menu-waves-block");
+	$("#faq-link").attr("class","displayLink-block menu-waves-block");
 });
 
 $('#medsos-link').on('click',function(e){
@@ -824,6 +848,33 @@ $('#medsos-link').on('click',function(e){
 	$("#payment-link").attr("class","menu-waves-block");
 
 	$("#medsos-link").attr("class","displayLink-block active-menu-right");
+	$("#faq-link").attr("class","displayLink-block menu-waves-block");
+	$("#testimoni-link").attr("class","displayLink-block menu-waves-block");
+	$("#about-link").attr("class","displayLink-block menu-waves-block");
+});
+
+$('#faq-link').on('click',function(e){
+	$("#content-profile").load("faqAdmin.php");
+
+	$("#review-link").attr("class","menu-waves-block");
+	$("#finish-link").attr("class","menu-waves-block");
+	$("#sales-link").attr("class","menu-waves-block");
+	$("#retur-all-link").attr("class","menu-waves-block");
+	$("#retur-link").attr("class","menu-waves-block");
+	$("#ontheway-link").attr("class","menu-waves-block");
+	$("#shipped-link").attr("class","menu-waves-block");
+	$("#account-edit-link").attr("class","menu-waves-block");
+	$("#account-link").attr("class","menu-waves-block");
+	$("#product-link").attr("class","menu-waves-block");
+	$("#product-link-on-progress").attr("class","menu-waves-block");
+	$("#create-user-link").attr("class","menu-waves-block");
+	$("#notification-link").attr("class","menu-waves-block");
+	$("#logout-link").attr("class","menu-waves-block");
+	$("#password-link").attr("class","menu-waves-block");
+	$("#payment-link").attr("class","menu-waves-block");
+
+	$("#faq-link").attr("class","displayLink-block active-menu-right");
+	$("#medsos-link").attr("class","displayLink-block menu-waves-block");
 	$("#testimoni-link").attr("class","displayLink-block menu-waves-block");
 	$("#about-link").attr("class","displayLink-block menu-waves-block");
 });
@@ -851,6 +902,7 @@ $('#testimoni-link').on('click',function(e){
 	$("#medsos-link").attr("class","displayLink-block menu-waves-block");
 	$("#testimoni-link").attr("class","displayLink-block active-menu-right");
 	$("#about-link").attr("class","displayLink-block menu-waves-block");
+	$("#faq-link").attr("class","displayLink-block menu-waves-block");
 });
 
 

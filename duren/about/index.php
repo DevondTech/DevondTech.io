@@ -98,10 +98,10 @@
               About US 
             </div>
             <div class="fontData2" style="font-size: 14px;" >
-              King Fruit hadir sejak 18 September 2020 melalui e-commerce, dengan produk pertama adalah SUPER MONTONG. Kami berkomitmen untuk menghadirkan berbagai jenis durian lokal dari pelosok Nusantara. Dengan konsep cara baru makan duren, menjadi kampanye hidup bersih di kala pandemi ini.
+              King Fruit hadir sejak 18 September 2020 dengan produk pertama adalah SUPER MONTONG. Kami berkomitmen untuk menghadirkan berbagai jenis durian lokal dari pelosok Nusantara. Dengan konsep cara baru makan duren, kami menyajikan duren dengan rasa yang berkualitas, konsisten dan dikemas secara higienis.
+<!--               <br />
               <br />
-              <br />
-              Ini #carabarumakanduren !
+              Ini #carabarumakanduren ! -->
             </div>
           </div>      
         </div>

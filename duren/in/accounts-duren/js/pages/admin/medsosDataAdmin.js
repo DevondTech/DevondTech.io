@@ -1,5 +1,5 @@
 $(document).ready(function(){   
-	$.ajax({
+    $.ajax({
      	type: 'POST',
      	url: '../../../conn/data2/companyProfile/medsos_data.php/?facebook',
      	contentType: 'application/json; charset=utf-8',

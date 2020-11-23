@@ -3,6 +3,6 @@
         'host' => 'localhost',
         'user' => 'root',
         'pass' => '',
-        'db'   => 'db_duren'
+        'db'   => 'db_durian'
     );
 ?>

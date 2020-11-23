@@ -39,6 +39,9 @@
   <link href="../scroll/css/style.css?v=1.0.1" rel="stylesheet" />
   <link rel="stylesheet" href="../js/sweetAlert/sweetalert2.min.css">
   <style type="text/css"> 
+    #detail1Produk{
+      white-space:pre-wrap;
+    }
 
     .fontData{
       font-family: 'Open Sans', sans-serif
@@ -273,7 +276,7 @@
             </div>
             <!-- <div style="font-size: 14px;" id="topText"></div> -->
             <div class="fontData2" style="font-size: 14px;" >
-              Durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan <b>Super Montong</b> sebagai produk pertama yang dihadirkan untuk para durian lovers. <b>Premium Quality Super Montong</b> tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.
+              Durian LOKAL yang FENOMENAL! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan <b>Super Montong</b> sebagai produk pertama yang dihadirkan untuk para durian lovers. <b>Premium Quality Super Montong</b> tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.
             </div>
           </div>      
         </div>

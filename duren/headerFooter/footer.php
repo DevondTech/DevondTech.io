@@ -49,6 +49,9 @@
                 <div class="padding-linkFooter" id="logoutFooter">
                   <a href="../conn/logout.php" class="a-colorWhite">Logout</a>
                 </div>
+                <div class="padding-linkFooter" id="FAQ">
+                  <a href="../FAQ" class="a-colorWhite">FAQ</a>
+                </div>
               </div>
             </div>
             <div class="padF20px col-lg-6 col-md-12 col-sm-12">

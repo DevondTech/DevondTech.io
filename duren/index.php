@@ -39,6 +39,9 @@
   <link rel="stylesheet" href="js/sweetAlert/sweetalert2.min.css">
   <link rel="stylesheet" href="js/sweetAlert/sweetalert2.min.css">
   <style type="text/css">
+    #detail1Produk{
+      white-space:pre-wrap;
+    }
 
     .fontData{
       font-family: 'Open Sans', sans-serif
@@ -337,7 +340,7 @@
             </div>
             <!-- <div style="font-size: 14px;" id="topText"> -->
             <div class="fontData2" style="font-size: 14px;" >
-              Durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan <b>Super Montong</b> sebagai produk pertama yang dihadirkan untuk para durian lovers. <b>Premium Quality Super Montong</b> tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.
+              Durian LOKAL yang FENOMENAL! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan <b>Super Montong</b> sebagai produk pertama yang dihadirkan untuk para durian lovers. <b>Premium Quality Super Montong</b> tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan.
               <!-- 
               Kini waktunya durian LOKAL yang FENOMENAL ! King Fruit menghadirkan buah durian dengan rasa berkualitas dari masa panen pilihan dan Super Montong sebagai produk pertama yang dihadirkan untuk para durian lovers. Premium Quality Super Montong tergambar dari ketebalan daging, konsistensi rasa yang legit, manis dan creamy. Dan yang pasti rasa yang tidak akan terlupakan. -->
             </div>
@@ -675,6 +678,9 @@
                   <div class="padding-linkFooter">
                   <a href="testimoni" class="a-colorWhite">Testimoni</a>
                   </div>
+                  <div class="padding-linkFooter" id="FAQ">
+                    <a href="FAQ" class="a-colorWhite">FAQ</a>
+                  </div>
                   <!-- <div class="padding-linkFooter">
                   <a href="" class="a-colorWhite">Event</a>
                   </div> -->
@@ -785,7 +791,7 @@
 <script type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript" src="js/slideSmall.js"></script>
-<script type="text/javascript" src="js/durian.js?v=2.1.2"></script>
+<script type="text/javascript" src="js/durian.js?v=2.1.6"></script>
 <script type="text/javascript" src="in/accounts-duren/js/pages/konsumen/cartDataKonsumenActionCart.js?v=1.7.4"></script>
 <script type="text/javascript" src="js/sweetAlert/sweetalert2.all.min.js"></script>
 <script type="text/javascript">

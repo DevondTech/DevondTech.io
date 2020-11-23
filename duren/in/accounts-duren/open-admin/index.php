@@ -350,6 +350,14 @@
                             <span><font class="icon-menu-active">Testimoni Sosial</font></span>
                         </a>
                     </li>
+                    <li class="displayLink-none menu-waves-block" id="faq-link">
+                        <a  id="waves-effect-this">
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/link/medsos.svg" width="20" height="20">
+                            </div>
+                            <span><font class="icon-menu-active">FAQ Data</font></span>
+                        </a>
+                    </li>
                     <!-- <li class="menu-waves-block" id="notification-link">
                         <a  id="waves-effect-this">
                             <div class="icon-menu-img-left">
@@ -402,7 +410,7 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.8.2"></script>
+<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.8.3"></script>
 
 <script type="text/javascript" src="../js/pages/admin/adminCheckData.js?v=1.1.1"></script>
 

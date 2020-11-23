@@ -202,6 +202,53 @@ if($id_user!=''){
         }
     }
 
+    if(isset($_GET['updateCancelOrderAdmin'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        $id_status_user = $_SESSION['id_status_user'];
+        if($id_user!='' && $id_status_user=='1'){
+            $callData = $db->query("select id_pemesanan, kode_pemesanan, jumlah_pemesanan, id_produk, waktu_batas_checkout, jumlah_pemesanan FROM tb_pemesanan WHERE id_proses_pemesanan='2'");
+            $rowCount = $callData->num_rows;
+            if($rowCount>0){
+                while($callDataToActionAuto=mysqli_fetch_array($callData)){
+                    $kode_pemesanan = $callDataToActionAuto['kode_pemesanan'];
+                    $id_produk = $callDataToActionAuto['id_produk'];
+                    $waktu_batas_checkout = $callDataToActionAuto['waktu_batas_checkout'];
+                    $id_pemesanan = $callDataToActionAuto['id_pemesanan'];
+                    $jumlah_pemesanan = $callDataToActionAuto['jumlah_pemesanan'];
+                    date_default_timezone_set('Asia/Jakarta');
+                    $now = date('Y-m-d H:i:s'); 
+                    $komentar = ''; 
+                    if($now > $waktu_batas_checkout){
+                        $callDataStokByOrder = $db->query("select id_produk, jumlah_stok FROM tb_produk WHERE id_produk='$id_produk'");
+                        $callDataStokByOrderToPrint = $callDataStokByOrder->fetch_object();
+                        $jumlah_stok = $callDataStokByOrderToPrint->jumlah_stok;
+                        $jumlah_stok_update =  $jumlah_stok + $jumlah_pemesanan;
+                        $id_status_produk_dalam_proses = 2;
+                        $id_proses_pemesanan = 10;
+                        $queryPemesanan = "UPDATE tb_pemesanan SET id_proses_pemesanan='$id_proses_pemesanan' WHERE id_pemesanan = '$id_pemesanan' ";
+                        $db->query($queryPemesanan);
+                        $queryProduk = "UPDATE tb_produk SET jumlah_stok='$jumlah_stok_update' WHERE id_produk = '$id_produk' ";
+                        $db->query($queryProduk);
+                        $queryProdukOnProgress = "UPDATE tb_produk_dalam_proses SET id_status_produk_dalam_proses='$id_status_produk_dalam_proses' WHERE id_pemesanan = '$id_pemesanan' ";
+                        $db->query($queryProdukOnProgress);
+                        echo "updateCancelOrder";   
+                    }
+                    else{
+                        echo 'notActionUpdateCancelOrder';
+                    }
+                }
+            }
+            else{
+                echo 'dataNotFound';
+            } 
+        }
+        else{
+            header('Location: https://kingfruit.co.id/');
+        }
+    }
+
     if(isset($_GET['selectToDataFotoRetur'])){
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
@@ -458,7 +505,7 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik, waktu_batas_checkout FROM v
             $pemesananDataLastID = $resultLastID->fetch_object();
             $pemesananLast=$pemesananDataLastID->last_data_pemesanan;
             $kode_pemesanan = $pemesananLast + 1;
-            $kode_duren = 'TEST-DATA-1-DR0T';
+            $kode_duren = 'TEST-DATA-23112020-DR0T';
             /*$kode_duren = 'DRN00';*/
             date_default_timezone_set('Asia/Jakarta');
             $waktu_pemesanan = date('Y-m-d H:i:s'); 
@@ -670,7 +717,7 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik, waktu_batas_checkout FROM v
             $returDataLastID = $resultLastID->fetch_object();
             $returLast=$returDataLastID->last_data_retur;
             $kode_retur = $returLast + 1;
-            $kode_text = 'TEST-DATA-1-RTDRN00T';
+            $kode_text = 'TEST-DATA-23112020-RTDRN00T';
             /*$kode_text = 'RTDRN00';*/
             date_default_timezone_set('Asia/Jakarta');
             $waktu_retur = date('Y-m-d H:i:s'); 

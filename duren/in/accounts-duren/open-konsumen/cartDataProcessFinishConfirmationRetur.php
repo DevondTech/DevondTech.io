@@ -3,6 +3,16 @@
 <head>
 	<title></title>
 <style type="text/css">
+	.cardReturProvisions{
+		border: 1px solid grey;
+	    border-radius: 5px;
+	    margin-top: 20px;
+	    padding: 30px;
+	}
+
+	.f-bold{
+		font-weight: bold;
+	}
 
 	.imageStar-smallLeft-detailComment {
 	    display: block;
@@ -169,6 +179,15 @@
 	    width: auto;
 	}
 
+	@media(max-width: 767px){
+		.cardReturProvisions{
+			border: 1px solid grey;
+		    border-radius: 5px;
+		    margin-top: 20px;
+		    padding: 15px;
+		}
+	}
+
 	@media(max-width: 650px){
 		.imageStar-smallLeft-detailComment {
 		    display: block;
@@ -223,6 +242,23 @@
         <div class="textTitleLarge-Black">
             Kirim Pengajuan Retur
         </div>
+    </div>
+    <div class="cardReturProvisions">
+    	<div>
+    		<div class="f-bold">A.  Berikut ketentuan mengajukan Retur barang:</div>
+	    	<br />
+			1.  Barang yang diterima dalam keadaan rusak, kurang jumlahnya, atau tidak sesuai dengan deskripsi produk yang dicantumkan.<br />
+			2.  King Fruit dengan sengaja mengirimkan barang yang tidak sesuai dengan spesifikasi yang telah disepakati saat melakukan transaksi.<br />
+			3.  Pembeli bisa mengajukan pengembalian barang (retur) maksimal 2×24 jam (sejak barang diterima).<br />
+			4.  Pembeli harus menghubungi admin King Fruit melalui CS / email untuk setiap kendala yang berkaitan dengan barang yang dibeli.<br />
+			5.  Apabila sudah terjadi kesepakatan antara pembeli dan King Fruit, kedua belah pihak harus melakukan konfirmasi ke admin melalui Pusat Bantuan (info@kingfruit.co.id atau WA 081311993939)<br />
+			*sertakan juga bukti/foto barang, dan bukti percakapan antara pembeli dan admin agar memudahkan tim  King Fruit menyelesaikan permasalahan tersebut.<br />
+			6.  Admin King Fruit akan menentukan apakah permohonan retur dari pembeli berhasil atau tidak. <br />
+			7.  Pembeli wajib melampirkan kartu garansi dan contact admin melalui platform yang disediakan.<br />
+			8. Ongkos kirim ditanggung pembeli. <br />
+			*saat pengembalian barang<br />
+			9. Tidak ada pengembalian berupa dana, barang yang rusak akan ditukar dengan barang baru atau voucher untuk pembelian selanjutnya.<br />
+    	</div>
     </div>
     <div class="padLeft20CartData">
         <div class=" col-divCartData" >
