@@ -92,7 +92,7 @@
 <script type="text/javascript"  src="../js/jquery.js" ></script>
 <!-- Jquery Ajax Js -->
 <script type="text/javascript" src="../js/ajax/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/pages/admin/faqAdmin.js?v=1.1.2"></script>
+<script type="text/javascript" src="../js/pages/admin/faqAdmin.js?v=1.1.3"></script>
 </body>
 
 </html>

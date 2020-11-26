@@ -3,15 +3,15 @@ session_start();
 $id_user = $_SESSION['id_user'];
 $id_status_user = $_SESSION['id_status_user'];
 if($id_user!='' && $id_status_user=='1'){
-    if(isset($_GET['callDataFAQ'])){
+    if(isset($_GET['callData'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
-        $query = "SELECT * FROM tb_faq where id_faq='1'";
+        $query = "SELECT * FROM tb_faq where id_faq=1";
         $result = $db->query($query); 
 
-        $callDataFAQ = mysqli_fetch_all($result,MYSQLI_ASSOC);
-        $callDataFAQ=json_encode($callDataFAQ);
-        echo json_encode($callDataFAQ);
+        $callData = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $callData=json_encode($callData);
+        echo json_encode($callData);
     }
 
     if(isset($_GET['updateDataFAQ'])){

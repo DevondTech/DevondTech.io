@@ -1,23 +1,17 @@
 $(document).ready(function(){   
     $.ajax({
      	type: 'POST',
-     	url: '../../../conn/data2/companyProfile/faqAdmin.php/?callDataFAQ',
+     	url: '../../../conn/data2/companyProfile/faqAdmin.php/?callData',
      	contentType: 'application/json; charset=utf-8',
         dataType: 'json',
-     	success: function(callDataFAQ) { 
+     	success: function(callData) { 
 
- 			var DataFAQ = jQuery.parseJSON(callDataFAQ);
-
- 			/*var PrintDetail_id_faq = DataFAQ[0].id_faq;*/
- 			var PrintDetail_faq = DataFAQ[0].faq;
-
-            /*$('#PrintDetail_faq').val(faq);*/
+ 			var CallData = jQuery.parseJSON(callData);
+ 			var PrintDetail_faq = CallData[0].faq;
             $('#PrintDetail_faq').val(PrintDetail_faq);
-         
         }
     });   
 
-     /*facebook edit*/
     $("#faq_SaveCancelDataDetailProductAdmin").attr('style','display:none;');
     $("#PrintDetail_faq").attr('style','background-color:#f1e8e8;color: #505050;padding-top: 4px;');
 

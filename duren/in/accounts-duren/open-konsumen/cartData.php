@@ -240,6 +240,135 @@
         margin-top: -3px;
     }
 
+    .voucherCard{
+        width: 300px;
+        float:right;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .aCol{
+        color: #2d472c;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .aCol:hover{
+        color: #dcb704;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .btnSelectVoucher{
+        color: white;
+        background-color: #2d472c;
+        border-style: none;
+        border-radius: 5px;
+        border: 1px solid #2d472c;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .btnSelectVoucher:hover{
+        color: #2d472c;
+        background-color: white;
+        border-style: none;
+        border-radius: 5px;
+        border: 1px solid #2d472c;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .btnCancelSelectVoucher{
+        color: white;
+        background-color: #fb483a;
+        border-style: none;
+        border-radius: 5px;
+        border: 1px solid #fb483a;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .btnCancelSelectVoucher:hover{
+        color: #fb483a;
+        background-color: white;
+        border-style: none;
+        border-radius: 5px;
+        border: 1px solid #fb483a;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .leftVoucher{
+        height: 160px;
+        background-color: transparent;
+    }
+
+    .rightVoucherTitle{
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        padding-top: 10px;
+    }
+
+    .rightVoucherDetail{
+        font-size: 16px;
+        color: #333;
+        padding-top: 5px;
+    }
+
+    .rightVoucherDate{
+        font-size: 16px;
+        color: #8a8a8a;
+        padding-top: 5px;
+        font-style: italic;
+    }
+
+    .imgVoucher{
+        height: 140px;
+        width: 140px;
+    }
+
+    .buttonSelectVoucherByCode{
+        background-color: white;
+        color: #2d472c;
+        font-weight: bold;
+        font-style: normal;
+        border-radius: 4px;
+        border: 1px solid #2d472c;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    .buttonSelectVoucherByCode:hover{
+        background-color: #2d472c;
+        color: white;
+        font-weight: bold;
+        font-style: normal;
+        border-radius: 4px;
+        border: 1px solid #2d472c;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
     @media(max-width: 991px){
 
         .centerPosition1{
@@ -276,6 +405,87 @@
     }
 
     @media(max-width: 767px){
+
+        .rightVoucherTitle{
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            padding-top: 10px;
+        }
+
+        .rightVoucherDetail{
+            font-size: 13px;
+            color: #333;
+            padding-top: 5px;
+        }
+
+        .rightVoucherDate{
+            font-size: 13px;
+            color: #8a8a8a;
+            padding-top: 5px;
+            font-style: italic;
+        }
+
+        .btnSelectVoucher{
+            color: white;
+            background-color: #2d472c;
+            border-style: none;
+            border-radius: 5px;
+            border: 1px solid #2d472c;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 16px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .btnSelectVoucher:hover{
+            color: #2d472c;
+            background-color: white;
+            border-style: none;
+            border-radius: 5px;
+            border: 1px solid #2d472c;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 16px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .btnCancelSelectVoucher{
+            color: white;
+            background-color: #fb483a;
+            border-style: none;
+            border-radius: 5px;
+            border: 1px solid #fb483a;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 16px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .btnCancelSelectVoucher:hover{
+            color: #fb483a;
+            background-color: white;
+            border-style: none;
+            border-radius: 5px;
+            border: 1px solid #fb483a;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 16px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .voucherCard{
+            width: 232px;
+            float: right;
+            font-size: 13px;
+            padding-bottom: 15px;
+            margin-bottom: 0px;
+            margin-top: -24px;
+            font-weight: 100px;
+        }
 
         .w150{
             width: 130px;
@@ -423,7 +633,31 @@
     input[type=number] {
       -moz-appearance: textfield;
     }
+    @media(max-width: 505px){
+        .rightVoucherTitle{
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            padding-top: 0px;
+        }
 
+        .imgVoucher{
+            height: 100px;
+            width: 100px;
+        }
+    }
+    @media(max-width: 421px){
+        .imgVoucher{
+            height: 80px;
+            width: 80px;
+        }
+        .rightVoucherTitle {
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            padding-top: 0px; 
+        }
+    }
     @media(max-width: 448px){
         .widthBorder{
             width: 100%;
@@ -728,6 +962,18 @@
                             Aksi
                             </div> -->
                             <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="border-bottom: 1px solid grey;margin-bottom: 35px;">
+                                    <div class="voucherCard">
+                                        <div style="float: left;padding-right: 10px;">
+                                            VOUCHER 
+                                        </div>
+                                        <div>
+                                            <a  data-toggle="modal" data-target="#voucherMdl" class="aCol" id="buttonShowVoucher" style="">GUNAKAN/MASUKKAN</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-lg-9 col-md-9 col-sm-12">
                                     <div style="margin-left: 4px;">
                                         <div class="positionTextDetailOrder">
@@ -831,8 +1077,50 @@
 
 <script src="../js/action.js"></script>
 <script src="../js/pages/konsumen/cartDataKonsumenCartV3.js?v=1.1.5"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.5"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.6"></script>
 
+<div id="voucherMdl" class="modal fade" >
+    <div class="modal-dialog modal-md">
+        <div class="modal-content w100">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-t20">VOUCHER KING FRUIT</h4>
+            </div>
+            <div class="modal-body" id="modal-body-pad" style="height: 500px;" >
+                <div style="width: 100%;height: 400px;overflow: scroll;">
+                    <div id="data" class="row" style="margin-left: 0px;margin-right: 0px;" >
+                    <!-- <div id="" class="row" style="margin-left: 0px;margin-right: 0px;" >
+                        
+                        <div class="paddingBottomCardMinTablet col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="leftVoucher">
+                                <img  class="imgVoucher" src="../images/voucher/gratis.png">
+                            </div>
+                        </div>
+                        <div class="paddingBottomCardMinTablet col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 300px;">
+                            <div class="rightVoucherTitle">
+                                this Header
+                            </div>
+                            <div class="rightVoucherDetail">
+                                this Detail
+                            </div>
+                            <div class="rightVoucherDate">
+                                this Date
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                
+            </div>
+            <div style="float: right;margin-top: 20px;">
+                <div style="float: left;padding-right: 10px;">
+                    <button id="cancelSelectVoucher" class="btnCancelSelectVoucher" type="button" data-dismiss="modal">Keluar</button>
+                </div>
+                <!-- <div style="float: left">
+                    <button id="selectVoucher" class="btnSelectVoucher" type="button">Pilih</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
-

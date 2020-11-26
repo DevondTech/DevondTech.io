@@ -1,5 +1,4 @@
 $('#checkOutActionButton').on('click',function(e){
-
   var alamatInput = $('#alamatInput').val();
   var negaraInput = $('#negaraInput').val();
   var provinsiInput = $('#provinsiInput').val();
@@ -23,7 +22,6 @@ $('#checkOutActionButton').on('click',function(e){
   var id_produk_send = $('#id_produk_send').val();
   var data = $("#checkOutActionForm").serialize();
   $.ajax({
-
     type : 'POST',
     url  : '../../../conn/data2/cartProcess/cartProcess.php/?updateCheckOutByUser',
     data : data,
@@ -63,5 +61,42 @@ $('#checkOutActionButton').on('click',function(e){
     }    
   });
   return false;
+});
 
+$('#buttonShowVoucher').on('click', function(e){
+    $.ajax({
+        type: 'POST',
+        url: '../../../conn/data2/voucher/dataVoucher.php?selectData',
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function(selectData) { 
+            const DataVoucher = jQuery.parseJSON(selectData);
+            var waktu_berlaku = DataVoucher[0].waktu_berlaku; 
+            var gambar_voucher = DataVoucher[0].gambar_voucher; 
+            var jenis_voucher = DataVoucher[0].jenis_voucher; 
+            var status_voucher = DataVoucher[0].status_voucher; 
+            var kode_voucher = DataVoucher[0].kode_voucher; 
+            var id_voucher = DataVoucher[0].id_voucher; 
+            var toDoItems = DataVoucher;
+            var id_pemesanan = $('#id_pemesanan').val();
+            var parsed = "";
+            var nHTML = '';
+            toDoItems.forEach(function(item, index, array) {
+            nHTML+= '<form id="formData'+item.kode_voucher+'"  class="formDataVoucher" method="POST" action="../../../conn/data2/voucher/updateVoucherID.php?0e2d42465dbfbf7cf71ff0d5b26eb1f8434e0bb1='+item.id_voucher+'&&cd775679d623fc90663c6d7688654d5ea5a7837a='+id_pemesanan+'">'+'<div id="rowdata" class="paddingBottomCardMinTablet col-lg-4 col-md-4 col-sm-4 col-xs-4" id="'+item.kode_voucher+'"  >'+'<div class="leftVoucher">'+'<img  class="imgVoucher" src="'+item.gambar_voucher+'">'+'</div>'+'</div>'+'<div class="paddingBottomCardMinTablet col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 160px;">'+'<div class="rightVoucherTitle">'+item.jenis_voucher+'</div>'+'<div class="rightVoucherDetail">'+item.status_voucher+'</div>'+'<div class="rightVoucherDate">'+item.waktu_berlaku+'<input type="hidden" id="dataVoucherID'+item.kode_voucher+'" value="'+item.kode_voucher+'">'+'<div style="margin-top:10px;">'+'<button id="thisID" class="buttonSelectVoucherByCode" type="submit">'+'THIS'+'</button>'+'</div>'+'</div>'+'</div>'+'</form>';
+                console.log(item.kode_voucher);
+                $('#data').on('click', function(e){
+                    var dataVoucherID = $('#dataVoucherID').val();
+                    console.log(dataVoucherID);
+                });   
+            });
+            if(DataVoucher!='' || DataVoucher!=null){
+                document.getElementById("data").innerHTML =  nHTML;
+                var idF = document.getElementById("data").innerHTML =  nHTML;
+                var dataVoucherID = $('#dataVoucherID').val();
+            }
+            else{
+                 document.getElementById("data").innerHTML =  'Belum Ada Voucher';
+            }
+        }
+    });
 });
