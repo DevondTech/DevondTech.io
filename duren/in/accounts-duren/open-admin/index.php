@@ -223,6 +223,14 @@
                             <span id=""><font class="icon-menu-active">Data Produk</font></span>
                         </a>
                     </li>
+                    <li class="menu-waves-block" id="voucher-link">
+                        <a  id="waves-effect-this" >
+                            <div class="icon-menu-img-left">
+                                <img src="../images/durian/admin/Data produk.svg" width="20" height="20">
+                            </div>
+                            <span id=""><font class="icon-menu-active">Data Voucher</font></span>
+                        </a>
+                    </li>
                     <li class="menu-waves-block" id="product-link-on-progress">
                         <a  id="waves-effect-this" >
                             <div class="icon-menu-img-left">
@@ -410,7 +418,7 @@
 <!-- Demo Js -->
 <script type="text/javascript" src="../js/demo.js"></script>
 <!-- Flash Js -->
-<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.8.3"></script>
+<script type="text/javascript" src="../js/pages/admin/adminProfile.js?v=1.8.4"></script>
 
 <script type="text/javascript" src="../js/pages/admin/adminCheckData.js?v=1.1.1"></script>
 

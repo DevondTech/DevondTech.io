@@ -975,6 +975,38 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-9 col-md-9 col-sm-12">
+                                    <div style="margin-left: 4px;"> 
+                                        <div class="positionTextDetailOrder">
+                                            <div class="w150 textTotalHarga floatLeftCartData" >
+                                                Jenis Voucher
+                                            </div>
+                                            <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">
+                                                :  
+                                            </div>
+                                            <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
+                                                <div class="marginLeft10 floatLeftCartData">
+                                                    <input type="hidden" name="jenis_voucher"  style="color: #737373;" id="jenis_voucher" class="input-textDataUser-false" >
+                                                    <input type="text" name="jenis_voucher_tampil"  style="color: #737373;background-color: transparent; text-overflow: ellipsis;" id="jenis_voucher_tampil" class="input-textDataUser-false" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-left: 4px;"> 
+                                        <div class="positionTextDetailOrder">
+                                            <div class="w150 textTotalHarga floatLeftCartData" >
+                                                Potongan Voucher
+                                            </div>
+                                            <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">
+                                                :  
+                                            </div>
+                                            <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
+                                                <div class="marginLeft10 floatLeftCartData">
+                                                    <input type="hidden" name="voucher"  style="color: #737373;" id="voucher" class="input-textDataUser-false" >
+                                                    <input type="text" name="voucher_tampil"  style="color: #737373;background-color: transparent;" id="voucher_tampil" class="input-textDataUser-false" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div style="margin-left: 4px;">
                                         <div class="positionTextDetailOrder">
                                             <div class="w150 textTotalHarga floatLeftCartData" >
@@ -1077,7 +1109,7 @@
 
 <script src="../js/action.js"></script>
 <script src="../js/pages/konsumen/cartDataKonsumenCartV3.js?v=1.1.5"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.6"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.7"></script>
 
 <div id="voucherMdl" class="modal fade" >
     <div class="modal-dialog modal-md">

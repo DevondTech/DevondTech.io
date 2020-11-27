@@ -55,6 +55,25 @@ $(document).ready(function(){
                     var id_produk_send = DataUser[0].id_produk;
                     var id_pemesanan = DataUser[0].id_pemesanan;
                     var waktu_pemesanan_send = DataUser[0].waktu_pemesanan;
+                    var id_voucher = DataUser[0].id_voucher;
+                    var kode_voucher = DataUser[0].kode_voucher;
+                    var jenis_voucher = DataUser[0].jenis_voucher;
+                    var total_voucher = DataUser[0].total_voucher;
+                    var status_voucher = DataUser[0].status_voucher;
+
+                    if(total_voucher=='' || total_voucher==null){
+                        var total_voucher = 0;
+                    }
+                    else{
+                        var total_voucher = total_voucher;
+                    }
+
+                    if(jenis_voucher=='' || jenis_voucher==null){
+                        var jenis_voucher = 'Belum Memilih Voucher';
+                    }
+                    else{
+                        var jenis_voucher = jenis_voucher;
+                    }
 
                     let getRandomPaymentUnix = function(start, range){
                       let getRandom = Math.floor((Math.random() * range) + start);
@@ -76,6 +95,21 @@ $(document).ready(function(){
                     }
                     $('#kodeUnik_tampil').val('Rp '+dataCreateOpenRupiah+',00');
                     $('#kodeUnikPlus').val(dataCreate);
+
+                    var dataTotalVoucher = total_voucher;
+                    var dataTotalVoucherNumberString = dataTotalVoucher.toString(),
+                    dataTotalVoucherSisa  = dataTotalVoucherNumberString.length % 3,
+                    dataTotalVoucherRupiah  = dataTotalVoucherNumberString.substr(0, dataTotalVoucherSisa),
+                    dataTotalVoucherRibuan  = dataTotalVoucherNumberString.substr(dataTotalVoucherSisa).match(/\d{3}/g);         
+                    if (dataTotalVoucherRibuan) {
+                        dataTotalVoucherSeparator = dataTotalVoucherSisa ? '.' : '';
+                        dataTotalVoucherRupiah += dataTotalVoucherSeparator + dataTotalVoucherRibuan.join('.');
+                    }
+
+                    $('#voucher_tampil').val('( - Rp '+dataTotalVoucherRupiah+',00 )');
+                    $('#voucher').val(dataTotalVoucher);
+                    $('#jenis_voucher_tampil').val(jenis_voucher);
+                    $('#jenis_voucher').val(jenis_voucher);
 
                     $('#email_send').val(email_send);
                     $('#kode_pemesanan_send').val(kode_pemesanan_send);
