@@ -59,7 +59,6 @@ $(document).ready(function(){
                     var kode_voucher = DataUser[0].kode_voucher;
                     var jenis_voucher = DataUser[0].jenis_voucher;
                     var total_voucher = DataUser[0].total_voucher;
-                    var status_voucher = DataUser[0].status_voucher;
 
                     if(total_voucher=='' || total_voucher==null){
                         var total_voucher = 0;

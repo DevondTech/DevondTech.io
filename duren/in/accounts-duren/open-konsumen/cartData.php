@@ -1108,8 +1108,8 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCartV3.js?v=1.1.5"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.7"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenCartV3.js?v=1.1.6"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.9"></script>
 
 <div id="voucherMdl" class="modal fade" >
     <div class="modal-dialog modal-md">
