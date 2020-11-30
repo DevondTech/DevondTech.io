@@ -55,11 +55,11 @@ $(document).ready(function(){
                     var id_produk_send = DataUser[0].id_produk;
                     var id_pemesanan = DataUser[0].id_pemesanan;
                     var waktu_pemesanan_send = DataUser[0].waktu_pemesanan;
-                    var id_voucher = DataUser[0].id_voucher;
+                    var id_voucher_by_user = DataUser[0].id_voucher_by_user;
                     var kode_voucher = DataUser[0].kode_voucher;
                     var jenis_voucher = DataUser[0].jenis_voucher;
                     var total_voucher = DataUser[0].total_voucher;
-
+                    $('#id_voucher_by_user').val(id_voucher_by_user);
                     if(total_voucher=='' || total_voucher==null){
                         var total_voucher = 0;
                     }
@@ -82,7 +82,7 @@ $(document).ready(function(){
                       return getRandom
                     }
                     var dataCreate = getRandomPaymentUnix(1,80); 
-                    console.log(dataCreate);
+                    //console.log(dataCreate);
                     var dataCreateOpen = dataCreate;
                     var dataCreateOpenNumberString = dataCreateOpen.toString(),
                     dataCreateOpenSisa  = dataCreateOpenNumberString.length % 3,
@@ -190,10 +190,10 @@ $(document).ready(function(){
                     $('#total_harga_pemesanan').val(harga);
                     $('#total_harga_pemesanan_tampil2').val('Rp '+hargaRupiah+',00');
                     $('#total_harga_pemesanan2').val(harga);
-                    $('#totalBayarKeseluruhan').val(+harga + +ongkir + +dataCreate);
+                    $('#totalBayarKeseluruhan').val(+harga + +ongkir + +dataCreate - +total_voucher);
 
                     var checkBayar = $('#totalBayarKeseluruhan').val();
-                    console.log(checkBayar);
+                    //console.log(checkBayar);
 
                     var totalBayarKeseluruhanCall = $('#totalBayarKeseluruhan').val();
                     var totalBayarKeseluruhanCall = totalBayarKeseluruhanCall;
@@ -290,7 +290,7 @@ $(document).ready(function(){
                         $('#total_harga_pemesanan2').val(totalHarga);
                         var total_harga_pemesanan2 = $('#total_harga_pemesanan2').val();
                         var ongkirCallback = $('#ongkir').val();
-                        var totalYangHarusDibayar = +total_harga_pemesanan2 + +ongkir;
+                        var totalYangHarusDibayar = +total_harga_pemesanan2 + +ongkir - +total_voucher;
                         var totalYangHarusDibayar = dataCreate + +totalYangHarusDibayar;
                         var totalBayarKeseluruhanNumberString = totalYangHarusDibayar.toString(),
                         totalBayarKeseluruhanSisa    = totalBayarKeseluruhanNumberString.length % 3,

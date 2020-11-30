@@ -361,7 +361,7 @@
                     <li class="displayLink-none menu-waves-block" id="faq-link">
                         <a  id="waves-effect-this">
                             <div class="icon-menu-img-left">
-                                <img src="../images/durian/link/medsos.svg" width="20" height="20">
+                                <img src="../images/icon png/faq.png" width="20" height="20">
                             </div>
                             <span><font class="icon-menu-active">FAQ Data</font></span>
                         </a>

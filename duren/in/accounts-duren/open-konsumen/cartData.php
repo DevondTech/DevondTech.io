@@ -964,11 +964,11 @@
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12" style="border-bottom: 1px solid grey;margin-bottom: 35px;">
                                     <div class="voucherCard">
-                                        <div style="float: left;padding-right: 10px;">
+                                       <!--  <div style="float: left;padding-right: 10px;">
                                             VOUCHER 
-                                        </div>
+                                        </div> -->
                                         <div>
-                                            <a  data-toggle="modal" data-target="#voucherMdl" class="aCol" id="buttonShowVoucher" style="">GUNAKAN/MASUKKAN</a>
+                                            <a  data-toggle="modal" data-target="#voucherMdl" class="aCol" id="buttonShowVoucher" style="float: right;">PILIH VOUCHER</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1108,8 +1108,8 @@
 </div>    
 
 <script src="../js/action.js"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenCartV3.js?v=1.1.6"></script>
-<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.1.9"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenCartV3.js?v=1.2.1"></script>
+<script src="../js/pages/konsumen/cartDataKonsumenActionCheckOutV3.js?v=1.2.2"></script>
 
 <div id="voucherMdl" class="modal fade" >
     <div class="modal-dialog modal-md">
@@ -1117,6 +1117,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-t20">VOUCHER KING FRUIT</h4>
+                <input type="hidden" name="id_voucher_by_user" id="id_voucher_by_user">
             </div>
             <div class="modal-body" id="modal-body-pad" style="height: 500px;" >
                 <div style="width: 100%;height: 400px;overflow: scroll;">
@@ -1155,4 +1156,7 @@
     </div>
 </div>
 </body>
+<script type="text/javascript">
+
+</script>
 </html>

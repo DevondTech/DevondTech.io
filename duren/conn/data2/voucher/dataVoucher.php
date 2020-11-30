@@ -6,7 +6,7 @@
         $json = json_decode(file_get_contents('php://input'), true);
         date_default_timezone_set('Asia/Jakarta');
         $now = date('Y-m-d H:i:s'); 
-        $query = "SELECT id_voucher, kode_voucher, jenis_voucher, judul_voucher, waktu_berlaku, waktu_berlaku_detail, gambar_voucher, total_voucher FROM view_data_voucher_by_user where waktu_berlaku_detail >= '$now' and  id_user='$id_user'";
+        $query = "SELECT id_voucher_by_user , id_voucher, kode_voucher, jenis_voucher, judul_voucher, waktu_berlaku, waktu_berlaku_detail, gambar_voucher, total_voucher FROM view_data_voucher_by_user where waktu_berlaku_detail >= '$now' and  id_user='$id_user'";
         $result = $db->query($query);      
         if($result){
             $selectData = mysqli_fetch_all($result,MYSQLI_ASSOC);

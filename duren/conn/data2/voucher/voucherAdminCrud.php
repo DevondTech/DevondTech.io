@@ -81,11 +81,16 @@ if($id_user!='' && $id_status_user=='1'){
         while($row = mysqli_fetch_array($result))
         {
             $id_user= $row['id_user'];
-            $id_status_voucher = '1';
-            $query = "INSERT INTO tb_voucher_by_user(id_voucher, id_user, id_status_voucher)
+            $id_status_voucher = 1;
+            $checkNull = 0;
+            if($id_voucher!=$checkNull){
+                $query = "INSERT INTO tb_voucher_by_user(id_voucher, id_user, id_status_voucher)
                     VALUES('$id_voucher', '$id_user', '$id_status_voucher')";   
-            $db->query($query); 
-            echo $id_user;
+                $db->query($query); 
+                echo $id_user;
+            }
+            else{
+            }
         }
         $kode_kirim_konsumen = 2;
         $queryUpVoucher = "UPDATE tb_voucher SET  kode_kirim_konsumen='$kode_kirim_konsumen' WHERE kode_kirim_konsumen='1' and waktu_berlaku='$waktu_berlaku'";
@@ -102,6 +107,16 @@ if($id_user!='' && $id_status_user=='1'){
         $checkVoucherKode = mysqli_fetch_all($result,MYSQLI_ASSOC);
         $checkVoucherKode=json_encode($checkVoucherKode);
         echo json_encode($checkVoucherKode);
+    }
+
+    if(isset($_GET['selectPrintVoucher'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT id_voucher, kode_voucher, judul_voucher, jenis_voucher, total_voucher, waktu_berlaku, gambar_voucher, status_kirim_konsumen FROM view_data_voucher where id_voucher ='".$_GET['selectPrintVoucher']."'";
+        $result = $db->query($query); 
+        $selectPrintVoucher = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $selectPrintVoucher=json_encode($selectPrintVoucher);
+        echo json_encode($selectPrintVoucher);
     }
     
 }
