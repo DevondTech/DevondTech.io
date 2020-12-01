@@ -16,6 +16,26 @@
 <title>Account</title>
 <link href="../css/dataUserLogin.css?v=1.1.1" rel="stylesheet" />
 <style type="text/css">
+    .selectMethodPayment{
+        width: 200px;
+        background-color: transparent;
+        margin-top: -1px;
+    }
+
+    .selectMethodPayment:hover{
+        width: 200px;
+        background-color: transparent;
+        margin-top: -1px;
+    }
+
+    .paymentMethodCard{
+        margin-top: 12px;
+        border: 1px solid grey;
+        padding-top: 15px;
+        width: 70%;
+        padding-left: 15px;
+        border-radius: 4px;
+    }
 
     /*.textDataUser {
         text-align: end;
@@ -156,6 +176,26 @@
 
     @media(max-width: 767px){
 
+        .selectMethodPayment{
+            width: 120px;
+            background-color: transparent;
+            margin-top: 0px;
+        }
+
+        .selectMethodPayment:hover{
+            width: 120px;
+            background-color: transparent;
+            margin-top: 0px;
+        }
+        
+        .paymentMethodCard{
+            margin-top: 12px;
+            border: 1px solid grey;
+            padding-top: 7px;
+            width: 70%;
+            padding-left: 15px;
+        }
+
         .divPositionTextRekAdmin{
             float: left;
             padding-right: 4px;
@@ -245,6 +285,14 @@
 
     
     @media(max-width: 448px){
+
+        .paymentMethodCard{
+            margin-top: 12px;
+            border: 1px solid grey;
+            padding-top: 7px;
+            width: 100%;
+            padding-left: 10px;
+        }
 
         .widthBorder2{
             width: 100%;
@@ -346,6 +394,23 @@
                                             <div class="marginLeft10 floatLeftCartData">
                                                 <input type="hidden" name="totalBayarKeseluruhan"   id="totalBayarKeseluruhan" class="input-textDataUser-false"  >
                                                 <input type="text" name="totalBayarKeseluruhan_tampil"  style="color: #3c3838;" id="totalBayarKeseluruhan_tampil" class="input-textDataUser-false" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="paymentMethodCard">
+                                    <div class="positionTextDetailOrder" >
+                                        <div class="w150 textTotalHarga floatLeftCartData"  >
+                                            Metode Pembayaran
+                                        </div>
+                                        <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">
+                                            :  
+                                        </div>
+                                        <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
+                                            <div class="marginLeft10 floatLeftCartData" style="margin-top: -1px;">
+                                                <select name="id_metode_pembayaran" class="selectMethodPayment input-textDataUser-false" id="id_metode_pembayaran">
+                                                        </select>
+                                                <input type="hidden" name="id_metode_pembayaran_call_back"  style="color: #3c3838;" id="id_metode_pembayaran_call_back" class="input-textDataUser-false" >
                                             </div>
                                         </div>
                                     </div>

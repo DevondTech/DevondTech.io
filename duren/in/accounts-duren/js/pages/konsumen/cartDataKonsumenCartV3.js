@@ -1,6 +1,20 @@
 $(document).ready(function(){
     $.ajax({
         type: "GET",
+        url: "../../../conn/data2/cartProcess/cartProcess.php/?ongkirCall",
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function(ongkirCall) { 
+          var DataOngkir = jQuery.parseJSON(ongkirCall);
+          var ongkirPrint = DataOngkir[0].ongkir;
+          $('#ongkir').val(ongkirPrint);
+          $('#ongkir_tampil').val(ongkirPrint);
+        }
+    });
+
+
+    $.ajax({
+        type: "GET",
         url: "../../../conn/data2/cartProcess/cartProcess.php/?selectDataWeightProduct",
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
@@ -145,7 +159,7 @@ $(document).ready(function(){
                     $('#harga_sebelum_diskon').val(DataHarga);
                     $('#harga_tampil').val(DataHargaSetelahDiskon);
                     $('#harga').val(DataHargaSetelahDiskon);          
-                    $('#ongkir').val('0');
+                    //$('#ongkir').val('0');
                     $('#ongkir_tampil').val('0');
                     var ongkir = $('#ongkir').val();
                     var ongkirNumberString = ongkir.toString(),

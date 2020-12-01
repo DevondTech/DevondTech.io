@@ -3,6 +3,32 @@ session_start();
 $id_user = $_SESSION['id_user'];
 if($id_user!=''){
 
+    if(isset($_GET['ongkirCall'])){
+        $userDataID = $_SESSION['id_user'];
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT id_ongkir, ongkir FROM tb_ongkir where id_ongkir ='1'";
+        $result = $db->query($query);      
+        if($result){
+            $ongkirCall = mysqli_fetch_all($result,MYSQLI_ASSOC);
+            $ongkirCall=json_encode($ongkirCall);
+            echo json_encode($ongkirCall);
+        }else{
+            $ongkirCall ='0';
+            echo json_encode($ongkirCall);
+        }
+    }
+
+    if(isset($_GET['methodPayment'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT id_metode_pembayaran, metode_pembayaran FROM rt_metode_pembayaran";
+        $result = $db->query($query); 
+        $methodPaymentCallBack = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        $methodPaymentCallBack=json_encode($methodPaymentCallBack);
+        echo json_encode($methodPaymentCallBack);
+    }
+
     if(isset($_GET['updateConfirmationReturTransfer'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);
@@ -655,6 +681,25 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik, waktu_batas_checkout FROM v
         if($id_user!=''){
 
             $query = "UPDATE tb_pemesanan SET  gambar_bukti_pembayaran='a' WHERE id_user = $id_user and id_proses_pemesanan =$id_proses_pemesanan" ;
+            $db->query($query);
+
+            echo "confirmationFormPicHaluSuccess";   
+        }
+        else{
+            echo "erorDATA";
+        }
+    }
+
+    if(isset($_GET['confirmationFormPicHaluLinkAja'])){
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $id_user = $_SESSION['id_user'];
+        /*$kodeUnikPlus = $_POST['kodeUnikPlus'];*/
+        $gambar_bukti_pembayaran = ''; 
+        $id_proses_pemesanan = 2;
+        if($id_user!=''){
+
+            $query = "UPDATE tb_pemesanan SET  gambar_bukti_pembayaran='../images/link-aja.png' WHERE id_user = $id_user and id_proses_pemesanan =$id_proses_pemesanan" ;
             $db->query($query);
 
             echo "confirmationFormPicHaluSuccess";   

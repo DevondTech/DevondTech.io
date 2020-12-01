@@ -1,6 +1,23 @@
 $(document).ready(function(){
     $.ajax({
         type: "GET",
+        url: "../../../conn/data2/cartProcess/cartProcess.php/?methodPayment",
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function(methodPaymentCallBack) { 
+          var DataPaymentMethod = jQuery.parseJSON(methodPaymentCallBack);
+          var html = '';
+            for(var count = 0; count < DataPaymentMethod.length; count++)
+            {
+              html += '<option value="'+DataPaymentMethod[count].id_metode_pembayaran+'">'+DataPaymentMethod[count].metode_pembayaran+'</option>';
+            }
+          $('#id_metode_pembayaran').html(html);
+          
+        }
+    });
+
+    $.ajax({
+        type: "GET",
         url: "../../../conn/data2/cartProcess/cartProcess.php/?selectCartDataByUserToPaymentCall",
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
@@ -194,28 +211,56 @@ $(document).ready(function(){
             $('#NumberRekening').text(NumberRekening);
         }
     });
-    
-    $('#confirmationButton').on('click', function(){
-        var data = $("#confirmationFormPicHalu").serialize();
-        $.ajax({
-            type : 'POST',
-            url  : '../../../conn/data2/cartProcess/cartProcess.php/?confirmationFormPicHalu',
-            data : data,
-            beforeSend: function()
-            { 
-              $("#error").fadeOut();
-              $("#btnCancelConfirmationDetailPayment").html('<span class="glyphicon glyphicon-transfer"></span>   Process ');
-            }, 
-            success :  function(response)
-            {
-              if(response == "confirmationFormPicHaluSuccess"){
-                location.reload();
-              }
-              else{
 
-              }
-            }    
-        });
-        return false;
+    $('#confirmationButton').on('click', function(){
+        var callIDMethod = $('#id_metode_pembayaran').val();
+        $('#id_metode_pembayaran_call_back').val(callIDMethod);
+        var callIDMethodToAction =  $('#id_metode_pembayaran_call_back').val();
+        if(callIDMethodToAction == '1'){
+            var data = $("#confirmationFormPicHalu").serialize();
+            $.ajax({
+                type : 'POST',
+                url  : '../../../conn/data2/cartProcess/cartProcess.php/?confirmationFormPicHaluLinkAja',
+                data : data,
+                beforeSend: function()
+                { 
+                  $("#error").fadeOut();
+                  $("#btnCancelConfirmationDetailPayment").html('<span class="glyphicon glyphicon-transfer"></span>   Process ');
+                }, 
+                success :  function(response)
+                {
+                  if(response == "confirmationFormPicHaluSuccess"){
+                    location.reload();
+                  }
+                  else{
+
+                  }
+                }    
+            });
+            return false;
+        }
+        else{
+            var data = $("#confirmationFormPicHalu").serialize();
+            $.ajax({
+                type : 'POST',
+                url  : '../../../conn/data2/cartProcess/cartProcess.php/?confirmationFormPicHalu',
+                data : data,
+                beforeSend: function()
+                { 
+                  $("#error").fadeOut();
+                  $("#btnCancelConfirmationDetailPayment").html('<span class="glyphicon glyphicon-transfer"></span>   Process ');
+                }, 
+                success :  function(response)
+                {
+                  if(response == "confirmationFormPicHaluSuccess"){
+                    location.reload();
+                  }
+                  else{
+
+                  }
+                }    
+            });
+            return false;
+        } 
     });
 });
