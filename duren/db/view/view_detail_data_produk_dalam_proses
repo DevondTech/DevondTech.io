@@ -1,0 +1,18 @@
+SELECT
+tb_produk_dalam_proses.id_produk_dalam_proses AS id_produk_dalam_proses,
+tb_produk_dalam_proses.id_produk AS id_produk,
+tb_produk.nama_produk AS nama_produk,
+tb_produk_dalam_proses.tanggal_checkout AS tanggal_checkout,
+tb_produk_dalam_proses.tanggal_batal_dipesan AS tanggal_batal_dipesan,
+tb_produk_dalam_proses.tanggal_dibeli AS tanggal_dibeli,
+tb_produk_dalam_proses.id_status_produk_dalam_proses AS id_status_produk_dalam_proses,
+rt_status_produk_dalam_proses.status_produk_dalam_proses AS status_produk_dalam_proses,
+tb_produk_dalam_proses.id_berat_produk AS id_berat_produk,
+tb_produk_dalam_proses.jumlah_pemesanan AS jumlah_pemesanan,
+tb_produk.id_satuan_produk AS id_satuan_produk,
+rt_satuan_produk.satuan_produk AS satuan_produk
+FROM
+(((tb_produk_dalam_proses
+JOIN tb_produk ON (tb_produk_dalam_proses.id_produk = tb_produk.id_produk))
+LEFT JOIN rt_status_produk_dalam_proses ON (tb_produk_dalam_proses.id_status_produk_dalam_proses = rt_status_produk_dalam_proses.id_status_produk_dalam_proses))
+JOIN rt_satuan_produk ON (tb_produk.id_satuan_produk = rt_satuan_produk.id_satuan_produk))

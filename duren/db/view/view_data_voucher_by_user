@@ -1,0 +1,21 @@
+SELECT
+tb_voucher_by_user.id_voucher_by_user AS id_voucher_by_user,
+tb_voucher_by_user.id_voucher AS id_voucher,
+tb_voucher.kode_voucher AS kode_voucher,
+tb_voucher.judul_voucher AS judul_voucher,
+tb_voucher.id_jenis_voucher AS id_jenis_voucher,
+rt_jenis_voucher.jenis_voucher AS jenis_voucher,
+tb_voucher.total_voucher AS total_voucher,
+tb_voucher.waktu_berlaku AS waktu_berlaku_detail,
+date_format(`tb_voucher`.`waktu_berlaku`,'%e/%c/%Y %H:%i') AS waktu_berlaku,
+tb_voucher_by_user.id_status_voucher AS id_status_voucher,
+rt_status_voucher.status_voucher AS status_voucher,
+tb_voucher.gambar_voucher AS gambar_voucher,
+tb_voucher_by_user.id_user AS id_user
+FROM
+(((tb_voucher_by_user
+JOIN tb_voucher ON (tb_voucher_by_user.id_voucher = tb_voucher.id_voucher))
+JOIN rt_status_voucher ON (tb_voucher_by_user.id_status_voucher = rt_status_voucher.id_status_voucher))
+JOIN rt_jenis_voucher ON (tb_voucher.id_jenis_voucher = rt_jenis_voucher.id_jenis_voucher))
+WHERE
+tb_voucher_by_user.id_status_voucher = 1 

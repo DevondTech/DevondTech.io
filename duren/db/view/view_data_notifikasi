@@ -1,0 +1,14 @@
+SELECT
+tb_notifikasi.id_notifikasi AS id_notifikasi,
+tb_notifikasi.pesan_notifikasi AS pesan_notifikasi,
+tb_notifikasi.id_status_notifikasi AS id_status_notifikasi,
+rt_status_notifikasi.status_notifikasi AS status_notifikasi,
+tb_notifikasi.id_status_baca AS id_status_baca,
+rt_status_baca.status_baca AS status_baca,
+tb_notifikasi.id_user_baca AS id_user_baca,
+rt_user_baca.user_baca AS user_baca
+FROM
+(((tb_notifikasi
+LEFT JOIN rt_status_notifikasi ON (tb_notifikasi.id_status_notifikasi = rt_status_notifikasi.id_status_notifikasi))
+LEFT JOIN rt_status_baca ON (tb_notifikasi.id_status_baca = rt_status_baca.id_status_baca))
+LEFT JOIN rt_user_baca ON (tb_notifikasi.id_user_baca = rt_user_baca.id_user_baca))

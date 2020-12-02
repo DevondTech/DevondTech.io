@@ -1,0 +1,51 @@
+SELECT
+tb_penjualan.id_penjualan AS id_penjualan,
+tb_penjualan.kode_penjualan AS kode_penjualan,
+tb_penjualan.waktu_penjualan AS waktu_penjualan_detail,
+date_format(`tb_penjualan`.`waktu_penjualan`,'%e/%c/%Y %H:%i') AS waktu_penjualan,
+tb_penjualan.id_user AS id_user,
+tb_login_user.username AS username,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.email AS email,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_login_user.foto AS foto,
+tb_penjualan.alamat AS alamat,
+tb_penjualan.negara AS negara,
+tb_penjualan.provinsi AS provinsi,
+tb_penjualan.kabupaten AS kabupaten,
+tb_penjualan.kota AS kota,
+tb_penjualan.kecamatan AS kecamatan,
+tb_penjualan.kelurahan AS kelurahan,
+tb_penjualan.kode_pos AS kode_pos,
+tb_penjualan.id_produk AS id_produk,
+tb_produk.nama_produk AS nama_produk,
+tb_produk.id_jenis_produk AS id_jenis_produk,
+rt_jenis_produk.jenis_produk AS jenis_produk,
+tb_produk.id_satuan_produk AS id_satuan_produk,
+rt_satuan_produk.satuan_produk AS satuan_produk,
+tb_penjualan.jumlah_penjualan AS jumlah_penjualan,
+tb_penjualan.id_berat_produk AS id_berat_produk,
+rt_berat_produk_pemesanan.teks_berat_produk AS teks_berat_produk,
+rt_berat_produk_pemesanan.konfersi_berat_produk_perkilogram AS konfersi_berat_produk_perkilogram,
+tb_penjualan.ongkos_kirim AS ongkos_kirim,
+tb_penjualan.id_voucher AS id_voucher,
+rt_jenis_voucher.jenis_voucher AS jenis_voucher,
+tb_penjualan.id_metode_pembayaran,
+rt_metode_pembayaran.metode_pembayaran,
+tb_penjualan.pesan_bukti_pembayaran AS pesan_bukti_pembayaran,
+tb_penjualan.nama_pemilik_rekening AS nama_pemilik_rekening,
+tb_penjualan.tanggal_transfer AS tanggal_transfer,
+tb_penjualan.no_rekening AS no_rekening,
+tb_penjualan.bank_asal AS bank_asal,
+tb_penjualan.gambar_bukti_pembayaran AS gambar_bukti_pembayaran,
+tb_penjualan.total_harga_perproduk AS total_harga_perproduk,
+tb_penjualan.total_penjualan AS total_penjualan
+FROM
+((((((tb_penjualan
+LEFT JOIN tb_login_user ON (tb_penjualan.id_user = tb_login_user.id_user))
+LEFT JOIN tb_produk ON (tb_penjualan.id_produk = tb_produk.id_produk))
+LEFT JOIN rt_jenis_produk ON (tb_produk.id_jenis_produk = rt_jenis_produk.id_jenis_produk))
+LEFT JOIN rt_berat_produk_pemesanan ON (tb_penjualan.id_berat_produk = rt_berat_produk_pemesanan.id_berat_produk))
+LEFT JOIN rt_jenis_voucher ON (tb_penjualan.id_voucher = rt_jenis_voucher.id_jenis_voucher))
+LEFT JOIN rt_satuan_produk ON (tb_produk.id_satuan_produk = rt_satuan_produk.id_satuan_produk))
+LEFT JOIN rt_metode_pembayaran ON tb_penjualan.id_metode_pembayaran = rt_metode_pembayaran.id_metode_pembayaran 

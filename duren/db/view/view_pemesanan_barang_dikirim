@@ -1,0 +1,15 @@
+SELECT
+tb_pemesanan.id_pemesanan AS id_pemesanan,
+tb_pemesanan.kode_pemesanan AS kode_pemesanan,
+tb_pemesanan.id_user AS id_user,
+tb_login_user.username AS username,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_pemesanan.id_proses_pemesanan AS id_proses_pemesanan,
+concat(`tb_pemesanan`.`alamat`,', ',`tb_pemesanan`.`kelurahan`,', ',`tb_pemesanan`.`kecamatan`,', ',`tb_pemesanan`.`kota`,', ',`tb_pemesanan`.`kabupaten`,', ',`tb_pemesanan`.`provinsi`,' - ',`tb_pemesanan`.`negara`,', ',' Kode POS :',' ',`tb_pemesanan`.`kode_pos`) AS alamat,
+rt_proses_pemesanan.proses_pemesanan AS proses_pemesanan
+FROM
+((tb_pemesanan
+JOIN tb_login_user ON (tb_pemesanan.id_user = tb_login_user.id_user))
+JOIN rt_proses_pemesanan ON (rt_proses_pemesanan.id_proses_pemesanan = tb_pemesanan.id_proses_pemesanan))
+WHERE
+tb_pemesanan.id_proses_pemesanan = '9'

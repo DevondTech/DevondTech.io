@@ -341,6 +341,22 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik, waktu_batas_checkout FROM v
         }
     }
 
+    if(isset($_GET['selectCartDataByUserToPaymentLinkAja'])){
+        $userDataID = $_SESSION['id_user'];
+        require '../config.php'; 
+        $json = json_decode(file_get_contents('php://input'), true);
+        $query = "SELECT id_pemesanan, id_user, kode_pemesanan, nomor_hp, nama_produk, harga, jumlah_pemesanan, id_proses_pemesanan, gambar_bukti_pembayaran, total_harga_yang_harus_dibayar FROM view_data_semua_pesanan where id_user ='$userDataID' and id_proses_pemesanan = '2'";
+        $result = $db->query($query); 
+        if($result){
+            $selectCartDataByUserToPaymentLinkAja = mysqli_fetch_all($result,MYSQLI_ASSOC);
+            $selectCartDataByUserToPaymentLinkAja=json_encode($selectCartDataByUserToPaymentLinkAja);
+            echo json_encode($selectCartDataByUserToPaymentLinkAja);
+        }else{
+            $selectCartDataByUserToPayment ='';
+            echo json_encode($selectCartDataByUserToPaymentLinkAja);
+        }
+    }
+
 	if(isset($_GET['selectDataUserDetailAlamat'])){
         $userDataID = $_SESSION['id_user'];
         require '../config.php'; 
@@ -628,12 +644,8 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik, waktu_batas_checkout FROM v
         $id_user_baca = 2;
         $id_status_produk_dalam_proses = 3;
         $id_proses_pemesanan = 3;
-        /*$resultData = $db->query("select jumlah_stok FROM tb_produk where id_produk='$IdProduk'");
-        $productData = $resultData->fetch_object();
-        $jumlah_stok=$productData->jumlah_stok;
-        $put_stok_to_produk = $jumlah_stok - $JumlahPemesanan;*/
         if($id_user!=''){
-            $queryPenjualan = "INSERT INTO tb_penjualan(kode_penjualan, waktu_penjualan, id_produk, jumlah_penjualan, id_berat_produk, total_penjualan, id_user, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, ongkos_kirim, id_voucher, metode_pembayaran, nama_pemilik_rekening, tanggal_transfer, no_rekening, bank_asal, gambar_bukti_pembayaran, total_harga_perproduk )
+            $queryPenjualan = "INSERT INTO tb_penjualan(kode_penjualan, waktu_penjualan, id_produk, jumlah_penjualan, id_berat_produk, total_penjualan, id_user, alamat, negara, provinsi, kabupaten, kota, kecamatan, kelurahan, kode_pos, ongkos_kirim, id_voucher, id_metode_pembayaran, nama_pemilik_rekening, tanggal_transfer, no_rekening, bank_asal, gambar_bukti_pembayaran, total_harga_perproduk )
                             VALUES('$IdPemesanan','$WaktuPemesanan','$IdProduk','$JumlahPemesanan','$IdBeratProduk','$TotalPenjualan','$IdKonsumen','$AlamatKonsumen','$NegaraKonsumen','$ProvinsiKonsumen','$KabupatenKonsumen','$KotaKonsumen','$KecamatanKonsumen','$KelurahanKonsumen','$KodePosKonsumen','$Ongkir','$IdVoucher','$MetodePembayaran','$nama_pemilik_rekening','$tanggal_transfer','$no_rekening','$bank_asal','$gambar_bukti_pembayaran','$total_harga_perproduk')";   
             $db->query($queryPenjualan);     
             $query = "UPDATE tb_pemesanan SET  nama_pemilik_rekening='$nama_pemilik_rekening', tanggal_transfer='$tanggal_transfer', no_rekening='$no_rekening', bank_asal='$bank_asal', id_proses_pemesanan='$id_proses_pemesanan' WHERE id_user = $id_user and id_proses_pemesanan='2'";
@@ -643,8 +655,6 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik, waktu_batas_checkout FROM v
             $queryNotif = "INSERT INTO tb_notifikasi(pesan_notifikasi, id_status_notifikasi, id_status_baca, id_user_baca, kode_pemesanan)
                             VALUES('$pesan_notifikasi','$id_status_notifikasi','$id_status_baca','$id_user_baca', '$IdPemesanan')";   
             $db->query($queryNotif); 
-            /*$queryProduct = "UPDATE tb_produk SET jumlah_stok='$put_stok_to_produk' WHERE id_produk='$IdProduk'";   
-            $db->query($queryProduct); */
             echo "updateConfirmationPaymentTransferSuccess";   
         }
         else{
@@ -652,7 +662,7 @@ tanggal_transfer, no_rekening, bank_asal, kode_unik, waktu_batas_checkout FROM v
         }
     }
 
-
+    
     if(isset($_GET['deleteImageConfirmationPaymentTransfer'])){
         require '../config.php'; 
         $json = json_decode(file_get_contents('php://input'), true);

@@ -61,7 +61,7 @@ $(document).ready(function(){
                     var DataDiskon = DataUser[0].diskon;  
                     var DataHargaSetelahDiskon = DataUser[0].harga_setelah_diskon;  
                     var gambarProductView = DataUser[0].gambar1_produk;
-                    var dataOngkir = DataUser[0].ongkos_kirim;
+                    //var dataOngkir = DataUser[0].ongkos_kirim;
                     var dataBerat = DataUser[0].konfersi_berat_produk_perkilogram;
                     var email_send = DataUser[0].email;
                     var kode_pemesanan_send = DataUser[0].kode_pemesanan;
@@ -233,6 +233,7 @@ $(document).ready(function(){
                             $('#jumlah_send_data').val(jumlahPemesanan);
                             var harga = $('#harga').val();
                             var totalHarga = jumlahPemesanan * harga;
+                            
                         }
                         else if (this.id == 'btnMinus') {
                             var checkDataJumlah = $('#jumlah_pemesanan').val();
@@ -251,7 +252,7 @@ $(document).ready(function(){
                         }
 
                         jumlahPemesanan = $('#jumlah_pemesanan').val();
-                        var ongkirCallBack =  '0';
+                        var ongkirCallBack =  $('#ongkir').val();
                         var dataBeratPemesanan = jumlahPemesanan * ongkirCallBack;
                         $('#jumlah_send_data').val(jumlahPemesanan);
                         
@@ -261,6 +262,8 @@ $(document).ready(function(){
                         //$('#ongkir_tampil').val(dataBeratPemesanan);
 
                         if(jumlahPemesanan<11){
+                            
+                            $('#ongkir_tampil').val();
                             var ongkir = ongkirCallBack;
                             var ongkirNumberString = ongkir.toString(),
                                 ongkirSisa    = ongkirNumberString.length % 3,

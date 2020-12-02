@@ -68,9 +68,9 @@
   });
   $(window).on("load", function(){
     swal({
-      title:"Sukses",
-      text: "Pembayaran Anda Berhasil",
-      type: "success"
+      title:"Gagal",
+      text: "Pembayaran Gagal, Silahkan Ulangi",
+      type: "error"
     }).then(function() {
       window.location = '../in/accounts-duren/open-konsumen/';
     });

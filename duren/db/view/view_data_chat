@@ -1,0 +1,17 @@
+SELECT
+tb_chat.id_chat AS id_chat,
+tb_chat.id_user AS id_user,
+tb_login_user.username AS username,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.email AS email,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_chat.waktu_chat AS waktu_chat,
+tb_chat.teks_chat AS teks_chat,
+tb_chat.gambar_chat AS gambar_chat,
+tb_chat.kode_chat AS kode_chat,
+tb_chat.id_status_chat AS id_status_chat,
+rt_status_chat.status_chat AS status_chat
+FROM
+((tb_chat
+LEFT JOIN rt_status_chat ON (rt_status_chat.id_status_chat = tb_chat.id_status_chat))
+LEFT JOIN tb_login_user ON (tb_login_user.id_user = tb_chat.id_user))

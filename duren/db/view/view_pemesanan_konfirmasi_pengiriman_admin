@@ -1,0 +1,13 @@
+SELECT
+tb_pemesanan.id_pemesanan AS id_pemesanan,
+tb_pemesanan.kode_pemesanan AS kode_pemesanan,
+tb_pemesanan.id_user AS id_user,
+tb_login_user.username AS username,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_pemesanan.id_proses_pemesanan AS id_proses_pemesanan,
+tb_pemesanan.tanggal_transfer AS tanggal_transfer
+FROM
+(tb_pemesanan
+JOIN tb_login_user ON (tb_pemesanan.id_user = tb_login_user.id_user))
+WHERE
+tb_pemesanan.id_proses_pemesanan = '4'

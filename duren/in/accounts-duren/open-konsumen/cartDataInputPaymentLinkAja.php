@@ -23,6 +23,25 @@
         padding-top: 5px;
         float: left;
     }*/
+    .buttonLarge-green{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .buttonLarge-green:hover{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .buttonLarge-red{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .buttonLarge-red:hover{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
     .card-textDataUser {
         width: 20%;
@@ -269,49 +288,65 @@
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
-                                    Nama Pemilik Rekening
+                                    Kode Transaksi
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
                                 <div style="border-bottom: 1px solid #969191;">
-                                    <input type="text" name="nama_pemilik_rekening" id="nama_pemilik_rekening" class="input-textDataUser"  style="border:transparent;">
-                                    <input type="hidden" name="foto_check" id="foto_check" class="input-textDataUser" >
+                                    <input type="hidden" name="kode_pemesanan" id="kode_pemesanan" class="input-textDataUser"  style="border:transparent;">
+                                    <input type="text" name="kode_pemesanan_tampil" id="kode_pemesanan_tampil" class="input-textDataUser"  style="border:transparent;color: grey;" disabled>
                                 </div>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
-                                    Tanggal Transfer
+                                    Nama Produk
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
                                 <div style="border-bottom: 1px solid #969191;">
-                                    <input type="date" name="tanggal_transfer" id="tanggal_transfer" class="input-textDataUser" style="border:transparent;">
+                                    <input type="hidden" name="nama_produk" id="nama_produk" class="input-textDataUser"  style="border:transparent;">
+                                    <input type="text" name="nama_produk_tampil" id="nama_produk_tampil" class="input-textDataUser"  style="border:transparent;color: grey;" disabled>
                                 </div>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px">
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
-                                    No. Rekening
+                                    Jumlah
                                 </div>
                             </div>
                             <div class="card-inputDataUser">
                                 <div style="border-bottom: 1px solid #969191;">
-                                    <input type="number" name="no_rekening" id="no_rekening" class="input-textDataUser"  style="border:transparent;">
+                                    <input type="hidden" name="jumlah_pemesanan" id="jumlah_pemesanan" class="input-textDataUser"  style="border:transparent;">
+                                    <input type="text" name="jumlah_pemesanan_tampil" id="jumlah_pemesanan_tampil" class="input-textDataUser"  style="border:transparent;color: grey;" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Card-inputDataUser-paddingTopBottom20px">
+                            <div class="card-textDataUser">
+                                <div class="textDataUser">
+                                    Total Pembayaran
+                                </div>
+                            </div>
+                            <div class="card-inputDataUser">
+                                <div style="border-bottom: 1px solid #969191;">
+                                    <input type="hidden" name="total_harga_yang_harus_dibayar" id="total_harga_yang_harus_dibayar" class="input-textDataUser"  style="border:transparent;">
+                                    <input type="text" name="total_harga_yang_harus_dibayar_tampil" id="total_harga_yang_harus_dibayar_tampil" class="input-textDataUser"  style="border:transparent;color: grey;" disabled>
                                 </div>
                             </div>
                         </div>
                         <div class="Card-inputDataUser-paddingTopBottom20px" >
                             <div class="card-textDataUser">
                                 <div class="textDataUser">
-                                    Asal Bank Transfer
+                                    Nomor HP
                                 </div>
                             </div>
                             <div class="card-inputDataUser" style="padding-bottom: 20px;">
                                 <div style="border-bottom: 1px solid #969191;">
-                                    <input type="text" name="bank_asal"  id="bank_asal" class="input-textDataUser"  style="border:transparent;">
+                                    <input type="hidden" name="nomor_hp"  id="nomor_hp" class="input-textDataUser" style="border:transparent;">
+                                    <input type="text" name="nomor_hp_tampil"  id="nomor_hp_tampil" class="input-textDataUser" style="border:transparent;color: grey;" disabled>
                                 </div>   
                             </div>
                         </div>
@@ -339,7 +374,7 @@
                         </div>
                         <div class="card-inputDataUser" style="padding-bottom: 100px;">
                             <div class="floatRightbutton">
-                                <button class="buttonLarge-green" type="button" id="btnUpdateConfirmationDetailPayment">SIMPAN</button>
+                                <button class="buttonLarge-green" type="button" id="btnUpdateConfirmationDetailPayment">LANJUTKAN</button>
                             </div>
                             <div class="floatRightbutton">
                                 <input type="hidden" name="IdPemesananDelete" id="IdPemesananDelete">

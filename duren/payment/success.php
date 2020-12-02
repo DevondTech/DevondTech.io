@@ -27,6 +27,18 @@
       background-color: #cda32b;
       margin-right: 60px;
     }
+
+    .swal2-popup #swal2-title {
+      font-size: 24px;
+     /* font-family: Palatino, "Palatino Linotype";*/
+    }
+
+    .swal2-popup #swal2-content {
+      text-align: center;
+      font-size: 16px;
+      /*font-family: Palatino, "Palatino Linotype";*/
+    }
+
     @media(max-width: 920px){
       .cardTextAbout{
         background-color: #cda32b;
@@ -43,7 +55,7 @@
   </div>
   <div class="phoneTop top-page" id="top-page" style="">
     <nav id="navbar-page" class="nav-outscroll2 nav-fixed navbar navbar-expand-lg navbar-light " style="z-index: 1;"> 
-      
+
     </nav>
     <div class="row-top-displayBlock row" style="">
      
@@ -67,12 +79,19 @@
     $('#next').css('display','block');
   });
   $(window).on("load", function(){
+    var receipt_number = "<?php echo $_GET['receiptNumber']; ?>";
+    var ref_num = "<?php echo $_GET['refNum']; ?>";
+    var kode_pemesanan = "<?php echo $_GET['trxId']; ?>";
+
+    console.log(receipt_number);
+    console.log(ref_num);
+    console.log(kode_pemesanan);
     swal({
-      title:"Sukses",
-      text: "Pembayaran Anda Berhasil",
+      title:"Pembayaran Berhasil",
+      text: "Silahkan Klik OK Untuk Kirim Ke Admin King Fruit",
       type: "success"
     }).then(function() {
-      window.location = '../in/accounts-duren/open-konsumen/';
+      //window.location = '../in/accounts-duren/open-konsumen/';
     });
   }); 
 
@@ -80,3 +99,4 @@
 
 </body>
 </html>
+

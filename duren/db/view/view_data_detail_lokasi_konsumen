@@ -1,0 +1,21 @@
+SELECT
+tb_share_peta_lokasi.id_share_peta_lokasi_user AS id_share_peta_lokasi_user,
+tb_share_peta_lokasi.id_user AS id_user,
+tb_login_user.username AS username,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.email AS email,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_data_user.alamat AS alamat,
+tb_data_user.negara AS negara,
+tb_data_user.provinsi AS provinsi,
+tb_data_user.kabupaten AS kabupaten,
+tb_data_user.kode_pos AS kode_pos,
+tb_data_user.kecamatan AS kecamatan,
+tb_data_user.kelurahan AS kelurahan,
+tb_data_user.id_kota AS id_kota,
+rt_kota.kota AS kota
+FROM
+(((tb_share_peta_lokasi
+LEFT JOIN tb_login_user ON (tb_login_user.id_user = tb_share_peta_lokasi.id_user))
+LEFT JOIN tb_data_user ON (tb_data_user.id_user = tb_login_user.id_user))
+LEFT JOIN rt_kota ON (tb_data_user.id_kota = rt_kota.id_kota))

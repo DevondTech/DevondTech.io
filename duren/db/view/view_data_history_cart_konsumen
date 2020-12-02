@@ -1,0 +1,58 @@
+SELECT
+tb_pemesanan.id_pemesanan AS id_pemesanan,
+tb_pemesanan.kode_pemesanan AS kode_pemesanan,
+tb_pemesanan.waktu_pemesanan AS waktu_pemesanan_detail,
+date_format(`tb_pemesanan`.`waktu_pemesanan`,'%e/%c/%Y %H:%i') AS waktu_pemesanan,
+tb_pemesanan.id_user AS id_user,
+tb_login_user.username AS username,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.email AS email,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_data_user.alamat AS alamat,
+tb_data_user.negara AS negara,
+tb_data_user.provinsi AS provinsi,
+tb_data_user.kabupaten AS kabupaten,
+tb_data_user.id_kota AS id_kota,
+rt_kota.kota AS kota,
+tb_data_user.kelurahan AS kelurahan,
+tb_data_user.kecamatan AS kecamatan,
+tb_data_user.kode_pos AS kode_pos,
+tb_pemesanan.pesan_pemesanan AS pesan_pemesanan,
+tb_pemesanan.id_proses_pemesanan AS id_proses_pemesanan,
+rt_proses_pemesanan.proses_pemesanan AS proses_pemesanan,
+tb_pemesanan.id_produk AS id_produk,
+tb_produk.nama_produk AS nama_produk,
+tb_produk.detail1_produk AS detail1_produk,
+tb_produk.id_jenis_produk AS id_jenis_produk,
+rt_jenis_produk.jenis_produk AS jenis_produk,
+tb_produk.harga AS harga,
+tb_produk.gambar1_produk AS gambar1_produk,
+tb_pemesanan.jumlah_pemesanan AS jumlah_pemesanan,
+tb_pemesanan.ongkos_kirim AS ongkos_kirim,
+tb_pemesanan.id_metode_pembayaran AS id_metode_pembayaran,
+rt_metode_pembayaran.metode_pembayaran AS metode_pembayaran,
+rt_metode_pembayaran.kode_link_pembayaran AS kode_link_pembayaran,
+tb_pemesanan.pesan_bukti_pembayaran AS pesan_bukti_pembayaran,
+tb_pemesanan.gambar_bukti_pembayaran AS gambar_bukti_pembayaran,
+tb_pemesanan.id_voucher_by_user,
+tb_voucher_by_user.id_voucher,
+tb_voucher.kode_voucher,
+tb_voucher.judul_voucher,
+tb_voucher.id_jenis_voucher,
+rt_jenis_voucher.jenis_voucher,
+tb_voucher.total_voucher,
+tb_voucher.waktu_berlaku
+FROM
+(((((((((tb_pemesanan
+LEFT JOIN tb_login_user ON (tb_login_user.id_user = tb_pemesanan.id_user))
+LEFT JOIN tb_data_user ON (tb_data_user.id_user = tb_login_user.id_user))
+LEFT JOIN rt_proses_pemesanan ON (rt_proses_pemesanan.id_proses_pemesanan = tb_pemesanan.id_proses_pemesanan))
+LEFT JOIN tb_produk ON (tb_produk.id_produk = tb_pemesanan.id_produk))
+LEFT JOIN rt_jenis_produk ON (rt_jenis_produk.id_jenis_produk = tb_produk.id_jenis_produk))))
+LEFT JOIN rt_metode_pembayaran ON (rt_metode_pembayaran.id_metode_pembayaran = tb_pemesanan.id_metode_pembayaran))
+LEFT JOIN rt_kota ON (tb_data_user.id_kota = rt_kota.id_kota))
+LEFT JOIN tb_voucher_by_user ON tb_pemesanan.id_voucher_by_user = tb_voucher_by_user.id_voucher_by_user
+LEFT OUTER JOIN tb_voucher ON tb_voucher_by_user.id_voucher = tb_voucher.id_voucher
+LEFT OUTER JOIN rt_jenis_voucher ON tb_voucher.judul_voucher = rt_jenis_voucher.id_jenis_voucher
+WHERE
+tb_pemesanan.id_proses_pemesanan <> 10 

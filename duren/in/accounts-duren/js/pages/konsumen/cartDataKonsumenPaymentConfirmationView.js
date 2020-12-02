@@ -42,6 +42,7 @@ $(document).ready(function(){
             var KodePosKonsumen = DataPayment[0].kode_pos;
             var Ongkir = DataPayment[0].ongkos_kirim;
             var IdVoucher = DataPayment[0].id_voucher;
+            var totalVoucher = DataPayment[0].total_voucher;
             var MetodePembayaran = DataPayment[0].id_metode_pembayaran ;
             var Gambar = DataPayment[0].gambar_bukti_pembayaran;
             var TotalPerProduk = DataPayment[0].total_harga_perproduk ;
@@ -132,6 +133,18 @@ $(document).ready(function(){
             }
             $('#total_harga_pemesanan').val(totalHargaPerproduk);
             $('#total_harga_pemesanan_tampil').val('Rp '+totalHargaPerprodukRupiah+',00');
+
+            var totalVoucherNumberString = totalVoucher.toString(),
+                totalVoucherSisa    = totalVoucherNumberString.length % 3,
+                totalVoucherRupiah  = totalVoucherNumberString.substr(0, totalVoucherSisa),
+                totalVoucherRibuan  = totalVoucherNumberString.substr(totalVoucherSisa).match(/\d{3}/g);         
+            if (totalVoucherRibuan) {
+                totalVoucherSeparator = totalVoucherSisa ? '.' : '';
+                totalVoucherRupiah += totalVoucherSeparator + totalVoucherRibuan.join('.');
+            }
+            $('#voucher').val(totalVoucher);
+            $('#voucher_tampil').val('Rp '+totalVoucherRupiah+',00');
+
             var ongkosKirimNumberString = ongkosKirim.toString(),
             ongkosKirimSisa  = ongkosKirimNumberString.length % 3,
             ongkosKirimRupiah  = ongkosKirimNumberString.substr(0, ongkosKirimSisa),

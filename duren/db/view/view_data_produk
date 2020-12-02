@@ -1,0 +1,24 @@
+SELECT
+tb_produk.id_produk AS id_produk,
+tb_produk.nama_produk AS nama_produk,
+tb_produk.detail1_produk AS detail1_produk,
+tb_produk.detail2_produk AS detail2_produk,
+tb_produk.id_jenis_produk AS id_jenis_produk,
+rt_jenis_produk.jenis_produk AS jenis_produk,
+tb_produk.jumlah_stok AS jumlah_stok,
+tb_produk.id_satuan_produk AS id_satuan_produk,
+rt_satuan_produk.satuan_produk AS satuan_produk,
+tb_produk.harga AS harga,
+tb_produk.diskon AS diskon,
+tb_produk.gambar1_produk AS gambar1_produk,
+tb_produk.gambar2_produk AS gambar2_produk,
+tb_produk.gambar3_produk AS gambar3_produk,
+tb_produk.gambar4_produk AS gambar4_produk,
+tb_produk.gambar5_produk AS gambar5_produk,
+`tb_produk`.`harga` - `tb_produk`.`diskon` AS harga_setelah_diskon
+FROM
+((tb_produk
+LEFT JOIN rt_jenis_produk ON (tb_produk.id_jenis_produk = rt_jenis_produk.id_jenis_produk))
+LEFT JOIN rt_satuan_produk ON (tb_produk.id_satuan_produk = rt_satuan_produk.id_satuan_produk))
+ORDER BY
+id_produk ASC

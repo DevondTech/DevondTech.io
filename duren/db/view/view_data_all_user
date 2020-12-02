@@ -1,0 +1,29 @@
+SELECT
+tb_data_user.id_data_user AS id_data_user,
+tb_login_user.id_user AS id_user,
+tb_login_user.tanggal_mendaftar AS tanggal_mendaftar,
+tb_login_user.username AS username,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.email AS email,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_data_user.alamat AS alamat,
+tb_data_user.negara AS negara,
+tb_data_user.provinsi AS provinsi,
+tb_data_user.kabupaten AS kabupaten,
+tb_data_user.id_kota AS id_kota,
+rt_kota.kota AS kota,
+tb_data_user.kecamatan AS kecamatan,
+tb_data_user.kelurahan AS kelurahan,
+tb_data_user.kode_pos AS kode_pos,
+tb_login_user.id_status_user AS id_status_user,
+rt_status_user.status_user AS status_user,
+tb_login_user.foto AS foto,
+tb_data_user.tanggal_lahir AS tanggal_lahir,
+tb_data_user.id_jenis_kelamin AS id_jenis_kelamin,
+rt_jenis_kelamin.jenis_kelamin AS jenis_kelamin
+FROM
+((((tb_login_user
+LEFT JOIN rt_status_user ON (rt_status_user.id_status_user = tb_login_user.id_status_user))
+LEFT JOIN tb_data_user ON (tb_login_user.id_user = tb_data_user.id_user))
+LEFT JOIN rt_jenis_kelamin ON (rt_jenis_kelamin.id_jenis_kelamin = tb_data_user.id_jenis_kelamin))
+LEFT JOIN rt_kota ON (tb_data_user.id_kota = rt_kota.id_kota))

@@ -1,0 +1,14 @@
+SELECT
+tb_notifikasi.id_notifikasi AS id_notifikasi,
+tb_notifikasi.pesan_notifikasi AS pesan_notifikasi,
+tb_notifikasi.id_status_notifikasi AS id_status_notifikasi,
+tb_notifikasi.id_status_baca AS id_status_baca,
+tb_notifikasi.id_user_baca AS id_user_baca,
+tb_notifikasi.id_user AS id_user,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.email AS email
+FROM
+(tb_notifikasi
+LEFT JOIN tb_login_user ON (tb_notifikasi.id_user = tb_login_user.id_user))
+WHERE
+tb_notifikasi.id_status_notifikasi = 7

@@ -1,0 +1,12 @@
+SELECT
+tb_retur_pembelian.id_retur AS id_retur,
+tb_retur_pembelian.kode_retur AS kode_retur,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_retur_pembelian.id_status_retur AS id_status_retur
+FROM
+((tb_retur_pembelian
+JOIN tb_pemesanan ON (tb_retur_pembelian.id_pemesanan = tb_pemesanan.id_pemesanan))
+JOIN tb_login_user ON (tb_pemesanan.id_user = tb_login_user.id_user))
+WHERE
+tb_retur_pembelian.id_status_retur = '2'

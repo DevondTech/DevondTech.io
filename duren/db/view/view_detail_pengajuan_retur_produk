@@ -1,0 +1,52 @@
+SELECT
+tb_retur_pembelian.id_retur AS id_retur,
+tb_retur_pembelian.kode_retur AS kode_retur,
+tb_retur_pembelian.id_user_retur AS id_user_retur,
+tb_retur_pembelian.id_pemesanan AS id_pemesanan,
+tb_retur_pembelian.waktu_retur AS waktu_retur_detail,
+date_format(`tb_retur_pembelian`.`waktu_retur`,'%e/%c/%Y %H:%i') AS waktu_retur,
+tb_retur_pembelian.pesan_retur AS pesan_retur,
+tb_retur_pembelian.gambar_barang_retur AS gambar_barang_retur,
+tb_pemesanan.kode_pemesanan AS kode_pemesanan,
+tb_pemesanan.waktu_pemesanan AS waktu_pemesanan,
+tb_pemesanan.id_user AS id_user,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.email AS email,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_pemesanan.nama_pemilik_rekening AS nama_pemilik_rekening,
+tb_pemesanan.tanggal_transfer AS tanggal_transfer,
+tb_pemesanan.no_rekening AS no_rekening,
+tb_pemesanan.bank_asal AS bank_asal,
+tb_pemesanan.gambar_bukti_pembayaran AS gambar_bukti_pembayaran,
+tb_pemesanan.total_harga_yang_harus_dibayar AS total_harga_yang_harus_dibayar,
+tb_retur_pembelian.id_status_retur AS id_status_retur,
+rt_status_retur.status_retur AS status_retur,
+tb_retur_pembelian.admin_pesan_retur AS admin_pesan_retur,
+tb_retur_pembelian.admin_tanggal_transfer AS admin_tanggal_transfer,
+tb_retur_pembelian.admin_nomor_rekening AS admin_nomor_rekening,
+tb_retur_pembelian.admin_bank_asal AS admin_bank_asal,
+tb_retur_pembelian.admin_gambar_bukti_transfer AS admin_gambar_bukti_transfer,
+tb_retur_pembelian.admin_total_pengembalian_dana AS admin_total_pengembalian_dana,
+tb_pemesanan.id_produk AS id_produk,
+tb_produk.nama_produk AS nama_produk,
+tb_produk.detail1_produk AS detail1_produk,
+tb_produk.detail2_produk AS detail2_produk,
+tb_produk.id_jenis_produk AS id_jenis_produk,
+rt_jenis_produk.jenis_produk AS jenis_produk,
+tb_pemesanan.jumlah_pemesanan AS jumlah_pemesanan,
+rt_satuan_produk.satuan_produk AS satuan_produk,
+tb_pemesanan.id_berat_produk AS id_berat_produk,
+rt_berat_produk_pemesanan.teks_berat_produk AS teks_berat_produk,
+rt_berat_produk_pemesanan.konfersi_berat_produk_perkilogram AS konfersi_berat_produk_perkilogram,
+tb_produk.id_satuan_produk AS id_satuan_produk
+FROM
+(((((((tb_retur_pembelian
+JOIN tb_pemesanan ON (tb_retur_pembelian.id_pemesanan = tb_pemesanan.id_pemesanan))
+JOIN tb_login_user ON (tb_pemesanan.id_user = tb_login_user.id_user))
+JOIN rt_status_retur ON (tb_retur_pembelian.id_status_retur = rt_status_retur.id_status_retur))
+LEFT JOIN tb_produk ON (tb_pemesanan.id_produk = tb_produk.id_produk))
+LEFT JOIN rt_jenis_produk ON (tb_produk.id_jenis_produk = rt_jenis_produk.id_jenis_produk))
+LEFT JOIN rt_berat_produk_pemesanan ON (tb_pemesanan.id_berat_produk = rt_berat_produk_pemesanan.id_berat_produk))
+JOIN rt_satuan_produk ON (tb_produk.id_satuan_produk = rt_satuan_produk.id_satuan_produk))
+WHERE
+tb_retur_pembelian.id_status_retur = '2'

@@ -1,0 +1,16 @@
+SELECT
+tb_voucher.id_voucher AS id_voucher,
+tb_voucher.kode_voucher AS kode_voucher,
+tb_voucher.id_jenis_voucher AS id_jenis_voucher,
+tb_voucher.judul_voucher AS judul_voucher,
+rt_jenis_voucher.jenis_voucher AS jenis_voucher,
+tb_voucher.total_voucher AS total_voucher,
+tb_voucher.waktu_berlaku AS waktu_berlaku_detail,
+date_format(`tb_voucher`.`waktu_berlaku`,'%e/%c/%Y %H:%i') AS waktu_berlaku,
+tb_voucher.gambar_voucher AS gambar_voucher,
+tb_voucher.kode_kirim_konsumen,
+rt_status_kirim_voucher.status_kirim_konsumen
+FROM
+(tb_voucher
+LEFT JOIN rt_jenis_voucher ON (rt_jenis_voucher.id_jenis_voucher = tb_voucher.id_jenis_voucher))
+left JOIN rt_status_kirim_voucher ON tb_voucher.kode_kirim_konsumen = rt_status_kirim_voucher.kode_kirim_konsumen 

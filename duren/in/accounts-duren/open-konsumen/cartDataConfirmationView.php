@@ -367,6 +367,22 @@
                                 <div style="margin-left: 4px;"> 
                                     <div class="positionTextDetailOrder">
                                         <div class="w150 textTotalHarga floatLeftCartData" >
+                                            Potongan Voucher
+                                        </div>
+                                        <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">
+                                            :  
+                                        </div>
+                                        <div class="inputTotalHarga textTotalHarga floatLeftCartData" >
+                                            <div class="marginLeft10 floatLeftCartData">
+                                                <input type="hidden" name="voucher"  style="color: #737373;" id="voucher" class="input-textDataUser-false" >
+                                                <input type="text" name="voucher_tampil"  style="color: #3c3838;    background-color: transparent;" id="voucher_tampil" class="input-textDataUser-false" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-left: 4px;"> 
+                                    <div class="positionTextDetailOrder">
+                                        <div class="w150 textTotalHarga floatLeftCartData" >
                                             Kode Unik
                                         </div>
                                         <div class="textTotalHarga floatLeftCartData" style="margin-left: 6px;">

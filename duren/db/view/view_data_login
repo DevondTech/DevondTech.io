@@ -1,0 +1,14 @@
+SELECT
+tb_login_user.id_user AS id_user,
+tb_login_user.tanggal_mendaftar AS tanggal_mendaftar,
+tb_login_user.username AS username,
+tb_login_user.email AS email,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_login_user.`password` AS `password`,
+tb_login_user.id_status_user AS id_status_user,
+rt_status_user.status_user AS status_user,
+tb_login_user.foto AS foto
+FROM
+(tb_login_user
+LEFT JOIN rt_status_user ON (rt_status_user.id_status_user = tb_login_user.id_status_user))

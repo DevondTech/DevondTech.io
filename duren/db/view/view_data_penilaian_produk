@@ -1,0 +1,27 @@
+SELECT
+tb_penilaian_produk.id_penilaian_produk AS id_penilaian_produk,
+tb_penilaian_produk.tanggal_penilaian_produk AS tanggal_penilaian_produk_detail,
+date_format(`tb_penilaian_produk`.`tanggal_penilaian_produk`,'%e/%c/%Y %H:%i') AS tanggal_penilaian_produk,
+tb_penilaian_produk.id_user AS id_user,
+tb_login_user.username AS username,
+tb_login_user.nama_lengkap AS nama_lengkap,
+tb_login_user.email AS email,
+tb_login_user.nomor_hp AS nomor_hp,
+tb_penilaian_produk.id_produk AS id_produk,
+tb_produk.nama_produk AS nama_produk,
+tb_penilaian_produk.id_bintang_penilaian_produk AS id_bintang_penilaian_produk,
+rt_bintang_penilaian_produk.bintang_penilaian_produk AS bintang_penilaian_produk,
+tb_penilaian_produk.komentar AS komentar,
+tb_produk.detail1_produk AS detail1_produk,
+tb_produk.detail2_produk AS detail2_produk,
+tb_produk.harga AS harga,
+tb_produk.gambar1_produk AS gambar1_produk,
+tb_produk.gambar2_produk AS gambar2_produk,
+tb_produk.gambar3_produk AS gambar3_produk,
+tb_produk.gambar4_produk AS gambar4_produk,
+tb_login_user.foto AS foto
+FROM
+(((tb_penilaian_produk
+LEFT JOIN tb_login_user ON (tb_login_user.id_user = tb_penilaian_produk.id_user))
+LEFT JOIN tb_produk ON (tb_produk.id_produk = tb_penilaian_produk.id_produk))
+LEFT JOIN rt_bintang_penilaian_produk ON (rt_bintang_penilaian_produk.id_bintang_penilaian_produk = tb_penilaian_produk.id_bintang_penilaian_produk))
